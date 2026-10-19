@@ -5,6 +5,7 @@ from beatles_viz.effects.base import Effect, map_words, register
 class Starr(Effect):
     """Rounded font, primary colours, the first word of each line bounces on a beat."""
     name = "starr"
+    summary = "rounded font, first word of each line bounces"
     font = 'Nunito, "Varela Round", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif'
     defaults = {"bg": "#fffbe6", "fg": "#1d3557", "accent": "#c1121f", "bounce": 4, "tempo": 1.2}
     ranges = {"bounce": (0, 10, 1), "tempo": (0.4, 3.0, 0.1)}

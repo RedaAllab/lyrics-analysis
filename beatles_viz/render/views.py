@@ -29,6 +29,9 @@ def navigation(song, scope, key):
 def effect_settings(song, key):
     st.sidebar.header("Reading")
     effects_on = st.sidebar.toggle("Voice effects", value=True, key=f"{key}_effects")
+    motion = st.sidebar.radio("Motion", ["calm", "loop", "off"], key=f"{key}_motion", horizontal=True,
+                              format_func={"calm": "Play once", "loop": "Loop", "off": "Off"}.get,
+                              help="Play once keeps the effects but lets the text rest after a few seconds.")
     font_size = st.sidebar.slider("Text size", 0.8, 1.6, 1.05, 0.05, key=f"{key}_font")
     params = {}
     with st.sidebar.expander("Effect settings", expanded=False):
@@ -46,7 +49,7 @@ def effect_settings(song, key):
                 elif str(value).startswith("#"):
                     p[name] = st.color_picker(name, value, key=wkey)
             params[effect.name] = p
-    return effects_on, font_size, params
+    return effects_on, motion, font_size, params
 
 
 @st.cache_data(show_spinner=False)
@@ -55,9 +58,9 @@ def _doc_freq(_corpus):
 
 
 @st.cache_data(show_spinner=False, max_entries=64)
-def _song_html(_corpus, title, effects_on, frozen, font_size):
+def _song_html(_corpus, title, effects_on, frozen, font_size, motion):
     row = _corpus[_corpus.title == title].iloc[0]
-    return render_song(row, effects_on, {e: dict(p) for e, p in frozen}, _doc_freq(_corpus), font_size)
+    return render_song(row, effects_on, {e: dict(p) for e, p in frozen}, _doc_freq(_corpus), font_size, motion)
 
 
 def read_view(song, corpus, local, key):
@@ -65,11 +68,11 @@ def read_view(song, corpus, local, key):
         st.info("Reading the full song needs the local lyrics file (data/beatles/beatles.parquet). "
                 "Lyrics are copyrighted, so they are not part of the deployed app: use the Analyse view.")
         return
-    effects_on, font_size, params = effect_settings(song, key)
+    effects_on, motion, font_size, params = effect_settings(song, key)
     frozen = tuple(sorted((e, tuple(sorted(p.items()))) for e, p in params.items()))
-    st.html(_song_html(corpus, song.title, effects_on, frozen, font_size))
+    st.html(_song_html(corpus, song.title, effects_on, frozen, font_size, motion))
     st.caption("Lyrics: Genius dataset, not proofread. Voice per section: Genius tag when present, otherwise the "
-               "song's lead vocal (Wikipedia). Animations stop when the system asks for reduced motion.")
+               "song's lead vocal (Wikipedia). Animations are off when the system asks for reduced motion.")
 
 
 def _show(fig, question, missing="Not enough data for this chart."):

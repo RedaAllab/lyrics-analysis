@@ -2,7 +2,7 @@ import re
 
 import streamlit as st
 
-from beatles_viz.config import VOICE_COLORS
+from beatles_viz.config import VOICE_COLORS, VOICE_ORDER
 
 PLOT_CONFIG = {"displayModeBar": False}
 HELP = {
@@ -25,19 +25,56 @@ def cached_corpus(source):
     return load_corpus(source)
 
 
+def _persistent(name, default):
+    # Streamlit drops widget state when the page changes: the value lives in a plain key, is copied into the
+    # widget key before each render, and copied back on change (pattern from the Streamlit multipage docs).
+    s = st.session_state
+    store, widget = f"flt_{name}", f"w_{name}"
+    s.setdefault(store, default)
+    s[widget] = s[store]
+    return widget, store, {"on_change": _save, "args": (widget, store)}
+
+
+def _save(widget, store):
+    st.session_state[store] = st.session_state[widget]
+
+
+def corpus_filters(y0, y1):
+    """Sidebar filters shared by every page: (originals_only, (year_from, year_to), voices)."""
+    s = st.session_state
+    st.sidebar.header("Filters")
+    widget, store, sync = _persistent("originals", True)
+    st.sidebar.toggle("Original compositions only", key=widget, **sync)
+    widget, store, sync = _persistent("years", (y0, min(y1, 1970)))
+    st.sidebar.slider("Release year", y0, y1, key=widget, **sync)
+    widget, store, sync = _persistent("voices", list(VOICE_ORDER))
+    st.sidebar.multiselect("Lead voice", VOICE_ORDER, key=widget, **sync)
+    return s.flt_originals, s.flt_years, s.flt_voices
+
+
+def apply_filters(df, originals, years, voices, voice_col="voice"):
+    d = df[df.year.between(*years) & df[voice_col].isin(voices)]
+    return d[d.is_original] if originals else d
+
+
+def open_song(title, page="song_page.py"):
+    st.session_state["goto_song"] = title
+    st.switch_page(page)
+
+
 def song_selector(corpus, key="song"):
-    """Sidebar filters + title picker. Keeps the choice in the URL (?song=...) so a song can be linked."""
-    originals = st.sidebar.toggle("Original compositions only", value=True, key=f"{key}_orig")
-    voices = sorted(corpus.voice.unique())
-    chosen_voices = st.sidebar.multiselect("Lead voice", voices, default=voices, key=f"{key}_voices")
-    d = corpus[corpus.voice.isin(chosen_voices)]
-    if originals:
-        d = d[d.is_original]
+    """Shared filters + title picker. Keeps the choice in the URL (?song=...) so a song can be linked."""
+    d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
     if d.empty:
         return None, d
     titles = d.title.tolist()
-    wanted = st.query_params.get("song")
+    goto = st.session_state.pop("goto_song", None)
+    if goto in titles:
+        st.session_state[f"{key}_title"] = goto
+    wanted = goto or st.query_params.get("song")
     index = titles.index(wanted) if wanted in titles else 0
+    if st.session_state.get(f"{key}_title") not in titles:
+        st.session_state.pop(f"{key}_title", None)
     title = st.sidebar.selectbox("Song", titles, index=index, key=f"{key}_title",
                                  format_func=lambda t: f"{t} ({int(d.loc[d.title == t, 'year'].iloc[0])})")
     st.query_params["song"] = title

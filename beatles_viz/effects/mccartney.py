@@ -7,6 +7,7 @@ from beatles_viz.effects.base import Effect, register
 class McCartney(Effect):
     """Readable serif, warm palette, lines fade in one after another, choruses slightly larger."""
     name = "mccartney"
+    summary = "warm serif, lines fade in, larger choruses"
     font = 'Georgia, "Times New Roman", serif'
     defaults = {"bg": "#fff3e6", "fg": "#4a1f12", "accent": "#b23a48", "speed": 0.25, "chorus_scale": 1.12}
     ranges = {"speed": (0.0, 1.0, 0.05), "chorus_scale": (1.0, 1.4, 0.02)}

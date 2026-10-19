@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from beatles_lib import PHASES, content_counter, load_public, merge, monroe, prior_from  # noqa: E402
 from beatles_viz.config import ACCENT, NEUTRAL, VOICE_COLORS, VOICE_ORDER  # noqa: E402
-from beatles_viz.render.components import HELP, plot  # noqa: E402
+from beatles_viz.render.components import HELP, apply_filters, corpus_filters, open_song, plot  # noqa: E402
 
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
@@ -40,13 +40,10 @@ def get_corpus(originals_only):
 
 
 # ---------------- sidebar filters ----------------
-st.sidebar.header("Corpus")
-originals_only = st.sidebar.radio("Songs", ["Original compositions", "All (incl. covers)"]) == "Original compositions"
+bounds = get_corpus(False)
+originals_only, years, singers = corpus_filters(int(bounds.year.min()), int(bounds.year.max()))
 full = get_corpus(originals_only)
-y0, y1 = int(full.year.min()), int(full.year.max())
-years = st.sidebar.slider("Release year", y0, y1, (y0, min(y1, 1970)))
-singers = st.sidebar.multiselect("Lead voice", sorted(full.singer.unique()), default=sorted(full.singer.unique()))
-df = full[full.year.between(*years) & full.singer.isin(singers)].copy()
+df = apply_filters(full, False, years, singers, voice_col="singer").copy()
 st.sidebar.caption(f"{len(df)} songs selected out of {len(full)}")
 st.sidebar.caption("Lyrics: Genius dataset, not proofread. Years: original release year (Wikipedia list).")
 
@@ -171,4 +168,8 @@ with tab_songs:
         st.caption(f"{len(t)} songs contain '{q}' ({int(t.occurrences.sum())} occurrences).")
     else:
         t = t.sort_values(["year", "title"])
-    st.dataframe(t, hide_index=True, use_container_width=True, column_config=SONG_TABLE)
+    st.caption("Select a row to open the song.")
+    picked = st.dataframe(t, hide_index=True, use_container_width=True, column_config=SONG_TABLE,
+                          on_select="rerun", selection_mode="single-row", key="songs_table")
+    if picked.selection.rows:
+        open_song(t.iloc[picked.selection.rows[0]]["title"])

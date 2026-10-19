@@ -6,6 +6,7 @@ from beatles_viz.text.tokenize import is_content
 class Lennon(Effect):
     """Typewriter font, cold high-contrast palette, rare words drift and blur slightly."""
     name = "lennon"
+    summary = "typewriter font, rare words drift and blur"
     font = '"Courier Prime", "Courier New", Courier, monospace'
     defaults = {"bg": "#eaf0f6", "fg": "#0b2545", "accent": "#1f4e79", "wave": 0.5, "rare_max_songs": 2}
     ranges = {"wave": (0.0, 1.0, 0.05), "rare_max_songs": (1, 10, 1)}

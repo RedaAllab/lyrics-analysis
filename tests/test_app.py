@@ -43,3 +43,12 @@ def test_public_mode_has_no_lyrics():
             "assert not at.exception and len(at.get('html')) == 0 and at.info")
     env = {**os.environ, "BEATLES_PUBLIC_ONLY": "1"}
     assert subprocess.run([sys.executable, "-c", code], env=env, cwd=APP.parent).returncode == 0
+
+
+@needs_lyrics
+def test_open_song_lands_on_requested_title():
+    at = AppTest.from_file(SONG_PAGE, default_timeout=180)
+    at.session_state["goto_song"] = "Something"
+    at.run()
+    assert not at.exception and at.session_state["song_title"] == "Something"
+    assert "goto_song" not in at.session_state

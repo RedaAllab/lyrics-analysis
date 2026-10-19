@@ -6,6 +6,7 @@ from beatles_viz.effects.base import Effect, register
 class Shared(Effect):
     """Several singers: a border split into the colours of the voices present, no animation."""
     name = "shared"
+    summary = "border in the colours of the voices present"
     defaults = {"bg": "#f3f1f7", "fg": "#2d2640", "accent": "#7b6d8d", "border": 6}
     ranges = {"border": (2, 12, 1)}
 

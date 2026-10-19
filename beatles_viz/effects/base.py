@@ -22,6 +22,7 @@ def map_words(line, fn):
 
 class Effect:
     name = "neutral"
+    summary = "plain text, no animation"
     font = "inherit"
     defaults = {"bg": "#f5f5f2", "fg": "#222222", "accent": "#8a8a8a"}
     ranges = {}

@@ -45,3 +45,17 @@ def test_neighbors():
     assert neighbors(corpus, "B") == ("A", "C")
     assert neighbors(corpus, "A") == (None, "B")
     assert neighbors(corpus, "B", "album") == (None, "C")
+
+
+def test_legend_lists_voices_present():
+    h = render_song(SONG)
+    legend = re.search(r'<div class="fx-legend">(.*?)</div>', h).group(1)
+    assert [v for v in ["Harrison", "Shared", "McCartney"] if f"<b>{v}</b>" in legend] == ["Harrison", "Shared", "McCartney"]
+    assert "<b>Lennon</b>" not in legend
+    assert "fx-legend" not in render_song(SONG, effects_on=False).split("</style>")[1]
+
+
+def test_motion_modes():
+    assert "animation-iteration-count:1" in render_song(SONG)
+    assert "animation-iteration-count:1" not in render_song(SONG, motion="loop")
+    assert ".fx,.fx *{animation:none !important" in render_song(SONG, motion="off")

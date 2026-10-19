@@ -1,0 +1,9 @@
+# Raw downloads and datasets containing copyrighted lyrics stay local
+raw/
+data/*
+!data/beatles/
+data/beatles/*
+!data/beatles/beatles_songs.csv
+!data/beatles/beatles_official.csv
+__pycache__/
+.DS_Store

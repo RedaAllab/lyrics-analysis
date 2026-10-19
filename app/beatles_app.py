@@ -2,7 +2,6 @@
 Run:  streamlit run app/beatles_app.py
 Shows statistics and word lists only (no lyrics text)."""
 import sys
-from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -10,7 +9,7 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-from beatles_lib import PHASES, content, load_corpus, monroe, prior_from  # noqa: E402
+from beatles_lib import PHASES, content_counter, load_public, merge, monroe, prior_from  # noqa: E402
 
 st.set_page_config(page_title="Beatles lyrics explorer", layout="wide")
 
@@ -21,7 +20,7 @@ SINGERS = ["Lennon", "McCartney", "Harrison", "Starr", "Shared"]
 
 @st.cache_data(show_spinner="Loading corpus...")
 def get_corpus(originals_only: bool) -> pd.DataFrame:
-    return load_corpus(originals_only)
+    return load_public(originals_only)
 
 
 # ---------------- sidebar filters ----------------
@@ -45,19 +44,18 @@ tab_over, tab_time, tab_words, tab_singer, tab_songs = st.tabs(
 
 # ---------------- overview ----------------
 with tab_over:
-    all_words = [w for ws in df.words for w in ws]
-    counts = Counter(all_words)
+    counts = merge(df.bow)
     hapax = sum(1 for n in counts.values() if n == 1)
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Songs", len(df)); c2.metric("Words", f"{len(all_words):,}")
+    c1.metric("Songs", len(df)); c2.metric("Words", f"{sum(counts.values()):,}")
     c3.metric("Distinct words", f"{len(counts):,}"); c4.metric("Used once", f"{hapax / len(counts):.0%}")
     c5.metric("Repeated lines", f"{df.repeat_ratio.mean():.0%}")
     n = st.slider("Number of words shown", 10, 60, 25)
-    top = pd.DataFrame(Counter(content(all_words)).most_common(n), columns=["word", "count"])
+    top = pd.DataFrame(content_counter(counts).most_common(n), columns=["word", "count"])
     st.plotly_chart(px.bar(top[::-1], x="count", y="word", orientation="h", height=max(350, 18 * n),
                            title="Most frequent words (stop words, syllables and names removed)"), use_container_width=True)
     ordered = df.sort_values(["year", "title"]); seen, growth = set(), []
-    for ws in ordered.words:
+    for ws in ordered.bow:
         seen |= set(ws); growth.append(len(seen))
     g = pd.DataFrame({"song #": range(1, len(growth) + 1), "distinct words": growth, "title": ordered.title.values, "year": ordered.year.values})
     st.plotly_chart(px.line(g, x="song #", y="distinct words", hover_data=["title", "year"], title="Vocabulary growth (chronological order)"), use_container_width=True)
@@ -84,7 +82,7 @@ with tab_time:
     watch = [w.strip().lower() for w in raw.split(",") if w.strip()]
     rows = []
     for k, grp in d.groupby(key):
-        c = Counter(w for ws in grp.words for w in ws); tot = sum(c.values())
+        c = merge(grp.bow); tot = sum(c.values())
         for w in watch:
             rows.append({key: k, "word": w, "per 1000 words": 1000 * c[w] / tot, "occurrences": c[w]})
     if rows:
@@ -105,7 +103,7 @@ with tab_words:
         grp = d[d.phase == p]
         if grp.empty or len(grp) == len(d):
             colw.caption(f"{p}: no data"); continue
-        a = Counter(content([w for ws in grp.words for w in ws])); b = Counter(content([w for ws in d[d.phase != p].words for w in ws]))
+        a = content_counter(merge(grp.bow)); b = content_counter(merge(d[d.phase != p].bow))
         r = monroe(a, b, prior).head(n_words)
         colw.markdown(f"**{p}** ({len(grp)} songs)")
         colw.dataframe(r[["word", "in_group", "z"]].round(1).reset_index(drop=True), hide_index=True, use_container_width=True)
@@ -124,7 +122,7 @@ with tab_singer:
         _, prior_s = prior_from(df)
         cols = st.columns(len(main))
         for colw, s in zip(cols, main):
-            a = Counter(content([w for ws in df[df.singer == s].words for w in ws])); b = Counter(content([w for ws in df[df.singer != s].words for w in ws]))
+            a = content_counter(merge(df[df.singer == s].bow)); b = content_counter(merge(df[df.singer != s].bow))
             colw.markdown(f"**{s}**")
             colw.dataframe(monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].round(1).reset_index(drop=True), hide_index=True, use_container_width=True)
 
@@ -133,7 +131,7 @@ with tab_songs:
     q = st.text_input("Find songs containing the word", "").strip().lower()
     t = df[["title", "year", "release_core", "singer", "tokens", "types", "mattr", "repeat_ratio"]].copy()
     if q:
-        t["occurrences"] = df.words.map(lambda ws: ws.count(q))
+        t["occurrences"] = df.bow.map(lambda c: c.get(q, 0))
         t = t[t.occurrences > 0].sort_values("occurrences", ascending=False)
         st.caption(f"{len(t)} songs contain '{q}' ({int(t.occurrences.sum())} occurrences).")
     else:

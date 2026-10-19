@@ -27,6 +27,15 @@ def tokenize(text):
 def content(words):
     return [w for w in words if w not in STOP and w not in EXCLUDED and len(w) > 1]
 
+def merge(counters):
+    total = Counter()
+    for c in counters:
+        total.update(c)
+    return total
+
+def content_counter(c):
+    return Counter({w: n for w, n in c.items() if w not in STOP and w not in EXCLUDED and len(w) > 1})
+
 def mattr(words, w=MATTR_WINDOW):
     if len(words) < w:
         return np.nan
@@ -53,6 +62,7 @@ def load_corpus(originals_only=True):
     df["words"] = df.lyrics_clean.map(tokenize)
     df["words_dedup"] = df.lyrics_clean.map(lambda t: tokenize("\n".join(dict.fromkeys(l.strip() for l in t.lower().split("\n")))))
     df = df[df.words.map(len) >= MIN_TOKENS].reset_index(drop=True)
+    df["bow"] = df.words.map(Counter)
     df["tokens"] = df.words.map(len)
     df["types"] = df.words.map(lambda w: len(set(w)))
     df["mattr"] = df.words.map(mattr)
@@ -74,5 +84,27 @@ def monroe(counts_a, counts_b, prior, a0=200, min_count=5):
     return pd.DataFrame(rows, columns=["word", "in_group", "in_rest", "z"]).sort_values("z", ascending=False)
 
 def prior_from(df):
-    c = Counter(content([w for ws in df.words for w in ws])); t = sum(c.values())
+    c = content_counter(merge(df.bow)); t = sum(c.values())
     return c, {w: n / t for w, n in c.items()}
+
+
+PUBLIC = ROOT / "data/public/beatles_bow.parquet"
+PUBLIC_COLS = ["title", "year", "release_core", "songwriters", "lead_vocal", "is_original", "singer", "phase",
+               "tokens", "types", "mattr", "mattr_dedup", "repeat_ratio"]
+
+def export_public():
+    """Lyrics-free dataset: per-song metrics and bag-of-words (word counts), safe to deploy."""
+    df = load_corpus(originals_only=False)
+    out = df[PUBLIC_COLS].copy()
+    out["bow_words"] = df.bow.map(lambda c: list(c.keys()))
+    out["bow_counts"] = df.bow.map(lambda c: [int(n) for n in c.values()])
+    PUBLIC.parent.mkdir(parents=True, exist_ok=True)
+    out.to_parquet(PUBLIC, compression="zstd", index=False)
+    return out
+
+def load_public(originals_only=True):
+    """Same shape as load_corpus (minus lyrics), from the deployable bag-of-words file."""
+    df = pd.read_parquet(PUBLIC)
+    df["bow"] = [Counter(dict(zip(w, c))) for w, c in zip(df.bow_words, df.bow_counts)]
+    df = df.drop(columns=["bow_words", "bow_counts"])
+    return df[df.is_original].reset_index(drop=True) if originals_only else df

@@ -4,6 +4,7 @@ import streamlit as st
 from beatles_viz.attribution import resolve_voice
 from beatles_viz.corpus import doc_frequencies, neighbors
 from beatles_viz.effects import get_effect
+from beatles_viz.render.components import plot
 from beatles_viz.render.song_view import render_song
 from beatles_viz.viz import song_charts as charts
 
@@ -72,11 +73,12 @@ def read_view(song, corpus, local, key):
 
 
 def _show(fig, question, missing="Not enough data for this chart."):
-    st.caption(question)
     if fig is None:
+        st.markdown(f"**{question}**")
         st.info(missing)
     else:
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(title=question)  # one title per chart, phrased as the question it answers
+        plot(fig)
 
 
 def analyse_view(song, corpus, local, key):

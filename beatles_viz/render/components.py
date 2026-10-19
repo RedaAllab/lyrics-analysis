@@ -4,6 +4,20 @@ import streamlit as st
 
 from beatles_viz.config import VOICE_COLORS
 
+PLOT_CONFIG = {"displayModeBar": False}
+HELP = {
+    "mattr": "Moving-average type-token ratio: share of distinct words in every 50-word window, averaged. "
+             "Higher means a more varied vocabulary, independent of song length.",
+    "repeats": "Share of lines that repeat an earlier line of the same song.",
+    "used_once": "Share of the vocabulary that appears only once in the selection.",
+    "z": "How strongly the word is over-represented compared with the rest (log-odds z-score). "
+         "Above 2 is a clear difference.",
+}
+
+
+def plot(fig):
+    st.plotly_chart(fig, use_container_width=True, config=PLOT_CONFIG)
+
 
 @st.cache_data(show_spinner="Loading songs...")
 def cached_corpus(source):
@@ -42,8 +56,10 @@ def song_header(song):
 def metrics_panel(song, corpus):
     ref = corpus[corpus.is_original]
     cols = st.columns(4)
-    cols[0].metric("Words", int(song.tokens), f"{song.tokens - ref.tokens.median():+.0f} vs median")
-    cols[1].metric("Distinct words", int(song.types), f"{song.types - ref.types.median():+.0f} vs median")
+    # Neutral deltas: a shorter song is not a worse one.
+    cols[0].metric("Words", int(song.tokens), f"{song.tokens - ref.tokens.median():+.0f} vs median", delta_color="off")
+    cols[1].metric("Distinct words", int(song.types), f"{song.types - ref.types.median():+.0f} vs median",
+                   delta_color="off")
     mattr = "n/a" if song.mattr != song.mattr else f"{song.mattr:.2f}"
-    cols[2].metric("Richness (MATTR-50)", mattr)
-    cols[3].metric("Repeated lines", f"{song.repeat_ratio:.0%}")
+    cols[2].metric("Lexical richness", mattr, help=HELP["mattr"])
+    cols[3].metric("Repeated lines", f"{song.repeat_ratio:.0%}", help=HELP["repeats"])

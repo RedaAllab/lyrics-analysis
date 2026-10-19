@@ -37,3 +37,5 @@ VOICE_COLORS = {"Lennon": "#3a6ea5", "McCartney": "#d1495b", "Harrison": "#e09f3
 SECTION_COLORS = {"intro": "#c9d6df", "verse": "#52616b", "pre_chorus": "#8fa9b8", "chorus": "#e07a5f",
                   "bridge": "#81b29a", "instrumental": "#f2cc8f", "outro": "#a7b1b8", "other": "#d8d8d8",
                   "song": "#52616b"}
+ACCENT = "#e07a5f"
+VOICE_ORDER = ["Lennon", "McCartney", "Harrison", "Starr", "Shared", "Neutral"]

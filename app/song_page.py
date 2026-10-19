@@ -3,13 +3,12 @@ from pathlib import Path
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatles_viz.data.loader import has_lyrics  # noqa: E402
 from beatles_viz.render.components import cached_corpus, metrics_panel, song_header, song_selector  # noqa: E402
 from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, read_view  # noqa: E402
 
 KEY = "song"
-st.set_page_config(page_title="Song - Beatles explorer", layout="wide")
 local = has_lyrics()
 corpus = cached_corpus("local" if local else "public")
 song, scope = song_selector(corpus, key=KEY)

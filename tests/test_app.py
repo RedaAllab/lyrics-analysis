@@ -9,12 +9,13 @@ from streamlit.testing.v1 import AppTest
 from beatles_viz.data.loader import has_lyrics
 
 APP = Path(__file__).resolve().parent.parent / "app"
-SONG_PAGE = str(APP / "pages/1_Song.py")
+SONG_PAGE = str(APP / "song_page.py")
 needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file not available")
 
 
-def test_home_runs():
-    assert not AppTest.from_file(str(APP / "beatles_app.py"), default_timeout=180).run().exception
+@pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py"])
+def test_corpus_runs(entry):
+    assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
 
 
 @needs_lyrics

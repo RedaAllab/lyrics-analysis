@@ -1,0 +1,22 @@
+,value
+songs,272
+originals,213
+columns,"artist, title, year, release_core, songwriters, lead_vocal, is_original, genius_title, n_tokens, n_types, lyrics_raw, lyrics_clean"
+missing_values,0
+lead_vocal_dash,3
+songs_without_tags,21
+songs_with_text_before_first_tag,2
+songs_with_unclosed_tag,1
+songs_with_inline_annotations,2
+songs_with_non_ascii,22
+distinct_raw_labels,79
+distinct_singer_strings,59
+sections,1827
+sections_with_named_singer,361
+originals_co_written,183
+originals_voice_Lennon,75
+originals_voice_McCartney,68
+originals_voice_Shared,32
+originals_voice_Harrison,27
+originals_voice_Starr,8
+originals_voice_Neutral,3

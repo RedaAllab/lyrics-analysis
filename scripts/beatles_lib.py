@@ -1,52 +1,15 @@
 """Shared corpus loading and text metrics for the Beatles analysis and the Streamlit app."""
-import math, re
+import math, re, sys
 from collections import Counter
 from pathlib import Path
-import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
-ROOT = Path(__file__).resolve().parent.parent
-WORD = re.compile(r"[a-z]+(?:'[a-z]+)*")
-STOP = set(ENGLISH_STOP_WORDS) | {"ll", "ve", "re", "don't", "i'm", "it's", "i'll", "you're", "i've", "that's",
-                                  "can't", "didn't", "won't", "isn't", "he's", "she's", "let's", "we're", "they're"}
-# Vocables (non-lexical syllables) and proper names are kept in the token counts used for length and
-# richness, but removed from word rankings and characteristic-word lists.
-VOCABLES = {"na", "la", "da", "doo", "dee", "du", "ba", "bom", "sha", "shoo", "dum", "ob", "di", "ho", "ha",
-            "ah", "ahh", "mm", "mmm", "hm", "uh", "oo", "ooh", "ooo", "woo", "wah", "bop", "ha", "tit", "ding", "dong"}
-NAMES = {"john", "george", "paul", "ringo", "yoko", "jude", "julia", "sadie", "rita", "lucy", "michelle", "prudence",
-         "eleanor", "rigby", "maxwell", "bungalow", "bill", "rocky", "raccoon", "martha", "desmond", "molly", "jojo",
-         "loretta", "kite", "mustard", "joe", "jack", "sam", "mary", "maggie", "anna", "sgt", "pepper", "peppers", "billy", "shears"}
-EXCLUDED = VOCABLES | NAMES
-PHASES = [("1962-63", 1962, 1963), ("1964-65", 1964, 1965), ("1966-67", 1966, 1967), ("1968-70", 1968, 1970)]
-MIN_TOKENS, MATTR_WINDOW = 30, 50
-
-def tokenize(text):
-    return WORD.findall(text.lower().replace("’", "'"))
-
-def content(words):
-    return [w for w in words if w not in STOP and w not in EXCLUDED and len(w) > 1]
-
-def merge(counters):
-    total = Counter()
-    for c in counters:
-        total.update(c)
-    return total
-
-def content_counter(c):
-    return Counter({w: n for w, n in c.items() if w not in STOP and w not in EXCLUDED and len(w) > 1})
-
-def mattr(words, w=MATTR_WINDOW):
-    if len(words) < w:
-        return np.nan
-    c = Counter(words[:w]); vals = [len(c)]
-    for i in range(w, len(words)):
-        c[words[i]] += 1
-        c[words[i - w]] -= 1
-        if c[words[i - w]] == 0:
-            del c[words[i - w]]
-        vals.append(len(c))
-    return float(np.mean(vals)) / w
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from beatles_viz.config import MATTR_WINDOW, MIN_TOKENS, PHASES, ROOT  # noqa: E402,F401
+from beatles_viz.text.keyness import monroe  # noqa: E402,F401
+from beatles_viz.text.metrics import mattr  # noqa: E402,F401
+from beatles_viz.text.tokenize import (EXCLUDED, NAMES, STOP, VOCABLES, content, content_counter,  # noqa: E402,F401
+                                       merge, tokenize)
 
 def singer(lead_vocal):
     names = set(re.findall(r"Lennon|McCartney|Harrison|Starr", re.sub(r"\(.*?\)", "", lead_vocal)))
@@ -71,17 +34,6 @@ def load_corpus(originals_only=True):
     df["singer"] = df.lead_vocal.map(singer)
     df["phase"] = df.year.map(lambda y: next((p for p, a, b in PHASES if a <= y <= b), None))
     return df
-
-def monroe(counts_a, counts_b, prior, a0=200, min_count=5):
-    """z-scored log-odds with an informative Dirichlet prior (Monroe et al. 2008)."""
-    na, nb = sum(counts_a.values()), sum(counts_b.values()); rows = []
-    for w, p in prior.items():
-        aw = a0 * p; ya, yb = counts_a.get(w, 0), counts_b.get(w, 0)
-        if ya + yb < min_count:
-            continue
-        d = math.log((ya + aw) / (na + a0 - ya - aw)) - math.log((yb + aw) / (nb + a0 - yb - aw))
-        rows.append((w, ya, yb, d / math.sqrt(1 / (ya + aw) + 1 / (yb + aw))))
-    return pd.DataFrame(rows, columns=["word", "in_group", "in_rest", "z"]).sort_values("z", ascending=False)
 
 def prior_from(df):
     c = content_counter(merge(df.bow)); t = sum(c.values())

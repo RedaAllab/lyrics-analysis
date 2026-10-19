@@ -117,7 +117,8 @@ def corpus_position(song, corpus, period=None):
                      labels={"tokens": "words in the song", "mattr": "lexical richness (MATTR-50)"})
     if not np.isnan(song.mattr):
         fig.add_scatter(x=[song.tokens], y=[song.mattr], mode="markers", name=song.title,
-                        marker=dict(symbol="star", size=18, color="black", line=dict(color="white", width=1)),
+                        # Gold fill with a dark outline stays visible on both light and dark themes.
+                        marker=dict(symbol="star", size=20, color="#f5b700", line=dict(color="#1a1a1a", width=1.5)),
                         hovertemplate=f"{song.title}<extra></extra>")
     scope = f"songs of {period}" if period else "all songs"
     return _layout(fig, f"Length and richness compared with {scope}", height=420)

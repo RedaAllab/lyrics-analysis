@@ -3,10 +3,14 @@
 Vocabulary analysis of Beatles lyrics (originals first), built from public datasets.
 
 ## Streamlit app
-[![Deploy on Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=RedaAllab/lyrics-analysis&branch=main&mainModule=app/beatles_app.py)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/)
 
-Interactive explorer (vocabulary, evolution over time, lead singers). Deploy it from the badge above
-(Streamlit Community Cloud, main file `app/beatles_app.py`). Run locally: `streamlit run app/beatles_app.py`.
+Deployed app: https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/
+(access limited to authorised viewers while the repository is private).
+
+Interactive explorer (vocabulary, evolution over time, lead singers, per-song charts). To deploy another copy, use
+[Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=RedaAllab/lyrics-analysis&branch=main&mainModule=app/beatles_app.py)
+(main file `app/beatles_app.py`). Run locally: `streamlit run app/beatles_app.py`.
 The app reads `data/public/beatles_bow.parquet`: per-song metrics and word counts only, no lyrics text.
 
 ## Layout

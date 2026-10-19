@@ -108,18 +108,22 @@ def keyness(song_bow, corpus_bows, top=10):
     return _layout(fig, "Words that set this song apart from the corpus", height=360)
 
 
-def corpus_position(song, corpus, period=None):
+HIGHLIGHT = {"symbol": "star", "size": 20, "line": dict(color="#1a1a1a", width=1.5)}
+HIGHLIGHT_COLORS = ["#f5b700", "#5fa8d3"]  # gold and sky blue, both visible on light and dark themes
+
+
+def corpus_position(song, corpus, period=None, others=()):
+    """Scatter of the corpus with the song (and optional other songs) marked as stars."""
     d = corpus.dropna(subset=["mattr"])
     if period:
         d = d[d.phase == period]
     fig = px.scatter(d, x="tokens", y="mattr", color="voice", color_discrete_map=VOICE_COLORS, opacity=0.55,
                      hover_name="title", hover_data={"year": True, "voice": True, "tokens": True, "mattr": ":.2f"},
                      labels={"tokens": "words in the song", "mattr": "lexical richness (MATTR-50)"})
-    if not np.isnan(song.mattr):
-        fig.add_scatter(x=[song.tokens], y=[song.mattr], mode="markers", name=song.title,
-                        # Gold fill with a dark outline stays visible on both light and dark themes.
-                        marker=dict(symbol="star", size=20, color="#f5b700", line=dict(color="#1a1a1a", width=1.5)),
-                        hovertemplate=f"{song.title}<extra></extra>")
+    for s, color in zip([song, *others], HIGHLIGHT_COLORS):
+        if not np.isnan(s.mattr):
+            fig.add_scatter(x=[s.tokens], y=[s.mattr], mode="markers", name=s.title,
+                            marker={**HIGHLIGHT, "color": color}, hovertemplate=f"{s.title}<extra></extra>")
     scope = f"songs of {period}" if period else "all songs"
     return _layout(fig, f"Length and richness compared with {scope}", height=420)
 

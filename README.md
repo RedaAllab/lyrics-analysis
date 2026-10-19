@@ -17,8 +17,10 @@ The app reads `data/public/beatles_bow.parquet`: per-song metrics and word count
 - `scripts/build_beatles.py` builds `data/beatles/beatles.parquet` from the official song list (Wikipedia) and Genius lyric datasets.
 - `scripts/beatles_lib.py` shared corpus loading and metrics.
 - `scripts/analyse_beatles.py` tables and figures in `analysis/beatles/`.
-- `app/beatles_app.py` entry point (navigation): `app/corpus_page.py` corpus view and `app/song_page.py` song page with
-  two views, Read (full song with one visual effect per voice, local only, needs the lyrics file) and Analyse (per-song charts).
+- `app/beatles_app.py` entry point (navigation, theme, logo): `app/home_page.py` song search and songs to discover,
+  `app/song_page.py` song page with two views, Read (full song with one visual effect per voice, local only, needs the
+  lyrics file) and Analyse (per-song charts), `app/compare_page.py` two songs side by side, `app/corpus_page.py`
+  the whole catalogue. Theme in `.streamlit/config.toml`, logo in `app/static/`.
 - `beatles_viz/` package: data loading, sections, metrics, voice attribution, charts, effects, rendering.
 - `tests/` pytest suite (synthetic lyrics only). `scripts/audit_dataset.py` dataset audit (`analysis/audit/`).
 - `ROADMAP.md` development plan.

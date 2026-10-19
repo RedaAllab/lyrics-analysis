@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48">
+  <g transform="translate(24 24)">
+    <circle r="20" fill="#0d0e12" stroke="#e07a5f" stroke-width="2"/>
+    <circle r="14" fill="none" stroke="#2b2d36" stroke-width="1"/>
+    <circle r="10" fill="none" stroke="#2b2d36" stroke-width="1"/>
+    <circle r="6" fill="#e07a5f"/>
+    <circle r="1.6" fill="#0d0e12"/>
+  </g>
+  <text x="54" y="22" font-family="Georgia, serif" font-size="17" fill="#ece6dc">Lyrics</text>
+  <text x="54" y="39" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="2" fill="#9a9aa6">EXPLORER</text>
+</svg>

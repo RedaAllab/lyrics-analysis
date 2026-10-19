@@ -13,9 +13,22 @@ SONG_PAGE = str(APP / "song_page.py")
 needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file not available")
 
 
-@pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py"])
-def test_corpus_runs(entry):
+@pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py", "compare_page.py"])
+def test_pages_run(entry):
     assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
+
+
+def test_home_shows_search_and_featured_songs():
+    at = AppTest.from_file(str(APP / "beatles_app.py"), default_timeout=180).run()
+    assert not at.exception
+    assert at.selectbox[0].placeholder.startswith("Type a title")
+    assert len([b for b in at.button if b.label == "Open"]) >= 4
+
+
+def test_compare_page_rejects_same_song():
+    at = AppTest.from_file(str(APP / "compare_page.py"), default_timeout=180).run()
+    at.selectbox(key="cmp_1").set_value(at.selectbox(key="cmp_0").value).run()
+    assert not at.exception and at.info
 
 
 @needs_lyrics

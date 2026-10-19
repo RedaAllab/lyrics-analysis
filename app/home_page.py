@@ -8,7 +8,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatles_viz.config import VOICE_COLORS  # noqa: E402
 from beatles_viz.corpus import featured_songs  # noqa: E402
 from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import cached_corpus, open_song  # noqa: E402
+from beatles_viz.render.components import cached_corpus, open_song, plot  # noqa: E402
+from beatles_viz.viz.song_charts import fingerprint_figure  # noqa: E402
 from beatles_viz.render.identity import kicker  # noqa: E402
 
 corpus = cached_corpus("local" if has_lyrics() else "public")
@@ -37,6 +38,9 @@ for row_start in range(0, len(cards), 3):
         with col.container(border=True):
             kicker(label)
             st.markdown(f"### {title}")
+            if "fingerprint" in song and song.fingerprint.size > 1:
+                plot(fingerprint_figure(song.fingerprint, VOICE_COLORS.get(song.voice, "#e07a5f"), height=110),
+                     static=True)
             st.markdown(f'<span class="lx-dot" style="background:{VOICE_COLORS.get(song.voice, "#999")}"></span>'
                         f'{song.voice} · {int(song.year)}<br><span class="lx-stat">{reason}</span>',
                         unsafe_allow_html=True)

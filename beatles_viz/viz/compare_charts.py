@@ -7,13 +7,16 @@ from beatles_viz.text.keyness import monroe, prior
 from beatles_viz.text.tokenize import content_counter
 from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, PRONOUN_LABELS, _layout
 
-PROFILE = {"tokens": "Words", "types": "Distinct words", "mattr": "Lexical richness", "repeat_ratio": "Repeated lines"}
+PROFILE = {"tokens": "Words", "types": "Distinct words", "mattr": "Lexical richness", "repeat_ratio": "Repeated lines",
+           "repetition_score": "Repetition score"}
 
 
 def percentile_profile(a, b, corpus):
     """Each metric as a percentile of the corpus, so scales with different units sit on one axis."""
     rows = []
     for col, label in PROFILE.items():
+        if col not in corpus:
+            continue
         ref = corpus[col].dropna()
         for song in (a, b):
             value = song[col]

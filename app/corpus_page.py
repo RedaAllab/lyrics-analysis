@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from beatles_lib import PHASES, content_counter, load_public, merge, monroe, prior_from  # noqa: E402
 from beatles_viz.config import ACCENT, NEUTRAL, VOICE_COLORS, VOICE_ORDER  # noqa: E402
-from beatles_viz.render.components import HELP, apply_filters, corpus_filters, open_song, plot  # noqa: E402
+from beatles_viz.render.components import HELP, apply_filters, corpus_filters, open_song, open_word, plot  # noqa: E402
 
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
@@ -29,7 +29,17 @@ SONG_TABLE = {"title": "Title", "year": st.column_config.NumberColumn("Year", fo
               "types": st.column_config.NumberColumn("Distinct words", format="%d"),
               "mattr": st.column_config.NumberColumn("Lexical richness", format="%.2f", help=HELP["mattr"]),
               "repeats": st.column_config.NumberColumn("Repeated lines", format="%.0f%%", help=HELP["repeats"]),
-              "occurrences": st.column_config.NumberColumn("Occurrences", format="%d")}
+              "occurrences": st.column_config.NumberColumn("Occurrences", format="%d"),
+              "repetition_score": st.column_config.NumberColumn("Repetition score", format="%.3f",
+                                                                help=HELP["repetition"])}
+
+
+def word_table(container, table, key):
+    """Characteristic words; selecting one opens its Word page."""
+    sel = container.dataframe(table, hide_index=True, use_container_width=True, column_config=WORD_TABLE,
+                              on_select="rerun", selection_mode="single-row", key=key)
+    if sel.selection.rows:
+        open_word(table.iloc[sel.selection.rows[0]]["word"])
 
 
 @st.cache_data(show_spinner="Loading corpus...")
@@ -114,7 +124,7 @@ with tab_time:
 # ---------------- characteristic words ----------------
 with tab_words:
     st.caption("Words used much more in a period than in the rest of the selection (log-odds z-score, "
-               "Monroe et al. 2008). Words seen fewer than 5 times are ignored.")
+               "Monroe et al. 2008). Words seen fewer than 5 times are ignored. Select a word to open its page.")
     n_words = st.slider("Words per group", 5, 25, 10, key="n_dist")
     d = df[df.phase.notna()]
     _, prior = prior_from(d)
@@ -126,8 +136,7 @@ with tab_words:
         a = content_counter(merge(grp.bow)); b = content_counter(merge(d[d.phase != p].bow))
         r = monroe(a, b, prior).head(n_words)
         colw.markdown(f"**{p}** ({len(grp)} songs)")
-        colw.dataframe(r[["word", "in_group", "z"]].reset_index(drop=True), hide_index=True,
-                       use_container_width=True, column_config=WORD_TABLE)
+        word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"phase_words_{p}")
 
 # ---------------- singers ----------------
 with tab_singer:
@@ -154,13 +163,13 @@ with tab_singer:
         for colw, s in zip(cols, main):
             a = content_counter(merge(df[df.singer == s].bow)); b = content_counter(merge(df[df.singer != s].bow))
             colw.markdown(f"**{s}**")
-            colw.dataframe(monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].reset_index(drop=True),
-                           hide_index=True, use_container_width=True, column_config=WORD_TABLE)
+            word_table(colw, monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].reset_index(drop=True),
+                       f"singer_words_{s}")
 
 # ---------------- songs ----------------
 with tab_songs:
     q = st.text_input("Find songs containing the word", "").strip().lower()
-    t = df[["title", "year", "release_core", "singer", "tokens", "types", "mattr"]].copy()
+    t = df[["title", "year", "release_core", "singer", "tokens", "types", "mattr", "repetition_score"]].copy()
     t["repeats"] = df.repeat_ratio * 100
     if q:
         t["occurrences"] = df.bow.map(lambda c: c.get(q, 0))

@@ -10,13 +10,15 @@ HELP = {
              "Higher means a more varied vocabulary, independent of song length.",
     "repeats": "Share of lines that repeat an earlier line of the same song.",
     "used_once": "Share of the vocabulary that appears only once in the selection.",
+    "repetition": "Share of word pairs in the song that are the same word (SongSim). 0 means every word is new; higher means more repetition, whatever the length.",
     "z": "How strongly the word is over-represented compared with the rest (log-odds z-score). "
          "Above 2 is a clear difference.",
 }
 
 
-def plot(fig):
-    st.plotly_chart(fig, use_container_width=True, config=PLOT_CONFIG)
+def plot(fig, static=False):
+    config = {**PLOT_CONFIG, "staticPlot": True} if static else PLOT_CONFIG
+    st.plotly_chart(fig, use_container_width=True, config=config)
 
 
 @st.cache_data(show_spinner="Loading songs...")
@@ -62,6 +64,11 @@ def open_song(title, page="song_page.py"):
     st.switch_page(page)
 
 
+def open_word(word, page="word_page.py"):
+    st.session_state["goto_word"] = word
+    st.switch_page(page)
+
+
 def song_selector(corpus, key="song"):
     """Shared filters + title picker. Keeps the choice in the URL (?song=...) so a song can be linked."""
     d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
@@ -82,17 +89,44 @@ def song_selector(corpus, key="song"):
 
 
 def song_header(song):
+    from beatles_viz.viz.song_charts import fingerprint_figure
     color = VOICE_COLORS.get(song.voice, "#999999")
-    st.markdown(f"## {song.title}")
+    text, thumb = st.columns([5, 1], vertical_alignment="center")
+    text.markdown(f"## {song.title}")
     release = re.sub(r'"\s+', '"', song.release_core)  # Wikipedia export leaves '" Title' quotes
-    st.markdown(f"{int(song.year)} · *{release}* · written by {song.songwriters} · "
-                f"lead voice <span style='color:{color};font-weight:600'>{song.voice}</span> ({song.lead_vocal})",
-                unsafe_allow_html=True)
+    text.markdown(f"{int(song.year)} · *{release}* · written by {song.songwriters} · "
+                  f"lead voice <span style='color:{color};font-weight:600'>{song.voice}</span> ({song.lead_vocal})",
+                  unsafe_allow_html=True)
+    if "fingerprint" in song and song.fingerprint.size > 1:
+        with thumb:
+            plot(fingerprint_figure(song.fingerprint, color, height=120), static=True)
+            st.caption("Repetition fingerprint", help=HELP["repetition"])
+
+
+def chip_row(label, options, key, help=None):
+    """A row of small buttons; returns the clicked option or None. Plain buttons rather than st.pills,
+    which AppTest cannot rerun."""
+    st.markdown(f"**{label}**", help=help)
+    cols = st.columns(len(options)) if options else []
+    for i, (col, option) in enumerate(zip(cols, options)):
+        if col.button(option, key=f"{key}_{i}", type="tertiary", use_container_width=True):
+            return option
+    return None
+
+
+def similar_picker(song, corpus, matrix, key):
+    from beatles_viz.text.similarity import similar_songs
+    sims = similar_songs(corpus, song.title, k=5, matrix=matrix)
+    labels = {f"{r.title} · {r.similarity:.0%}": r.title for r in sims.itertuples()}
+    pick = chip_row("Songs like this one", list(labels), f"{key}_similar",
+                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).")
+    if pick:
+        open_song(labels[pick])
 
 
 def metrics_panel(song, corpus):
     ref = corpus[corpus.is_original]
-    cols = st.columns(4)
+    cols = st.columns(5)
     # Neutral deltas: a shorter song is not a worse one.
     cols[0].metric("Words", int(song.tokens), f"{song.tokens - ref.tokens.median():+.0f} vs median", delta_color="off")
     cols[1].metric("Distinct words", int(song.types), f"{song.types - ref.types.median():+.0f} vs median",
@@ -100,3 +134,7 @@ def metrics_panel(song, corpus):
     mattr = "n/a" if song.mattr != song.mattr else f"{song.mattr:.2f}"
     cols[2].metric("Lexical richness", mattr, help=HELP["mattr"])
     cols[3].metric("Repeated lines", f"{song.repeat_ratio:.0%}", help=HELP["repeats"])
+    if "repetition_score" in song and song.repetition_score == song.repetition_score:
+        pct = (ref.repetition_score < song.repetition_score).mean()
+        cols[4].metric("Repetition score", f"{song.repetition_score:.3f}", f"more than {pct:.0%} of songs",
+                       delta_color="off", help=HELP["repetition"])

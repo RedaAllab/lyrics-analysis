@@ -5,7 +5,10 @@ import pandas as pd
 from beatles_viz.attribution import lead_voice
 from beatles_viz.config import PHASES
 from beatles_viz.data.loader import load_songs
+import numpy as np
+
 from beatles_viz.text.metrics import pronoun_shares, text_metrics
+from beatles_viz.text.repetition import fingerprint, repetition_score
 from beatles_viz.text.sections import all_lines, split_sections
 from beatles_viz.text.tokenize import tokenize
 
@@ -23,8 +26,13 @@ def build_corpus(df):
         df["bow"] = df.words.map(Counter)
         metrics = pd.DataFrame(df.sections.map(lambda s: text_metrics(all_lines(s))).tolist(), index=df.index)
         df = df.drop(columns=[c for c in metrics if c in df]).join(metrics)
+        df["repetition_score"] = df.words.map(repetition_score)
+        df["fingerprint"] = df.words.map(fingerprint)
     else:
         df = df.join(pd.DataFrame(df.bow.map(pronoun_shares).tolist(), index=df.index))
+        if "fingerprint" in df:  # stored flat in the public file
+            df["fingerprint"] = df.fingerprint.map(lambda f: np.asarray(f, dtype=np.uint8).reshape(
+                int(np.sqrt(len(f))), -1) if f is not None and len(f) else np.zeros((1, 1), dtype=np.uint8))
     df["voice"] = df.lead_vocal.map(lead_voice)
     df["phase"] = df.year.map(phase_of)
     return df.sort_values(["year", "title"]).reset_index(drop=True)

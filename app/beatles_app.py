@@ -13,6 +13,7 @@ apply_identity(HERE / "static/logo.svg", HERE / "static/icon.svg")
 st.navigation([
     st.Page(HERE / "home_page.py", title="Home", icon=":material/home:", url_path="home", default=True),
     st.Page(HERE / "song_page.py", title="Song", icon=":material/lyrics:", url_path="song"),
+    st.Page(HERE / "word_page.py", title="Word", icon=":material/text_fields:", url_path="word"),
     st.Page(HERE / "compare_page.py", title="Compare", icon=":material/compare_arrows:", url_path="compare"),
     st.Page(HERE / "corpus_page.py", title="Corpus", icon=":material/bar_chart:", url_path="corpus"),
 ]).run()

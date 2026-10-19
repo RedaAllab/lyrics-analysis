@@ -9,7 +9,7 @@ from beatles_viz.data.loader import has_lyrics  # noqa: E402
 from beatles_viz.render.components import apply_filters, cached_corpus, corpus_filters, open_song, plot  # noqa: E402
 from beatles_viz.viz import compare_charts as cmp  # noqa: E402
 from beatles_viz.viz import song_charts as charts  # noqa: E402
-from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS  # noqa: E402
+from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, fingerprint_figure  # noqa: E402
 
 local = has_lyrics()
 corpus = cached_corpus("local" if local else "public")
@@ -31,6 +31,9 @@ for i, (col, label) in enumerate(zip(st.columns(2), ["Song A", "Song B"])):
     col.markdown(f'<span class="lx-dot" style="background:{HIGHLIGHT_COLORS[i]}"></span>'
                  f'**{song.title}** · {int(song.year)} · <span style="color:{color}">{song.voice}</span>',
                  unsafe_allow_html=True)
+    if "fingerprint" in song and song.fingerprint.size > 1:
+        with col:
+            plot(fingerprint_figure(song.fingerprint, HIGHLIGHT_COLORS[i], height=140), static=True)
     if col.button("Open this song", key=f"cmp_open_{i}", icon=":material/arrow_forward:"):
         open_song(song.title)
 a, b = picks

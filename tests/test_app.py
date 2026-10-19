@@ -65,3 +65,10 @@ def test_open_song_lands_on_requested_title():
     at.run()
     assert not at.exception and at.session_state["song_title"] == "Something"
     assert "goto_song" not in at.session_state
+
+
+def test_word_page_runs_and_follows_url():
+    at = AppTest.from_file(str(APP / "word_page.py"), default_timeout=180)
+    at.query_params["w"] = "love"
+    at.run()
+    assert not at.exception and at.session_state["word_pick"] == "love"

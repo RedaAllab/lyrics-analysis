@@ -5,7 +5,9 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import cached_corpus, metrics_panel, song_header, song_selector  # noqa: E402
+from beatles_viz.render.components import (cached_corpus, metrics_panel, similar_picker, song_header,  # noqa: E402
+                                           song_selector)
+from beatles_viz.text.similarity import similarity_matrix  # noqa: E402
 from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, read_view  # noqa: E402
 
 KEY = "song"
@@ -29,6 +31,14 @@ st.query_params["view"] = view
 navigation(song, scope, KEY)
 with st.expander("Metrics", expanded=view == ANALYSE):
     metrics_panel(song, corpus)
+
+
+@st.cache_data(show_spinner=False)
+def _similarity(source):
+    return similarity_matrix(corpus)
+
+
+similar_picker(song, corpus, _similarity("local" if local else "public"), KEY)
 
 if view == READ:
     read_view(song, corpus, local, KEY)

@@ -154,3 +154,15 @@ def pronoun_profile(song, corpus):
                  labels={"share": "per 100 words", "pronoun": ""},
                  color_discrete_sequence=["#3a6ea5", "#c9d6df"])
     return _layout(fig, "Point of view: personal pronouns", height=320)
+
+
+def fingerprint_figure(fp, color="#e07a5f", height=150):
+    """SongSim thumbnail: where words repeat along the song (top-left = start). No text involved."""
+    z = 255 * np.sqrt(np.asarray(fp, dtype=float) / 255)  # most blocks are sparse: lift faint repeats
+    fig = go.Figure(go.Heatmap(z=z, colorscale=[[0, "rgba(128,128,128,0.08)"], [0.05, color], [1, color]],
+                               zmin=0, zmax=255, showscale=False, hoverinfo="skip"))
+    fig.update_xaxes(visible=False)
+    fig.update_yaxes(visible=False, autorange="reversed", scaleanchor="x")
+    fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0), paper_bgcolor="rgba(0,0,0,0)",
+                      plot_bgcolor="rgba(0,0,0,0)")
+    return fig

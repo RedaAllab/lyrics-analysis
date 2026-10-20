@@ -1,8 +1,11 @@
 """A 1200x630 PNG card for one song (the usual link-preview size): repetition fingerprint, title, voice and the
-song's most unusual measures. Drawn with Pillow and its built-in font: nothing more to install on Streamlit Cloud."""
+song's most unusual measures. Drawn with Pillow (installed with Streamlit) in the app's fonts, kept in fonts/ with
+their SIL Open Font License."""
 import io
 import re
 import textwrap
+from functools import lru_cache
+from pathlib import Path
 
 import numpy as np
 import streamlit as st
@@ -16,8 +19,15 @@ INK, NAVY, CREAM, GREY = "#12151f", "#1b2440", "#ece6dc", "#9a9aa6"
 FAINT = (40, 44, 58)
 
 
-def _font(size):
-    return ImageFont.load_default(size=size)
+FONTS = {"title": "DMSerifDisplay-Regular.ttf", "label": "BebasNeue-Regular.ttf", "body": "SourceSans3.ttf"}
+
+
+@lru_cache(maxsize=None)
+def _font(size, family="body", weight="Regular"):
+    font = ImageFont.truetype(Path(__file__).parent / "fonts" / FONTS[family], size)
+    if family == "body":  # a variable font, whose default instance is ExtraLight
+        font.set_variation_by_name(weight)
+    return font
 
 
 def _rgb(hex_color):
@@ -35,7 +45,7 @@ def fingerprint_image(fp, color, size=400):
 def _title_lines(draw, title, width):
     for size in (68, 58, 48, 40):
         lines = textwrap.wrap(title, width=max(8, int(width / (size * 0.52))))
-        if len(lines) <= 2 and all(draw.textlength(l, font=_font(size)) <= width for l in lines):
+        if len(lines) <= 2 and all(draw.textlength(l, font=_font(size, "title")) <= width for l in lines):
             return lines, size
     return textwrap.wrap(title, width=30)[:2], 40
 
@@ -51,21 +61,21 @@ def card_png(song, reference):
 
     x, width = 510, W - 510 - 60
     kicker = f"THE BEATLES · {int(song.year)}"
-    kw = d.textlength(kicker, font=_font(22))
+    kw = d.textlength(kicker, font=_font(28, "label"))
     d.rectangle([x, 70, x + kw + 24, 106], fill=CREAM)
-    d.text((x + 12, 76), kicker, fill=INK, font=_font(22))
+    d.text((x + 12, 73), kicker, fill=INK, font=_font(28, "label"))
 
     lines, size = _title_lines(d, song.title, width)
     y = 128
     for line in lines:
-        d.text((x, y), line, fill=CREAM, font=_font(size))
+        d.text((x, y), line, fill=CREAM, font=_font(size, "title"))
         y += int(size * 1.15)
     d.ellipse([x, y + 14, x + 18, y + 32], fill=color)
     d.text((x + 28, y + 10), voice_line(song.voice), fill=GREY, font=_font(24))
 
     y += 64
     for headline, detail in standout_facts(song, reference):
-        d.text((x, y), headline, fill=CREAM, font=_font(30))
+        d.text((x, y), headline, fill=CREAM, font=_font(30, weight="SemiBold"))
         d.text((x, y + 36), detail, fill=GREY, font=_font(20))
         y += 78
 

@@ -1,13 +1,13 @@
 import streamlit as st
 
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import (apply_filters, cached_corpus, chip_row, corpus_filters,
                                            open_song, open_word, plot)
 from beatles_viz.render.identity import kicker
 from beatles_viz.text import words as W
 from beatles_viz.viz import word_charts as charts
 
-corpus = cached_corpus("local" if has_lyrics() else "public")
+corpus = cached_corpus(data_source())
 d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
 vocab, counts = W.vocabulary(d)
 if not vocab:

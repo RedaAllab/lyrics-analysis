@@ -3,12 +3,12 @@ import streamlit as st
 
 from beatles_viz.config import MEMBERS, VOICE_COLORS
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.viz import voice_charts as vc
 
-corpus = analysable(cached_corpus("local" if has_lyrics() else "public"))
+corpus = analysable(cached_corpus(data_source()))
 
 kicker("Lead voices · original compositions")
 st.markdown("## Who sings what")

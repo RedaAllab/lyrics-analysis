@@ -1,7 +1,7 @@
 import streamlit as st
 
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source, has_lyrics
 from beatles_viz.render.components import cached_corpus, metrics_panel, similar_picker, song_header, song_selector
 from beatles_viz.render.listen_view import listen_block
 from beatles_viz.render.share_card import share_block
@@ -11,7 +11,7 @@ from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, re
 
 KEY = "song"
 local = has_lyrics()
-corpus = cached_corpus("local" if local else "public")
+corpus = cached_corpus(data_source())
 song, scope = song_selector(corpus, key=KEY)
 if song is None:
     st.warning("No song matches the filters.")
@@ -40,7 +40,7 @@ def _similarity(source):
     return similarity_matrix(corpus)
 
 
-similar_picker(song, corpus, _similarity("local" if local else "public"), KEY)
+similar_picker(song, corpus, _similarity(data_source()), KEY)
 
 if view == READ:
     read_view(song, corpus, local, KEY)

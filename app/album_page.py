@@ -3,7 +3,7 @@ import streamlit as st
 
 from beatles_viz.config import VOICE_COLORS
 from beatles_viz.corpus import albums
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, listen_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.text.keyness import monroe, prior
@@ -15,7 +15,7 @@ TRACK_METRICS = {"Lexical richness": "mattr", "Words": "tokens", "Repetition sco
                  "Repeated lines": "repeat_ratio"}
 GRID = 4
 
-corpus = cached_corpus("local" if has_lyrics() else "public")
+corpus = cached_corpus(data_source())
 table = albums(corpus)
 names = table.album.tolist()
 wanted = st.query_params.get("album")

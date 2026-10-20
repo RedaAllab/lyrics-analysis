@@ -5,12 +5,12 @@ import streamlit as st
 
 from beatles_viz.config import VOICE_COLORS
 from beatles_viz.corpus import featured_songs
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, open_song, plot
 from beatles_viz.viz.song_charts import fingerprint_figure
 from beatles_viz.render.identity import banner, kicker
 
-corpus = cached_corpus("local" if has_lyrics() else "public")
+corpus = cached_corpus(data_source())
 originals = corpus[corpus.is_original]
 
 banner(Path(__file__).parent / "static/hero.svg",

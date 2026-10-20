@@ -5,7 +5,7 @@ import streamlit as st
 
 from beatles_viz.config import ACCENT, PHASES, PHASE_ORDER, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
                                            plot)
 from beatles_viz.text.keyness import monroe, prior
@@ -43,7 +43,7 @@ def prior_from(d):
 
 
 # ---------------- sidebar filters ----------------
-corpus = analysable(cached_corpus("local" if has_lyrics() else "public"), originals_only=False)
+corpus = analysable(cached_corpus(data_source()), originals_only=False)
 originals_only, years, voices = corpus_filters(int(corpus.year.min()), int(corpus.year.max()))
 full = corpus[corpus.is_original] if originals_only else corpus
 df = apply_filters(full, False, years, voices).copy()

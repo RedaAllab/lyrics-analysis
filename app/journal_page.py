@@ -4,7 +4,7 @@ import streamlit as st
 
 from beatles_viz import personal
 from beatles_viz.config import ACCENT
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, open_song, plot
 from beatles_viz.render.identity import kicker
 
@@ -15,7 +15,7 @@ if not personal.enabled():
     st.stop()
 
 journal = personal.load()
-table = personal.journal_frame(journal, cached_corpus("local" if has_lyrics() else "public"))
+table = personal.journal_frame(journal, cached_corpus(data_source()))
 if table.empty:
     st.info("Nothing yet. On a song page, star it, rate it, write a note or press “I listened”.")
     st.stop()

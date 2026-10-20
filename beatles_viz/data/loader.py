@@ -11,10 +11,14 @@ def has_lyrics():
     return LYRICS_PATH.exists() and os.environ.get("BEATLES_PUBLIC_ONLY") != "1"
 
 
+def data_source():
+    return "local" if has_lyrics() else "public"
+
+
 def load_songs(source="auto", originals_only=True):
     """source: "local" (with lyrics), "public" (word counts only) or "auto" (local when available)."""
     if source == "auto":
-        source = "local" if has_lyrics() else "public"
+        source = data_source()
     if source == "local":
         df = pd.read_parquet(LYRICS_PATH)
         if SEMANTIC_PATH.exists():

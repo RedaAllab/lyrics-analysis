@@ -1,7 +1,7 @@
 """Guided stories: four findings, one screen each. Statistics only, works without the lyrics."""
 import streamlit as st
 
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.stories import build_stories
@@ -12,7 +12,7 @@ def cached_stories(source):
     return build_stories(cached_corpus(source))
 
 
-stories = cached_stories("local" if has_lyrics() else "public")
+stories = cached_stories(data_source())
 n = len(stories)
 try:
     step = min(max(int(st.query_params.get("story", 1)), 1), n)

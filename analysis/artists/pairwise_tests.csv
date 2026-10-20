@@ -1,34 +1,309 @@
 metric,a,b,median_a,median_b,p_value
 tokens,The Beatles,The Rolling Stones,183,236,1.11e-14
 tokens,The Beatles,Bob Dylan,183,258,2.49e-19
+tokens,The Beatles,Paul McCartney,183,206,5.44e-06
+tokens,The Beatles,John Lennon,183,185,0.554
+tokens,The Beatles,Leonard Cohen,183,240,1.31e-10
+tokens,The Beatles,Joni Mitchell,183,232,8.55e-13
+tokens,The Beatles,Paul Simon,183,225,1.68e-05
 tokens,The Rolling Stones,Bob Dylan,236,258,0.00288
+tokens,The Rolling Stones,Paul McCartney,236,206,3.63e-05
+tokens,The Rolling Stones,John Lennon,236,185,1.28e-07
+tokens,The Rolling Stones,Leonard Cohen,236,240,0.754
+tokens,The Rolling Stones,Joni Mitchell,236,232,0.776
+tokens,The Rolling Stones,Paul Simon,236,225,0.0899
+tokens,Bob Dylan,Paul McCartney,258,206,6.79e-11
+tokens,Bob Dylan,John Lennon,258,185,4.93e-10
+tokens,Bob Dylan,Leonard Cohen,258,240,0.0625
+tokens,Bob Dylan,Joni Mitchell,258,232,0.0166
+tokens,Bob Dylan,Paul Simon,258,225,9.96e-05
+tokens,Paul McCartney,John Lennon,206,185,0.00564
+tokens,Paul McCartney,Leonard Cohen,206,240,0.000782
+tokens,Paul McCartney,Joni Mitchell,206,232,0.000655
+tokens,Paul McCartney,Paul Simon,206,225,0.212
+tokens,John Lennon,Leonard Cohen,185,240,2.48e-06
+tokens,John Lennon,Joni Mitchell,185,232,4.03e-07
+tokens,John Lennon,Paul Simon,185,225,0.00231
+tokens,Leonard Cohen,Joni Mitchell,240,232,0.618
+tokens,Leonard Cohen,Paul Simon,240,225,0.0903
+tokens,Joni Mitchell,Paul Simon,232,225,0.17
 types,The Beatles,The Rolling Stones,62,86,6.94e-25
 types,The Beatles,Bob Dylan,62,120,1.27e-54
+types,The Beatles,Paul McCartney,62,68.5,0.00198
+types,The Beatles,John Lennon,62,72,0.00531
+types,The Beatles,Leonard Cohen,62,97,1.19e-22
+types,The Beatles,Joni Mitchell,62,114,3.03e-43
+types,The Beatles,Paul Simon,62,96.5,1.96e-26
 types,The Rolling Stones,Bob Dylan,86,120,3.52e-25
+types,The Rolling Stones,Paul McCartney,86,68.5,2.73e-19
+types,The Rolling Stones,John Lennon,86,72,5.72e-07
+types,The Rolling Stones,Leonard Cohen,86,97,0.000295
+types,The Rolling Stones,Joni Mitchell,86,114,1.41e-18
+types,The Rolling Stones,Paul Simon,86,96.5,4.1e-05
+types,Bob Dylan,Paul McCartney,120,68.5,7.32e-64
+types,Bob Dylan,John Lennon,120,72,7.58e-23
+types,Bob Dylan,Leonard Cohen,120,97,5.54e-06
+types,Bob Dylan,Joni Mitchell,120,114,0.115
+types,Bob Dylan,Paul Simon,120,96.5,3.62e-06
+types,Paul McCartney,John Lennon,68.5,72,0.433
+types,Paul McCartney,Leonard Cohen,68.5,97,6.6e-20
+types,Paul McCartney,Joni Mitchell,68.5,114,2.2e-45
+types,Paul McCartney,Paul Simon,68.5,96.5,2.02e-23
+types,John Lennon,Leonard Cohen,72,97,9.59e-10
+types,John Lennon,Joni Mitchell,72,114,1.68e-21
+types,John Lennon,Paul Simon,72,96.5,1.81e-11
+types,Leonard Cohen,Joni Mitchell,97,114,0.000923
+types,Leonard Cohen,Paul Simon,97,96.5,0.876
+types,Joni Mitchell,Paul Simon,114,96.5,0.000387
 mattr,The Beatles,The Rolling Stones,0.64,0.643,0.422
 mattr,The Beatles,Bob Dylan,0.64,0.766,1.37e-35
+mattr,The Beatles,Paul McCartney,0.64,0.651,0.582
+mattr,The Beatles,John Lennon,0.64,0.654,0.362
+mattr,The Beatles,Leonard Cohen,0.64,0.717,2.13e-10
+mattr,The Beatles,Joni Mitchell,0.64,0.76,4.49e-28
+mattr,The Beatles,Paul Simon,0.64,0.74,8.32e-16
 mattr,The Rolling Stones,Bob Dylan,0.643,0.766,2.96e-37
+mattr,The Rolling Stones,Paul McCartney,0.643,0.651,0.681
+mattr,The Rolling Stones,John Lennon,0.643,0.654,0.685
+mattr,The Rolling Stones,Leonard Cohen,0.643,0.717,2.63e-09
+mattr,The Rolling Stones,Joni Mitchell,0.643,0.76,7.55e-28
+mattr,The Rolling Stones,Paul Simon,0.643,0.74,1.35e-14
+mattr,Bob Dylan,Paul McCartney,0.766,0.651,9.4e-42
+mattr,Bob Dylan,John Lennon,0.766,0.654,1.67e-17
+mattr,Bob Dylan,Leonard Cohen,0.766,0.717,1.72e-06
+mattr,Bob Dylan,Joni Mitchell,0.766,0.76,0.939
+mattr,Bob Dylan,Paul Simon,0.766,0.74,0.000498
+mattr,Paul McCartney,John Lennon,0.651,0.654,0.645
+mattr,Paul McCartney,Leonard Cohen,0.651,0.717,1.41e-09
+mattr,Paul McCartney,Joni Mitchell,0.651,0.76,4.87e-29
+mattr,Paul McCartney,Paul Simon,0.651,0.74,7.23e-15
+mattr,John Lennon,Leonard Cohen,0.654,0.717,8.86e-06
+mattr,John Lennon,Joni Mitchell,0.654,0.76,1.38e-16
+mattr,John Lennon,Paul Simon,0.654,0.74,6.74e-09
+mattr,Leonard Cohen,Joni Mitchell,0.717,0.76,5.35e-06
+mattr,Leonard Cohen,Paul Simon,0.717,0.74,0.158
+mattr,Joni Mitchell,Paul Simon,0.76,0.74,0.00111
 repetition_score,The Beatles,The Rolling Stones,0.0302,0.0263,0.00305
 repetition_score,The Beatles,Bob Dylan,0.0302,0.015,4.59e-42
+repetition_score,The Beatles,Paul McCartney,0.0302,0.0276,0.159
+repetition_score,The Beatles,John Lennon,0.0302,0.0274,0.0565
+repetition_score,The Beatles,Leonard Cohen,0.0302,0.0206,3.74e-12
+repetition_score,The Beatles,Joni Mitchell,0.0302,0.0159,1.39e-29
+repetition_score,The Beatles,Paul Simon,0.0302,0.0175,1.38e-21
 repetition_score,The Rolling Stones,Bob Dylan,0.0263,0.015,2.12e-38
+repetition_score,The Rolling Stones,Paul McCartney,0.0263,0.0276,0.0538
+repetition_score,The Rolling Stones,John Lennon,0.0263,0.0274,0.831
+repetition_score,The Rolling Stones,Leonard Cohen,0.0263,0.0206,1.93e-07
+repetition_score,The Rolling Stones,Joni Mitchell,0.0263,0.0159,2.87e-25
+repetition_score,The Rolling Stones,Paul Simon,0.0263,0.0175,3.86e-16
+repetition_score,Bob Dylan,Paul McCartney,0.015,0.0276,1.68e-53
+repetition_score,Bob Dylan,John Lennon,0.015,0.0274,7.98e-18
+repetition_score,Bob Dylan,Leonard Cohen,0.015,0.0206,1.49e-07
+repetition_score,Bob Dylan,Joni Mitchell,0.015,0.0159,0.991
+repetition_score,Bob Dylan,Paul Simon,0.015,0.0175,0.00382
+repetition_score,Paul McCartney,John Lennon,0.0276,0.0274,0.322
+repetition_score,Paul McCartney,Leonard Cohen,0.0276,0.0206,4.05e-11
+repetition_score,Paul McCartney,Joni Mitchell,0.0276,0.0159,9.02e-33
+repetition_score,Paul McCartney,Paul Simon,0.0276,0.0175,7.57e-22
+repetition_score,John Lennon,Leonard Cohen,0.0274,0.0206,3.41e-05
+repetition_score,John Lennon,Joni Mitchell,0.0274,0.0159,7.28e-15
+repetition_score,John Lennon,Paul Simon,0.0274,0.0175,2.07e-10
+repetition_score,Leonard Cohen,Joni Mitchell,0.0206,0.0159,3.4e-06
+repetition_score,Leonard Cohen,Paul Simon,0.0206,0.0175,0.0167
+repetition_score,Joni Mitchell,Paul Simon,0.0159,0.0175,0.0161
 repeat_ratio,The Beatles,The Rolling Stones,0.327,0.204,1.72e-11
 repeat_ratio,The Beatles,Bob Dylan,0.327,0.0936,4.13e-37
+repeat_ratio,The Beatles,Paul McCartney,0.327,0.326,0.805
+repeat_ratio,The Beatles,John Lennon,0.327,0.24,0.000132
+repeat_ratio,The Beatles,Leonard Cohen,0.327,0.207,5.01e-07
+repeat_ratio,The Beatles,Joni Mitchell,0.327,0.103,4.24e-25
+repeat_ratio,The Beatles,Paul Simon,0.327,0.136,6.11e-16
 repeat_ratio,The Rolling Stones,Bob Dylan,0.204,0.0936,5.93e-20
+repeat_ratio,The Rolling Stones,Paul McCartney,0.204,0.326,2.87e-17
+repeat_ratio,The Rolling Stones,John Lennon,0.204,0.24,0.246
+repeat_ratio,The Rolling Stones,Leonard Cohen,0.204,0.207,0.859
+repeat_ratio,The Rolling Stones,Joni Mitchell,0.204,0.103,4.95e-13
+repeat_ratio,The Rolling Stones,Paul Simon,0.204,0.136,3.83e-05
+repeat_ratio,Bob Dylan,Paul McCartney,0.0936,0.326,4.34e-58
+repeat_ratio,Bob Dylan,John Lennon,0.0936,0.24,9.67e-12
+repeat_ratio,Bob Dylan,Leonard Cohen,0.0936,0.207,2.48e-10
+repeat_ratio,Bob Dylan,Joni Mitchell,0.0936,0.103,0.535
+repeat_ratio,Bob Dylan,Paul Simon,0.0936,0.136,0.002
+repeat_ratio,Paul McCartney,John Lennon,0.326,0.24,8.12e-06
+repeat_ratio,Paul McCartney,Leonard Cohen,0.326,0.207,1.37e-09
+repeat_ratio,Paul McCartney,Joni Mitchell,0.326,0.103,1.97e-35
+repeat_ratio,Paul McCartney,Paul Simon,0.326,0.136,1.56e-21
+repeat_ratio,John Lennon,Leonard Cohen,0.24,0.207,0.307
+repeat_ratio,John Lennon,Joni Mitchell,0.24,0.103,1.6e-09
+repeat_ratio,John Lennon,Paul Simon,0.24,0.136,9.77e-05
+repeat_ratio,Leonard Cohen,Joni Mitchell,0.207,0.103,1.18e-07
+repeat_ratio,Leonard Cohen,Paul Simon,0.207,0.136,0.00283
+repeat_ratio,Joni Mitchell,Paul Simon,0.103,0.136,0.0201
 chorus_share,The Beatles,The Rolling Stones,0.236,0.263,0.294
 chorus_share,The Beatles,Bob Dylan,0.236,0,5.34e-17
+chorus_share,The Beatles,Paul McCartney,0.236,0.332,3.47e-05
+chorus_share,The Beatles,John Lennon,0.236,0.241,0.411
+chorus_share,The Beatles,Leonard Cohen,0.236,0.227,0.36
+chorus_share,The Beatles,Joni Mitchell,0.236,0.278,0.117
+chorus_share,The Beatles,Paul Simon,0.236,0.25,0.203
 chorus_share,The Rolling Stones,Bob Dylan,0.263,0,5.24e-26
+chorus_share,The Rolling Stones,Paul McCartney,0.263,0.332,0.000256
+chorus_share,The Rolling Stones,John Lennon,0.263,0.241,0.924
+chorus_share,The Rolling Stones,Leonard Cohen,0.263,0.227,0.867
+chorus_share,The Rolling Stones,Joni Mitchell,0.263,0.278,0.562
+chorus_share,The Rolling Stones,Paul Simon,0.263,0.25,0.591
+chorus_share,Bob Dylan,Paul McCartney,0,0.332,1.51e-43
+chorus_share,Bob Dylan,John Lennon,0,0.241,2.3e-13
+chorus_share,Bob Dylan,Leonard Cohen,0,0.227,6.6e-15
+chorus_share,Bob Dylan,Joni Mitchell,0,0.278,2.99e-25
+chorus_share,Bob Dylan,Paul Simon,0,0.25,4.15e-18
+chorus_share,Paul McCartney,John Lennon,0.332,0.241,0.024
+chorus_share,Paul McCartney,Leonard Cohen,0.332,0.227,0.0207
+chorus_share,Paul McCartney,Joni Mitchell,0.332,0.278,0.00982
+chorus_share,Paul McCartney,Paul Simon,0.332,0.25,0.03
+chorus_share,John Lennon,Leonard Cohen,0.241,0.227,0.991
+chorus_share,John Lennon,Joni Mitchell,0.241,0.278,0.671
+chorus_share,John Lennon,Paul Simon,0.241,0.25,0.749
+chorus_share,Leonard Cohen,Joni Mitchell,0.227,0.278,0.596
+chorus_share,Leonard Cohen,Paul Simon,0.227,0.25,0.786
+chorus_share,Joni Mitchell,Paul Simon,0.278,0.25,0.835
 valence,The Beatles,The Rolling Stones,0.217,0.0221,3.93e-08
 valence,The Beatles,Bob Dylan,0.217,0.0444,1.62e-10
+valence,The Beatles,Paul McCartney,0.217,0.253,0.142
+valence,The Beatles,John Lennon,0.217,0.0944,0.006
+valence,The Beatles,Leonard Cohen,0.217,0.0995,0.00187
+valence,The Beatles,Joni Mitchell,0.217,0.148,0.0187
+valence,The Beatles,Paul Simon,0.217,0.104,0.00237
 valence,The Rolling Stones,Bob Dylan,0.0221,0.0444,0.729
+valence,The Rolling Stones,Paul McCartney,0.0221,0.253,9.32e-19
+valence,The Rolling Stones,John Lennon,0.0221,0.0944,0.101
+valence,The Rolling Stones,Leonard Cohen,0.0221,0.0995,0.00679
+valence,The Rolling Stones,Joni Mitchell,0.0221,0.148,3.35e-05
+valence,The Rolling Stones,Paul Simon,0.0221,0.104,0.0198
+valence,Bob Dylan,Paul McCartney,0.0444,0.253,4.87e-26
+valence,Bob Dylan,John Lennon,0.0444,0.0944,0.0752
+valence,Bob Dylan,Leonard Cohen,0.0444,0.0995,0.00398
+valence,Bob Dylan,Joni Mitchell,0.0444,0.148,1.25e-06
+valence,Bob Dylan,Paul Simon,0.0444,0.104,0.00495
+valence,Paul McCartney,John Lennon,0.253,0.0944,1.1e-05
+valence,Paul McCartney,Leonard Cohen,0.253,0.0995,6.4e-08
+valence,Paul McCartney,Joni Mitchell,0.253,0.148,3.41e-06
+valence,Paul McCartney,Paul Simon,0.253,0.104,2.46e-07
+valence,John Lennon,Leonard Cohen,0.0944,0.0995,0.74
+valence,John Lennon,Joni Mitchell,0.0944,0.148,0.177
+valence,John Lennon,Paul Simon,0.0944,0.104,0.788
+valence,Leonard Cohen,Joni Mitchell,0.0995,0.148,0.15
+valence,Leonard Cohen,Paul Simon,0.0995,0.104,0.866
+valence,Joni Mitchell,Paul Simon,0.148,0.104,0.292
 positive,The Beatles,The Rolling Stones,0.0407,0.0339,0.0387
 positive,The Beatles,Bob Dylan,0.0407,0.0316,0.000336
+positive,The Beatles,Paul McCartney,0.0407,0.0467,0.165
+positive,The Beatles,John Lennon,0.0407,0.04,0.763
+positive,The Beatles,Leonard Cohen,0.0407,0.039,0.654
+positive,The Beatles,Joni Mitchell,0.0407,0.0447,0.222
+positive,The Beatles,Paul Simon,0.0407,0.0366,0.0788
 positive,The Rolling Stones,Bob Dylan,0.0339,0.0316,0.181
+positive,The Rolling Stones,Paul McCartney,0.0339,0.0467,6.83e-05
+positive,The Rolling Stones,John Lennon,0.0339,0.04,0.173
+positive,The Rolling Stones,Leonard Cohen,0.0339,0.039,0.0881
+positive,The Rolling Stones,Joni Mitchell,0.0339,0.0447,0.000195
+positive,The Rolling Stones,Paul Simon,0.0339,0.0366,0.973
+positive,Bob Dylan,Paul McCartney,0.0316,0.0467,5.92e-10
+positive,Bob Dylan,John Lennon,0.0316,0.04,0.00876
+positive,Bob Dylan,Leonard Cohen,0.0316,0.039,0.000548
+positive,Bob Dylan,Joni Mitchell,0.0316,0.0447,7.32e-09
+positive,Bob Dylan,Paul Simon,0.0316,0.0366,0.211
+positive,Paul McCartney,John Lennon,0.0467,0.04,0.152
+positive,Paul McCartney,Leonard Cohen,0.0467,0.039,0.0386
+positive,Paul McCartney,Joni Mitchell,0.0467,0.0447,0.893
+positive,Paul McCartney,Paul Simon,0.0467,0.0366,0.000927
+positive,John Lennon,Leonard Cohen,0.04,0.039,0.839
+positive,John Lennon,Joni Mitchell,0.04,0.0447,0.207
+positive,John Lennon,Paul Simon,0.04,0.0366,0.214
+positive,Leonard Cohen,Joni Mitchell,0.039,0.0447,0.0585
+positive,Leonard Cohen,Paul Simon,0.039,0.0366,0.126
+positive,Joni Mitchell,Paul Simon,0.0447,0.0366,0.001
 negative,The Beatles,The Rolling Stones,0.0174,0.031,2.24e-07
 negative,The Beatles,Bob Dylan,0.0174,0.0292,4.9e-08
+negative,The Beatles,Paul McCartney,0.0174,0.0159,0.169
+negative,The Beatles,John Lennon,0.0174,0.027,0.00225
+negative,The Beatles,Leonard Cohen,0.0174,0.0327,1.55e-06
+negative,The Beatles,Joni Mitchell,0.0174,0.0294,1.84e-05
+negative,The Beatles,Paul Simon,0.0174,0.0276,0.000388
 negative,The Rolling Stones,Bob Dylan,0.031,0.0292,0.643
+negative,The Rolling Stones,Paul McCartney,0.031,0.0159,2.59e-16
+negative,The Rolling Stones,John Lennon,0.031,0.027,0.597
+negative,The Rolling Stones,Leonard Cohen,0.031,0.0327,0.48
+negative,The Rolling Stones,Joni Mitchell,0.031,0.0294,0.604
+negative,The Rolling Stones,Paul Simon,0.031,0.0276,0.254
+negative,Bob Dylan,Paul McCartney,0.0292,0.0159,2.27e-20
+negative,Bob Dylan,John Lennon,0.0292,0.027,0.857
+negative,Bob Dylan,Leonard Cohen,0.0292,0.0327,0.147
+negative,Bob Dylan,Joni Mitchell,0.0292,0.0294,0.818
+negative,Bob Dylan,Paul Simon,0.0292,0.0276,0.391
+negative,Paul McCartney,John Lennon,0.0159,0.027,4.67e-06
+negative,Paul McCartney,Leonard Cohen,0.0159,0.0327,5.61e-13
+negative,Paul McCartney,Joni Mitchell,0.0159,0.0294,8.59e-12
+negative,Paul McCartney,Paul Simon,0.0159,0.0276,2.13e-08
+negative,John Lennon,Leonard Cohen,0.027,0.0327,0.396
+negative,John Lennon,Joni Mitchell,0.027,0.0294,0.94
+negative,John Lennon,Paul Simon,0.027,0.0276,0.776
+negative,Leonard Cohen,Joni Mitchell,0.0327,0.0294,0.202
+negative,Leonard Cohen,Paul Simon,0.0327,0.0276,0.0944
+negative,Joni Mitchell,Paul Simon,0.0294,0.0276,0.572
 first_singular,The Beatles,The Rolling Stones,0.0938,0.07,0.128
 first_singular,The Beatles,Bob Dylan,0.0938,0.0688,0.00117
+first_singular,The Beatles,Paul McCartney,0.0938,0.0628,0.00132
+first_singular,The Beatles,John Lennon,0.0938,0.0418,0.0014
+first_singular,The Beatles,Leonard Cohen,0.0938,0.0772,0.282
+first_singular,The Beatles,Joni Mitchell,0.0938,0.0414,2.57e-09
+first_singular,The Beatles,Paul Simon,0.0938,0.0595,0.00182
 first_singular,The Rolling Stones,Bob Dylan,0.07,0.0688,0.0769
+first_singular,The Rolling Stones,Paul McCartney,0.07,0.0628,0.031
+first_singular,The Rolling Stones,John Lennon,0.07,0.0418,0.00224
+first_singular,The Rolling Stones,Leonard Cohen,0.07,0.0772,0.58
+first_singular,The Rolling Stones,Joni Mitchell,0.07,0.0414,1.99e-10
+first_singular,The Rolling Stones,Paul Simon,0.07,0.0595,0.0178
+first_singular,Bob Dylan,Paul McCartney,0.0688,0.0628,0.661
+first_singular,Bob Dylan,John Lennon,0.0688,0.0418,0.052
+first_singular,Bob Dylan,Leonard Cohen,0.0688,0.0772,0.059
+first_singular,Bob Dylan,Joni Mitchell,0.0688,0.0414,7.03e-08
+first_singular,Bob Dylan,Paul Simon,0.0688,0.0595,0.215
+first_singular,Paul McCartney,John Lennon,0.0628,0.0418,0.123
+first_singular,Paul McCartney,Leonard Cohen,0.0628,0.0772,0.0381
+first_singular,Paul McCartney,Joni Mitchell,0.0628,0.0414,7.88e-06
+first_singular,Paul McCartney,Paul Simon,0.0628,0.0595,0.492
+first_singular,John Lennon,Leonard Cohen,0.0418,0.0772,0.00353
+first_singular,John Lennon,Joni Mitchell,0.0418,0.0414,0.208
+first_singular,John Lennon,Paul Simon,0.0418,0.0595,0.225
+first_singular,Leonard Cohen,Joni Mitchell,0.0772,0.0414,1.56e-09
+first_singular,Leonard Cohen,Paul Simon,0.0772,0.0595,0.00799
+first_singular,Joni Mitchell,Paul Simon,0.0414,0.0595,0.000496
 second,The Beatles,The Rolling Stones,0.0575,0.0456,0.177
 second,The Beatles,Bob Dylan,0.0575,0.0361,0.000438
+second,The Beatles,Paul McCartney,0.0575,0.0337,1.64e-05
+second,The Beatles,John Lennon,0.0575,0.0317,0.0118
+second,The Beatles,Leonard Cohen,0.0575,0.0419,0.0349
+second,The Beatles,Joni Mitchell,0.0575,0.0247,7.09e-07
+second,The Beatles,Paul Simon,0.0575,0.0221,5.1e-08
 second,The Rolling Stones,Bob Dylan,0.0456,0.0361,0.00458
+second,The Rolling Stones,Paul McCartney,0.0456,0.0337,0.000149
+second,The Rolling Stones,John Lennon,0.0456,0.0317,0.0419
+second,The Rolling Stones,Leonard Cohen,0.0456,0.0419,0.274
+second,The Rolling Stones,Joni Mitchell,0.0456,0.0247,1.19e-06
+second,The Rolling Stones,Paul Simon,0.0456,0.0221,1.92e-08
+second,Bob Dylan,Paul McCartney,0.0361,0.0337,0.224
+second,Bob Dylan,John Lennon,0.0361,0.0317,0.656
+second,Bob Dylan,Leonard Cohen,0.0361,0.0419,0.19
+second,Bob Dylan,Joni Mitchell,0.0361,0.0247,0.00393
+second,Bob Dylan,Paul Simon,0.0361,0.0221,9.22e-05
+second,Paul McCartney,John Lennon,0.0337,0.0317,0.74
+second,Paul McCartney,Leonard Cohen,0.0337,0.0419,0.0354
+second,Paul McCartney,Joni Mitchell,0.0337,0.0247,0.0618
+second,Paul McCartney,Paul Simon,0.0337,0.0221,0.00405
+second,John Lennon,Leonard Cohen,0.0317,0.0419,0.227
+second,John Lennon,Joni Mitchell,0.0317,0.0247,0.127
+second,John Lennon,Paul Simon,0.0317,0.0221,0.022
+second,Leonard Cohen,Joni Mitchell,0.0419,0.0247,0.000377
+second,Leonard Cohen,Paul Simon,0.0419,0.0221,1.05e-05
+second,Joni Mitchell,Paul Simon,0.0247,0.0221,0.256

@@ -192,3 +192,69 @@ def distinctive(counts, doc_counts, others, min_songs=5, k=20, exclude=()):
     z = monroe(counts, others, prior(counts + others))
     z = z[~z.word.isin(exclude) & z.word.map(lambda w: doc_counts.get(w, 0) >= min_songs)]
     return z.head(k).assign(songs=lambda d: d.word.map(doc_counts))
+
+
+WIKILINK = re.compile(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]")
+TEMPLATE = re.compile(r"\{\{[^{}]*\}\}")
+
+
+def strip_wikitext(text):
+    """'[[Suzanne (song)|Suzanne]]{{efn|...}}' -> 'Suzanne'."""
+    text = re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>|<!--.*?-->", "", str(text), flags=re.S)
+    text = WIKILINK.sub(r"\1", text)
+    for _ in range(3):
+        text = TEMPLATE.sub("", text)
+    text = re.sub(r"<[^>]+>|'''?", "", text)
+    return clean_title(text)
+
+
+def infobox_year(wikitext):
+    """Release year from the album infobox's 'released' field."""
+    m = re.search(r"\|\s*released\s*=([^\n]*)", str(wikitext))
+    return first_year(m.group(1)) if m else None
+
+
+def album_tracks(wikitext):
+    """[(title, writers)] from the {{Track listing}} / {{Track list}} templates of an album page, else from the
+    numbered list ('# "Title" (writers) – 3:02') of its Track listing section. Bonus and reissue blocks are left
+    out: those songs were not released with the album. Writers fall back to all_writing / all_lyrics, else ''."""
+    tracks = []
+    for block in re.findall(r"\{\{\s*[Tt]rack ?list(?:ing)?\s*\n(.*?)\n\s*\}\}", str(wikitext), flags=re.S):
+        fields = dict(m.groups() for line in block.split("\n")
+                      if (m := re.match(r"\s*\|\s*([a-z_]+\d*)\s*=\s*(.*)", line)))
+        if EXTRA.search(fields.get("headline", "")):
+            continue
+        default = strip_wikitext(fields.get("all_writing") or fields.get("all_lyrics") or "")
+        for n in sorted(int(k[5:]) for k in fields if re.fullmatch(r"title\d+", k)):
+            title = strip_wikitext(fields[f"title{n}"])
+            writers = strip_wikitext(fields.get(f"writer{n}") or fields.get(f"lyrics{n}") or "") or default
+            if title:
+                tracks.append((title, writers))
+    return tracks or numbered_tracks(wikitext)
+
+
+SUBHEADING = re.compile(r"\s*(;|===|'''|\{\{small)")  # Side one, Bonus tracks...
+EXTRA = re.compile(r"bonus|reissue|edition|remaster|deluxe", re.I)
+
+
+def numbered_tracks(wikitext):
+    m = re.search(r"\n==\s*Track ?listings?\s*==(.*?)(?=\n==[^=])", "\n" + str(wikitext) + "\n==End==", flags=re.S | re.I)
+    tracks, skip = [], False
+    for line in (m.group(1) if m else "").split("\n"):
+        if SUBHEADING.match(line):
+            skip = bool(EXTRA.search(line))
+        elif not skip and (t := re.match(r'\s*#\s*"(.+?)"\s*(\(.*?\))?', line)):
+            title = strip_wikitext(t.group(1))
+            if title:
+                tracks.append((title, strip_wikitext((t.group(2) or "").strip("()"))))
+    return tracks
+
+
+def song_list_html(rows):
+    """rows: dicts with title, year, release, writers -> a wikitable that build_artist.py reads like a
+    Wikipedia song list."""
+    esc = lambda s: str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    body = "".join(f"<tr><td>\"{esc(r['title'])}\"</td><td>{r['year']}</td><td>{esc(r['release'])}</td>"
+                   f"<td>{esc(r['writers'])}</td></tr>" for r in rows)
+    return ('<table class="wikitable"><tr><th>Title</th><th>Year released</th><th>Original release</th>'
+            f"<th>Songwriter(s)</th></tr>{body}</table>")

@@ -5,7 +5,8 @@ import plotly.graph_objects as go
 
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter
-from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, PRONOUN_LABELS, _layout
+from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, PRONOUN_LABELS
+from beatles_viz.viz.theme import titled
 
 PROFILE = {"tokens": "Words", "types": "Distinct words", "mattr": "Lexical richness", "repeat_ratio": "Repeated lines",
            "repetition_score": "Repetition score"}
@@ -27,7 +28,7 @@ def percentile_profile(a, b, corpus):
                  labels={"percentile": "percentile among all songs", "metric": ""},
                  category_orders={"metric": list(PROFILE.values())})
     fig.add_vline(x=50, line=dict(color="#888888", dash="dot", width=1))
-    return _layout(fig, "Where each song stands in the corpus", height=330)
+    return titled(fig, "Where each song stands in the corpus", height=330)
 
 
 def contrast_words(ca, cb, top=8, min_count=2):
@@ -51,7 +52,7 @@ def contrast_figure(ca, cb, label_a, label_b, colors=HIGHLIGHT_COLORS, top=8, mi
                            hovertemplate=f"%{{y}}<br>%{{customdata[0]}} in {label_a}, "
                                          f"%{{customdata[1]}} in {label_b}<extra></extra>"))
     fig.update_xaxes(title=f"← more in {label_b}   ·   more in {label_a} →")
-    return _layout(fig, title, height=max(300, 26 * len(side)))
+    return titled(fig, title, height=max(300, 26 * len(side)))
 
 
 def word_contrast(a, b, top=8):
@@ -64,7 +65,7 @@ def pronoun_pair(a, b):
             for s in (a, b)]
     fig = px.bar(pd.DataFrame(rows), x="pronoun", y="share", color="song", barmode="group",
                  color_discrete_sequence=HIGHLIGHT_COLORS, labels={"share": "per 100 words", "pronoun": ""})
-    return _layout(fig, "Point of view: personal pronouns", height=320)
+    return titled(fig, "Point of view: personal pronouns", height=320)
 
 
 def shared_vocabulary(a, b):

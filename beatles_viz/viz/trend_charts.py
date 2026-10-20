@@ -3,7 +3,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from beatles_viz.config import ACCENT, PHASE_ORDER, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
-from beatles_viz.viz.song_charts import _layout
+from beatles_viz.viz.theme import titled
 
 RISING = "#5fa8d3"
 GROUP_COLORS = {**SECTION_COLORS, "other": "#c9d6df"}
@@ -22,7 +22,7 @@ def word_movers(movers):
                          "first": f"per 1,000 words, {first}", "last": f"per 1,000 words, {last}",
                          "songs": "songs using it"})
     fig.update_layout(showlegend=False)
-    return _layout(fig, "Words that drift steadily", height=max(320, 26 * len(movers) + 100))
+    return titled(fig, "Words that drift steadily", height=max(320, 26 * len(movers) + 100))
 
 
 def section_shares(shares, counts):
@@ -32,7 +32,7 @@ def section_shares(shares, counts):
     fig.update_yaxes(tickformat=".0%")
     fig.update_layout(legend_title_text="")
     fig.update_xaxes(title="")
-    return _layout(fig, "Where the words are sung", height=380)
+    return titled(fig, "Where the words are sung", height=380)
 
 
 def voice_shares(shares, counts):
@@ -43,7 +43,7 @@ def voice_shares(shares, counts):
     fig.update_yaxes(tickformat=".0%")
     fig.update_layout(legend_title_text="")
     fig.update_xaxes(title="")
-    return _layout(fig, "Who sings lead", height=380)
+    return titled(fig, "Who sings lead", height=380)
 
 
 def phase_strip(d, col, label, title, height=400, zero_line=False):
@@ -57,4 +57,4 @@ def phase_strip(d, col, label, title, height=400, zero_line=False):
                              line=dict(color=ACCENT, width=3)))
     if zero_line:
         fig.add_hline(y=0, line=dict(color="#888888", dash="dot", width=1))
-    return _layout(fig, title, height)
+    return titled(fig, title, height)

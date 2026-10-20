@@ -107,7 +107,15 @@ def test_voice_pills_filter_the_corpus_and_persist():
 
 def test_song_page_plays_the_official_upload():
     at = AppTest.from_file(SONG_PAGE, default_timeout=180)
-    at.query_params["song"] = "Hey Jude"
+    at.query_params["song"] = "Something"
     at.run()
     assert not at.exception
     assert any("youtube-nocookie.com/embed/" in str(e.proto) for e in at.get("iframe"))
+
+
+def test_song_page_syncs_the_structure_on_test_songs():
+    at = AppTest.from_file(SONG_PAGE, default_timeout=180)
+    at.query_params["song"] = "Hey Jude"
+    at.run()
+    assert not at.exception
+    assert any("mQER0A0ej0M" in str(e.proto) and "seekTo" in str(e.proto) for e in at.get("iframe"))

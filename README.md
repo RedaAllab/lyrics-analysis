@@ -5,24 +5,33 @@ Vocabulary analysis of Beatles lyrics (originals first), built from public datas
 ## Streamlit app
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/)
 
-Deployed app: https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/
-(access limited to authorised viewers while the repository is private).
+Deployed app (public): https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/
 
 Interactive explorer (vocabulary, evolution over time, lead singers, per-song charts). To deploy another copy, use
 [Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=RedaAllab/lyrics-analysis&branch=main&mainModule=app/beatles_app.py)
-(main file `app/beatles_app.py`). Run locally: `streamlit run app/beatles_app.py`.
-The app reads `data/public/beatles_bow.parquet`: per-song metrics, word counts, a repetition score and a 48x48
-repetition fingerprint (where words repeat, not which words), no lyrics text.
+(main file `app/beatles_app.py`). The app reads `data/public/beatles_bow.parquet`: per-song metrics, word counts,
+a repetition score, a 48x48 repetition fingerprint (where words repeat, not which words) and section shapes
+(kind and word count of each section), no lyrics text.
+
+Run locally (same versions as Streamlit Cloud, pinned in `requirements.txt` and `pyproject.toml`):
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e ".[dev]"
+.venv/bin/streamlit run app/beatles_app.py
+.venv/bin/pytest
+```
+`BEATLES_PUBLIC_ONLY=1` runs the app as deployed (no lyrics) on a machine that has the lyrics file.
 
 ## Layout
 - `scripts/build_beatles.py` builds `data/beatles/beatles.parquet` from the official song list (Wikipedia) and Genius lyric datasets.
-- `scripts/beatles_lib.py` shared corpus loading and metrics.
 - `scripts/analyse_beatles.py` tables and figures in `analysis/beatles/`.
 - `app/beatles_app.py` entry point (navigation, theme, logo): `app/home_page.py` song search and songs to discover,
   `app/song_page.py` song page with two views, Read (full song with one visual effect per voice, local only, needs the
-  lyrics file) and Analyse (per-song charts), `app/word_page.py` one word across the catalogue, `app/compare_page.py` two songs side by side, `app/corpus_page.py`
-  the whole catalogue. Theme in `.streamlit/config.toml`, logo in `app/static/`.
-- `beatles_viz/` package: data loading, sections, metrics, voice attribution, charts, effects, rendering.
+  lyrics file) and Analyse (per-song charts), `app/word_page.py` one word across the catalogue, `app/compare_page.py` two songs side by side,
+  `app/stories_page.py` four guided findings, `app/album_page.py` one release at a time, `app/voice_page.py` the lead
+  voices side by side (Lennon / McCartney by default), `app/corpus_page.py` the whole catalogue. Theme in `.streamlit/config.toml`, logo in `app/static/`.
+- `beatles_viz/` package: data loading and public export, sections (Genius tags, or verses and choruses detected
+  from returning stanzas when a song has no tags), metrics, voice attribution, stories, charts, effects, rendering.
 - `tests/` pytest suite (synthetic lyrics only). `scripts/audit_dataset.py` dataset audit (`analysis/audit/`).
 - `ROADMAP.md` development plan.
 - `scripts/export_public.py` regenerates the lyrics-free `data/public/beatles_bow.parquet` (needs the local lyrics file).

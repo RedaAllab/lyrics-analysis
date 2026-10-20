@@ -30,23 +30,34 @@ def percentile_profile(a, b, corpus):
     return _layout(fig, "Where each song stands in the corpus", height=330)
 
 
-def word_contrast(a, b, top=8):
-    """Words most typical of one song against the other: A to the right, B to the left."""
-    ca, cb = content_counter(a.bow), content_counter(b.bow)
-    r = monroe(ca, cb, prior(ca + cb), min_count=2)
+def contrast_words(ca, cb, top=8, min_count=2):
+    """The words most typical of A (z > 0) and of B (z < 0), strongest last."""
+    ca, cb = content_counter(ca), content_counter(cb)
+    r = monroe(ca, cb, prior(ca + cb), min_count=min_count)
     if r.empty:
-        return None
-    side = pd.concat([r.head(top).assign(song=a.title), r.tail(top).assign(song=b.title)])
-    side = side[(side.song == a.title) & (side.z > 0) | (side.song == b.title) & (side.z < 0)]
+        return r
+    side = pd.concat([r.head(top), r.tail(top)]).drop_duplicates("word")
+    return side[side.z != 0].sort_values("z")
+
+
+def contrast_figure(ca, cb, label_a, label_b, colors=HIGHLIGHT_COLORS, top=8, min_count=2,
+                    title="Words that tell the two songs apart"):
+    """A diverging bar chart: words of A to the right, words of B to the left."""
+    side = contrast_words(ca, cb, top, min_count)
     if side.empty:
         return None
-    side = side.drop_duplicates("word").sort_values("z")
     fig = go.Figure(go.Bar(x=side.z, y=side.word, orientation="h",
-                           marker_color=[HIGHLIGHT_COLORS[0] if s == a.title else HIGHLIGHT_COLORS[1] for s in side.song],
-                           customdata=side[["song", "in_group", "in_rest"]],
-                           hovertemplate="%{y}<br>%{customdata[1]} in A, %{customdata[2]} in B<extra></extra>"))
-    fig.update_xaxes(title=f"← more in {b.title}   ·   more in {a.title} →")
-    return _layout(fig, "Words that tell the two songs apart", height=max(300, 26 * len(side)))
+                           marker_color=[colors[0] if z > 0 else colors[1] for z in side.z],
+                           customdata=side[["in_group", "in_rest"]],
+                           hovertemplate=f"%{{y}}<br>%{{customdata[0]}} in {label_a}, "
+                                         f"%{{customdata[1]}} in {label_b}<extra></extra>"))
+    fig.update_xaxes(title=f"← more in {label_b}   ·   more in {label_a} →")
+    return _layout(fig, title, height=max(300, 26 * len(side)))
+
+
+def word_contrast(a, b, top=8):
+    """Words most typical of one song against the other: A to the right, B to the left."""
+    return contrast_figure(a.bow, b.bow, a.title, b.title, top=top)
 
 
 def pronoun_pair(a, b):

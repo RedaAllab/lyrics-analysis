@@ -22,15 +22,26 @@ def _layout(fig, title, height=320):
     return fig
 
 
-def structure_timeline(sections):
+def structure_frame(song):
+    """One row per section from the song's sec_* columns (names, kinds, word counts): works without the lyrics."""
     rows, start = [], 0
-    for i, s in enumerate(sections):
-        words = len(tokenize(" ".join(s.lines)))
-        width = max(words, MIN_INSTRUMENTAL_WIDTH)
-        rows.append(dict(order=i, name=section_name(s), kind=s.kind, start=start, width=width, words=words,
-                         repeat=f"x{s.repeat}" if s.repeat > 1 else ""))
+    for i, (name, kind, words, repeat, auto) in enumerate(zip(song.sec_names, song.sec_kinds, song.sec_words,
+                                                               song.sec_repeats, song.sec_auto)):
+        width = max(int(words), MIN_INSTRUMENTAL_WIDTH)
+        rows.append(dict(order=i, name=name, kind=kind, start=start, width=width, words=int(words),
+                         repeat=f"x{repeat}" if repeat > 1 else "", auto=bool(auto)))
         start += width
-    df = pd.DataFrame(rows)
+    return pd.DataFrame(rows)
+
+
+def has_structure(song):
+    return "sec_kinds" in song and isinstance(song.sec_kinds, list) and len(song.sec_kinds) > 0
+
+
+def structure_timeline(song):
+    if not has_structure(song):
+        return None
+    df = structure_frame(song)
     fig = go.Figure()
     for kind, g in df.groupby("kind", sort=False):
         fig.add_bar(y=["structure"] * len(g), x=g.width, base=g.start, orientation="h", name=kind,
@@ -41,7 +52,8 @@ def structure_timeline(sections):
     fig.update_yaxes(visible=False)
     fig.update_xaxes(title="position in the song (words)")
     fig.update_layout(barmode="overlay", legend=dict(orientation="h", y=-0.4))
-    return _layout(fig, "Structure", height=230)
+    title = "Structure (sections detected automatically)" if df.auto.any() else "Structure"
+    return _layout(fig, title, height=230)
 
 
 def _jaccard(a, b):

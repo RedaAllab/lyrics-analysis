@@ -193,6 +193,8 @@ neighbors(corpus, title, order="chronological")   # -> (précédent, suivant)
 
 ## Phase 5 : tests, packaging et lancement local
 
+**Statut (20/10/2026)** : fait. `pyproject.toml` installe le paquet (`pip install -e ".[dev]"`), les versions sont celles de Streamlit Cloud, `scripts/beatles_lib.py` a disparu au profit de `beatles_viz` seul. Le point d'entrée reste `app/beatles_app.py`.
+
 **Objectifs** : tests automatisés, installation reproductible, lancement en une commande.
 
 **Tests (`tests/`)**

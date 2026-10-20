@@ -1,14 +1,10 @@
-import sys
-from pathlib import Path
-
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import (cached_corpus, metrics_panel, similar_picker, song_header,  # noqa: E402
+from beatles_viz.data.loader import has_lyrics
+from beatles_viz.render.components import (cached_corpus, metrics_panel, similar_picker, song_header,
                                            song_selector)
-from beatles_viz.text.similarity import similarity_matrix  # noqa: E402
-from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, read_view  # noqa: E402
+from beatles_viz.text.similarity import similarity_matrix
+from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, read_view
 
 KEY = "song"
 local = has_lyrics()

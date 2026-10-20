@@ -11,6 +11,8 @@ from beatles_viz.render.song_view import render_song
 from beatles_viz.viz import song_charts as charts
 
 READ, ANALYSE = "Read", "Analyse"
+DETECTED_NOTE = ("This song has no section tags: verses and choruses were detected from the stanzas that "
+                 "come back. On tagged songs this guess matches the tags for 70% of lines.")
 
 
 def navigation(song, scope, key):
@@ -23,9 +25,9 @@ def navigation(song, scope, key):
     prev_title, next_title = neighbors(scope, song.title, order)
     cols = st.columns([1, 1, 4])
     cols[0].button("← Previous", disabled=prev_title is None, on_click=go_to, args=(prev_title,),
-                   use_container_width=True, key=f"{key}_prev")
+                   width="stretch", key=f"{key}_prev")
     cols[1].button("Next →", disabled=next_title is None, on_click=go_to, args=(next_title,),
-                   use_container_width=True, key=f"{key}_next")
+                   width="stretch", key=f"{key}_next")
 
 
 def effect_settings(song, key):
@@ -87,8 +89,10 @@ def _show(fig, question, missing="Not enough data for this chart."):
 
 
 def analyse_view(song, corpus, local, key):
+    _show(charts.structure_timeline(song), "How is the song built?", "No section information for this song.")
+    if charts.has_structure(song) and any(song.sec_auto):
+        st.caption(DETECTED_NOTE)
     if local:
-        _show(charts.structure_timeline(song.sections), "How is the song built?")
         left, right = st.columns(2)
         with left:
             _show(charts.self_similarity(song.sections), "Where are the repetitions and returning motifs?")
@@ -98,8 +102,8 @@ def analyse_view(song, corpus, local, key):
             _show(charts.voice_split(song.sections, song.lead_vocal), "Who sings what?",
                   "The lyrics source names no singer per section for this song.")
     else:
-        st.info("Structure, repetition, density and voice charts need the local lyrics file; "
-                "this deployment only has word counts.")
+        st.info("Repetition, density and voice charts need the local lyrics file; "
+                "this deployment only has word counts and section shapes.")
     left, right = st.columns(2)
     with left:
         _show(charts.keyness(song.bow, corpus[corpus.title != song.title].bow), "Which vocabulary sets it apart?",

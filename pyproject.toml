@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beatles-viz"
+version = "0.2.0"
+description = "Vocabulary, structure and voices in Beatles lyrics, with a Streamlit explorer"
+readme = "README.md"
+requires-python = ">=3.11"
+# Same versions as requirements.txt (the file Streamlit Cloud installs).
+dependencies = [
+    "streamlit==1.66.0",
+    "plotly==7.1.0",
+    "pandas==3.0.6",
+    "numpy==2.5.4",
+    "pyarrow==24.0.0",
+    "scikit-learn==1.9.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "duckdb", "matplotlib"]
+
+[tool.setuptools.packages.find]
+include = ["beatles_viz*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

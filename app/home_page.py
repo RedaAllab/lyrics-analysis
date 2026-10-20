@@ -1,16 +1,13 @@
 import random
-import sys
-from pathlib import Path
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from beatles_viz.config import VOICE_COLORS  # noqa: E402
-from beatles_viz.corpus import featured_songs  # noqa: E402
-from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import cached_corpus, open_song, plot  # noqa: E402
-from beatles_viz.viz.song_charts import fingerprint_figure  # noqa: E402
-from beatles_viz.render.identity import kicker  # noqa: E402
+from beatles_viz.config import VOICE_COLORS
+from beatles_viz.corpus import featured_songs
+from beatles_viz.data.loader import has_lyrics
+from beatles_viz.render.components import cached_corpus, open_song, plot
+from beatles_viz.viz.song_charts import fingerprint_figure
+from beatles_viz.render.identity import kicker
 
 corpus = cached_corpus("local" if has_lyrics() else "public")
 originals = corpus[corpus.is_original]
@@ -27,7 +24,7 @@ choice = search.selectbox("Search a song", titles, index=None, placeholder="Type
                           label_visibility="collapsed")
 if choice:
     open_song(choice)
-if surprise.button("Surprise me", icon=":material/shuffle:", use_container_width=True):
+if surprise.button("Surprise me", icon=":material/shuffle:", width="stretch"):
     open_song(random.choice(titles))
 
 st.subheader("Songs to discover")

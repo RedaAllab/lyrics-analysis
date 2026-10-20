@@ -9,3 +9,6 @@ data/beatles/*
 !data/public/
 __pycache__/
 .DS_Store
+.venv/
+.pytest_cache/
+*.egg-info/

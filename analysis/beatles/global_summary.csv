@@ -1,10 +1,10 @@
 ,value
 songs,211.0
-tokens,40076.0
+tokens,40106.0
 vocabulary,2635.0
 hapax,1094.0
 hapax_share,0.415
-mean_tokens,189.9
+mean_tokens,190.1
 mean_types,64.2
 mean_mattr50,0.624
-mean_repeat_ratio,0.316
+mean_repeat_ratio,0.317

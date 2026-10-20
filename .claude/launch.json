@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "beatles-app",
-      "runtimeExecutable": "python3",
+      "runtimeExecutable": ".venv/bin/python",
       "runtimeArgs": ["-m", "streamlit", "run", "app/beatles_app.py", "--server.port", "8501", "--server.headless", "true", "--browser.gatherUsageStats", "false"],
       "port": 8501
     }

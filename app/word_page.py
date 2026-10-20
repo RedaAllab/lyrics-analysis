@@ -1,15 +1,11 @@
-import sys
-from pathlib import Path
-
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import (apply_filters, cached_corpus, chip_row, corpus_filters,  # noqa: E402
+from beatles_viz.data.loader import has_lyrics
+from beatles_viz.render.components import (apply_filters, cached_corpus, chip_row, corpus_filters,
                                            open_song, open_word, plot)
-from beatles_viz.render.identity import kicker  # noqa: E402
-from beatles_viz.text import words as W  # noqa: E402
-from beatles_viz.viz import word_charts as charts  # noqa: E402
+from beatles_viz.render.identity import kicker
+from beatles_viz.text import words as W
+from beatles_viz.viz import word_charts as charts
 
 corpus = cached_corpus("local" if has_lyrics() else "public")
 d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
@@ -57,7 +53,7 @@ st.subheader("Songs where it matters most")
 top = W.top_songs(d, word)
 top["share"] *= 100
 st.caption("Select a row to open the song.")
-sel = st.dataframe(top, hide_index=True, use_container_width=True, on_select="rerun", selection_mode="single-row",
+sel = st.dataframe(top, hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row",
                    key=f"word_songs_{word}",
                    column_config={"title": "Title", "year": st.column_config.NumberColumn("Year", format="%d"),
                                   "voice": "Lead voice",

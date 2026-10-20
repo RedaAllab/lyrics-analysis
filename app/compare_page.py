@@ -1,15 +1,11 @@
-import sys
-from pathlib import Path
-
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from beatles_viz.config import VOICE_COLORS  # noqa: E402
-from beatles_viz.data.loader import has_lyrics  # noqa: E402
-from beatles_viz.render.components import apply_filters, cached_corpus, corpus_filters, open_song, plot  # noqa: E402
-from beatles_viz.viz import compare_charts as cmp  # noqa: E402
-from beatles_viz.viz import song_charts as charts  # noqa: E402
-from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, fingerprint_figure  # noqa: E402
+from beatles_viz.config import VOICE_COLORS
+from beatles_viz.data.loader import has_lyrics
+from beatles_viz.render.components import apply_filters, cached_corpus, corpus_filters, open_song, plot
+from beatles_viz.viz import compare_charts as cmp
+from beatles_viz.viz import song_charts as charts
+from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, fingerprint_figure
 
 local = has_lyrics()
 corpus = cached_corpus("local" if local else "public")
@@ -43,9 +39,9 @@ if a.title == b.title:
 
 plot(cmp.percentile_profile(a, b, corpus[corpus.is_original]))
 
-if local:
-    for song in (a, b):
-        fig = charts.structure_timeline(song.sections)
+for song in (a, b):
+    fig = charts.structure_timeline(song)
+    if fig is not None:
         fig.update_layout(title=f"How {song.title} is built")
         plot(fig)
 

@@ -1,19 +1,15 @@
-"""Interactive explorer for the Beatles lyrics vocabulary analysis.
-Run:  streamlit run app/beatles_app.py
-Shows statistics and word lists only (no lyrics text)."""
-import sys
-from pathlib import Path
-
+"""The whole catalogue: vocabulary, evolution over time, voices and the song table. Statistics only, no lyrics."""
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from beatles_lib import PHASES, content_counter, load_public, merge, monroe, prior_from  # noqa: E402
-from beatles_viz.config import ACCENT, NEUTRAL, VOICE_COLORS, VOICE_ORDER  # noqa: E402
-from beatles_viz.render.components import HELP, apply_filters, corpus_filters, open_song, open_word, plot  # noqa: E402
-
+from beatles_viz.config import ACCENT, PHASES, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.corpus import analysable
+from beatles_viz.data.loader import has_lyrics
+from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
+                                           plot)
+from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.tokenize import content_counter, merge
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
            "Lexical richness (MATTR-50)": "mattr", "Share of repeated lines": "repeat_ratio"}
@@ -24,7 +20,7 @@ WORD_TABLE = {"word": st.column_config.TextColumn("Word"),
               "z": st.column_config.ProgressColumn("Distinctiveness", format="%.1f", min_value=0, max_value=15,
                                                    help=HELP["z"])}
 SONG_TABLE = {"title": "Title", "year": st.column_config.NumberColumn("Year", format="%d"),
-              "release_core": "Release", "singer": "Lead voice",
+              "release_core": "Release", "voice": "Lead voice",
               "tokens": st.column_config.NumberColumn("Words", format="%d"),
               "types": st.column_config.NumberColumn("Distinct words", format="%d"),
               "mattr": st.column_config.NumberColumn("Lexical richness", format="%.2f", help=HELP["mattr"]),
@@ -36,24 +32,21 @@ SONG_TABLE = {"title": "Title", "year": st.column_config.NumberColumn("Year", fo
 
 def word_table(container, table, key):
     """Characteristic words; selecting one opens its Word page."""
-    sel = container.dataframe(table, hide_index=True, use_container_width=True, column_config=WORD_TABLE,
+    sel = container.dataframe(table, hide_index=True, width="stretch", column_config=WORD_TABLE,
                               on_select="rerun", selection_mode="single-row", key=key)
     if sel.selection.rows:
         open_word(table.iloc[sel.selection.rows[0]]["word"])
 
 
-@st.cache_data(show_spinner="Loading corpus...")
-def get_corpus(originals_only):
-    df = load_public(originals_only)
-    df["singer"] = df.singer.replace("Other", NEUTRAL)  # same vocabulary as the song page
-    return df
+def prior_from(d):
+    return prior(content_counter(merge(d.bow)))
 
 
 # ---------------- sidebar filters ----------------
-bounds = get_corpus(False)
-originals_only, years, singers = corpus_filters(int(bounds.year.min()), int(bounds.year.max()))
-full = get_corpus(originals_only)
-df = apply_filters(full, False, years, singers, voice_col="singer").copy()
+corpus = analysable(cached_corpus("local" if has_lyrics() else "public"), originals_only=False)
+originals_only, years, voices = corpus_filters(int(corpus.year.min()), int(corpus.year.max()))
+full = corpus[corpus.is_original] if originals_only else corpus
+df = apply_filters(full, False, years, voices).copy()
 st.sidebar.caption(f"{len(df)} songs selected out of {len(full)}")
 st.sidebar.caption("Lyrics: Genius dataset, not proofread. Years: original release year (Wikipedia list).")
 
@@ -127,41 +120,41 @@ with tab_words:
                "Monroe et al. 2008). Words seen fewer than 5 times are ignored. Select a word to open its page.")
     n_words = st.slider("Words per group", 5, 25, 10, key="n_dist")
     d = df[df.phase.notna()]
-    _, prior = prior_from(d)
+    phase_prior = prior_from(d)
     cols = st.columns(len(PHASES))
     for colw, (p, _, _) in zip(cols, PHASES):
         grp = d[d.phase == p]
         if grp.empty or len(grp) == len(d):
             colw.caption(f"{p}: no data"); continue
         a = content_counter(merge(grp.bow)); b = content_counter(merge(d[d.phase != p].bow))
-        r = monroe(a, b, prior).head(n_words)
+        r = monroe(a, b, phase_prior).head(n_words)
         colw.markdown(f"**{p}** ({len(grp)} songs)")
         word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"phase_words_{p}")
 
 # ---------------- singers ----------------
 with tab_singer:
-    sg = df.groupby("singer").agg(songs=("title", "count"), tokens=("tokens", "mean"), types=("types", "mean"),
+    sg = df.groupby("voice").agg(songs=("title", "count"), tokens=("tokens", "mean"), types=("types", "mean"),
                                   mattr=("mattr", "mean"), repeats=("repeat_ratio", "mean"))
     sg["repeats"] *= 100
-    sg = sg.reindex([s for s in SINGERS if s in sg.index]).rename_axis("singer").reset_index()
-    st.dataframe(sg, hide_index=True, use_container_width=True,
+    sg = sg.reindex([s for s in SINGERS if s in sg.index]).rename_axis("voice").reset_index()
+    st.dataframe(sg, hide_index=True, width="stretch",
                  column_config={**SONG_TABLE, "songs": st.column_config.NumberColumn("Songs", format="%d"),
                                 "tokens": st.column_config.NumberColumn("Words (mean)", format="%.0f"),
                                 "types": st.column_config.NumberColumn("Distinct words (mean)", format="%.0f")})
     m = st.selectbox("Metric", list(METRICS), key="sing_metric")
     log = METRICS[m] in LOG_METRICS
-    fig = px.box(df, x="singer", y=METRICS[m], points="all", hover_data=["title", "year"], color="singer",
-                 color_discrete_map=VOICE_COLORS, category_orders={"singer": SINGERS}, log_y=log,
-                 labels={"singer": "", METRICS[m]: m + (" (log scale)" if log else "")})
+    fig = px.box(df, x="voice", y=METRICS[m], points="all", hover_data=["title", "year"], color="voice",
+                 color_discrete_map=VOICE_COLORS, category_orders={"voice": SINGERS}, log_y=log,
+                 labels={"voice": "", METRICS[m]: m + (" (log scale)" if log else "")})
     fig.update_layout(showlegend=False)
     plot(fig)
     st.caption("Songs credited to Lennon-McCartney: the lead singer is used as a proxy, not the actual writer.")
-    main = [s for s in ["Lennon", "McCartney", "Harrison"] if (df.singer == s).sum() >= 5]
+    main = [s for s in ["Lennon", "McCartney", "Harrison"] if (df.voice == s).sum() >= 5]
     if len(main) >= 2:
-        _, prior_s = prior_from(df)
+        prior_s = prior_from(df)
         cols = st.columns(len(main))
         for colw, s in zip(cols, main):
-            a = content_counter(merge(df[df.singer == s].bow)); b = content_counter(merge(df[df.singer != s].bow))
+            a = content_counter(merge(df[df.voice == s].bow)); b = content_counter(merge(df[df.voice != s].bow))
             colw.markdown(f"**{s}**")
             word_table(colw, monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].reset_index(drop=True),
                        f"singer_words_{s}")
@@ -169,7 +162,7 @@ with tab_singer:
 # ---------------- songs ----------------
 with tab_songs:
     q = st.text_input("Find songs containing the word", "").strip().lower()
-    t = df[["title", "year", "release_core", "singer", "tokens", "types", "mattr", "repetition_score"]].copy()
+    t = df[["title", "year", "release_core", "voice", "tokens", "types", "mattr", "repetition_score"]].copy()
     t["repeats"] = df.repeat_ratio * 100
     if q:
         t["occurrences"] = df.bow.map(lambda c: c.get(q, 0))
@@ -178,7 +171,7 @@ with tab_songs:
     else:
         t = t.sort_values(["year", "title"])
     st.caption("Select a row to open the song.")
-    picked = st.dataframe(t, hide_index=True, use_container_width=True, column_config=SONG_TABLE,
+    picked = st.dataframe(t, hide_index=True, width="stretch", column_config=SONG_TABLE,
                           on_select="rerun", selection_mode="single-row", key="songs_table")
     if picked.selection.rows:
         open_song(t.iloc[picked.selection.rows[0]]["title"])

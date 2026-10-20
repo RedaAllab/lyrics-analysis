@@ -1,7 +1,6 @@
 """Vocabulary analysis of the Beatles' original compositions (data/beatles/beatles.parquet).
 Covers: global vocabulary, evolution over time (year / phase), comparison by lead singer.
 Outputs: tables (CSV) and figures (PNG) in analysis/beatles/."""
-from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -9,14 +8,20 @@ import numpy as np
 import pandas as pd
 from collections import Counter
 
-import sys
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from beatles_lib import *  # corpus loading, metrics, stopword/vocable/name filters
+from beatles_viz.config import MATTR_WINDOW, PHASES, ROOT
+from beatles_viz.corpus import analysable, load_corpus
+from beatles_viz.text.keyness import monroe
+from beatles_viz.text.metrics import mattr
+from beatles_viz.text.sections import all_lines
+from beatles_viz.text.tokenize import content, tokenize
 
 OUT = ROOT / "analysis/beatles"
 OUT.mkdir(parents=True, exist_ok=True)
 
-df = load_corpus()
+df = analysable(load_corpus("local")).rename(columns={"voice": "singer"})
+# MATTR with repeated lines counted once: richness of the writing rather than of the performance
+df["mattr_dedup"] = df.sections.map(lambda s: mattr([w for l in dict.fromkeys(x.lower() for x in all_lines(s))
+                                                    for w in tokenize(l)]))
 df[["title", "year", "phase", "release_core", "singer", "tokens", "types", "mattr", "mattr_dedup", "repeat_ratio"]].to_csv(OUT / "song_metrics.csv", index=False)
 print(f"corpus: {len(df)} songs")
 

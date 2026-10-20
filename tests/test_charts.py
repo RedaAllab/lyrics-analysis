@@ -30,7 +30,7 @@ def test_corpus_columns(corpus):
 def test_every_chart_builds_or_returns_none(corpus):
     for song in corpus.itertuples():
         row = corpus.loc[song.Index]
-        charts.structure_timeline(song.sections)
+        charts.structure_timeline(row)
         charts.self_similarity(song.sections)
         charts.rolling_richness(song.sections)
         charts.keyness(song.bow, corpus[corpus.title != song.title].bow)
@@ -41,7 +41,7 @@ def test_every_chart_builds_or_returns_none(corpus):
 
 def test_untagged_song_still_has_structure_and_density(corpus):
     street = corpus.set_index("title").loc["Street"]
-    assert charts.structure_timeline(street.sections) is not None
+    assert charts.structure_timeline(street) is not None
     assert charts.rolling_richness(street.sections) is not None
     assert charts.voice_split(street.sections, street.lead_vocal) is None
 
@@ -58,6 +58,6 @@ def test_voice_split_only_with_tagged_singers(corpus):
 
 def test_figures_never_contain_lyric_lines(corpus):
     kettle = corpus.set_index("title").loc["Kettle"]
-    for fig in [charts.structure_timeline(kettle.sections), charts.self_similarity(kettle.sections),
+    for fig in [charts.structure_timeline(kettle), charts.self_similarity(kettle.sections),
                 charts.voice_split(kettle.sections, kettle.lead_vocal)]:
         assert "kettle hums" not in fig.to_json()

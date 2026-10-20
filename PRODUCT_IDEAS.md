@@ -60,6 +60,17 @@ Impact et effort sont estimés à vue : I = impact, E = effort, sur une échelle
 11. **Notes et favoris personnels** (I1, E1), en local seulement.
 12. **Écoute** (I2, E3). Des liens vers les versions officielles (lecteurs intégrés des plateformes), sans héberger d'audio. Il faut faire correspondre chaque titre à son identifiant sur la plateforme.
 
+## Suivi (20/10/2026)
+
+| # | Fonctionnalité | Statut |
+|---|---|---|
+| 1-3 | Chansons proches, page Mot, score de répétition et empreinte | Fait |
+| 4 | Vue par album | Fait : page Albums (frise des sorties, structure de chaque piste, pistes comparées, mots de l'album, empreintes) |
+| 5 | Profils de voix | Fait : page Voices, deux voix face à face (Lennon / McCartney par défaut) |
+| 6 | Histoires guidées | Fait : page Stories, 4 constats dont le texte est calculé à partir des données |
+| 7 | Détection des sections | Fait pour 16 des 21 chansons sans balises. Mesurée sur les chansons balisées : 70 % des lignes bien classées (62 % en classant tout en couplet), F1 de 0,65 sur les refrains |
+| 8-12 | Plus tard | À faire |
+
 ## Design
 
 - **Empreinte de chanson** : en tête de la page Song, une bande avec la mini-frise de structure, la couleur de la voix et le score de répétition. C'est l'élément visuel signature de l'app.
@@ -75,7 +86,7 @@ Impact et effort sont estimés à vue : I = impact, E = effort, sur une échelle
 
 ## Prérequis techniques
 
-- **Versions alignées** : passer en local à la version de Streamlit utilisée en ligne (1.66) et fixer les versions dans `requirements.txt`. On développe aujourd'hui sur la 1.45 et on déploie sur la 1.66, ce qui bloque l'usage des nouveautés (thèmes réutilisables, `st.pills`, etc.).
+- **Versions alignées (fait)** : passer en local à la version de Streamlit utilisée en ligne (1.66) et fixer les versions dans `requirements.txt`. On développe aujourd'hui sur la 1.45 et on déploie sur la 1.66, ce qui bloque l'usage des nouveautés (thèmes réutilisables, `st.pills`, etc.).
 - **Calculs de similarité** (TF-IDF, voisins) : les faire une fois et les mettre en cache, avec les comptes de mots publics, pour que les nouvelles fonctions marchent aussi dans l'app déployée.
 
 ## Mis de côté

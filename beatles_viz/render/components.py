@@ -18,7 +18,7 @@ HELP = {
 
 def plot(fig, static=False):
     config = {**PLOT_CONFIG, "staticPlot": True} if static else PLOT_CONFIG
-    st.plotly_chart(fig, use_container_width=True, config=config)
+    st.plotly_chart(fig, width="stretch", config=config)
 
 
 @st.cache_data(show_spinner="Loading songs...")
@@ -103,15 +103,17 @@ def song_header(song):
             st.caption("Repetition fingerprint", help=HELP["repetition"])
 
 
-def chip_row(label, options, key, help=None):
-    """A row of small buttons; returns the clicked option or None. Plain buttons rather than st.pills,
+def chip_row(label, options, key, help=None, per_row=4):
+    """Rows of small buttons; returns the clicked option or None. Plain buttons rather than st.pills,
     which AppTest cannot rerun."""
     st.markdown(f"**{label}**", help=help)
-    cols = st.columns(len(options)) if options else []
-    for i, (col, option) in enumerate(zip(cols, options)):
-        if col.button(option, key=f"{key}_{i}", type="tertiary", use_container_width=True):
-            return option
-    return None
+    clicked = None
+    for start in range(0, len(options), per_row):
+        cols = st.columns(per_row)
+        for i, (col, option) in enumerate(zip(cols, options[start:start + per_row]), start):
+            if col.button(option, key=f"{key}_{i}", type="tertiary", width="stretch"):
+                clicked = option
+    return clicked
 
 
 def similar_picker(song, corpus, matrix, key):
@@ -119,7 +121,7 @@ def similar_picker(song, corpus, matrix, key):
     sims = similar_songs(corpus, song.title, k=5, matrix=matrix)
     labels = {f"{r.title} · {r.similarity:.0%}": r.title for r in sims.itertuples()}
     pick = chip_row("Songs like this one", list(labels), f"{key}_similar",
-                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).")
+                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).", per_row=5)
     if pick:
         open_song(labels[pick])
 

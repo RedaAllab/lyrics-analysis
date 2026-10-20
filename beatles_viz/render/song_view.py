@@ -4,6 +4,7 @@ from beatles_viz.attribution import resolve_voice, section_members
 from beatles_viz.config import NEUTRAL, SHARED, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.effects import get_effect
 from beatles_viz.text.sections import section_name
+from beatles_viz.text.segment import AUTO
 
 FONTS = "@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Nunito:wght@400;700&display=swap');"
 
@@ -47,7 +48,9 @@ def render_section(section, lead_vocal, effects_on, params, doc_freq):
                     for i, l in enumerate(section.lines))
     repeat = f'<span class="fx-badge">x{section.repeat}</span>' if section.repeat > 1 else ""
     shown_voice = voice_label(resolve_voice(section, lead_vocal), members)
-    head = (f'<div class="fx-head"><span>{html.escape(section_name(section))}</span>{repeat}'
+    guess = '<span class="fx-badge" title="No tag in the source: section detected">detected</span>' \
+        if section.label == AUTO else ""
+    head = (f'<div class="fx-head"><span>{html.escape(section_name(section))}</span>{repeat}{guess}'
             f'<span class="fx-voice">{html.escape(shown_voice)}</span></div>')
     body = lines or '<div class="fx-instr">instrumental</div>'
     return effect, p, effect.wrap_section(head + body, section, p, ctx)

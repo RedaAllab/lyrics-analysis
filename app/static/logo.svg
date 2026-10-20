@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48">
-  <g transform="translate(24 24)">
-    <circle r="20" fill="#0d0e12" stroke="#e07a5f" stroke-width="2"/>
-    <circle r="14" fill="none" stroke="#2b2d36" stroke-width="1"/>
-    <circle r="10" fill="none" stroke="#2b2d36" stroke-width="1"/>
-    <circle r="6" fill="#e07a5f"/>
-    <circle r="1.6" fill="#0d0e12"/>
+  <g transform="translate(4 6)" fill="#16161a">
+    <rect width="36" height="36" fill="#ffffff" stroke="#16161a" stroke-width="2"/>
+    <rect x="6" y="6" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><rect x="24" y="24" width="6" height="6"/>
+    <rect x="24" y="6" width="6" height="6" fill="#e4572e"/><rect x="6" y="24" width="6" height="6" fill="#e4572e"/>
   </g>
-  <text x="54" y="22" font-family="Georgia, serif" font-size="17" fill="#ece6dc">Lyrics</text>
-  <text x="54" y="39" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="2" fill="#9a9aa6">EXPLORER</text>
+  <text x="52" y="27" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.4" fill="#16161a">LYRICS</text>
+  <text x="52" y="41" font-family="'IBM Plex Mono', Menlo, monospace" font-size="8.5" letter-spacing="1.2" fill="#5c5c66">THE BEATLES, WORD BY WORD</text>
 </svg>

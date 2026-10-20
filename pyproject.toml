@@ -22,6 +22,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "duckdb", "matplotlib"]
+# Local only, never on Streamlit Cloud: scripts/embed_songs.py (pulls PyTorch)
+nlp = ["sentence-transformers"]
 
 [tool.setuptools.packages.find]
 include = ["beatles_viz*"]

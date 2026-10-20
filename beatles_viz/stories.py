@@ -4,13 +4,13 @@ from collections import Counter, namedtuple
 
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 
 from beatles_viz.config import ACCENT, MEMBERS, PHASES, VOICE_COLORS
 from beatles_viz.corpus import analysable
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
 from beatles_viz.viz.song_charts import _layout
+from beatles_viz.viz.trend_charts import phase_strip
 from beatles_viz.text.tokenize import merge
 
 # link: ("word", w), ("song", title) or ("page", file name)
@@ -55,12 +55,9 @@ def richest_years(d):
     text = (f"Lexical richness measures how many different words a song uses in every 50-word stretch. "
             f"It peaks in {peak} (average {g[peak]:.2f}) and is lowest in {low} ({g[low]:.2f}). "
             f"The richest song of {peak} is {top.title} ({top.mattr:.2f}). Each dot is a song.")
-    fig = px.strip(d, x="phase", y="mattr", color="voice", color_discrete_map=VOICE_COLORS, hover_name="title",
-                   labels={"mattr": "lexical richness (MATTR-50)", "voice": "lead voice"})
-    fig.add_trace(go.Scatter(x=g.index, y=g.values, mode="lines+markers", name="average",
-                             line=dict(color=ACCENT, width=3)))
     headline = f"The richest vocabulary comes in {peak}"
-    return Story("richness", headline, text, _layout(_phase_axis(fig), headline, 420), [("song", top.title)])
+    fig = phase_strip(d, "mattr", "lexical richness (MATTR-50)", headline, 420)
+    return Story("richness", headline, text, fig, [("song", top.title)])
 
 
 def i_to_we(d):

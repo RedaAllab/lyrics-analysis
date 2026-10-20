@@ -41,6 +41,9 @@ python3 -m venv .venv
   from returning stanzas when a song has no tags), metrics, voice attribution, stories, charts, effects, rendering.
 - `tests/` pytest suite (synthetic lyrics only). `scripts/audit_dataset.py` dataset audit (`analysis/audit/`).
 - `ROADMAP.md` development plan.
+- `scripts/embed_songs.py` turns each song's stanzas into sentence-transformer vectors (all-MiniLM-L6-v2) and keeps
+  only the five closest songs in meaning and each song's closeness to the 1962-63 songs (`data/beatles/semantic.parquet`,
+  local). Needs `pip install -e ".[nlp]"`; run it before `scripts/export_public.py`.
 - `scripts/export_public.py` regenerates the lyrics-free `data/public/beatles_bow.parquet` (needs the local lyrics file).
 - `scripts/build_dataset.py`, `build_genius.py`, `vocab_by_year.py`: earlier rock / hip-hop experiments (Million Song Dataset, Genius).
 

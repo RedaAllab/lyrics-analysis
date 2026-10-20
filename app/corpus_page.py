@@ -6,8 +6,8 @@ import streamlit as st
 from beatles_viz.config import ACCENT, PHASES, PHASE_ORDER, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
-from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
-                                           plot)
+from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_word, plot,
+                                           song_table)
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
 
@@ -162,8 +162,4 @@ with tab_songs:
         st.caption(f"{len(t)} songs contain '{q}' ({int(t.occurrences.sum())} occurrences).")
     else:
         t = t.sort_values(["year", "title"])
-    st.caption("Select a row to open the song.")
-    picked = st.dataframe(t, hide_index=True, width="stretch", column_config=SONG_TABLE,
-                          on_select="rerun", selection_mode="single-row", key="songs_table")
-    if picked.selection.rows:
-        open_song(t.iloc[picked.selection.rows[0]]["title"])
+    song_table(t, "songs_table", SONG_TABLE)

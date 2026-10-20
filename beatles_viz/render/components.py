@@ -77,6 +77,15 @@ def apply_filters(df, originals, years, voices, voice_col="voice"):
     return d[d.is_original] if originals else d
 
 
+def song_table(table, key, column_config):
+    """A table of songs where selecting a row opens that song."""
+    st.caption("Select a row to open the song.")
+    picked = st.dataframe(table, hide_index=True, width="stretch", column_config=column_config,
+                          on_select="rerun", selection_mode="single-row", key=key)
+    if picked.selection.rows:
+        open_song(table.iloc[picked.selection.rows[0]]["title"])
+
+
 def open_song(title, page="song_page.py"):
     st.session_state["goto_song"] = title
     st.switch_page(page)

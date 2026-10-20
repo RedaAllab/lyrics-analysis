@@ -6,7 +6,7 @@ from beatles_viz.viz.song_charts import _layout
 
 PHASE_ORDER = [p for p, _, _ in PHASES]
 RISING = "#5fa8d3"
-SECTION_LABELS = {"song": "untagged", "pre_chorus": "pre-chorus"}
+GROUP_COLORS = {**SECTION_COLORS, "other": "#c9d6df"}
 
 
 def _phase_labels(counts):
@@ -26,9 +26,8 @@ def word_movers(movers):
 
 
 def section_shares(shares, counts):
-    d = shares.rename(index=_phase_labels(counts)).rename(columns=SECTION_LABELS)
-    colors = {SECTION_LABELS.get(k, k): c for k, c in {**SECTION_COLORS, "song": "#2f3441"}.items()}
-    fig = px.bar(d, barmode="stack", color_discrete_map=colors, labels={"value": "share of sung words", "index": "",
+    d = shares.rename(index=_phase_labels(counts))
+    fig = px.bar(d, barmode="stack", color_discrete_map=GROUP_COLORS, labels={"value": "share of sung words", "index": "",
                                                                          "kind": "section"})
     fig.update_yaxes(tickformat=".0%")
     fig.update_layout(legend_title_text="")

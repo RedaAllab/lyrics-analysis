@@ -27,7 +27,7 @@ st.markdown('<p class="lx-lead">Beyond “love” (see Stories): which words, wh
 
 st.subheader("Which words rise or fall, besides “love”?")
 plot(charts.word_movers(movers))
-pick = chip_row("Open a word", movers.word.tolist(), "trend_words")
+pick = chip_row("Open a word", movers.word.head(3).tolist() + movers.word.tail(3).tolist(), "trend_words")
 if pick:
     open_word(pick)
 st.caption("Words used in at least 10 songs whose rate follows the release year (rank correlation, p < 0.05), "
@@ -38,7 +38,7 @@ st.caption("Words used in at least 10 songs whose rate follows the release year 
 st.subheader("Are songs built differently over time?")
 plot(charts.section_shares(sections, counts))
 st.caption("Sections come from Genius tags (verses and choruses detected from returning stanzas when a song has none), "
-           "and count sung words only: instrumental passages are invisible. Tagging habits may vary with the era "
+           "and count sung words only: instrumental passages are invisible. “Other” gathers intros, pre-choruses and untagged songs. Tagging habits may vary with the era "
            "of the transcription, not only with the songs.")
 
 st.subheader("Who sings lead, and when?")

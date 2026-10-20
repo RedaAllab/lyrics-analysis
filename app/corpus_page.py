@@ -10,6 +10,8 @@ from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, c
                                            song_table)
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
+from beatles_viz.text.words import usage_by
+from beatles_viz.viz.voice_charts import voice_words
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
            "Lexical richness (MATTR-50)": "mattr", "Share of repeated lines": "repeat_ratio"}
@@ -97,13 +99,9 @@ with tab_time:
     default = ["love", "i", "you", "we", "yeah"]
     raw = st.text_input("Words (comma separated)", ", ".join(default))
     watch = [w.strip().lower() for w in raw.split(",") if w.strip()]
-    rows = []
-    for k, grp in d.groupby(key):
-        c = merge(grp.bow); tot = sum(c.values())
-        for w in watch:
-            rows.append({key: k, "word": w, "per 1000 words": 1000 * c[w] / tot, "occurrences": c[w]})
-    if rows:
-        tr = pd.DataFrame(rows)
+    if watch:
+        tr = pd.concat([usage_by(d, w, key).assign(word=w) for w in watch])
+        tr = tr.rename(columns={"per_1000": "per 1000 words"})
         if order:
             tr[key] = pd.Categorical(tr[key], order, ordered=True); tr = tr.sort_values(key)
         fig = px.line(tr, x=key, y="per 1000 words", color="word", markers=True, hover_data=["occurrences"])
@@ -147,9 +145,8 @@ with tab_singer:
     if len(main) >= 2:
         cols = st.columns(len(main))
         for colw, s in zip(cols, main):
-            r = contrast(merge(df[df.voice == s].bow), merge(df[df.voice != s].bow)).head(10)
             colw.markdown(f"**{s}**")
-            word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"singer_words_{s}")
+            word_table(colw, voice_words(df, s, top=10)[["word", "in_group", "z"]], f"singer_words_{s}")
 
 # ---------------- songs ----------------
 with tab_songs:

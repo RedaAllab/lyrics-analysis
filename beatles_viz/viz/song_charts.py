@@ -8,9 +8,9 @@ import plotly.graph_objects as go
 
 from beatles_viz.attribution import resolve_voice
 from beatles_viz.config import SECTION_COLORS, VOICE_COLORS
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.keyness import song_keyness
 from beatles_viz.text.sections import section_name
-from beatles_viz.text.tokenize import content_counter, merge, tokenize
+from beatles_viz.text.tokenize import tokenize
 
 MIN_INSTRUMENTAL_WIDTH = 4  # word-equivalents, so wordless sections stay visible on the timeline
 MAX_LINES_FOR_LINE_MATRIX = 80
@@ -108,10 +108,7 @@ def rolling_richness(sections, window=30):
 
 
 def keyness(song_bow, corpus_bows, top=10):
-    song = content_counter(song_bow)
-    rest = content_counter(merge(corpus_bows)) - song
-    r = monroe(song, rest, prior(song + rest), min_count=3)
-    r = r[r.in_group > 0].head(top)
+    r = song_keyness(song_bow, corpus_bows).head(top)
     if r.empty:
         return None
     fig = px.bar(r[::-1], x="z", y="word", orientation="h", hover_data={"in_group": True, "in_rest": True},

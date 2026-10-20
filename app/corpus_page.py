@@ -8,7 +8,7 @@ from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
                                            plot)
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
@@ -36,10 +36,6 @@ def word_table(container, table, key):
                               on_select="rerun", selection_mode="single-row", key=key)
     if sel.selection.rows:
         open_word(table.iloc[sel.selection.rows[0]]["word"])
-
-
-def prior_from(d):
-    return prior(content_counter(merge(d.bow)))
 
 
 # ---------------- sidebar filters ----------------
@@ -120,14 +116,12 @@ with tab_words:
                "Monroe et al. 2008). Words seen fewer than 5 times are ignored. Select a word to open its page.")
     n_words = st.slider("Words per group", 5, 25, 10, key="n_dist")
     d = df[df.phase.notna()]
-    phase_prior = prior_from(d)
     cols = st.columns(len(PHASES))
     for colw, (p, _, _) in zip(cols, PHASES):
         grp = d[d.phase == p]
         if grp.empty or len(grp) == len(d):
             colw.caption(f"{p}: no data"); continue
-        a = content_counter(merge(grp.bow)); b = content_counter(merge(d[d.phase != p].bow))
-        r = monroe(a, b, phase_prior).head(n_words)
+        r = contrast(merge(grp.bow), merge(d[d.phase != p].bow)).head(n_words)
         colw.markdown(f"**{p}** ({len(grp)} songs)")
         word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"phase_words_{p}")
 
@@ -151,13 +145,11 @@ with tab_singer:
     st.caption("Songs credited to Lennon-McCartney: the lead singer is used as a proxy, not the actual writer.")
     main = [s for s in ["Lennon", "McCartney", "Harrison"] if (df.voice == s).sum() >= 5]
     if len(main) >= 2:
-        prior_s = prior_from(df)
         cols = st.columns(len(main))
         for colw, s in zip(cols, main):
-            a = content_counter(merge(df[df.voice == s].bow)); b = content_counter(merge(df[df.voice != s].bow))
+            r = contrast(merge(df[df.voice == s].bow), merge(df[df.voice != s].bow)).head(10)
             colw.markdown(f"**{s}**")
-            word_table(colw, monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].reset_index(drop=True),
-                       f"singer_words_{s}")
+            word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"singer_words_{s}")
 
 # ---------------- songs ----------------
 with tab_songs:

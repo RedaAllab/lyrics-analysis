@@ -3,7 +3,7 @@ from collections import Counter
 
 import pandas as pd
 
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
 
 
@@ -39,7 +39,7 @@ def companions(corpus, word, k=15):
     a, b = content_counter(merge(corpus[has].bow)), content_counter(merge(corpus[~has].bow))
     a.pop(word, None)
     b.pop(word, None)
-    return monroe(a, b, prior(a + b)).head(k).reset_index(drop=True)
+    return contrast(a, b).head(k).reset_index(drop=True)
 
 
 def vocabulary(corpus, min_count=3):

@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter
 from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, PRONOUN_LABELS, _layout
 
@@ -32,8 +32,7 @@ def percentile_profile(a, b, corpus):
 
 def contrast_words(ca, cb, top=8, min_count=2):
     """The words most typical of A (z > 0) and of B (z < 0), strongest last."""
-    ca, cb = content_counter(ca), content_counter(cb)
-    r = monroe(ca, cb, prior(ca + cb), min_count=min_count)
+    r = contrast(ca, cb, min_count=min_count)
     if r.empty:
         return r
     side = pd.concat([r.head(top), r.tail(top)]).drop_duplicates("word")

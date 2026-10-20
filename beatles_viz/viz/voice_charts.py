@@ -3,8 +3,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from beatles_viz.config import PHASE_ORDER, VOICE_COLORS
-from beatles_viz.text.keyness import monroe, prior
-from beatles_viz.text.tokenize import content_counter, merge
+from beatles_viz.text.keyness import contrast
+from beatles_viz.text.tokenize import merge
 from beatles_viz.viz.compare_charts import contrast_figure
 from beatles_viz.viz.song_charts import _layout
 
@@ -48,9 +48,8 @@ def voice_trend(corpus, voices, metric, label):
 
 def voice_words(corpus, voice, top=10):
     """Words a voice sings much more than the other voices."""
-    a = content_counter(merge(corpus[corpus.voice == voice].bow))
-    b = content_counter(merge(corpus[corpus.voice != voice].bow))
-    return monroe(a, b, prior(a + b)).query("z > 0").head(top).reset_index(drop=True)
+    r = contrast(merge(corpus[corpus.voice == voice].bow), merge(corpus[corpus.voice != voice].bow))
+    return r.query("z > 0").head(top).reset_index(drop=True)
 
 
 def voice_duel(corpus, a, b, top=10):

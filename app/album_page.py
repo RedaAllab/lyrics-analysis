@@ -6,8 +6,8 @@ from beatles_viz.corpus import albums
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, listen_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
-from beatles_viz.text.keyness import monroe, prior
-from beatles_viz.text.tokenize import content_counter, merge
+from beatles_viz.text.keyness import contrast
+from beatles_viz.text.tokenize import merge
 from beatles_viz.viz import album_charts
 from beatles_viz.viz.song_charts import fingerprint_figure
 
@@ -47,9 +47,8 @@ with left:
     else:
         plot(fig)
 with right:
-    a = content_counter(merge(tracks.bow))
-    rest = content_counter(merge(corpus[corpus.album != album].bow))
-    words = monroe(a, rest, prior(a + rest), min_count=3).query("z > 0").word.head(8).tolist()
+    words = contrast(merge(tracks.bow), merge(corpus[corpus.album != album].bow), min_count=3)
+    words = words.query("z > 0").word.head(8).tolist()
     if words:
         pick = chip_row("Words of this album", words, "album_words",
                         help="Over-represented on this album compared with the rest of the catalogue. " + HELP["z"])

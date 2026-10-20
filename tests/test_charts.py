@@ -68,3 +68,8 @@ def test_section_spans_cover_the_song_in_order(corpus):
     spans = section_spans(corpus.loc[corpus.title == "Kettle"].iloc[0])
     assert spans[0][2] == 0 and abs(spans[-1][3] - 1) < 1e-9
     assert all(a[3] == b[2] for a, b in zip(spans, spans[1:]))
+
+
+def test_parse_time():
+    from beatles_viz.listen import parse_time
+    assert parse_time("3:08") == 188 and parse_time(" 95 ") == 95 and parse_time("0:07.5") == 7.5

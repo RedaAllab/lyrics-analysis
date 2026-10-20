@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LYRICS_PATH = ROOT / "data/beatles/beatles.parquet"
 PUBLIC_PATH = ROOT / "data/public/beatles_bow.parquet"
 YOUTUBE_PATH = ROOT / "data/beatles/youtube.csv"
+SECTION_TIMES_PATH = ROOT / "data/beatles/section_times.csv"
 
 PHASES = [("1962-63", 1962, 1963), ("1964-65", 1964, 1965), ("1966-67", 1966, 1967), ("1968-70", 1968, 1970)]
 MIN_TOKENS = 30

@@ -1,10 +1,14 @@
 [theme]
 base = "dark"
 primaryColor = "#e07a5f"
-backgroundColor = "#15161b"
-secondaryBackgroundColor = "#1f2129"
+backgroundColor = "#12151f"
+secondaryBackgroundColor = "#1b2440"
 textColor = "#ece6dc"
 font = "sans serif"
+
+[theme.sidebar]
+backgroundColor = "#0d0f16"
+secondaryBackgroundColor = "#1b2440"
 
 [browser]
 gatherUsageStats = false

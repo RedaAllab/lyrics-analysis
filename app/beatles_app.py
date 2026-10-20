@@ -43,6 +43,7 @@ st.navigation({
     ],
     "Catalogue": [
         st.Page(HERE / "stories_page.py", title="Stories", icon=":material/auto_stories:", url_path="stories"),
+        st.Page(HERE / "trends_page.py", title="Trends", icon=":material/trending_up:", url_path="trends"),
         st.Page(HERE / "album_page.py", title="Albums", icon=":material/album:", url_path="albums"),
         st.Page(HERE / "voice_page.py", title="Voices", icon=":material/record_voice_over:", url_path="voices"),
         st.Page(HERE / "mood_page.py", title="Mood", icon=":material/sentiment_satisfied:", url_path="mood"),

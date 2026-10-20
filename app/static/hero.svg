@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 190" role="img" aria-label="Stadium floodlights, drum kit, amplifier and violin bass above a zebra crossing">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2440"/><stop offset="1" stop-color="#12151f"/>
+    </linearGradient>
+    <pattern id="diamonds" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#2b2418"/><path d="M0 0H10M0 0V10" stroke="#c9a85c" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="190" fill="url(#sky)"/>
+
+  <!-- stadium bowl and floodlight towers -->
+  <path d="M30 150 Q175 70 320 150Z" fill="#2a3358"/>
+  <path d="M60 150 Q175 98 290 150M90 150 Q175 115 260 150" fill="none" stroke="#56639a" stroke-width="2"/>
+  <g stroke="#ece6dc" stroke-width="3"><path d="M52 150V58M298 150V58"/></g>
+  <g fill="#ece6dc"><rect x="38" y="42" width="28" height="16" rx="2"/><rect x="284" y="42" width="28" height="16" rx="2"/></g>
+  <g fill="#12151f"><circle cx="45" cy="50" r="2.2"/><circle cx="52" cy="50" r="2.2"/><circle cx="59" cy="50" r="2.2"/>
+    <circle cx="291" cy="50" r="2.2"/><circle cx="298" cy="50" r="2.2"/><circle cx="305" cy="50" r="2.2"/></g>
+  <path d="M52 42 L20 8M52 42 L84 8M298 42 L266 8M298 42 L330 8" stroke="#ece6dc" stroke-opacity=".12" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- drum kit -->
+  <g stroke="#ece6dc" stroke-width="3" fill="#12151f">
+    <path d="M356 150V92M360 70V92" fill="none"/>
+    <ellipse cx="358" cy="66" rx="22" ry="4" fill="#d9b25f" stroke="none"/>
+    <circle cx="430" cy="116" r="34"/><circle cx="430" cy="116" r="26" stroke="#e07a5f"/>
+    <circle cx="400" cy="76" r="16"/><circle cx="460" cy="76" r="16"/>
+    <circle cx="500" cy="108" r="20"/><circle cx="500" cy="108" r="14" stroke="#5fa8d3" stroke-width="2"/>
+    <path d="M430 150V150M418 150l-8 0M442 150l8 0" fill="none"/>
+    <ellipse cx="470" cy="46" rx="28" ry="4" fill="#d9b25f" stroke="none"/><path d="M470 46V62" fill="none"/>
+  </g>
+
+  <!-- amplifier with diamond grille -->
+  <g>
+    <rect x="570" y="62" width="112" height="88" rx="5" fill="#15110b" stroke="#ece6dc" stroke-width="3"/>
+    <rect x="570" y="62" width="112" height="22" rx="5" fill="#2b2418"/>
+    <g fill="#ece6dc"><circle cx="590" cy="73" r="4"/><circle cx="608" cy="73" r="4"/><circle cx="626" cy="73" r="4"/></g>
+    <rect x="644" y="68" width="28" height="10" rx="2" fill="#e07a5f"/>
+    <rect x="580" y="92" width="92" height="50" fill="url(#diamonds)" stroke="#ece6dc" stroke-width="1.5"/>
+    <path d="M610 62V54h32v8" fill="none" stroke="#ece6dc" stroke-width="3"/>
+  </g>
+
+  <!-- violin bass -->
+  <g transform="translate(790 105) rotate(-32)" stroke="#ece6dc" stroke-width="3">
+    <path d="M-120 -4H-30M-120 4H-30" fill="none"/>
+    <rect x="-150" y="-9" width="34" height="18" rx="4" fill="#12151f"/>
+    <path d="M-30 -28 C-4 -34 22 -30 36 -14 C42 -6 42 6 36 14 C22 30 -4 34 -30 28 C-34 20 -36 6 -26 0 C-36 -6 -34 -20 -30 -28Z" fill="#9c4a32"/>
+    <path d="M12 -8V8M24 -8V8" stroke="#12151f" stroke-width="3"/>
+  </g>
+
+  <!-- union flag (simplified) -->
+  <g transform="translate(880 14)">
+    <rect width="64" height="38" fill="#1b2a5c"/>
+    <path d="M0 0L64 38M64 0L0 38" stroke="#ece6dc" stroke-width="7"/><path d="M0 0L64 38M64 0L0 38" stroke="#c8372d" stroke-width="2.5"/>
+    <path d="M32 0V38M0 19H64" stroke="#ece6dc" stroke-width="12"/><path d="M32 0V38M0 19H64" stroke="#c8372d" stroke-width="7"/>
+  </g>
+
+  <!-- zebra crossing -->
+  <rect y="150" width="960" height="40" fill="#0d0f16"/>
+  <g fill="#ece6dc">
+    <path id="s" d="M0 150H34L24 190H-12Z"/>
+    <use href="#s" x="60"/><use href="#s" x="120"/><use href="#s" x="180"/><use href="#s" x="240"/><use href="#s" x="300"/>
+    <use href="#s" x="360"/><use href="#s" x="420"/><use href="#s" x="480"/><use href="#s" x="540"/><use href="#s" x="600"/>
+    <use href="#s" x="660"/><use href="#s" x="720"/><use href="#s" x="780"/><use href="#s" x="840"/><use href="#s" x="900"/>
+    <use href="#s" x="960"/>
+  </g>
+</svg>

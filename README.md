@@ -1,60 +1,60 @@
-# Lyrics : analyse des paroles des Beatles
+# Lyrics: analysing the Beatles' words
 
-Explorateur Streamlit du vocabulaire, de la structure et des voix dans les paroles des Beatles (compositions
-originales par défaut), avec une comparaison à huit catalogues d'artistes.
+A Streamlit explorer for the vocabulary, structure and voices in Beatles lyrics (original compositions by default),
+with a comparison against eight artist catalogues.
 
-**App publique** : <https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/>
-(point d'entrée : `app/beatles_app.py`).
+**Public app**: <https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app/>
+(entry point: `app/beatles_app.py`).
 
-> Projet de fans non officiel, sans lien avec les Beatles, Apple Corps ou leurs maisons de disques.
+> Unofficial fan project, not affiliated with The Beatles, Apple Corps or their record labels.
 
-## Fonctionnement
+## How it works
 
-Chaque chanson passe par `beatles_viz.corpus.build_corpus` :
+Each song goes through `beatles_viz.corpus.build_corpus`:
 
-1. **Sections** : balises Genius (`[Verse 1]`, `[Chorus: Paul McCartney]`…) normalisées ; à défaut, couplets et
-   refrains détectés par les strophes qui reviennent (`text/sections.py`, `text/segment.py`).
-2. **Mesures** : tokenisation, richesse lexicale (MATTR), répétition et « empreinte » 48×48 des répétitions,
-   pronoms, humeur (lexique VADER) et thèmes (`text/`).
-3. **Voix** : la voix principale suit le chanteur nommé dans la section, sinon `lead_vocal` de la chanson,
-   sinon « Neutral » ; plusieurs voix donnent « Shared » (`attribution.py`). Ce n'est pas le crédit d'écriture.
-4. **Rendu** : graphiques Plotly (`viz/`), page « Read » avec un effet visuel par voix (`effects/`), carte de
-   partage (`render/share_card.py`).
+1. **Sections**: Genius tags (`[Verse 1]`, `[Chorus: Paul McCartney]`…) are normalised; when a song has none,
+   verses and choruses are detected from returning stanzas (`text/sections.py`, `text/segment.py`).
+2. **Metrics**: tokenisation, lexical richness (MATTR), repetition and a 48×48 repetition "fingerprint",
+   pronouns, mood (VADER lexicon) and themes (`text/`).
+3. **Voices**: the lead voice is the singer named in the section tag, otherwise the song's `lead_vocal`,
+   otherwise "Neutral"; several voices give "Shared" (`attribution.py`). This is not the songwriting credit.
+4. **Rendering**: Plotly charts (`viz/`), a Read page with one visual effect per voice (`effects/`), and a
+   share card (`render/share_card.py`).
 
-## Deux modes de données
+## Two data modes
 
-| Mode | Source | Contenu |
+| Mode | Source | Content |
 |---|---|---|
-| `local` | `data/beatles/beatles.parquet` (git-ignoré) | paroles complètes ; active la page Read, « My songs » et les similarités sémantiques |
-| `public` | `data/public/beatles_bow.parquet` (versionné) | métriques, comptes de mots, empreinte de répétition, forme des sections : **aucune parole** |
+| `local` | `data/beatles/beatles.parquet` (git-ignored) | full lyrics; enables the Read page, "My songs" and semantic similarities |
+| `public` | `data/public/beatles_bow.parquet` (versioned) | metrics, word counts, repetition fingerprint, section shapes: **no lyrics** |
 
-Les paroles sont protégées par le droit d'auteur et ne sont pas dans le dépôt. Sans fichier local, l'app se
-lance en mode `public`. `BEATLES_PUBLIC_ONLY=1` force ce mode sur une machine qui a les paroles.
+Lyrics are copyrighted and are not in the repository. Without the local file the app starts in `public` mode.
+`BEATLES_PUBLIC_ONLY=1` forces that mode on a machine that has the lyrics.
 
-## Arborescence
+## Layout
 
 ```
-app/                  Streamlit : beatles_app.py (navigation) + une page par fichier *_page.py ; static/ (logos)
-beatles_viz/          paquet Python
-  config.py           chemins, phases, seuils, couleurs
+app/                  Streamlit: beatles_app.py (navigation) + one *_page.py per page; static/ (logos)
+beatles_viz/          Python package
+  config.py           paths, phases, thresholds, colours
   corpus.py           build_corpus / load_corpus / analysable
-  attribution.py      règle voix -> effet
-  stories.py          les constats des « Stories »
-  data/               loader.py (local/public), export.py (export sans paroles)
-  text/               tokenisation, sections, métriques, humeur, répétition, sémantique
-  viz/                graphiques Plotly
-  effects/            un effet visuel par voix
-  render/             vues, carte de partage, polices (licences OFL incluses)
-scripts/              construction des données et analyses hors ligne
-tests/                pytest, paroles synthétiques uniquement
-analysis/             tables et figures produites (sans paroles) ; artists/README.md décrit la méthode
-data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/ (le reste est git-ignoré)
-docs/                 ROADMAP.md, AUDIT_UX.md, PRODUCT_IDEAS.md : notes de travail (en français)
+  attribution.py      voice -> effect rule
+  stories.py          the findings shown in "Stories"
+  data/               loader.py (local/public), export.py (lyrics-free export)
+  text/               tokenisation, sections, metrics, mood, repetition, semantics
+  viz/                Plotly charts
+  effects/            one visual effect per voice
+  render/             views, share card, fonts (OFL licences included)
+scripts/              offline data building and analyses
+tests/                pytest, synthetic lyrics only
+analysis/             generated tables and figures (no lyrics); artists/README.md describes the method
+data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/ (the rest is git-ignored)
+docs/                 ROADMAP.md, AUDIT_UX.md, PRODUCT_IDEAS.md: working notes (in French)
 ```
 
-## Installation et exécution
+## Install and run
 
-Python ≥ 3.11. Les versions sont épinglées comme sur Streamlit Cloud (`requirements.txt`, `pyproject.toml`).
+Python ≥ 3.11. Versions are pinned to match Streamlit Cloud (`requirements.txt`, `pyproject.toml`).
 
 ```bash
 python3 -m venv .venv
@@ -62,32 +62,32 @@ python3 -m venv .venv
 .venv/bin/streamlit run app/beatles_app.py
 ```
 
-Extras : `dev` (pytest, duckdb, matplotlib, pour les tests et les scripts) ; `nlp` (sentence-transformers, local
-uniquement, pour `scripts/embed_songs.py`).
+Extras: `dev` (pytest, duckdb, matplotlib, for tests and scripts); `nlp` (sentence-transformers, local only, for
+`scripts/embed_songs.py`).
 
 ## Tests
 
 ```bash
-BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # comme la CI GitHub Actions : les tests qui exigent les paroles sont ignorés
-.venv/bin/pytest                         # avec le fichier de paroles local : tous les tests
+BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # as in GitHub Actions CI: tests that need the lyrics are skipped
+.venv/bin/pytest                         # with the local lyrics file: all tests
 ```
 
-## Reconstruire les données (local)
+## Rebuilding the data (local)
 
-| Étape | Script |
+| Step | Script |
 |---|---|
-| Liste officielle (Wikipédia) × paroles Genius (datasets Hugging Face `theelderemo/genius-lyrics-cleaned`, `Dr3dre/Genius-song-lyrics-cleaned`) | `scripts/build_beatles.py` (voir son docstring) |
-| Autres artistes | `scripts/build_artist.py`, `scripts/album_song_list.py` |
-| Vecteurs sémantiques (facultatif) | `scripts/embed_songs.py` |
-| Fichier public sans paroles | `scripts/export_public.py` |
-| Identifiants YouTube officiels | `scripts/youtube_ids.py` |
-| Tables et figures | `scripts/analyse_beatles.py`, `scripts/compare_artists.py`, `scripts/audit_dataset.py` |
+| Official song list (Wikipedia) × Genius lyrics (Hugging Face datasets `theelderemo/genius-lyrics-cleaned`, `Dr3dre/Genius-song-lyrics-cleaned`) | `scripts/build_beatles.py` (see its docstring) |
+| Other artists | `scripts/build_artist.py`, `scripts/album_song_list.py` |
+| Semantic vectors (optional) | `scripts/embed_songs.py` |
+| Public lyrics-free file | `scripts/export_public.py` |
+| Official YouTube IDs | `scripts/youtube_ids.py` |
+| Tables and figures | `scripts/analyse_beatles.py`, `scripts/compare_artists.py`, `scripts/audit_dataset.py` |
 
-## Limites connues
+## Known limitations
 
-- `build_beatles.py` écrit `beatles_lyrics.csv` ; aucun script versionné ne produit `beatles.parquet` (colonnes
-  `title`, `release_core`, `is_original`, `lyrics_raw`…) que l'app lit. Ce fichier local n'est donc pas
-  reproductible depuis le dépôt seul.
-- Les années Genius sont peu fiables ; l'année retenue est celle de la liste officielle.
-- Les horodatages de sections (`section_times.csv`) sont mesurés à l'oreille sur quelques chansons, estimés ailleurs.
-- Usage de recherche personnel.
+- `build_beatles.py` writes `beatles_lyrics.csv`; no versioned script produces the `beatles.parquet` the app reads
+  (columns `title`, `release_core`, `is_original`, `lyrics_raw`…), so that local file cannot be rebuilt from the
+  repository alone.
+- Genius years are unreliable; the year used is the one from the official list.
+- Section timestamps (`section_times.csv`) are measured by ear on a few songs and estimated for the others.
+- For personal research use only.

@@ -1,0 +1,17 @@
+artist,decade,songs,tokens_median,mattr_median,repetition_score_median,valence_median
+Bob Dylan,1960,87,253.0,0.778,0.0147,0.0251
+Bob Dylan,1970,74,213.5,0.774,0.0149,0.1058
+Bob Dylan,1980,69,242.0,0.7527,0.0179,0.0287
+Bob Dylan,1990,55,244.0,0.7662,0.0149,0.0295
+Bob Dylan,2000,49,333.0,0.7948,0.0134,0.0461
+Bob Dylan,2010,58,257.0,0.7367,0.0172,0.0458
+Bob Dylan,2020,11,351.0,0.7685,0.013,0.0597
+The Beatles,1960,196,182.0,0.6402,0.0298,0.2173
+The Beatles,1970,13,186.0,0.5934,0.0375,0.1657
+The Rolling Stones,1960,88,190.0,0.6574,0.0262,0.0771
+The Rolling Stones,1970,72,240.5,0.6366,0.0247,0.0269
+The Rolling Stones,1980,52,252.0,0.5917,0.0343,0.005
+The Rolling Stones,1990,36,257.0,0.6456,0.0262,-0.0029
+The Rolling Stones,2000,19,244.0,0.7074,0.0221,-0.0604
+The Rolling Stones,2010,17,279.0,0.7078,0.0194,0.0839
+The Rolling Stones,2020,9,310.0,0.6776,0.0269,0.2269

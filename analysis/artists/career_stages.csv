@@ -1,0 +1,10 @@
+artist,stage,songs,tokens_median,mattr_median,repetition_score_median,chorus_share_median,valence_median,first_singular_median,second_median
+Bob Dylan,years 1-3,34,286.0,0.769,0.0143,0.0,0.0034,0.0699,0.0201
+Bob Dylan,years 4-6,45,258.0,0.7969,0.0136,0.0,0.0263,0.0498,0.0341
+Bob Dylan,years 7-9,23,160.0,0.7395,0.018,0.0,0.2286,0.0625,0.0242
+The Beatles,years 1-3,54,177.0,0.6387,0.0327,0.0274,0.2433,0.1347,0.0754
+The Beatles,years 4-6,71,200.0,0.672,0.0288,0.283,0.1962,0.0781,0.0513
+The Beatles,years 7-9,81,166.0,0.6117,0.0293,0.2232,0.1964,0.0419,0.0439
+The Rolling Stones,years 1-3,21,153.0,0.6195,0.0289,0.2128,0.0667,0.0779,0.0523
+The Rolling Stones,years 4-6,58,191.0,0.6845,0.025,0.1973,0.0912,0.0529,0.0418
+The Rolling Stones,years 7-9,18,206.0,0.6629,0.0234,0.2765,0.0238,0.0847,0.0464

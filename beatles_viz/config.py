@@ -43,4 +43,5 @@ SECTION_COLORS = {"intro": "#c9d6df", "verse": "#6a8398", "pre_chorus": "#8fa9b8
                   "bridge": "#81b29a", "instrumental": "#f2cc8f", "outro": "#a7b1b8", "other": "#d8d8d8",
                   "song": "#6a8398"}
 ACCENT = "#e07a5f"
+APP_URL = "https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app"
 VOICE_ORDER = ["Lennon", "McCartney", "Harrison", "Starr", "Shared", "Neutral"]

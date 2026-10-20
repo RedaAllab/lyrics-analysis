@@ -32,6 +32,7 @@ from beatles_viz.render.identity import apply_identity  # noqa: E402
 
 st.set_page_config(page_title="Beatles lyrics explorer", page_icon=str(HERE / "static/icon.svg"), layout="wide")
 apply_identity(HERE / "static/logo.svg", HERE / "static/icon.svg")
+st.sidebar.caption("Unofficial fan project, not affiliated with The Beatles, Apple Corps or their record labels.")
 st.navigation({
     "Explore": [
         st.Page(HERE / "home_page.py", title="Home", icon=":material/home:", url_path="home", default=True),

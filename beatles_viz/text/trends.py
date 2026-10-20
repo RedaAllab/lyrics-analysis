@@ -3,11 +3,13 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-from beatles_viz.config import PHASES, SECTION_KINDS
+from beatles_viz.config import PHASES
 from beatles_viz.corpus import doc_frequencies
 from beatles_viz.text.tokenize import content_counter, is_content, merge
 
 FIRST, LAST = PHASES[0][0], PHASES[-1][0]
+SECTION_GROUPS = {"verse": "verse", "chorus": "chorus", "bridge": "bridge", "outro": "outro"}  # anything else: "other"
+GROUP_ORDER = ["verse", "chorus", "bridge", "outro", "other"]
 
 
 def word_trends(d, min_songs=10):
@@ -37,10 +39,11 @@ def steady_movers(trends, top=8, alpha=0.05, exclude=()):
 
 
 def section_shares(d):
-    """Share of sung words that fall in each kind of section, per period."""
-    rows = [(p, k, w) for p, kinds, words in zip(d.phase, d.sec_kinds, d.sec_words) for k, w in zip(kinds, words)]
+    """Share of sung words in verses, choruses, bridges, outros and the rest, per period."""
+    rows = [(p, SECTION_GROUPS.get(k, "other"), w)
+            for p, kinds, words in zip(d.phase, d.sec_kinds, d.sec_words) for k, w in zip(kinds, words)]
     g = pd.DataFrame(rows, columns=["phase", "kind", "words"]).groupby(["phase", "kind"]).words.sum().unstack(fill_value=0)
-    g = g.reindex(columns=[k for k in SECTION_KINDS + ["song"] if k in g]).drop(columns=["instrumental"], errors="ignore")
+    g = g.reindex(columns=[k for k in GROUP_ORDER if k in g])
     return g.div(g.sum(axis=1), axis=0)
 
 

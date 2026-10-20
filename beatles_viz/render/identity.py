@@ -1,4 +1,6 @@
 """Global look: display font for titles, card style, section rhythm. Colours come from .streamlit/config.toml."""
+import base64
+
 import streamlit as st
 
 CSS = """
@@ -6,11 +8,11 @@ CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap');
 h1, h2, h3 { font-family: 'DM Serif Display', Georgia, serif !important; font-weight: 400 !important;
              letter-spacing: .01em; }
-h1 { font-family: 'Bebas Neue', Impact, sans-serif !important; letter-spacing: .04em; font-size: 3.2rem !important; }
+h1 { font-family: 'Bebas Neue', Impact, sans-serif !important; letter-spacing: .04em; font-size: 2.4rem !important; }
 .lx-kicker { display: inline-block; text-transform: uppercase; letter-spacing: .16em; font-size: .7rem; font-weight: 600;
              color: #12151f; background: #ece6dc; border: 1px solid #ece6dc; padding: .1em .55em; margin: 0 0 .4rem; }
-.lx-zebra { height: 8px; margin: .2rem 0 1rem; opacity: .85;
-            background: repeating-linear-gradient(90deg, #ece6dc 0 26px, transparent 26px 40px); }
+.lx-kicker.lx-plain { letter-spacing: .08em; white-space: nowrap; background: transparent; color: #ece6dc; border-color: rgba(236,230,220,.5); }
+.lx-banner { display: block; width: 100%; height: auto; border-radius: .5rem; margin-bottom: .75rem; }
 .lx-lead { font-size: 1.1rem; opacity: .8; max-width: 40rem; }
 .lx-dot { display: inline-block; width: .7em; height: .7em; border-radius: 50%; margin-right: .35em; }
 .lx-stat { font-size: .85rem; opacity: .75; }
@@ -31,9 +33,11 @@ def apply_identity(logo, icon):
     st.logo(str(logo), icon_image=str(icon))
 
 
-def zebra():
-    st.markdown('<div class="lx-zebra"></div>', unsafe_allow_html=True)
+def kicker(text, plain=False):
+    st.markdown(f'<p class="lx-kicker{" lx-plain" if plain else ""}">{text}</p>', unsafe_allow_html=True)
 
 
-def kicker(text):
-    st.markdown(f'<p class="lx-kicker">{text}</p>', unsafe_allow_html=True)
+def banner(path, alt):
+    """An <img> rather than st.image, which cannot take a text alternative."""
+    data = base64.b64encode(path.read_bytes()).decode()
+    st.markdown(f'<img class="lx-banner" src="data:image/svg+xml;base64,{data}" alt="{alt}">', unsafe_allow_html=True)

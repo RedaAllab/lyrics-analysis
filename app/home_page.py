@@ -8,15 +8,15 @@ from beatles_viz.corpus import featured_songs
 from beatles_viz.data.loader import has_lyrics
 from beatles_viz.render.components import cached_corpus, open_song, plot
 from beatles_viz.viz.song_charts import fingerprint_figure
-from beatles_viz.render.identity import kicker, zebra
+from beatles_viz.render.identity import banner, kicker
 
 corpus = cached_corpus("local" if has_lyrics() else "public")
 originals = corpus[corpus.is_original]
 
-st.image(str(Path(__file__).parent / "static/hero.svg"), width="stretch")
+banner(Path(__file__).parent / "static/hero.svg",
+       "Stadium with floodlights, drum kit, amplifier and violin bass above a zebra crossing")
 kicker(f"The Beatles · {int(originals.year.min())}–1970")
 st.title("Pick a song, see how it is written")
-zebra()
 st.markdown('<p class="lx-lead">Structure, repetitions, vocabulary and voices of '
             f'{len(originals)} original compositions, song by song or across the whole catalogue.</p>',
             unsafe_allow_html=True)
@@ -36,7 +36,7 @@ for row_start in range(0, len(cards), 3):
     for col, (label, title, reason) in zip(st.columns(3), cards[row_start:row_start + 3]):
         song = corpus[corpus.title == title].iloc[0]
         with col.container(border=True):
-            kicker(label)
+            kicker(label, plain=True)
             st.markdown(f"### {title}")
             if "fingerprint" in song and song.fingerprint.size > 1:
                 plot(fingerprint_figure(song.fingerprint, VOICE_COLORS.get(song.voice, "#e07a5f"), height=110),

@@ -10,7 +10,7 @@ from beatles_viz.listen import section_spans, section_times, video_id
 from beatles_viz.render.components import listen_row
 from beatles_viz.viz.song_charts import has_structure
 
-SYNCED = {"Hey Jude"}
+SYNCED = {"Hey Jude", "Let It Be"}
 
 TEMPLATE = """
 <style>

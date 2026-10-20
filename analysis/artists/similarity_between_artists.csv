@@ -1,4 +1,9 @@
-,The Beatles,The Rolling Stones,Bob Dylan
-The Beatles,0.0364,0.0321,0.03
-The Rolling Stones,0.0321,0.0372,0.0313
-Bob Dylan,0.03,0.0313,0.0359
+,The Beatles,The Rolling Stones,Bob Dylan,Paul McCartney,John Lennon,Leonard Cohen,Joni Mitchell,Paul Simon
+The Beatles,0.0361,0.0321,0.0298,0.0308,0.0289,0.0252,0.0238,0.0243
+The Rolling Stones,0.0321,0.0378,0.0313,0.029,0.0281,0.0248,0.0243,0.0247
+Bob Dylan,0.0298,0.0313,0.0357,0.0272,0.0272,0.0281,0.027,0.0272
+Paul McCartney,0.0308,0.029,0.0272,0.0281,0.0256,0.0233,0.0219,0.0224
+John Lennon,0.0289,0.0281,0.0272,0.0256,0.027,0.0225,0.0217,0.0225
+Leonard Cohen,0.0252,0.0248,0.0281,0.0233,0.0225,0.0292,0.0233,0.0233
+Joni Mitchell,0.0238,0.0243,0.027,0.0219,0.0217,0.0233,0.0256,0.0226
+Paul Simon,0.0243,0.0247,0.0272,0.0224,0.0225,0.0233,0.0226,0.0251

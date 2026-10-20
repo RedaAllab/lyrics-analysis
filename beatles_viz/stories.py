@@ -4,7 +4,7 @@ from collections import Counter, namedtuple
 
 import plotly.express as px
 
-from beatles_viz.config import ACCENT, MEMBERS, PHASES, VOICE_COLORS
+from beatles_viz.config import ACCENT, MEMBERS, PHASE_ORDER, VOICE_COLORS
 from beatles_viz.corpus import analysable
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
@@ -14,7 +14,6 @@ from beatles_viz.text.tokenize import merge
 
 # link: ("word", w), ("song", title) or ("page", file name)
 Story = namedtuple("Story", "key headline text figure links")
-PHASE_ORDER = [p for p, _, _ in PHASES]
 EARLY, LATE = PHASE_ORDER[0], PHASE_ORDER[-1]
 
 

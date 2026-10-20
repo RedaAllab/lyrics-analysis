@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from beatles_viz.config import ACCENT, PHASES, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, PHASES, PHASE_ORDER, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import has_lyrics
 from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
@@ -84,7 +84,7 @@ with tab_time:
     by = st.radio("Group by", ["Year", "Period"], horizontal=True)
     key = "year" if by == "Year" else "phase"
     d = df if by == "Year" else df[df.phase.notna()]
-    order = None if by == "Year" else [p for p, _, _ in PHASES]
+    order = None if by == "Year" else PHASE_ORDER
     metric_label = st.selectbox("Metric", list(METRICS))
     col = METRICS[metric_label]
     agg = d.groupby(key).agg(value=(col, "mean"), songs=("title", "count")).reset_index()

@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from collections import Counter
 
-from beatles_viz.config import MATTR_WINDOW, PHASES, ROOT
+from beatles_viz.config import MATTR_WINDOW, PHASES, PHASE_ORDER, ROOT
 from beatles_viz.corpus import analysable, load_corpus
 from beatles_viz.text.keyness import monroe
 from beatles_viz.text.metrics import mattr
@@ -59,7 +59,7 @@ yr = tm.groupby("year").agg(songs=("title", "count"), tokens=("tokens", "mean"),
 yr.to_csv(OUT / "year_summary.csv")
 ph = tm.groupby("phase").agg(songs=("title", "count"), tokens=("tokens", "mean"), types=("types", "mean"),
                              mattr=("mattr", "mean"), mattr_dedup=("mattr_dedup", "mean"),
-                             repeat_ratio=("repeat_ratio", "mean")).round(3).loc[[p for p, _, _ in PHASES]]
+                             repeat_ratio=("repeat_ratio", "mean")).round(3).loc[PHASE_ORDER]
 ph.to_csv(OUT / "phase_summary.csv")
 fig, axes = plt.subplots(1, 3, figsize=(14, 4))
 for ax, col, ttl in zip(axes, ["tokens", "mattr", "repeat_ratio"], ["words per song", f"lexical richness (MATTR-{MATTR_WINDOW})", "share of repeated lines"]):
@@ -82,7 +82,7 @@ def distinctive(col, groups, fname, fig_name, title):
     pd.concat(res).to_csv(OUT / fname, index=False)
     fig.suptitle(title); fig.tight_layout(); fig.savefig(OUT / fig_name, dpi=150); plt.close(fig)
 
-distinctive("phase", [p for p, _, _ in PHASES], "distinctive_words_by_phase.csv", "fig4_phase_words.png", "Words most characteristic of each period")
+distinctive("phase", PHASE_ORDER, "distinctive_words_by_phase.csv", "fig4_phase_words.png", "Words most characteristic of each period")
 
 # word trends per 1000 tokens, by phase
 WATCH = ["love", "i", "you", "we", "me", "yeah", "oh", "baby"]

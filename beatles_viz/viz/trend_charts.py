@@ -2,10 +2,9 @@
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASES, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, PHASE_ORDER, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.viz.song_charts import _layout
 
-PHASE_ORDER = [p for p, _, _ in PHASES]
 RISING = "#5fa8d3"
 GROUP_COLORS = {**SECTION_COLORS, "other": "#c9d6df"}
 

@@ -2,7 +2,7 @@
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import PHASES, VOICE_COLORS
+from beatles_viz.config import PHASE_ORDER, VOICE_COLORS
 from beatles_viz.text.keyness import monroe, prior
 from beatles_viz.text.tokenize import content_counter, merge
 from beatles_viz.viz.compare_charts import contrast_figure
@@ -37,13 +37,12 @@ def voice_radar(corpus, voices):
 
 
 def voice_trend(corpus, voices, metric, label):
-    order = [p for p, _, _ in PHASES]
     g = (corpus[corpus.voice.isin(voices)].groupby(["phase", "voice"])
          .agg(value=(metric, "mean"), songs=("title", "count")).reset_index())
     g = g[g.songs >= 2]
     fig = px.line(g, x="phase", y="value", color="voice", markers=True, color_discrete_map=VOICE_COLORS,
                   hover_data={"songs": True}, labels={"value": label, "phase": ""},
-                  category_orders={"phase": order})
+                  category_orders={"phase": PHASE_ORDER})
     return _layout(fig, f"{label} over time (periods with at least 2 songs)", height=340)
 
 

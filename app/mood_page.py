@@ -1,7 +1,7 @@
 """Mood and themes across the catalogue, from word counts only (works without the lyrics)."""
 import streamlit as st
 
-from beatles_viz.config import PHASES, VOICE_ORDER
+from beatles_viz.config import PHASE_ORDER, VOICE_ORDER
 from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import has_lyrics
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, open_song, plot
@@ -32,7 +32,7 @@ with right:
 
 by = st.radio("Themes by", ["period", "voice"], horizontal=True, key="mood_by")
 if by == "period":
-    plot(mc.theme_heatmap(corpus, "phase", [p for p, _, _ in PHASES]))
+    plot(mc.theme_heatmap(corpus, "phase", PHASE_ORDER))
 else:
     plot(mc.theme_heatmap(corpus, "voice", VOICE_ORDER))
 

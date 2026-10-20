@@ -3,12 +3,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASES
+from beatles_viz.config import ACCENT
 from beatles_viz.corpus import THEME_PREFIX
 from beatles_viz.viz.song_charts import _layout
 from beatles_viz.viz.trend_charts import phase_strip
 
-PHASE_ORDER = [p for p, _, _ in PHASES]
 LABELS = {"phase": "period", "voice": "voice"}
 
 

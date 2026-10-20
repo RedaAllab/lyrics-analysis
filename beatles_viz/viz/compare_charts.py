@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+from beatles_viz.config import REFERENCE
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter
 from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, PRONOUN_LABELS
@@ -27,7 +28,7 @@ def percentile_profile(a, b, corpus):
                  color_discrete_sequence=HIGHLIGHT_COLORS, range_x=[0, 100],
                  labels={"percentile": "percentile among all songs", "metric": ""},
                  category_orders={"metric": list(PROFILE.values())})
-    fig.add_vline(x=50, line=dict(color="#888888", dash="dot", width=1))
+    fig.add_vline(x=50, line=dict(color=REFERENCE, dash="dot", width=1))
     return titled(fig, "Where each song stands in the corpus", height=330)
 
 

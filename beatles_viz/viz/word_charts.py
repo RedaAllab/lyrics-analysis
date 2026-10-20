@@ -1,7 +1,7 @@
 """Figures about one word across the corpus."""
 import plotly.express as px
 
-from beatles_viz.config import ACCENT, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, SECONDARY, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.viz.theme import titled
 
 
@@ -25,6 +25,6 @@ def usage_by_voice(by_voice, word):
 def companion_words(comp, word):
     if comp.empty:
         return None
-    fig = px.bar(comp[::-1], x="z", y="word", orientation="h", color_discrete_sequence=["#5fa8d3"],
+    fig = px.bar(comp[::-1], x="z", y="word", orientation="h", color_discrete_sequence=[SECONDARY],
                  labels={"z": "over-representation (z-score)", "word": ""})
     return titled(fig, f"Words that come with “{word}”", height=max(300, 24 * len(comp)))

@@ -1,14 +1,42 @@
+# "Session sheet" theme. Colours mirror beatles_viz/config.py (INK, PAPER, CARD, MUTED, RULE): change both together.
 [theme]
-base = "dark"
-primaryColor = "#e07a5f"
-backgroundColor = "#12151f"
-secondaryBackgroundColor = "#1b2440"
-textColor = "#ece6dc"
-font = "sans serif"
+base = "light"
+primaryColor = "#16161a"
+backgroundColor = "#f4f4f1"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#16161a"
+linkColor = "#16161a"
+linkUnderline = true
+borderColor = "#16161a"
+dataframeBorderColor = "#dadad4"
+dataframeHeaderBackgroundColor = "#16161a"
+dataframeHeaderTextColor = "#f4f4f1"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "none"
+buttonRadius = "none"
+font = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap, sans-serif"
+headingFont = "Space Grotesk:https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap, sans-serif"
+codeFont = "IBM Plex Mono:https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap, monospace"
+headingFontWeights = [700, 700, 700, 600, 600, 600]
+headingFontSizes = ["4rem", "2.25rem", "1.75rem", "1.375rem", "1.25rem", "1rem"]
+metricValueFontSize = "2.25rem"
+metricValueFontWeight = 700
+codeBackgroundColor = "#ecece7"
+redColor = "#c8283f"
+orangeColor = "#e4572e"
+yellowColor = "#a86a00"
+blueColor = "#2b59c3"
+greenColor = "#00796b"
+violetColor = "#6a4fa3"
+grayColor = "#5c5c66"
+chartCategoricalColors = ["#2b59c3", "#c8283f", "#a86a00", "#00796b", "#6a4fa3", "#e4572e", "#4f6d8a", "#6e6e73"]
+chartSequentialColors = ["#ecece7", "#d3d8e6", "#b7c2df", "#9aabd7", "#7d95d0", "#607fc9", "#456ac2", "#2b59c3", "#1f4596", "#16161a"]
 
 [theme.sidebar]
-backgroundColor = "#0d0f16"
-secondaryBackgroundColor = "#1b2440"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f4f1"
+borderColor = "#16161a"
 
 [browser]
 gatherUsageStats = false

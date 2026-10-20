@@ -37,11 +37,16 @@ SECTION_RULES = [
 ]
 REPEAT_MARK = re.compile(r"^\s*(?:x\s*(\d+)|repeat\s*(\d+)\s*x)\s*$", re.I)
 
-VOICE_COLORS = {"Lennon": "#3a6ea5", "McCartney": "#d1495b", "Harrison": "#e09f3e", "Starr": "#2a9d8f",
-                "Shared": "#7b6d8d", "Neutral": "#9a9a9a"}
-SECTION_COLORS = {"intro": "#c9d6df", "verse": "#6a8398", "pre_chorus": "#8fa9b8", "chorus": "#e07a5f",
-                  "bridge": "#81b29a", "instrumental": "#f2cc8f", "outro": "#a7b1b8", "other": "#d8d8d8",
-                  "song": "#6a8398"}
-ACCENT = "#e07a5f"
+# "Session sheet" palette: monochrome interface, colour reserved for data. Mirrored in .streamlit/config.toml.
+INK, PAPER, CARD = "#16161a", "#f4f4f1", "#ffffff"
+MUTED, RULE, SOFT = "#5c5c66", "#dadad4", "#ecece7"  # MUTED passes 4.5:1 on PAPER
+REFERENCE = "#a9a9a2"  # medians, zero lines, "everything else" in a comparison
+VOICE_COLORS = {"Lennon": "#2b59c3", "McCartney": "#c8283f", "Harrison": "#a86a00", "Starr": "#00796b",
+                "Shared": "#6a4fa3", "Neutral": "#6e6e73"}
+SECTION_COLORS = {"intro": "#a9b4be", "verse": "#4f6d8a", "pre_chorus": "#7f98ae", "chorus": "#e4572e",
+                  "bridge": "#5e9c76", "instrumental": "#e9c46a", "outro": "#a9b4be", "other": "#cfcfc8",
+                  "song": "#4f6d8a"}
+ACCENT = SECTION_COLORS["chorus"]
+SECONDARY = VOICE_COLORS["Lennon"]  # second series when a chart compares two things that are not voices
 APP_URL = "https://redaallab-lyrics-analysis-appbeatles-app-lzrxuu.streamlit.app"
 VOICE_ORDER = ["Lennon", "McCartney", "Harrison", "Starr", "Shared", "Neutral"]

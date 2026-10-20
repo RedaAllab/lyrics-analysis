@@ -2,11 +2,11 @@
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASE_ORDER, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, PHASE_ORDER, REFERENCE, SECONDARY, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.viz.theme import titled
 
-RISING = "#5fa8d3"
-GROUP_COLORS = {**SECTION_COLORS, "other": "#c9d6df"}
+RISING = SECONDARY
+GROUP_COLORS = SECTION_COLORS
 
 
 def _phase_labels(counts):
@@ -56,5 +56,5 @@ def phase_strip(d, col, label, title, height=400, zero_line=False):
     fig.add_trace(go.Scatter(x=g.index, y=g.values, mode="lines+markers", name="average",
                              line=dict(color=ACCENT, width=3)))
     if zero_line:
-        fig.add_hline(y=0, line=dict(color="#888888", dash="dot", width=1))
+        fig.add_hline(y=0, line=dict(color=REFERENCE, dash="dot", width=1))
     return titled(fig, title, height)

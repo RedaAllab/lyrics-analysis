@@ -5,7 +5,7 @@ import json
 
 import streamlit.components.v1 as components
 
-from beatles_viz.config import SECTION_COLORS
+from beatles_viz.config import INK, PAPER, SECTION_COLORS
 from beatles_viz.listen import section_spans, section_times, video_id
 from beatles_viz.render.components import listen_row
 from beatles_viz.viz.song_charts import has_structure
@@ -14,12 +14,12 @@ SYNCED = {"Hey Jude", "Let It Be"}
 
 TEMPLATE = """
 <style>
-body { margin: 0; font-family: 'Source Sans Pro', system-ui, sans-serif; color: #ece6dc; }
+body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: __INK__; }
 #player { width: 100%; max-width: 560px; aspect-ratio: 16 / 9; }
 #bar { position: relative; height: 26px; margin: 10px 0 6px; cursor: pointer; }
-.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 #12151f; opacity: .55; }
+.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 __PAPER__; opacity: .55; }
 .seg.on { opacity: 1; }
-#head { position: absolute; top: -4px; bottom: -4px; width: 2px; background: #ece6dc; left: 0; }
+#head { position: absolute; top: -4px; bottom: -4px; width: 2px; background: __INK__; left: 0; }
 #now { font-size: 15px; font-weight: 600; }
 #note { font-size: 12px; opacity: .65; }
 </style>
@@ -76,11 +76,11 @@ function onYouTubeIframeAPIReady() {
 
 def synced_player(song, vid):
     measured = section_times(song.title)
-    spans = [dict(name=n, start=a, end=b, color=SECTION_COLORS.get(k, "#999999"), at=measured.get(i))
+    spans = [dict(name=n, start=a, end=b, color=SECTION_COLORS.get(k, SECTION_COLORS["other"]), at=measured.get(i))
              for i, (n, k, a, b) in enumerate(section_spans(song))]
     note = (f"Start of {len(measured)} of {len(spans)} sections measured by ear, the others estimated from word counts."
             if measured else "Section times are estimated from word counts, not measured.")
-    html = TEMPLATE.replace("__SPANS__", json.dumps(spans)).replace("__VIDEO__", vid).replace("__NOTE__", note)
+    html = TEMPLATE.replace("__INK__", INK).replace("__PAPER__", PAPER).replace("__SPANS__", json.dumps(spans)).replace("__VIDEO__", vid).replace("__NOTE__", note)
     components.html(html, height=420)
 
 

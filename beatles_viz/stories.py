@@ -4,7 +4,7 @@ from collections import Counter, namedtuple
 
 import plotly.express as px
 
-from beatles_viz.config import ACCENT, MEMBERS, PHASE_ORDER, VOICE_COLORS
+from beatles_viz.config import ACCENT, INK, MEMBERS, PHASE_ORDER, REFERENCE, SECONDARY, VOICE_COLORS
 from beatles_viz.corpus import analysable
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
@@ -68,7 +68,7 @@ def i_to_we(d):
             f"{g.first_plural[low_i]:.1f}. The songs talk less about the singer and more about a group, or the world.")
     long = g.rename(columns=cols).reset_index().melt("phase", var_name="pronoun", value_name="per 100 words")
     fig = px.line(long, x="phase", y="per 100 words", color="pronoun", markers=True,
-                  color_discrete_sequence=[ACCENT, "#5fa8d3", "#9a9a9a"])
+                  color_discrete_sequence=[INK, ACCENT, REFERENCE])
     headline = f"“I” is halved by {low_i}" if g.first_singular[low_i] <= g.first_singular[EARLY] / 2 \
         else f"“I” recedes in {low_i}"
     return Story("pronouns", headline, text, titled(_phase_axis(fig), headline, 380), [("word", "we")])
@@ -89,7 +89,7 @@ def new_words(d, top=8):
             f"The early catalogue leans on {', '.join(f'“{w}”' for w in lost)}; the later one brings "
             f"{', '.join(f'“{w}”' for w in gained)}. Each word is counted once per song: these are words that more "
             "songs use, not words one song repeats.")
-    fig = contrast_figure(a, b, "1966-70", "1962-65", colors=["#5fa8d3", ACCENT], top=top, min_count=5,
+    fig = contrast_figure(a, b, "1966-70", "1962-65", colors=[SECONDARY, ACCENT], top=top, min_count=5,
                           title="Words that changed")
     headline = "From “" + lost[0] + "” to “" + gained[0] + "”" if lost and gained else "Words that changed"
     return Story("words", headline, text, fig, [("word", w) for w in lost[:2] + gained[:2]])

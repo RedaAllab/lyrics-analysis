@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from beatles_viz.attribution import resolve_voice
-from beatles_viz.config import SECTION_COLORS, VOICE_COLORS
+from beatles_viz.config import ACCENT, INK, PAPER, REFERENCE, SECONDARY, SECTION_COLORS, VOICE_COLORS
 from beatles_viz.text.keyness import song_keyness
 from beatles_viz.text.sections import section_name
 from beatles_viz.text.tokenize import tokenize
@@ -41,7 +41,7 @@ def structure_timeline(song):
     fig = go.Figure()
     for kind, g in df.groupby("kind", sort=False):
         fig.add_bar(y=["structure"] * len(g), x=g.width, base=g.start, orientation="h", name=kind,
-                    marker_color=SECTION_COLORS.get(kind, "#cccccc"), marker_line=dict(color="white", width=2),
+                    marker_color=SECTION_COLORS.get(kind, SECTION_COLORS["other"]), marker_line=dict(color=PAPER, width=2),
                     text=(g.name + " " + g.repeat).str.strip(), textposition="inside", insidetextanchor="middle",
                     customdata=g[["name", "words", "repeat"]],
                     hovertemplate="%{customdata[0]} %{customdata[2]}<br>%{customdata[1]} words<extra></extra>")
@@ -65,7 +65,7 @@ def self_similarity(sections):
         return None
     m = np.array([[_jaccard(a, b) for _, b in units] for _, a in units])
     labels = [f"{i + 1}. {name}" for i, (name, _) in enumerate(units)]
-    fig = go.Figure(go.Heatmap(z=m, x=labels, y=labels, colorscale="Blues", zmin=0, zmax=1,
+    fig = go.Figure(go.Heatmap(z=m, x=labels, y=labels, zmin=0, zmax=1,
                                hovertemplate="%{y}<br>%{x}<br>shared words: %{z:.2f}<extra></extra>"))
     fig.update_xaxes(showticklabels=False)
     fig.update_yaxes(autorange="reversed", showticklabels=by_section)
@@ -89,11 +89,11 @@ def rolling_richness(sections, window=30):
             del c[words[i - window]]
         vals.append(len(c) / window)
     x = np.arange(len(vals)) + window // 2
-    fig = go.Figure(go.Scatter(x=x, y=vals, mode="lines", line=dict(color="#3a6ea5"),
+    fig = go.Figure(go.Scatter(x=x, y=vals, mode="lines", line=dict(color=SECONDARY),
                                hovertemplate="word %{x}<br>%{y:.0%} distinct<extra></extra>"))
     last_label = -len(words)
     for pos, name in bounds:
-        fig.add_vline(x=pos, line=dict(color="#bbbbbb", dash="dot", width=1))
+        fig.add_vline(x=pos, line=dict(color=REFERENCE, dash="dot", width=1))
         if pos - last_label >= MIN_LABEL_GAP * len(words):  # skip labels that would overlap
             fig.add_annotation(x=pos, y=1.04, yref="paper", text=name, showarrow=False, font=dict(size=9),
                                xanchor="left")
@@ -109,12 +109,12 @@ def keyness(song_bow, corpus_bows, top=10):
         return None
     fig = px.bar(r[::-1], x="z", y="word", orientation="h", hover_data={"in_group": True, "in_rest": True},
                  labels={"z": "over-representation (z-score)", "in_group": "in this song", "in_rest": "in other songs"},
-                 color_discrete_sequence=["#e07a5f"])
+                 color_discrete_sequence=[ACCENT])
     return titled(fig, "Words that set this song apart from the corpus", height=360)
 
 
-HIGHLIGHT = {"symbol": "star", "size": 20, "line": dict(color="#1a1a1a", width=1.5)}
-HIGHLIGHT_COLORS = ["#f5b700", "#5fa8d3"]  # gold and sky blue, both visible on light and dark themes
+HIGHLIGHT = {"symbol": "star", "size": 20, "line": dict(color=INK, width=1.5)}
+HIGHLIGHT_COLORS = [ACCENT, INK]  # song A, song B: neither is a voice colour
 
 
 def corpus_position(song, corpus, period=None, others=()):
@@ -157,14 +157,14 @@ def pronoun_profile(song, corpus):
         rows.append(dict(pronoun=label, group=f"average {song.phase or 'corpus'}", share=100 * ref[key].mean()))
     fig = px.bar(pd.DataFrame(rows), x="pronoun", y="share", color="group", barmode="group",
                  labels={"share": "per 100 words", "pronoun": ""},
-                 color_discrete_sequence=["#3a6ea5", "#c9d6df"])
+                 color_discrete_sequence=[SECONDARY, REFERENCE])
     return titled(fig, "Point of view: personal pronouns", height=320)
 
 
-def fingerprint_figure(fp, color="#e07a5f", height=150):
+def fingerprint_figure(fp, color=ACCENT, height=150):
     """SongSim thumbnail: where words repeat along the song (top-left = start). No text involved."""
     z = 255 * np.sqrt(np.asarray(fp, dtype=float) / 255)  # most blocks are sparse: lift faint repeats
-    fig = go.Figure(go.Heatmap(z=z, colorscale=[[0, "rgba(128,128,128,0.08)"], [0.05, color], [1, color]],
+    fig = go.Figure(go.Heatmap(z=z, colorscale=[[0, "rgba(22,22,26,0.06)"], [0.05, color], [1, color]],
                                zmin=0, zmax=255, showscale=False, hoverinfo="skip"))
     fig.update_xaxes(visible=False)
     fig.update_yaxes(visible=False, autorange="reversed", scaleanchor="x")

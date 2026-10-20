@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, SECTION_COLORS, VOICE_COLORS
+from beatles_viz.config import ACCENT, PAPER, REFERENCE, SECTION_COLORS, VOICE_COLORS
 from beatles_viz.viz.song_charts import has_structure, structure_frame
 from beatles_viz.viz.theme import titled
 
@@ -12,7 +12,7 @@ def album_timeline(albums, selected=None):
     """Each release as a bubble: year, average richness, size = number of songs."""
     d = albums.dropna(subset=["mattr"]).assign(selected=lambda a: a.album == selected)
     fig = px.scatter(d, x="year", y="mattr", size="tracks", hover_name="album", size_max=28,
-                     color="selected", color_discrete_map={True: ACCENT, False: "#7a8794"},
+                     color="selected", color_discrete_map={True: ACCENT, False: REFERENCE},
                      hover_data={"tracks": True, "year": True, "mattr": ":.2f", "selected": False},
                      labels={"mattr": "average lexical richness", "year": ""})
     fig.update_layout(showlegend=False)
@@ -29,7 +29,7 @@ def album_structures(tracks):
     fig = go.Figure()
     for kind, g in df.groupby("kind", sort=False):
         fig.add_bar(y=g.title, x=g.width, base=g.start, orientation="h", name=kind,
-                    marker_color=SECTION_COLORS.get(kind, "#cccccc"), marker_line=dict(color="white", width=1),
+                    marker_color=SECTION_COLORS.get(kind, SECTION_COLORS["other"]), marker_line=dict(color=PAPER, width=1),
                     customdata=g[["name", "words"]],
                     hovertemplate="%{y}<br>%{customdata[0]}: %{customdata[1]} words<extra></extra>")
     fig.update_yaxes(categoryorder="array", categoryarray=order[::-1], title=None)

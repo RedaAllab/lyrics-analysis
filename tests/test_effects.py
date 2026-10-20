@@ -3,6 +3,7 @@ import re
 
 import pytest
 
+from beatles_viz.config import VOICE_COLORS
 from beatles_viz.effects import REGISTRY, get_effect
 from beatles_viz.text.sections import Section
 
@@ -80,4 +81,4 @@ def test_lennon_marks_rare_words_only():
 def test_shared_border_uses_member_colours():
     effect = get_effect("Shared")
     style = effect.section_style(SECTION, effect.params(), CTX)
-    assert "#3a6ea5" in style and "#d1495b" in style
+    assert VOICE_COLORS["Lennon"] in style and VOICE_COLORS["McCartney"] in style

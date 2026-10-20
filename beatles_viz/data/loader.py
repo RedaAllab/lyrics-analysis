@@ -3,7 +3,7 @@ from collections import Counter
 
 import pandas as pd
 
-from beatles_viz.config import LYRICS_PATH, PUBLIC_PATH
+from beatles_viz.config import LYRICS_PATH, PUBLIC_PATH, SEMANTIC_PATH
 
 
 def has_lyrics():
@@ -17,6 +17,8 @@ def load_songs(source="auto", originals_only=True):
         source = "local" if has_lyrics() else "public"
     if source == "local":
         df = pd.read_parquet(LYRICS_PATH)
+        if SEMANTIC_PATH.exists():
+            df = df.merge(pd.read_parquet(SEMANTIC_PATH), on="title", how="left")
     else:
         df = pd.read_parquet(PUBLIC_PATH)
         df["bow"] = [Counter(dict(zip(w, c))) for w, c in zip(df.bow_words, df.bow_counts)]

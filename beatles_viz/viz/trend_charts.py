@@ -1,5 +1,6 @@
 """Figures about change over the discography. No lyric text in any figure."""
 import plotly.express as px
+import plotly.graph_objects as go
 
 from beatles_viz.config import ACCENT, PHASES, SECTION_COLORS, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.viz.song_charts import _layout
@@ -44,3 +45,17 @@ def voice_shares(shares, counts):
     fig.update_layout(legend_title_text="")
     fig.update_xaxes(title="")
     return _layout(fig, "Who sings lead", height=380)
+
+
+def phase_strip(d, col, label, title, height=400, zero_line=False):
+    """Each song as a dot in its period, coloured by lead voice, with the period average as a line."""
+    d = d.dropna(subset=[col, "phase"])
+    g = d.groupby("phase")[col].mean().reindex(PHASE_ORDER)
+    fig = px.strip(d, x="phase", y=col, color="voice", color_discrete_map=VOICE_COLORS, hover_name="title",
+                   category_orders={"phase": PHASE_ORDER, "voice": VOICE_ORDER},
+                   labels={col: label, "phase": "", "voice": "lead voice"})
+    fig.add_trace(go.Scatter(x=g.index, y=g.values, mode="lines+markers", name="average",
+                             line=dict(color=ACCENT, width=3)))
+    if zero_line:
+        fig.add_hline(y=0, line=dict(color="#888888", dash="dot", width=1))
+    return _layout(fig, title, height)

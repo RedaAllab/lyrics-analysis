@@ -145,13 +145,21 @@ def chip_row(label, options, key, help=None):
 
 
 def similar_picker(song, corpus, matrix, key):
+    """Closest songs by shared words and, when scripts/embed_songs.py has run, by meaning."""
     from beatles_viz.text.similarity import similar_songs
     sims = similar_songs(corpus, song.title, k=5, matrix=matrix)
-    labels = {f"{r.title} · {r.similarity:.0%}": r.title for r in sims.itertuples()}
-    pick = chip_row("Songs like this one", list(labels), f"{key}_similar",
-                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).")
-    if pick:
-        open_song(labels[pick])
+    rows = [("similar", "Similar words", {f"{r.title} · {r.similarity:.0%}": r.title for r in sims.itertuples()},
+             "Closest vocabulary (TF-IDF weighted word counts, cosine similarity).")]
+    meaning = song.get("sem_neighbors")
+    if meaning is not None and not isinstance(meaning, float) and len(meaning):
+        rows.append(("meaning", "Similar meaning", {t: t for t in meaning},
+                     "Closest in meaning: each stanza turned into a vector by a sentence transformer (all-MiniLM-L6-v2), "
+                     "averaged per song, cosine similarity. Trained on everyday text, not lyrics: irony and metaphor "
+                     "escape it."))
+    for suffix, label, options, help in rows:
+        pick = chip_row(label, list(options), f"{key}_{suffix}", help=help)
+        if pick:
+            open_song(options[pick])
 
 
 def metrics_panel(song, corpus):

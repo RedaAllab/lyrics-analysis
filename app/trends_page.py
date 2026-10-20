@@ -15,10 +15,10 @@ def cached_trends(source):
     d = analysable(cached_corpus(source))
     d = d[d.phase.notna()]
     shares, counts = T.voice_shares(d)
-    return T.steady_movers(T.word_trends(d), exclude=("love",)), T.section_shares(d), shares, counts
+    return d, T.steady_movers(T.word_trends(d), exclude=("love",)), T.section_shares(d), shares, counts
 
 
-movers, sections, voices, counts = cached_trends("local" if has_lyrics() else "public")
+d, movers, sections, voices, counts = cached_trends("local" if has_lyrics() else "public")
 
 kicker("Trends · original compositions, period by period")
 st.markdown("## What changed between 1962 and 1970")
@@ -45,3 +45,12 @@ st.subheader("Who sings lead, and when?")
 plot(charts.voice_shares(voices, counts))
 st.caption("Lead voice is read from the credits; “Shared” means several lead singers. "
            f"{PHASES[0][0]} has {counts.iloc[0]} songs, so a single song moves it by several points.")
+
+if "sem_early" in d and d.sem_early.notna().any():
+    st.subheader("Do the songs move away from their first subjects?")
+    plot(charts.phase_strip(d, "sem_early", f"closeness in meaning to the {PHASES[0][0]} songs",
+                            f"How close each song is, in meaning, to the songs of {PHASES[0][0]}"))
+    st.caption("Each stanza is turned into a vector by a sentence transformer (all-MiniLM-L6-v2), averaged per song, "
+               f"and compared with the average of the {PHASES[0][0]} songs ({PHASES[0][0]} songs are compared without "
+               "themselves). Checked against random shuffles of the periods. The model was trained on everyday text, "
+               "not lyrics: it reads subjects, not irony or metaphor, and the scale has no natural zero.")

@@ -3,9 +3,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASES, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, PHASES
 from beatles_viz.corpus import THEME_PREFIX
 from beatles_viz.viz.song_charts import _layout
+from beatles_viz.viz.trend_charts import phase_strip
 
 PHASE_ORDER = [p for p, _, _ in PHASES]
 LABELS = {"phase": "period", "voice": "voice"}
@@ -16,15 +17,8 @@ def theme_columns(corpus):
 
 
 def mood_over_time(corpus):
-    d = corpus.dropna(subset=["valence", "phase"])
-    g = d.groupby("phase").valence.mean().reindex(PHASE_ORDER)
-    fig = px.strip(d, x="phase", y="valence", color="voice", color_discrete_map=VOICE_COLORS, hover_name="title",
-                   category_orders={"phase": PHASE_ORDER, "voice": VOICE_ORDER},
-                   labels={"valence": "mood (−1 dark · +1 bright)", "phase": "", "voice": "lead voice"})
-    fig.add_trace(go.Scatter(x=g.index, y=g.values, mode="lines+markers", name="average",
-                             line=dict(color=ACCENT, width=3)))
-    fig.add_hline(y=0, line=dict(color="#888888", dash="dot", width=1))
-    return _layout(fig, "Mood of each song, period by period", height=400)
+    return phase_strip(corpus.dropna(subset=["valence"]), "valence", "mood (−1 dark · +1 bright)",
+                       "Mood of each song, period by period", zero_line=True)
 
 
 def theme_heatmap(corpus, key, order):

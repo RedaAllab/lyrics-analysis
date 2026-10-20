@@ -1,7 +1,6 @@
 import re
 
 import streamlit as st
-import streamlit.components.v1 as components
 
 from beatles_viz.config import IMPROVISATIONS, VOICE_COLORS, VOICE_ORDER
 
@@ -94,14 +93,15 @@ def song_selector(corpus, key="song"):
     if d.empty:
         return None, d
     titles = d.title.tolist()
+    # The choice lives in session state only: a widget given both a default and a session value warns.
+    state = f"{key}_title"
     goto = st.session_state.pop("goto_song", None)
     if goto in titles:
-        st.session_state[f"{key}_title"] = goto
-    wanted = goto or st.query_params.get("song")
-    index = titles.index(wanted) if wanted in titles else 0
-    if st.session_state.get(f"{key}_title") not in titles:
-        st.session_state.pop(f"{key}_title", None)
-    title = st.sidebar.selectbox("Song", titles, index=index, key=f"{key}_title",
+        st.session_state[state] = goto
+    if st.session_state.get(state) not in titles:
+        wanted = st.query_params.get("song")
+        st.session_state[state] = wanted if wanted in titles else titles[0]
+    title = st.sidebar.selectbox("Song", titles, key=state,
                                  format_func=lambda t: f"{t} ({int(d.loc[d.title == t, 'year'].iloc[0])})")
     st.query_params["song"] = title
     return d[d.title == title].iloc[0], d
@@ -132,7 +132,7 @@ def listen_row(title, label="Listen on", player=False):
     if embed:
         left, _ = st.columns([2, 3])
         with left:
-            components.iframe(embed, height=200)
+            st.iframe(embed, height=200)
     links = " · ".join(f"[{name}]({url})" for name, url in listen_links(title).items())
     st.markdown(f":material/headphones: {label} {links}")
 

@@ -34,7 +34,8 @@ python3 -m venv .venv
   `app/corpus_page.py` the whole catalogue, `app/journal_page.py` your favourites, ratings, notes and listening
   history (local only, `data/personal/journal.json`, git-ignored). Song and album pages link to Spotify, Apple Music,
   YouTube Music and Deezer searches (no audio hosted); the song page also plays the official YouTube upload
-  (`data/beatles/youtube.csv`, rebuilt by `scripts/youtube_ids.py`). Theme in `.streamlit/config.toml`, logo in `app/static/`.
+  (`data/beatles/youtube.csv`, rebuilt by `scripts/youtube_ids.py`), with a section bar that follows the song
+  on the songs listed in `beatles_viz/render/listen_view.py` (times estimated from word counts). Theme in `.streamlit/config.toml`, logo in `app/static/`.
 - `beatles_viz/` package: data loading and public export, sections (Genius tags, or verses and choruses detected
   from returning stanzas when a song has no tags), metrics, voice attribution, stories, charts, effects, rendering.
 - `tests/` pytest suite (synthetic lyrics only). `scripts/audit_dataset.py` dataset audit (`analysis/audit/`).

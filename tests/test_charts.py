@@ -61,3 +61,10 @@ def test_figures_never_contain_lyric_lines(corpus):
     for fig in [charts.structure_timeline(kettle), charts.self_similarity(kettle.sections),
                 charts.voice_split(kettle.sections, kettle.lead_vocal)]:
         assert "kettle hums" not in fig.to_json()
+
+
+def test_section_spans_cover_the_song_in_order(corpus):
+    from beatles_viz.listen import section_spans
+    spans = section_spans(corpus.loc[corpus.title == "Kettle"].iloc[0])
+    assert spans[0][2] == 0 and abs(spans[-1][3] - 1) < 1e-9
+    assert all(a[3] == b[2] for a, b in zip(spans, spans[1:]))

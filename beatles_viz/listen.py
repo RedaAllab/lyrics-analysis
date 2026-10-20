@@ -28,7 +28,20 @@ def _youtube_ids():
         return {r["title"]: r["video_id"] for r in csv.DictReader(f)}
 
 
+def video_id(title):
+    return _youtube_ids().get(title)
+
+
 def youtube_embed(title):
     """Embed URL of the song's official upload, or None. youtube-nocookie: no tracking cookie until play."""
-    vid = _youtube_ids().get(title)
+    vid = video_id(title)
     return f"https://www.youtube-nocookie.com/embed/{vid}" if vid else None
+
+
+def section_spans(song):
+    """Each section as a share of the song, 0 to 1: [(name, kind, start, end)]. Words are sung at a fairly steady
+    pace, so the share of words is a first estimate of the share of time; wordless sections get a few words' worth."""
+    from beatles_viz.viz.song_charts import structure_frame
+    f = structure_frame(song)
+    total = f.width.sum()
+    return [(r.name, r.kind, r.start / total, (r.start + r.width) / total) for r in f.itertuples()]

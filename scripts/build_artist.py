@@ -16,7 +16,6 @@ import re
 import sys
 from pathlib import Path
 
-import duckdb
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -69,6 +68,7 @@ def clean(lyrics):
 
 
 def main(artist, page, dirs, aliases=()):
+    import duckdb  # here, not at the top: the tests import official_songs without the dev dependencies
     official = official_songs(Path(page).read_text(encoding="utf-8"), artist)
     titles = {r["title"]: r for r in official.values()}
     names = [artist, *aliases]

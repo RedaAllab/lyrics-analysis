@@ -5,7 +5,7 @@ import csv
 from functools import lru_cache
 from urllib.parse import quote, quote_plus
 
-from beatles_viz.config import YOUTUBE_PATH
+from beatles_viz.config import SECTION_TIMES_PATH, YOUTUBE_PATH
 
 PLATFORMS = {
     "Spotify": lambda q: f"https://open.spotify.com/search/{quote(q)}",
@@ -45,3 +45,25 @@ def section_spans(song):
     f = structure_frame(song)
     total = f.width.sum()
     return [(r.name, r.kind, r.start / total, (r.start + r.width) / total) for r in f.itertuples()]
+
+
+def parse_time(text):
+    """'3:08' or '188' -> seconds."""
+    minutes, _, seconds = text.strip().partition(":")
+    return int(minutes) * 60 + float(seconds) if seconds else float(minutes)
+
+
+@lru_cache(maxsize=1)
+def _section_times():
+    if not SECTION_TIMES_PATH.exists():
+        return {}
+    out = {}
+    with open(SECTION_TIMES_PATH, newline="") as f:
+        for r in csv.DictReader(f):
+            out.setdefault(r["title"], {})[int(r["section"]) - 1] = parse_time(r["start"])
+    return out
+
+
+def section_times(title):
+    """Start times measured by ear, {section index from 0: seconds}; the other sections are estimated."""
+    return _section_times().get(title, {})

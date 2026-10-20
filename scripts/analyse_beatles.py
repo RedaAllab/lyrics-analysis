@@ -107,7 +107,6 @@ for ax, col, ttl in zip(axes, ["tokens", "mattr", "repeat_ratio"], ["words per s
     ax.boxplot([df[df.singer == s][col].dropna() for s in main], tick_labels=[f"{s}\n(n={int((df.singer == s).sum())})" for s in main])
     ax.set_title(ttl)
 fig.suptitle("Lead singer comparison (originals)"); fig.tight_layout(); fig.savefig(OUT / "fig6_singers.png", dpi=150); plt.close(fig)
-tm_s = tm.copy()
 distinctive("singer", main, "distinctive_words_by_singer.csv", "fig7_singer_words.png", "Words most characteristic of each lead singer")
 
 print(pd.Series(glob)); print(ph); print(sg); print(trend)

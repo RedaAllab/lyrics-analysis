@@ -2,7 +2,6 @@
 the text is computed from the data, so a story stays true if the corpus changes."""
 from collections import Counter, namedtuple
 
-import pandas as pd
 import plotly.express as px
 
 from beatles_viz.config import ACCENT, MEMBERS, PHASES, VOICE_COLORS

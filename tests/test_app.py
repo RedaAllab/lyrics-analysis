@@ -103,3 +103,11 @@ def test_voice_pills_filter_the_corpus_and_persist():
     assert set(pills.value) == {"Lennon", "McCartney", "Harrison", "Starr", "Shared", "Neutral"}
     pills.set_value(["Harrison"]).run()
     assert not at.exception and at.session_state["flt_voices"] == ["Harrison"]
+
+
+def test_song_page_plays_the_official_upload():
+    at = AppTest.from_file(SONG_PAGE, default_timeout=180)
+    at.query_params["song"] = "Hey Jude"
+    at.run()
+    assert not at.exception
+    assert any("youtube-nocookie.com/embed/" in str(e.proto) for e in at.get("iframe"))

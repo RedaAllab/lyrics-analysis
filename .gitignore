@@ -5,6 +5,7 @@ data/*
 data/beatles/*
 !data/beatles/beatles_songs.csv
 !data/beatles/beatles_official.csv
+!data/beatles/youtube.csv
 # Lyrics-free dataset used by the deployed app (metrics + word counts)
 !data/public/
 __pycache__/

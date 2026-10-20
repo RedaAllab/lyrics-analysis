@@ -16,7 +16,7 @@ if song is None:
     st.stop()
 
 song_header(song)
-listen_row(song.title)
+listen_row(song.title, player=True)
 personal_strip(song)
 
 # The view is kept in the URL (?view=Read) so a link opens the song in the right mode.

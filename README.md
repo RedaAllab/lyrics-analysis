@@ -28,7 +28,8 @@ python3 -m venv .venv
 - `app/beatles_app.py` entry point (navigation, theme, logo): `app/home_page.py` song search and songs to discover,
   `app/song_page.py` song page with two views, Read (full song with one visual effect per voice, local only, needs the
   lyrics file) and Analyse (per-song charts), `app/word_page.py` one word across the catalogue, `app/compare_page.py` two songs side by side,
-  `app/stories_page.py` five guided findings, `app/album_page.py` one release at a time, `app/voice_page.py` the lead
+  `app/stories_page.py` five guided findings, `app/trends_page.py` drifting words, song architecture and
+  lead voices by period, `app/album_page.py` one release at a time, `app/voice_page.py` the lead
   voices side by side (Lennon / McCartney by default), `app/mood_page.py` mood (VADER word valence) and themes,
   `app/corpus_page.py` the whole catalogue, `app/journal_page.py` your favourites, ratings, notes and listening
   history (local only, `data/personal/journal.json`, git-ignored). Song and album pages link to Spotify, Apple Music,

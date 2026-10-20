@@ -14,7 +14,7 @@ needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file no
 
 
 @pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py", "compare_page.py", "stories_page.py",
-                                   "album_page.py", "voice_page.py", "mood_page.py"])
+                                   "album_page.py", "voice_page.py", "mood_page.py", "trends_page.py"])
 def test_pages_run(entry):
     assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
 

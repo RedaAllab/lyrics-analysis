@@ -1,4 +1,5 @@
 import random
+from pathlib import Path
 
 import streamlit as st
 
@@ -7,13 +8,15 @@ from beatles_viz.corpus import featured_songs
 from beatles_viz.data.loader import has_lyrics
 from beatles_viz.render.components import cached_corpus, open_song, plot
 from beatles_viz.viz.song_charts import fingerprint_figure
-from beatles_viz.render.identity import kicker
+from beatles_viz.render.identity import kicker, zebra
 
 corpus = cached_corpus("local" if has_lyrics() else "public")
 originals = corpus[corpus.is_original]
 
+st.image(str(Path(__file__).parent / "static/hero.svg"), width="stretch")
 kicker(f"The Beatles · {int(originals.year.min())}–1970")
 st.title("Pick a song, see how it is written")
+zebra()
 st.markdown('<p class="lx-lead">Structure, repetitions, vocabulary and voices of '
             f'{len(originals)} original compositions, song by song or across the whole catalogue.</p>',
             unsafe_allow_html=True)

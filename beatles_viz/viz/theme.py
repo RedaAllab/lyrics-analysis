@@ -21,6 +21,11 @@ pio.templates[NAME] = go.layout.Template(layout=dict(
 ))
 
 
+def titled(fig, title, height=320):
+    fig.update_layout(title=title, height=height, margin=dict(l=10, r=10, t=50, b=10))
+    return fig
+
+
 def style(fig):
     """Layered over Streamlit's own chart theme: explicit layout values win over it."""
     t = pio.templates[NAME].layout

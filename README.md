@@ -48,7 +48,6 @@ Tests run on GitHub Actions on every pull request and push to `main`, in public 
   only the five closest songs in meaning and each song's closeness to the 1962-63 songs (`data/beatles/semantic.parquet`,
   local). Needs `pip install -e ".[nlp]"`; run it before `scripts/export_public.py`.
 - `scripts/export_public.py` regenerates the lyrics-free `data/public/beatles_bow.parquet` (needs the local lyrics file).
-- `scripts/build_dataset.py`, `build_genius.py`, `vocab_by_year.py`: earlier rock / hip-hop experiments (Million Song Dataset, Genius).
 
 ## Data
 Lyrics are copyrighted and are **not** in this repository (`raw/` and `data/` are git-ignored, except song metadata

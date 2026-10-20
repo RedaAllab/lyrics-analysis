@@ -9,6 +9,7 @@ SECTION_TIMES_PATH = ROOT / "data/beatles/section_times.csv"
 SEMANTIC_PATH = ROOT / "data/beatles/semantic.parquet"  # local, from scripts/embed_songs.py
 
 PHASES = [("1962-63", 1962, 1963), ("1964-65", 1964, 1965), ("1966-67", 1966, 1967), ("1968-70", 1968, 1970)]
+PHASE_ORDER = [p for p, _, _ in PHASES]
 MIN_TOKENS = 30
 # Get Back session jams: real recordings, but improvised talk-singing that would skew catalogue statistics
 IMPROVISATIONS = {"Can You Dig It?", "Commonwealth"}
@@ -24,7 +25,6 @@ MEMBER_PATTERNS = {
 }
 SHARED, NEUTRAL = "Shared", "Neutral"
 
-SECTION_KINDS = ["intro", "verse", "pre_chorus", "chorus", "bridge", "instrumental", "outro", "other"]
 # Checked in order: the first matching rule wins ("Instrumental Bridge" is instrumental, not bridge).
 SECTION_RULES = [
     ("instrumental", re.compile(r"instrumental|solo|break|interlude|segue|transition|jam", re.I)),

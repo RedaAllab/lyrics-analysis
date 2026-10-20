@@ -1,7 +1,6 @@
 import re
 
 from beatles_viz.config import MEMBERS, NEUTRAL, SHARED
-from beatles_viz.text.sections import parse_members
 
 
 def voice_from_members(members):

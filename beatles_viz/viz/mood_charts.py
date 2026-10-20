@@ -3,12 +3,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASES
+from beatles_viz.config import ACCENT
 from beatles_viz.corpus import THEME_PREFIX
-from beatles_viz.viz.song_charts import _layout
 from beatles_viz.viz.trend_charts import phase_strip
+from beatles_viz.viz.theme import titled
 
-PHASE_ORDER = [p for p, _, _ in PHASES]
 LABELS = {"phase": "period", "voice": "voice"}
 
 
@@ -30,7 +29,7 @@ def theme_heatmap(corpus, key, order):
                                texttemplate="%{text}", colorbar=dict(title="per 1,000"),
                                hovertemplate="%{y} · %{x}<br>%{z:.1f} theme words per 1,000<extra></extra>"))
     fig.update_yaxes(autorange="reversed")
-    return _layout(fig, f"Themes by {LABELS.get(key, key)}", height=420)
+    return titled(fig, f"Themes by {LABELS.get(key, key)}", height=420)
 
 
 def song_themes(song, corpus):
@@ -44,7 +43,7 @@ def song_themes(song, corpus):
     fig = px.bar(pd.DataFrame(rows), x="rate", y="theme", color="group", barmode="group", orientation="h",
                  color_discrete_sequence=[ACCENT, "#7a8794"], labels={"rate": "theme words per 1,000", "theme": ""})
     fig.update_yaxes(autorange="reversed")
-    return _layout(fig, "Themes", height=400)
+    return titled(fig, "Themes", height=400)
 
 
 def mood_words_figure(positive, negative):
@@ -56,4 +55,4 @@ def mood_words_figure(positive, negative):
                            marker_color=[ACCENT if v > 0 else "#3a6ea5" for v in d.weight],
                            hovertemplate="%{y}: %{x:.1f}<extra></extra>"))
     fig.update_xaxes(title="← darker · brighter → (occurrences × word valence)")
-    return _layout(fig, "Words that set the mood", height=max(260, 26 * len(d)))
+    return titled(fig, "Words that set the mood", height=max(260, 26 * len(d)))

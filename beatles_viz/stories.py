@@ -2,20 +2,18 @@
 the text is computed from the data, so a story stays true if the corpus changes."""
 from collections import Counter, namedtuple
 
-import pandas as pd
 import plotly.express as px
 
-from beatles_viz.config import ACCENT, MEMBERS, PHASES, VOICE_COLORS
+from beatles_viz.config import ACCENT, MEMBERS, PHASE_ORDER, VOICE_COLORS
 from beatles_viz.corpus import analysable
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
-from beatles_viz.viz.song_charts import _layout
 from beatles_viz.viz.trend_charts import phase_strip
 from beatles_viz.text.tokenize import merge
+from beatles_viz.viz.theme import titled
 
 # link: ("word", w), ("song", title) or ("page", file name)
 Story = namedtuple("Story", "key headline text figure links")
-PHASE_ORDER = [p for p, _, _ in PHASES]
 EARLY, LATE = PHASE_ORDER[0], PHASE_ORDER[-1]
 
 
@@ -45,7 +43,7 @@ def love_fades(d):
                  hover_data={"songs": True, "total_songs": True},
                  labels={"per_1000": "“love” per 1,000 words", "songs": "songs using it", "total_songs": "songs"})
     headline = f"“Love” {trend(first.per_1000, last.per_1000)} from {first.per_1000:.0f} to {last.per_1000:.0f} per 1,000 words"
-    return Story("love", headline, text, _layout(_phase_axis(fig), headline, 360), [("word", "love")])
+    return Story("love", headline, text, titled(_phase_axis(fig), headline, 360), [("word", "love")])
 
 
 def richest_years(d):
@@ -73,7 +71,7 @@ def i_to_we(d):
                   color_discrete_sequence=[ACCENT, "#5fa8d3", "#9a9a9a"])
     headline = f"“I” is halved by {low_i}" if g.first_singular[low_i] <= g.first_singular[EARLY] / 2 \
         else f"“I” recedes in {low_i}"
-    return Story("pronouns", headline, text, _layout(_phase_axis(fig), headline, 380), [("word", "we")])
+    return Story("pronouns", headline, text, titled(_phase_axis(fig), headline, 380), [("word", "we")])
 
 
 def song_presence(bows):
@@ -113,7 +111,7 @@ def darkest_voice(d, min_songs=5):
                  labels={"valence": "mood (−1 dark · +1 bright)", "voice": ""})
     fig.update_layout(showlegend=False)
     headline = f"{dark} sings the darkest songs"
-    return Story("mood", headline, text, _layout(fig, headline, 400), [("song", darkest.title), ("page", "mood")])
+    return Story("mood", headline, text, titled(fig, headline, 400), [("song", darkest.title), ("page", "mood")])
 
 
 STORIES = [love_fades, richest_years, i_to_we, new_words, darkest_voice]

@@ -1,14 +1,14 @@
 """Mood and themes across the catalogue, from word counts only (works without the lyrics)."""
 import streamlit as st
 
-from beatles_viz.config import PHASES, VOICE_ORDER
+from beatles_viz.config import PHASE_ORDER, VOICE_ORDER
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, open_song, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.viz import mood_charts as mc
 
-corpus = analysable(cached_corpus("local" if has_lyrics() else "public"))
+corpus = analysable(cached_corpus(data_source()))
 scored = corpus.dropna(subset=["valence"])
 
 kicker("Mood and themes · original compositions")
@@ -32,7 +32,7 @@ with right:
 
 by = st.radio("Themes by", ["period", "voice"], horizontal=True, key="mood_by")
 if by == "period":
-    plot(mc.theme_heatmap(corpus, "phase", [p for p, _, _ in PHASES]))
+    plot(mc.theme_heatmap(corpus, "phase", PHASE_ORDER))
 else:
     plot(mc.theme_heatmap(corpus, "voice", VOICE_ORDER))
 

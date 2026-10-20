@@ -8,18 +8,14 @@ import plotly.graph_objects as go
 
 from beatles_viz.attribution import resolve_voice
 from beatles_viz.config import SECTION_COLORS, VOICE_COLORS
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.text.keyness import song_keyness
 from beatles_viz.text.sections import section_name
-from beatles_viz.text.tokenize import content_counter, merge, tokenize
+from beatles_viz.text.tokenize import tokenize
+from beatles_viz.viz.theme import titled
 
 MIN_INSTRUMENTAL_WIDTH = 4  # word-equivalents, so wordless sections stay visible on the timeline
 MAX_LINES_FOR_LINE_MATRIX = 80
 MIN_LABEL_GAP = 0.08  # share of the song length between two section labels
-
-
-def _layout(fig, title, height=320):
-    fig.update_layout(title=title, height=height, margin=dict(l=10, r=10, t=50, b=10))
-    return fig
 
 
 def structure_frame(song):
@@ -53,7 +49,7 @@ def structure_timeline(song):
     fig.update_xaxes(title="position in the song (words)")
     fig.update_layout(barmode="overlay", legend=dict(orientation="h", yanchor="top", y=-0.7))
     title = "Structure (sections detected automatically)" if df.auto.any() else "Structure"
-    return _layout(fig, title, height=270)
+    return titled(fig, title, height=270)
 
 
 def _jaccard(a, b):
@@ -74,7 +70,7 @@ def self_similarity(sections):
     fig.update_xaxes(showticklabels=False)
     fig.update_yaxes(autorange="reversed", showticklabels=by_section)
     unit = "sections" if by_section else "lines"
-    return _layout(fig, f"Repetition map ({unit}: similarity of word sets)", height=460)
+    return titled(fig, f"Repetition map ({unit}: similarity of word sets)", height=460)
 
 
 def rolling_richness(sections, window=30):
@@ -104,20 +100,17 @@ def rolling_richness(sections, window=30):
             last_label = pos
     fig.update_yaxes(title=f"distinct words in a {window}-word window", tickformat=".0%", range=[0, 1.05])
     fig.update_xaxes(title="position in the song (words)")
-    return _layout(fig, "Lexical density along the song", height=320)
+    return titled(fig, "Lexical density along the song", height=320)
 
 
 def keyness(song_bow, corpus_bows, top=10):
-    song = content_counter(song_bow)
-    rest = content_counter(merge(corpus_bows)) - song
-    r = monroe(song, rest, prior(song + rest), min_count=3)
-    r = r[r.in_group > 0].head(top)
+    r = song_keyness(song_bow, corpus_bows).head(top)
     if r.empty:
         return None
     fig = px.bar(r[::-1], x="z", y="word", orientation="h", hover_data={"in_group": True, "in_rest": True},
                  labels={"z": "over-representation (z-score)", "in_group": "in this song", "in_rest": "in other songs"},
                  color_discrete_sequence=["#e07a5f"])
-    return _layout(fig, "Words that set this song apart from the corpus", height=360)
+    return titled(fig, "Words that set this song apart from the corpus", height=360)
 
 
 HIGHLIGHT = {"symbol": "star", "size": 20, "line": dict(color="#1a1a1a", width=1.5)}
@@ -137,7 +130,7 @@ def corpus_position(song, corpus, period=None, others=()):
             fig.add_scatter(x=[s.tokens], y=[s.mattr], mode="markers", name=s.title,
                             marker={**HIGHLIGHT, "color": color}, hovertemplate=f"{s.title}<extra></extra>")
     scope = f"songs of {period}" if period else "all songs"
-    return _layout(fig, f"Length and richness compared with {scope}", height=420)
+    return titled(fig, f"Length and richness compared with {scope}", height=420)
 
 
 def voice_split(sections, lead_vocal):
@@ -150,7 +143,7 @@ def voice_split(sections, lead_vocal):
     fig = px.bar(df, x="words", y="section", color="voice", orientation="h", color_discrete_map=VOICE_COLORS,
                  hover_data={"source": True}, category_orders={"section": df.section.tolist()})
     fig.update_yaxes(autorange="reversed", title=None)
-    return _layout(fig, "Who sings each section", height=max(260, 28 * len(df)))
+    return titled(fig, "Who sings each section", height=max(260, 28 * len(df)))
 
 
 PRONOUN_LABELS = {"first_singular": "I / me / my", "second": "you / your", "first_plural": "we / us / our"}
@@ -165,7 +158,7 @@ def pronoun_profile(song, corpus):
     fig = px.bar(pd.DataFrame(rows), x="pronoun", y="share", color="group", barmode="group",
                  labels={"share": "per 100 words", "pronoun": ""},
                  color_discrete_sequence=["#3a6ea5", "#c9d6df"])
-    return _layout(fig, "Point of view: personal pronouns", height=320)
+    return titled(fig, "Point of view: personal pronouns", height=320)
 
 
 def fingerprint_figure(fp, color="#e07a5f", height=150):

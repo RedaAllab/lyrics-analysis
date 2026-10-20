@@ -1,14 +1,14 @@
 import streamlit as st
 
 from beatles_viz.config import VOICE_COLORS
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source, has_lyrics
 from beatles_viz.render.components import apply_filters, cached_corpus, corpus_filters, open_song, plot
 from beatles_viz.viz import compare_charts as cmp
 from beatles_viz.viz import song_charts as charts
 from beatles_viz.viz.song_charts import HIGHLIGHT_COLORS, fingerprint_figure
 
 local = has_lyrics()
-corpus = cached_corpus("local" if local else "public")
+corpus = cached_corpus(data_source())
 d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
 st.title("Compare two songs")
 if len(d) < 2:

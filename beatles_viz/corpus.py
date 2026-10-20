@@ -8,7 +8,7 @@ from beatles_viz.attribution import lead_voice
 from beatles_viz.config import IMPROVISATIONS, MIN_TOKENS, PHASES
 from beatles_viz.data.loader import load_songs
 from beatles_viz.text.metrics import pronoun_shares, text_metrics
-from beatles_viz.text.mood import THEMES, mood, themes
+from beatles_viz.text.mood import mood, themes
 from beatles_viz.text.repetition import fingerprint, repetition_score
 from beatles_viz.text.sections import all_lines, section_name
 from beatles_viz.text.segment import AUTO, song_sections

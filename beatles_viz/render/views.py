@@ -7,8 +7,7 @@ from beatles_viz.effects import get_effect
 from beatles_viz.render.components import HELP, chip_row, open_word, plot
 from beatles_viz.text.mood import mood_words
 from beatles_viz.viz import mood_charts
-from beatles_viz.text.keyness import monroe, prior
-from beatles_viz.text.tokenize import content_counter, merge
+from beatles_viz.text.keyness import song_keyness
 from beatles_viz.render.song_view import render_song
 from beatles_viz.viz import song_charts as charts
 
@@ -130,9 +129,7 @@ def analyse_view(song, corpus, local, key):
     with left:
         _show(charts.keyness(song.bow, corpus[corpus.title != song.title].bow), "Which vocabulary sets it apart?",
               "Too few words for a reliable comparison.")
-        a = content_counter(song.bow)
-        rest = content_counter(merge(corpus[corpus.title != song.title].bow)) - a
-        top = monroe(a, rest, prior(a + rest), min_count=3).query("in_group > 0").word.head(6).tolist()
+        top = song_keyness(song.bow, corpus[corpus.title != song.title].bow).word.head(6).tolist()
         if top:
             pick = chip_row("Explore a word", top, f"{key}_word")
             if pick:

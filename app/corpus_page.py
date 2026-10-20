@@ -3,13 +3,15 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from beatles_viz.config import ACCENT, PHASES, VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import ACCENT, PHASES, PHASE_ORDER, VOICE_COLORS, VOICE_ORDER
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
-from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_song, open_word,
-                                           plot)
-from beatles_viz.text.keyness import monroe, prior
+from beatles_viz.data.loader import data_source
+from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, corpus_filters, open_word, plot,
+                                           song_table)
+from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
+from beatles_viz.text.words import usage_by
+from beatles_viz.viz.voice_charts import voice_words
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
            "Lexical richness (MATTR-50)": "mattr", "Share of repeated lines": "repeat_ratio"}
@@ -38,12 +40,8 @@ def word_table(container, table, key):
         open_word(table.iloc[sel.selection.rows[0]]["word"])
 
 
-def prior_from(d):
-    return prior(content_counter(merge(d.bow)))
-
-
 # ---------------- sidebar filters ----------------
-corpus = analysable(cached_corpus("local" if has_lyrics() else "public"), originals_only=False)
+corpus = analysable(cached_corpus(data_source()), originals_only=False)
 originals_only, years, voices = corpus_filters(int(corpus.year.min()), int(corpus.year.max()))
 full = corpus[corpus.is_original] if originals_only else corpus
 df = apply_filters(full, False, years, voices).copy()
@@ -84,7 +82,7 @@ with tab_time:
     by = st.radio("Group by", ["Year", "Period"], horizontal=True)
     key = "year" if by == "Year" else "phase"
     d = df if by == "Year" else df[df.phase.notna()]
-    order = None if by == "Year" else [p for p, _, _ in PHASES]
+    order = None if by == "Year" else PHASE_ORDER
     metric_label = st.selectbox("Metric", list(METRICS))
     col = METRICS[metric_label]
     agg = d.groupby(key).agg(value=(col, "mean"), songs=("title", "count")).reset_index()
@@ -101,13 +99,9 @@ with tab_time:
     default = ["love", "i", "you", "we", "yeah"]
     raw = st.text_input("Words (comma separated)", ", ".join(default))
     watch = [w.strip().lower() for w in raw.split(",") if w.strip()]
-    rows = []
-    for k, grp in d.groupby(key):
-        c = merge(grp.bow); tot = sum(c.values())
-        for w in watch:
-            rows.append({key: k, "word": w, "per 1000 words": 1000 * c[w] / tot, "occurrences": c[w]})
-    if rows:
-        tr = pd.DataFrame(rows)
+    if watch:
+        tr = pd.concat([usage_by(d, w, key).assign(word=w) for w in watch])
+        tr = tr.rename(columns={"per_1000": "per 1000 words"})
         if order:
             tr[key] = pd.Categorical(tr[key], order, ordered=True); tr = tr.sort_values(key)
         fig = px.line(tr, x=key, y="per 1000 words", color="word", markers=True, hover_data=["occurrences"])
@@ -120,14 +114,12 @@ with tab_words:
                "Monroe et al. 2008). Words seen fewer than 5 times are ignored. Select a word to open its page.")
     n_words = st.slider("Words per group", 5, 25, 10, key="n_dist")
     d = df[df.phase.notna()]
-    phase_prior = prior_from(d)
     cols = st.columns(len(PHASES))
     for colw, (p, _, _) in zip(cols, PHASES):
         grp = d[d.phase == p]
         if grp.empty or len(grp) == len(d):
             colw.caption(f"{p}: no data"); continue
-        a = content_counter(merge(grp.bow)); b = content_counter(merge(d[d.phase != p].bow))
-        r = monroe(a, b, phase_prior).head(n_words)
+        r = contrast(merge(grp.bow), merge(d[d.phase != p].bow)).head(n_words)
         colw.markdown(f"**{p}** ({len(grp)} songs)")
         word_table(colw, r[["word", "in_group", "z"]].reset_index(drop=True), f"phase_words_{p}")
 
@@ -151,13 +143,10 @@ with tab_singer:
     st.caption("Songs credited to Lennon-McCartney: the lead singer is used as a proxy, not the actual writer.")
     main = [s for s in ["Lennon", "McCartney", "Harrison"] if (df.voice == s).sum() >= 5]
     if len(main) >= 2:
-        prior_s = prior_from(df)
         cols = st.columns(len(main))
         for colw, s in zip(cols, main):
-            a = content_counter(merge(df[df.voice == s].bow)); b = content_counter(merge(df[df.voice != s].bow))
             colw.markdown(f"**{s}**")
-            word_table(colw, monroe(a, b, prior_s).head(10)[["word", "in_group", "z"]].reset_index(drop=True),
-                       f"singer_words_{s}")
+            word_table(colw, voice_words(df, s, top=10)[["word", "in_group", "z"]], f"singer_words_{s}")
 
 # ---------------- songs ----------------
 with tab_songs:
@@ -170,8 +159,4 @@ with tab_songs:
         st.caption(f"{len(t)} songs contain '{q}' ({int(t.occurrences.sum())} occurrences).")
     else:
         t = t.sort_values(["year", "title"])
-    st.caption("Select a row to open the song.")
-    picked = st.dataframe(t, hide_index=True, width="stretch", column_config=SONG_TABLE,
-                          on_select="rerun", selection_mode="single-row", key="songs_table")
-    if picked.selection.rows:
-        open_song(t.iloc[picked.selection.rows[0]]["title"])
+    song_table(t, "songs_table", SONG_TABLE)

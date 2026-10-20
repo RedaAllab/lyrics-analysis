@@ -3,7 +3,7 @@ import streamlit as st
 
 from beatles_viz.config import PHASES
 from beatles_viz.corpus import analysable
-from beatles_viz.data.loader import has_lyrics
+from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, chip_row, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.text import trends as T
@@ -18,7 +18,7 @@ def cached_trends(source):
     return d, T.steady_movers(T.word_trends(d), exclude=("love",)), T.section_shares(d), shares, counts
 
 
-d, movers, sections, voices, counts = cached_trends("local" if has_lyrics() else "public")
+d, movers, sections, voices, counts = cached_trends(data_source())
 
 kicker("Trends · original compositions, period by period")
 st.markdown("## What changed between 1962 and 1970")

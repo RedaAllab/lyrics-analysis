@@ -1,13 +1,13 @@
 import streamlit as st
 
-from beatles_viz.data.loader import has_lyrics
-from beatles_viz.render.components import (apply_filters, cached_corpus, chip_row, corpus_filters,
-                                           open_song, open_word, plot)
+from beatles_viz.data.loader import data_source
+from beatles_viz.render.components import (apply_filters, cached_corpus, chip_row, corpus_filters, open_word, plot,
+                                           song_table)
 from beatles_viz.render.identity import kicker
 from beatles_viz.text import words as W
 from beatles_viz.viz import word_charts as charts
 
-corpus = cached_corpus("local" if has_lyrics() else "public")
+corpus = cached_corpus(data_source())
 d = apply_filters(corpus, *corpus_filters(int(corpus.year.min()), int(corpus.year.max())))
 vocab, counts = W.vocabulary(d)
 if not vocab:
@@ -52,12 +52,7 @@ with right:
 st.subheader("Songs where it matters most")
 top = W.top_songs(d, word)
 top["share"] *= 100
-st.caption("Select a row to open the song.")
-sel = st.dataframe(top, hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row",
-                   key=f"word_songs_{word}",
-                   column_config={"title": "Title", "year": st.column_config.NumberColumn("Year", format="%d"),
-                                  "voice": "Lead voice",
-                                  "occurrences": st.column_config.NumberColumn("Times", format="%d"),
-                                  "share": st.column_config.NumberColumn("Share of the song's words", format="%.1f%%")})
-if sel.selection.rows:
-    open_song(top.iloc[sel.selection.rows[0]]["title"])
+song_table(top, f"word_songs_{word}",
+           {"title": "Title", "year": st.column_config.NumberColumn("Year", format="%d"), "voice": "Lead voice",
+            "occurrences": st.column_config.NumberColumn("Times", format="%d"),
+            "share": st.column_config.NumberColumn("Share of the song's words", format="%.1f%%")})

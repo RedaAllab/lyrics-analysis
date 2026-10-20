@@ -3,7 +3,6 @@ from collections import Counter
 import numpy as np
 
 from beatles_viz.config import MATTR_WINDOW
-from beatles_viz.text.sections import all_lines
 from beatles_viz.text.tokenize import tokenize
 
 PRONOUNS = {"first_singular": {"i", "me", "my", "mine", "myself", "i'm", "i've", "i'll", "i'd"},
@@ -48,11 +47,3 @@ def text_metrics(lines):
     return {"tokens": len(words), "types": len(counts), "mattr": mattr(words),
             "repeat_ratio": repeat_ratio(lines), "hapax": sum(n == 1 for n in counts.values()),
             **pronoun_profile(words)}
-
-
-def song_metrics(sections):
-    return text_metrics(all_lines(sections))
-
-
-def section_metrics(section):
-    return text_metrics(section.lines)

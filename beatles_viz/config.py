@@ -25,7 +25,6 @@ MEMBER_PATTERNS = {
 }
 SHARED, NEUTRAL = "Shared", "Neutral"
 
-SECTION_KINDS = ["intro", "verse", "pre_chorus", "chorus", "bridge", "instrumental", "outro", "other"]
 # Checked in order: the first matching rule wins ("Instrumental Bridge" is instrumental, not bridge).
 SECTION_RULES = [
     ("instrumental", re.compile(r"instrumental|solo|break|interlude|segue|transition|jam", re.I)),

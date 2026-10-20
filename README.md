@@ -39,6 +39,8 @@ python3 -m venv .venv
   `title,section,start` with sections numbered from 1 and times as `m:ss`; the others estimated from word counts). Theme in `.streamlit/config.toml`, logo in `app/static/`.
 - `beatles_viz/` package: data loading and public export, sections (Genius tags, or verses and choruses detected
   from returning stanzas when a song has no tags), metrics, voice attribution, stories, charts, effects, rendering.
+- `beatles_viz/render/fonts/` DM Serif Display, Bebas Neue and Source Sans 3 for the share card (SIL Open Font License,
+  licence texts alongside).
 - `tests/` pytest suite (synthetic lyrics only). `scripts/audit_dataset.py` dataset audit (`analysis/audit/`).
 - `ROADMAP.md` development plan.
 - `scripts/embed_songs.py` turns each song's stanzas into sentence-transformer vectors (all-MiniLM-L6-v2) and keeps

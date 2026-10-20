@@ -1,6 +1,7 @@
 import re
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 from beatles_viz.config import IMPROVISATIONS, VOICE_COLORS, VOICE_ORDER
 
@@ -123,9 +124,15 @@ def song_header(song):
             st.caption("Repetition fingerprint", help=HELP["repetition"])
 
 
-def listen_row(title, label="Listen on"):
-    """One line of links that wraps on a phone, rather than a row of buttons."""
-    from beatles_viz.listen import listen_links
+def listen_row(title, label="Listen on", player=False):
+    """One line of links that wraps on a phone, rather than a row of buttons; with player, the song's official
+    YouTube upload above it when there is one."""
+    from beatles_viz.listen import listen_links, youtube_embed
+    embed = youtube_embed(title) if player else None
+    if embed:
+        left, _ = st.columns([2, 3])
+        with left:
+            components.iframe(embed, height=200)
     links = " · ".join(f"[{name}]({url})" for name, url in listen_links(title).items())
     st.markdown(f":material/headphones: {label} {links}")
 

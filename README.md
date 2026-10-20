@@ -21,6 +21,7 @@ python3 -m venv .venv
 .venv/bin/pytest
 ```
 `BEATLES_PUBLIC_ONLY=1` runs the app as deployed (no lyrics) on a machine that has the lyrics file.
+Tests run on GitHub Actions on every pull request and push to `main`, in public mode (`BEATLES_PUBLIC_ONLY=1`, no lyrics).
 
 ## Layout
 - `scripts/build_beatles.py` builds `data/beatles/beatles.parquet` from the official song list (Wikipedia) and Genius lyric datasets.

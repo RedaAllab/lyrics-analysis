@@ -48,7 +48,7 @@ for col, v in zip(cols, voices):
             if pick:
                 open_word(pick)
         songs = vc.signature_songs(corpus, v, k=4)
-        pick = chip_row(f"Most {v} songs", songs, f"voice_songs_{v}", per_row=2,
+        pick = chip_row(f"Most {v} songs", songs, f"voice_songs_{v}",
                         help=f"Songs that use the most of {v}'s characteristic words, per word sung.")
         if pick:
             open_song(pick)

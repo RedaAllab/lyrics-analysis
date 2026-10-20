@@ -5,15 +5,17 @@ import numpy as np
 import pandas as pd
 
 from beatles_viz.attribution import lead_voice
-from beatles_viz.config import MIN_TOKENS, PHASES
+from beatles_viz.config import IMPROVISATIONS, MIN_TOKENS, PHASES
 from beatles_viz.data.loader import load_songs
 from beatles_viz.text.metrics import pronoun_shares, text_metrics
+from beatles_viz.text.mood import THEMES, mood, themes
 from beatles_viz.text.repetition import fingerprint, repetition_score
 from beatles_viz.text.sections import all_lines, section_name
 from beatles_viz.text.segment import AUTO, song_sections
 from beatles_viz.text.tokenize import tokenize
 
 EXCLUDED_TITLES = {"Revolution 9"}  # a sound collage: its few words are not lyrics
+THEME_PREFIX = "theme: "
 STRUCTURE_COLS = ["sec_names", "sec_kinds", "sec_words", "sec_repeats", "sec_auto"]
 
 
@@ -55,6 +57,8 @@ def build_corpus(df):
         for col in STRUCTURE_COLS:
             if col in df:
                 df[col] = df[col].map(list)
+    df = df.join(pd.DataFrame(df.bow.map(mood).tolist(), index=df.index))
+    df = df.join(pd.DataFrame(df.bow.map(themes).tolist(), index=df.index).add_prefix(THEME_PREFIX))
     df["voice"] = df.lead_vocal.map(lead_voice)
     df["phase"] = df.year.map(phase_of)
     df["album"] = df.release_core.map(album_of)
@@ -65,9 +69,12 @@ def load_corpus(source="auto", originals_only=False):
     return build_corpus(load_songs(source, originals_only))
 
 
-def analysable(corpus, originals_only=True):
-    """Songs long enough for vocabulary statistics: the same set whether the lyrics are local or not."""
+def analysable(corpus, originals_only=True, improvisations=False):
+    """Songs long enough for vocabulary statistics: the same set whether the lyrics are local or not.
+    Studio improvisations stay in the public file (improvisations=True) but out of the statistics."""
     d = corpus[~corpus.title.isin(EXCLUDED_TITLES) & (corpus.tokens >= MIN_TOKENS)]
+    if not improvisations:
+        d = d[~d.title.isin(IMPROVISATIONS)]
     return d[d.is_original] if originals_only else d
 
 
@@ -98,7 +105,8 @@ def doc_frequencies(corpus):
 
 def featured_songs(corpus, min_tokens=60):
     """A few songs worth opening, each with the reason it stands out: [(label, title, reason)]."""
-    d = corpus[corpus.is_original & (corpus.tokens >= min_tokens)].dropna(subset=["mattr"])
+    d = analysable(corpus)
+    d = d[d.tokens >= min_tokens].dropna(subset=["mattr"])
     if d.empty:
         return []
     med_t, med_m = d.tokens.median(), d.mattr.median()

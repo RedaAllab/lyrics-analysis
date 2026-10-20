@@ -2,7 +2,7 @@ import re
 
 import streamlit as st
 
-from beatles_viz.config import VOICE_COLORS, VOICE_ORDER
+from beatles_viz.config import IMPROVISATIONS, VOICE_COLORS, VOICE_ORDER
 
 PLOT_CONFIG = {"displayModeBar": False}
 HELP = {
@@ -11,14 +11,22 @@ HELP = {
     "repeats": "Share of lines that repeat an earlier line of the same song.",
     "used_once": "Share of the vocabulary that appears only once in the selection.",
     "repetition": "Share of word pairs in the song that are the same word (SongSim). 0 means every word is new; higher means more repetition, whatever the length.",
+    "mood": "Average valence of the song's words in the VADER sentiment lexicon, from −1 (dark) to +1 (bright). "
+            "Word counts only: negation and irony are missed.",
     "z": "How strongly the word is over-represented compared with the rest (log-odds z-score). "
          "Above 2 is a clear difference.",
 }
 
 
 def plot(fig, static=False):
+    """Plotly titles do not wrap and get cut on a phone: the title becomes a Streamlit heading above the chart."""
+    from beatles_viz.viz.theme import style
+    title = fig.layout.title.text
+    if title:
+        st.markdown(f"##### {title}")
+        fig.update_layout(title=None, margin_t=10)
     config = {**PLOT_CONFIG, "staticPlot": True} if static else PLOT_CONFIG
-    st.plotly_chart(fig, width="stretch", config=config)
+    st.plotly_chart(style(fig), width="stretch", config=config)
 
 
 @st.cache_data(show_spinner="Loading songs...")
@@ -41,6 +49,15 @@ def _save(widget, store):
     st.session_state[store] = st.session_state[widget]
 
 
+# Markdown colours closest to VOICE_COLORS (pills cannot take arbitrary colours)
+CHIP_COLORS = {"Lennon": "blue", "McCartney": "red", "Harrison": "orange", "Starr": "green", "Shared": "violet",
+               "Neutral": "gray"}
+
+
+def voice_chip(voice):
+    return f":{CHIP_COLORS.get(voice, 'gray')}[●] {voice}"
+
+
 def corpus_filters(y0, y1):
     """Sidebar filters shared by every page: (originals_only, (year_from, year_to), voices)."""
     s = st.session_state
@@ -50,7 +67,8 @@ def corpus_filters(y0, y1):
     widget, store, sync = _persistent("years", (y0, min(y1, 1970)))
     st.sidebar.slider("Release year", y0, y1, key=widget, **sync)
     widget, store, sync = _persistent("voices", list(VOICE_ORDER))
-    st.sidebar.multiselect("Lead voice", VOICE_ORDER, key=widget, **sync)
+    st.sidebar.pills("Lead voice", VOICE_ORDER, selection_mode="multi", key=widget, format_func=voice_chip, wrap=True,
+                     **sync)
     return s.flt_originals, s.flt_years, s.flt_voices
 
 
@@ -97,23 +115,26 @@ def song_header(song):
     text.markdown(f"{int(song.year)} · *{release}* · written by {song.songwriters} · "
                   f"lead voice <span style='color:{color};font-weight:600'>{song.voice}</span> ({song.lead_vocal})",
                   unsafe_allow_html=True)
+    if song.title in IMPROVISATIONS:
+        text.caption("Studio improvisation from the Get Back sessions: left out of the catalogue statistics.")
     if "fingerprint" in song and song.fingerprint.size > 1:
         with thumb:
             plot(fingerprint_figure(song.fingerprint, color, height=120), static=True)
             st.caption("Repetition fingerprint", help=HELP["repetition"])
 
 
-def chip_row(label, options, key, help=None, per_row=4):
-    """Rows of small buttons; returns the clicked option or None. Plain buttons rather than st.pills,
-    which AppTest cannot rerun."""
-    st.markdown(f"**{label}**", help=help)
-    clicked = None
-    for start in range(0, len(options), per_row):
-        cols = st.columns(per_row)
-        for i, (col, option) in enumerate(zip(cols, options[start:start + per_row]), start):
-            if col.button(option, key=f"{key}_{i}", type="tertiary", width="stretch"):
-                clicked = option
-    return clicked
+def listen_row(title, label="Listen on"):
+    """One line of links that wraps on a phone, rather than a row of buttons."""
+    from beatles_viz.listen import listen_links
+    links = " · ".join(f"[{name}]({url})" for name, url in listen_links(title).items())
+    st.markdown(f":material/headphones: {label} {links}")
+
+
+def chip_row(label, options, key, help=None):
+    """Clickable chips that wrap on narrow screens; returns the clicked option or None. Every caller navigates
+    away on a click, so no selection is left behind."""
+    return st.pills(label, options, selection_mode="single", key=key, help=help, width="stretch",
+                    wrap=True) if options else None
 
 
 def similar_picker(song, corpus, matrix, key):
@@ -121,7 +142,7 @@ def similar_picker(song, corpus, matrix, key):
     sims = similar_songs(corpus, song.title, k=5, matrix=matrix)
     labels = {f"{r.title} · {r.similarity:.0%}": r.title for r in sims.itertuples()}
     pick = chip_row("Songs like this one", list(labels), f"{key}_similar",
-                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).", per_row=5)
+                    help="Closest vocabulary (TF-IDF weighted word counts, cosine similarity).")
     if pick:
         open_song(labels[pick])
 

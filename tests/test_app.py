@@ -14,7 +14,7 @@ needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file no
 
 
 @pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py", "compare_page.py", "stories_page.py",
-                                   "album_page.py", "voice_page.py"])
+                                   "album_page.py", "voice_page.py", "mood_page.py"])
 def test_pages_run(entry):
     assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
 
@@ -78,9 +78,9 @@ def test_word_page_runs_and_follows_url():
 def test_stories_step_through_and_stop_at_the_end():
     at = AppTest.from_file(str(APP / "stories_page.py"), default_timeout=180).run()
     assert not at.exception and at.button(key="story_prev").disabled
-    for _ in range(3):
+    for _ in range(4):
         at.button(key="story_next").click().run()
-    assert not at.exception and at.query_params["story"] == "4"
+    assert not at.exception and at.query_params["story"] == "5"
     assert not [b for b in at.button if b.key == "story_next"]
 
 
@@ -95,3 +95,11 @@ def test_voice_page_single_voice():
     at = AppTest.from_file(str(APP / "voice_page.py"), default_timeout=180).run()
     at.selectbox(key="voice_b").set_value("Lennon").run()
     assert not at.exception
+
+
+def test_voice_pills_filter_the_corpus_and_persist():
+    at = AppTest.from_file(str(APP / "corpus_page.py"), default_timeout=180).run()
+    pills = at.button_group(key="w_voices")
+    assert set(pills.value) == {"Lennon", "McCartney", "Harrison", "Starr", "Shared", "Neutral"}
+    pills.set_value(["Harrison"]).run()
+    assert not at.exception and at.session_state["flt_voices"] == ["Harrison"]

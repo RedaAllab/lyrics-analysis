@@ -30,8 +30,11 @@ def voice_radar(corpus, voices):
         values = [100 * (corpus[c].dropna() < d[c].median()).mean() for c in PROFILE if c in corpus]
         fig.add_trace(go.Scatterpolar(r=values + values[:1], theta=labels + labels[:1], name=v, fill="toself",
                                       opacity=0.6, line=dict(color=VOICE_COLORS.get(v))))
-    fig.update_layout(polar=dict(radialaxis=dict(range=[0, 100], ticksuffix="%", angle=90)))
-    return _layout(fig, "Typical song of each voice (percentile among all songs)", height=420)
+    fig.update_layout(polar=dict(radialaxis=dict(range=[0, 100], ticksuffix="%", angle=90, tickfont_size=9),
+                                 angularaxis=dict(tickfont_size=11)))
+    fig = _layout(fig, "Typical song of each voice (percentile among all songs)", height=420)
+    fig.update_layout(margin=dict(l=60, r=60))  # room for the axis labels on a phone
+    return fig
 
 
 def voice_trend(corpus, voices, metric, label):

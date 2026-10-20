@@ -51,9 +51,9 @@ def structure_timeline(song):
                     hovertemplate="%{customdata[0]} %{customdata[2]}<br>%{customdata[1]} words<extra></extra>")
     fig.update_yaxes(visible=False)
     fig.update_xaxes(title="position in the song (words)")
-    fig.update_layout(barmode="overlay", legend=dict(orientation="h", y=-0.4))
+    fig.update_layout(barmode="overlay", legend=dict(orientation="h", yanchor="top", y=-0.7))
     title = "Structure (sections detected automatically)" if df.auto.any() else "Structure"
-    return _layout(fig, title, height=230)
+    return _layout(fig, title, height=270)
 
 
 def _jaccard(a, b):

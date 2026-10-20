@@ -4,7 +4,7 @@ import streamlit as st
 from beatles_viz.config import VOICE_COLORS
 from beatles_viz.corpus import albums
 from beatles_viz.data.loader import has_lyrics
-from beatles_viz.render.components import HELP, cached_corpus, chip_row, open_song, open_word, plot
+from beatles_viz.render.components import HELP, cached_corpus, chip_row, listen_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.text.keyness import monroe, prior
 from beatles_viz.text.tokenize import content_counter, merge
@@ -27,6 +27,7 @@ tracks = corpus[corpus.album == album].sort_values(["year", "title"])
 
 kicker(f"{int(info.year)} · {int(info.tracks)} songs in the catalogue")
 st.markdown(f"## {album}")
+listen_row(album, "Listen to the album")
 c = st.columns(4)
 c[0].metric("Songs", int(info.tracks), f"{int(info.originals)} original", delta_color="off")
 c[1].metric("Words", f"{int(info.words):,}")

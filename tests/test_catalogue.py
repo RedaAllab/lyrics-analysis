@@ -57,7 +57,7 @@ def stories():
 
 
 def test_stories_are_complete(stories):
-    assert list(stories) == ["love", "richness", "pronouns", "words"]
+    assert list(stories) == ["love", "richness", "pronouns", "words", "mood"]
     for s in stories.values():
         assert s.headline and s.text and s.figure is not None and s.links
 
@@ -67,3 +67,4 @@ def test_stories_match_the_data(stories):
     assert stories["love"].headline.startswith("“Love” fell")
     assert stories["richness"].headline.endswith("1964-65")
     assert "1966-67" in stories["pronouns"].headline
+    assert stories["mood"].headline.startswith("Lennon")

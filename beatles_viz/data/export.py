@@ -8,7 +8,7 @@ PUBLIC_COLS = ["title", "year", "release_core", "songwriters", "lead_vocal", "is
 
 def public_table(corpus):
     """corpus: built from the local lyrics. Keeps every column that cannot give the text back."""
-    d = analysable(corpus, originals_only=False)
+    d = analysable(corpus, originals_only=False, improvisations=True)
     out = d[PUBLIC_COLS].copy()
     out["bow_words"] = d.bow.map(lambda c: list(c.keys()))
     out["bow_counts"] = d.bow.map(lambda c: [int(n) for n in c.values()])

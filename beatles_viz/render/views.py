@@ -4,7 +4,9 @@ import streamlit as st
 from beatles_viz.attribution import resolve_voice
 from beatles_viz.corpus import doc_frequencies, neighbors
 from beatles_viz.effects import get_effect
-from beatles_viz.render.components import chip_row, open_word, plot
+from beatles_viz.render.components import HELP, chip_row, open_word, plot
+from beatles_viz.text.mood import mood_words
+from beatles_viz.viz import mood_charts
 from beatles_viz.text.keyness import monroe, prior
 from beatles_viz.text.tokenize import content_counter, merge
 from beatles_viz.render.song_view import render_song
@@ -81,10 +83,30 @@ def read_view(song, corpus, local, key):
 
 def _show(fig, question, missing="Not enough data for this chart."):
     if fig is None:
-        st.markdown(f"**{question}**")
+        st.markdown(f"##### {question}")
         st.info(missing)
     else:
         fig.update_layout(title=question)  # one title per chart, phrased as the question it answers
+        plot(fig)
+
+
+def mood_section(song, corpus):
+    st.markdown("**What mood, which themes?**")
+    left, right = st.columns(2)
+    with left:
+        if song.valence == song.valence:
+            ref = corpus.valence.dropna()
+            st.metric("Mood", f"{song.valence:+.2f}", f"brighter than {(ref < song.valence).mean():.0%} of songs",
+                      delta_color="off", help=HELP["mood"])
+            fig = mood_charts.mood_words_figure(*mood_words(song.bow))
+            if fig is not None:
+                fig.update_layout(title=None)
+                plot(fig)
+        else:
+            st.info("Too few mood words in this song for a score.")
+    with right:
+        fig = mood_charts.song_themes(song, corpus)
+        fig.update_layout(title=None)
         plot(fig)
 
 
@@ -117,6 +139,7 @@ def analyse_view(song, corpus, local, key):
                 open_word(pick)
     with right:
         _show(charts.pronoun_profile(song, corpus), "From whose point of view does the song speak?")
+    mood_section(song, corpus)
     period = st.radio("Compare with", ["same period", "all songs"], horizontal=True, key=f"{key}_period")
     _show(charts.corpus_position(song, corpus, song.phase if period == "same period" else None),
           "Is the song typical of its time?")

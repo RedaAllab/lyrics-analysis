@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from beatles_viz.config import ACCENT, PHASES, VOICE_COLORS
+from beatles_viz.config import ACCENT, MEMBERS, PHASES, VOICE_COLORS
 from beatles_viz.corpus import analysable
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
@@ -100,7 +100,26 @@ def new_words(d, top=8):
     return Story("words", headline, text, fig, [("word", w) for w in lost[:2] + gained[:2]])
 
 
-STORIES = [love_fades, richest_years, i_to_we, new_words]
+def darkest_voice(d, min_songs=5):
+    s = d.dropna(subset=["valence"])
+    g = s[s.voice.isin(MEMBERS)].groupby("voice").valence.agg(["mean", "count"])
+    g = g[g["count"] >= min_songs].sort_values("mean")
+    dark, bright = g.index[0], g.index[-1]
+    darkest = s[s.voice == dark].nsmallest(1, "valence").iloc[0]
+    text = (f"Score each song by the mood of its words, from −1 (dark) to +1 (bright). Among the voices with at "
+            f"least {min_songs} songs, {dark}'s average {g.loc[dark, 'mean']:+.2f} is the lowest and {bright}'s "
+            f"{g.loc[bright, 'mean']:+.2f} the highest. {dark}'s darkest is {darkest.title} "
+            f"({darkest.valence:+.2f}). Words only: negation and irony are missed.")
+    order = g.index.tolist()
+    fig = px.box(s[s.voice.isin(order)], x="voice", y="valence", color="voice", points="all", hover_name="title",
+                 color_discrete_map=VOICE_COLORS, category_orders={"voice": order},
+                 labels={"valence": "mood (−1 dark · +1 bright)", "voice": ""})
+    fig.update_layout(showlegend=False)
+    headline = f"{dark} sings the darkest songs"
+    return Story("mood", headline, text, _layout(fig, headline, 400), [("song", darkest.title), ("page", "mood")])
+
+
+STORIES = [love_fades, richest_years, i_to_we, new_words, darkest_voice]
 
 
 def build_stories(corpus):

@@ -37,8 +37,10 @@ links = story.links
 if links:
     cols = st.columns(len(links))
     for i, (col, (kind, target)) in enumerate(zip(cols, links)):
-        label = f"Open “{target}”" if kind == "word" else f"Open {target}"
+        label = {"word": f"Open “{target}”", "song": f"Open {target}", "page": f"Open the {target} page"}[kind]
         if col.button(label, key=f"story_link_{step}_{i}", icon=":material/arrow_outward:", width="stretch"):
+            if kind == "page":
+                st.switch_page(f"{target}_page.py")
             (open_word if kind == "word" else open_song)(target)
 
 st.divider()

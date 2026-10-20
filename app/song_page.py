@@ -1,8 +1,9 @@
 import streamlit as st
 
 from beatles_viz.data.loader import has_lyrics
-from beatles_viz.render.components import (cached_corpus, metrics_panel, similar_picker, song_header,
+from beatles_viz.render.components import (cached_corpus, listen_row, metrics_panel, similar_picker, song_header,
                                            song_selector)
+from beatles_viz.render.personal_view import personal_strip
 from beatles_viz.text.similarity import similarity_matrix
 from beatles_viz.render.views import ANALYSE, READ, analyse_view, navigation, read_view
 
@@ -15,6 +16,8 @@ if song is None:
     st.stop()
 
 song_header(song)
+listen_row(song.title)
+personal_strip(song)
 
 # The view is kept in the URL (?view=Read) so a link opens the song in the right mode.
 views = [READ, ANALYSE] if local else [ANALYSE, READ]

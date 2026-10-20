@@ -27,6 +27,7 @@ def fresh_package():
 
 
 fresh_package()
+from beatles_viz import personal  # noqa: E402
 from beatles_viz.render.identity import apply_identity  # noqa: E402
 
 st.set_page_config(page_title="Beatles lyrics explorer", page_icon=str(HERE / "static/icon.svg"), layout="wide")
@@ -37,11 +38,14 @@ st.navigation({
         st.Page(HERE / "song_page.py", title="Song", icon=":material/lyrics:", url_path="song"),
         st.Page(HERE / "word_page.py", title="Word", icon=":material/text_fields:", url_path="word"),
         st.Page(HERE / "compare_page.py", title="Compare", icon=":material/compare_arrows:", url_path="compare"),
+        *([st.Page(HERE / "journal_page.py", title="My songs", icon=":material/favorite:", url_path="mine")]
+          if personal.enabled() else []),
     ],
     "Catalogue": [
         st.Page(HERE / "stories_page.py", title="Stories", icon=":material/auto_stories:", url_path="stories"),
         st.Page(HERE / "album_page.py", title="Albums", icon=":material/album:", url_path="albums"),
         st.Page(HERE / "voice_page.py", title="Voices", icon=":material/record_voice_over:", url_path="voices"),
+        st.Page(HERE / "mood_page.py", title="Mood", icon=":material/sentiment_satisfied:", url_path="mood"),
         st.Page(HERE / "corpus_page.py", title="Corpus", icon=":material/bar_chart:", url_path="corpus"),
     ],
 }).run()

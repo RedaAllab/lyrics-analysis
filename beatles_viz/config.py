@@ -7,6 +7,8 @@ PUBLIC_PATH = ROOT / "data/public/beatles_bow.parquet"
 
 PHASES = [("1962-63", 1962, 1963), ("1964-65", 1964, 1965), ("1966-67", 1966, 1967), ("1968-70", 1968, 1970)]
 MIN_TOKENS = 30
+# Get Back session jams: real recordings, but improvised talk-singing that would skew catalogue statistics
+IMPROVISATIONS = {"Can You Dig It?", "Commonwealth"}
 MATTR_WINDOW = 50
 
 MEMBERS = ["Lennon", "McCartney", "Harrison", "Starr"]

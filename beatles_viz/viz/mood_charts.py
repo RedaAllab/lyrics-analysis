@@ -46,6 +46,20 @@ def annotated_theme_heatmap(matrix, corpus, labels):
     return titled(fig, "Annotated themes by period (annotated songs)", height=460)
 
 
+def stanza_topic_heatmap(shares, topics):
+    """shares: periods x topics (stanza_topic_shares); topics: topic, words. Topics named by their first words."""
+    names = dict(zip(topics.topic, topics.words.str.split().str[:4].str.join(" ")))
+    order = topics.topic.tolist()
+    g = shares.reindex(index=[p for p in PHASE_ORDER if p in shares.index], columns=order).fillna(0)
+    z = g.T.values
+    fig = go.Figure(go.Heatmap(z=z, x=g.index.tolist(), y=[names.get(t, t) for t in g.columns],
+                               text=[[f"{v:.0%}" for v in row] for row in z], texttemplate="%{text}",
+                               colorbar=dict(title="stanzas", tickformat=".0%"),
+                               hovertemplate="%{y} · %{x}<br>%{z:.0%} of the period's stanzas<extra></extra>"))
+    fig.update_yaxes(autorange="reversed")
+    return titled(fig, "Automatic stanza groups by period", height=140 + 28 * len(order))
+
+
 def theme_heatmap(corpus, key, order):
     cols = theme_columns(corpus)
     g = corpus.groupby(key)[cols].mean().reindex([o for o in order if o in set(corpus[key])])

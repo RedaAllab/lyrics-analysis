@@ -54,3 +54,14 @@ def test_annotated_heatmap_builds():
     m = pd.DataFrame({"love_devotion": [True, False, True], "society": [False, False, True]}, index=["A", "B", "C"])
     fig = annotated_theme_heatmap(m, corpus, {"love_devotion": "Love"})
     assert list(fig.data[0].x) == ["1962-63 (2)", "1968-70 (1)"] and fig.data[0].z[0][0] == 0.5
+
+
+def test_stanza_topic_shares_and_heatmap():
+    from beatles_viz.viz.mood_charts import stanza_topic_heatmap
+    corpus = pd.DataFrame({"title": ["A", "B"], "phase": ["1962-63", "1968-70"]})
+    songs = pd.DataFrame({"title": ["A", "A", "B"], "topic": [0, 1, 1], "stanzas": [3, 1, 2]})
+    s = T.stanza_topic_shares(songs, corpus)
+    assert s.loc["1962-63", 0] == 0.75 and s.loc["1968-70", 1] == 1
+    topics = pd.DataFrame({"topic": [1, 0], "words": ["sun sky blue day rain", "love need"]})
+    fig = stanza_topic_heatmap(s, topics)
+    assert list(fig.data[0].y) == ["sun sky blue day", "love need"]

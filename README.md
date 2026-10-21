@@ -93,6 +93,8 @@ BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # as in GitHub Actions CI: tests that n
 | Tables and figures | `scripts/analyse_beatles.py`, `scripts/compare_artists.py`, `scripts/audit_dataset.py` |
 | Credits from MusicBrainz, then the sourced credit tables (see `data/credits/README.md`) | `scripts/fetch_credits.py`, `scripts/build_credits.py` |
 | Theme suggestions (local, nlp extra), agreement once songs are annotated on the Annotate page | `scripts/suggest_themes.py`, `scripts/theme_agreement.py` |
+| Automatic stanza groups (exploratory, with their stability) | `scripts/stanza_topics.py` |
+| Narrative markers and line-by-line mood for the eight catalogues | `scripts/compare_narrative.py` (same files as `compare_artists.py`) |
 
 ## Known limitations
 

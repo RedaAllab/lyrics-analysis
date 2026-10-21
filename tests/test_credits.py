@@ -78,3 +78,31 @@ def test_conflicts_and_performers():
     table = song_performers(perf, people, "A")
     assert table.person.tolist() == ["John Lennon", "Paul McCartney"]
     assert table.what.iloc[1] == "lead vocal, bass guitar" and table.sources.iloc[1] == "mb"
+
+
+def test_instrument_families():
+    from beatles_viz.credits import instrument_family
+    assert [instrument_family(n) for n in ["electric bass guitar", "bass", "bass drum", "12 string guitar",
+                                           "Hammond organ", "sitar", "French horn", "cello", "tape"]] == [
+        "Bass", "Bass", "Percussion", "Guitar", "Keyboards", "Indian instruments", "Winds and brass", "Strings",
+        "Other"]
+
+
+def test_instruments_outside_musicians_and_charts():
+    from beatles_viz.credits import instruments, outside_musicians
+    from beatles_viz.viz import credit_charts as cc
+    perf = pd.DataFrame([("A", "lennon", "instrument", "piano; electric guitar", "mb"),
+                         ("B", "lennon", "instrument", "guest", "mb"),
+                         ("B", "billy_preston", "instrument", "Hammond organ", "mb"),
+                         ("B", "george_martin", "producer", "", "mb")],
+                        columns=["title", "person_id", "role", "detail", "source_id"])
+    inst = instruments(perf)
+    assert sorted(inst.instrument) == ["Hammond organ", "electric guitar", "piano"]
+    people = pd.DataFrame({"person_id": ["billy_preston"], "name": ["Billy Preston"]})
+    assert outside_musicians(perf, people).person.tolist() == ["Billy Preston"]
+    songs = pd.DataFrame({"title": ["A", "B"], "phase": ["1962-63", "1962-63"]})
+    shares, per_phase = cc.family_shares(inst, songs)
+    s = shares.set_index(["person_id", "family"]).share
+    assert s[("lennon", "Keyboards")] == 0.5 and per_phase["1962-63"] == 2
+    assert cc.member_instruments(shares, per_phase, "Lennon") is not None
+    assert cc.member_instruments(shares, per_phase, "Starr") is None

@@ -120,3 +120,47 @@ def song_performers(perf, people, title):
     order = {m.lower(): i for i, m in enumerate(MEMBERS)}
     return g.reset_index().sort_values("person_id", key=lambda s: s.map(lambda p: order.get(p, 9))).drop(
         columns="person_id").reset_index(drop=True)
+
+
+# MusicBrainz instrument names -> families, checked in order (the first match wins: "bass drum" is percussion).
+FAMILIES = [
+    ("Percussion", ("drum", "tambourine", "maracas", "handclap", "percussion", "bongo", "conga", "cowbell", "clave",
+                    "cymbal", "hi-hat", "wood block", "anvil", "shaker", "finger snap", "tap dance", "timpani",
+                    "tubular bells", "glockenspiel", "vibraphone")),
+    ("Indian instruments", ("sitar", "tambura", "tabla", "dilruba", "swarmandal", "sarod", "shehnai", "santoor",
+                            "surbahar", "pakhawaj", "dholak")),
+    ("Bass", ("bass guitar", "double bass")),
+    ("Guitar", ("guitar", "ukulele", "banjo")),
+    ("Keyboards", ("piano", "organ", "harmonium", "harpsichord", "mellotron", "moog", "synthesizer", "clavi",
+                   "celesta", "keyboard")),
+    ("Winds and brass", ("trumpet", "trombone", "horn", "flugelhorn", "tuba", "saxophone", "clarinet", "flute",
+                         "flûte", "piccolo", "oboe", "cor anglais", "bassoon", "recorder", "harmonica",
+                         "mouth harp", "accordion", "ocarina")),
+    ("Strings", ("violin", "viola", "cello", "harp")),
+]
+
+
+def instrument_family(name):
+    """'electric bass guitar' -> 'Bass'; 'Hammond organ' -> 'Keyboards'; unknown or vague ('tape') -> 'Other'."""
+    name = str(name).lower()
+    if name == "bass":
+        return "Bass"
+    return next((fam for fam, keys in FAMILIES if any(k in name for k in keys)), "Other")
+
+
+def instruments(perf):
+    """One row per (song, person, instrument) from the recording credits, with the instrument's family."""
+    d = perf[perf.role == "instrument"].assign(instrument=lambda x: x.detail.str.split("; ")).explode("instrument")
+    d = d[~d.instrument.isin({"", "guest", "additional", "other instruments"})]
+    return d.assign(family=d.instrument.map(instrument_family))[["title", "person_id", "instrument", "family",
+                                                                 "source_id"]]
+
+
+def outside_musicians(perf, people, roles=("instrument", "vocal", "backing_vocal", "lead_vocal")):
+    """People other than the four who sing or play, with the songs they are credited on."""
+    members = {m.lower() for m in MEMBERS}
+    d = perf[perf.role.isin(roles) & ~perf.person_id.isin(members)]
+    names = dict(zip(people.person_id, people.name))
+    g = d.groupby("person_id").agg(songs=("title", "nunique"), titles=("title", lambda t: ", ".join(sorted(set(t)))))
+    g.insert(0, "person", g.index.map(lambda p: names.get(p, p)))
+    return g.sort_values(["songs", "person"], ascending=[False, True]).reset_index(drop=True)

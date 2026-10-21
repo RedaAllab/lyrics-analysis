@@ -234,13 +234,24 @@ contributions documentées depuis les livres.
 
 ### Phase 3 : exploratoire
 
-- BERTopic sur les strophes (une fois, local, présenté comme exploration) ; classifieur d'émotions évalué contre
-  l'annotation ; graphe de collaborations ; croisements auteur × interprète × période avec avertissement sur les
-  effectifs ; mêmes thèmes appliqués aux 8 autres catalogues.
-- **Fichiers** : nouveaux `scripts/`, `viz/`, `app/credits_page.py`.
-- **Dépendances** : torch, bertopic (local seulement).
-- **Critères** : chaque résultat affiche son niveau de preuve.
-- **Risques** : instabilité ; conclusions trop fortes sur de petits effectifs.
+**Statut** : faite le 21/10/2026, sauf ce qui dépend de l'annotation des thèmes.
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Niveau de preuve affiché sous chaque analyse (descriptif, exploratoire, à valider) | `render/components.py:evidence`, pages Trends, Mood, Credits, Other artists | ✅ |
+| Page Credits : instruments par membre et par période (familles), musiciens extérieurs, crédit officiel × voix principale × période, désaccords entre sources, contributions documentées | `app/credits_page.py`, `viz/credit_charts.py`, `credits.py` | ✅ 218 chansons avec instrumentistes ; ex. l'harmonica de Lennon en 1962-63 puis les claviers en 1966-67 ; George Martin (36 chansons) et Billy Preston (10) en tête des extérieurs |
+| Sujets de strophes : le cœur de BERTopic (embeddings MiniLM, k-means, mots par c-TF-IDF) sans umap ni hdbscan ; k par silhouette ; stabilité par ARI entre 10 graines | `scripts/stanza_topics.py`, `data/themes/stanza_topics*.csv`, `analysis/themes/stanza_topics_quality.csv`, page Mood | ✅ 1 144 strophes distinctes, k = 18. **Silhouette 0,04, stabilité 0,29** : les strophes ne forment pas de groupes nets, et une autre graine donne des groupes assez différents. Quelques groupes lisibles (versions allemandes, amour / besoin, soleil, argent), d'autres réduits aux mots d'une ou deux chansons. Affiché comme exploratoire, pas comme des thèmes |
+| Indicateurs narratifs et humeur par ligne sur les 8 catalogues, avec intervalles bootstrap | `scripts/compare_narrative.py`, `analysis/artists/narrative.csv`, page Other artists | ✅ ex. Cohen narre le plus au passé, les Beatles et McCartney sont les plus tournés vers le futur et les plus positifs ; personnages exclus (la liste de noms est celle des Beatles) |
+| Classifieur d'émotions transformer | | ⏸ reporté : il ne peut être évalué que contre l'annotation manuelle, qui n'existe pas encore ; l'ajouter sans évaluation contredirait la règle de la v2 |
+| Thèmes du codebook appliqués aux 8 catalogues | | ⏸ reporté : dépend aussi de l'annotation (un modèle validé sur les Beatles pourrait alors être appliqué aux autres, avec contrôle sur un échantillon) |
+
+**Leçon** : le résultat le plus net de la phase 3 est négatif et utile. Les méthodes non supervisées (NMF en phase 2,
+groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles
+confirment le choix d'un codebook annoté à la main comme référence.
+
+**Reste à faire (dans l'ordre)** : annoter (page Annotate) → `scripts/theme_agreement.py` → remplacer les thèmes par
+listes de mots sur la page Mood → évaluer un classifieur d'émotions et les suggestions du modèle contre l'annotation →
+étendre aux autres catalogues. En parallèle : saisir les contributions documentées (`data/credits/manual_claims.csv`).
 
 ---
 

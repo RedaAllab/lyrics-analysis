@@ -31,6 +31,27 @@ def load_tables():
             "years": read("career_years.csv"), "tests": read("pairwise_tests.csv")}
 
 
+def narrative_table():
+    """analysis/artists/narrative.csv (scripts/compare_narrative.py), or None when not computed."""
+    path = ARTISTS_DIR / "narrative.csv"
+    return pd.read_csv(path) if path.exists() else None
+
+
+def narrative_bars(table, measure):
+    """Mean per song for each artist with its 95% bootstrap interval."""
+    d = table[table.measure == measure].set_index("artist").reindex([a for a in ARTISTS if a in set(table.artist)])
+    share = measure not in {"valence", "valence_ctx"}
+    scale = 100 if share else 1
+    fig = go.Figure(go.Bar(x=d["mean"] * scale, y=d.index, orientation="h",
+                           marker_color=[ARTIST_COLORS[a] for a in d.index],
+                           error_x=dict(type="data", symmetric=False, array=(d.ci_high - d["mean"]) * scale,
+                                        arrayminus=(d["mean"] - d.ci_low) * scale),
+                           customdata=d.songs, hovertemplate="%{y}: %{x:.2f} (%{customdata} songs)<extra></extra>"))
+    fig.update_yaxes(autorange="reversed")
+    fig.update_xaxes(title=d.label.iloc[0].replace("(share", "(per 100") if share else d.label.iloc[0])
+    return _layout(fig, "How each catalogue tells", height=360)
+
+
 def _layout(fig, title, height=380):
     fig.update_layout(title=title, height=height, margin=dict(l=10, r=10, t=50, b=10))
     return fig

@@ -4,7 +4,7 @@ import streamlit as st
 from beatles_viz.config import PHASES
 from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
-from beatles_viz.render.components import cached_corpus, chip_row, open_word, plot
+from beatles_viz.render.components import cached_corpus, chip_row, evidence, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.text import trends as T
 from beatles_viz.viz import trend_charts as charts
@@ -33,6 +33,7 @@ plot(charts.word_movers(movers))
 pick = chip_row("Open a word", movers.word.head(3).tolist() + movers.word.tail(3).tolist(), "trend_words")
 if pick:
     open_word(pick)
+evidence("exploratory")
 st.caption("Words used in at least 10 songs whose rate follows the release year (rank correlation, p < 0.05), "
            "ranked by the change of the songs' mean rate between the first and the last period; bars show a 95% "
            f"bootstrap interval (songs resampled). {tested} words are tested: once corrected for that "
@@ -44,12 +45,14 @@ st.caption("Words used in at least 10 songs whose rate follows the release year 
 
 st.subheader("Are songs built differently over time?")
 plot(charts.section_shares(sections, counts))
+evidence("descriptive")
 st.caption("Sections come from Genius tags (verses and choruses detected from returning stanzas when a song has none), "
            "and count sung words only: instrumental passages are invisible. “Other” gathers intros, pre-choruses and untagged songs. Tagging habits may vary with the era "
            "of the transcription, not only with the songs.")
 
 st.subheader("Who sings lead, and when?")
 plot(charts.voice_shares(voices, counts))
+evidence("descriptive")
 st.caption("Lead voice is read from the credits; “Shared” means several lead singers. "
            f"{PHASES[0][0]} has {counts.iloc[0]} songs, so a single song moves it by several points.")
 
@@ -63,6 +66,7 @@ if telling:
     col, unit = telling[label]
     plot(charts.phase_strip(d.assign(**{col: 100 * d[col]}), col, f"{label}, {unit}",
                             f"{label.capitalize()}, period by period"))
+    evidence("exploratory")
     st.caption("Word lists and line rules (beatles_viz/text/narrative.py), no grammar: past words are “was”, “said”, "
                "regular “-ed” forms…; an order is a line opening on “come”, “help”, “don't”, “let's”…; a question is a "
                "line ending in a question mark in the transcription. Rough markers: a song can tell a story in the "
@@ -72,6 +76,7 @@ if "sem_early" in d and d.sem_early.notna().any():
     st.subheader("Do the songs move away from their first subjects?")
     plot(charts.phase_strip(d, "sem_early", f"closeness in meaning to the {PHASES[0][0]} songs",
                             f"How close each song is, in meaning, to the songs of {PHASES[0][0]}"))
+    evidence("exploratory")
     st.caption("Each stanza is turned into a vector by a sentence transformer (all-MiniLM-L6-v2), averaged per song, "
                f"and compared with the average of the {PHASES[0][0]} songs ({PHASES[0][0]} songs are compared without "
                "themselves). Checked against random shuffles of the periods. The model was trained on everyday text, "

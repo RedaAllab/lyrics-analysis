@@ -51,6 +51,7 @@ st.navigation({
         st.Page(HERE / "mood_page.py", title="Mood", icon=":material/sentiment_satisfied:", url_path="mood"),
         st.Page(HERE / "guess_page.py", title="Who sings?", icon=":material/quiz:", url_path="guess"),
         st.Page(HERE / "voice_page.py", title="Voices", icon=":material/record_voice_over:", url_path="voices"),
+        st.Page(HERE / "credits_page.py", title="Credits", icon=":material/badge:", url_path="credits"),
         st.Page(HERE / "corpus_page.py", title="Corpus", icon=":material/bar_chart:", url_path="corpus"),
     ],
 }, expanded=True).run()

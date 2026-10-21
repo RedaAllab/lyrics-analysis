@@ -12,6 +12,9 @@ THEMES_DIR = ROOT / "data/themes"
 CODEBOOK_PATH = THEMES_DIR / "codebook.csv"
 ANNOTATIONS_PATH = THEMES_DIR / "annotations.csv"
 SUGGESTIONS_PATH = THEMES_DIR / "suggestions.csv"
+STANZA_TOPICS_PATH = THEMES_DIR / "stanza_topics.csv"
+STANZA_SONGS_PATH = THEMES_DIR / "stanza_topics_songs.csv"
+STANZA_QUALITY_PATH = ROOT / "analysis/themes/stanza_topics_quality.csv"
 ANNOTATION_COLS = ["title", "annotator", "themes", "main_theme", "implicit", "note", "annotated_on"]
 SEP = ";"
 
@@ -98,3 +101,11 @@ def theme_shares(matrix, groups):
     """Share of songs carrying each theme, per group (period, album, voice...); groups: Series indexed by title."""
     g = groups.reindex(matrix.index)
     return matrix.groupby(g.to_numpy()).mean().assign(songs=matrix.groupby(g.to_numpy()).size())
+
+
+def stanza_topic_shares(song_topics, corpus):
+    """Share of each period's distinct stanzas that fall in each automatic topic (scripts/stanza_topics.py):
+    periods x topics, rows sum to 1. song_topics: title, topic, stanzas."""
+    d = song_topics.merge(corpus[["title", "phase"]], on="title").dropna(subset=["phase"])
+    t = d.pivot_table(index="phase", columns="topic", values="stanzas", aggfunc="sum", fill_value=0)
+    return t.div(t.sum(axis=1), axis=0)

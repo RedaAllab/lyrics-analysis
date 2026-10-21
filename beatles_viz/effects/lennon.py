@@ -1,14 +1,15 @@
+from beatles_viz.config import CARD, INK, VOICE_COLORS
 from beatles_viz.effects.base import Effect, map_words, register
 from beatles_viz.text.tokenize import is_content
 
 
 @register
 class Lennon(Effect):
-    """Typewriter font, cold high-contrast palette, rare words drift and blur slightly."""
+    """Typewriter font, rare words drift and blur slightly."""
     name = "lennon"
     summary = "typewriter font, rare words drift and blur"
     font = '"Courier Prime", "Courier New", Courier, monospace'
-    defaults = {"bg": "#eaf0f6", "fg": "#0b2545", "accent": "#1f4e79", "wave": 0.5, "rare_max_songs": 2}
+    defaults = {"bg": CARD, "fg": INK, "accent": VOICE_COLORS["Lennon"], "wave": 0.5, "rare_max_songs": 2}
     ranges = {"wave": (0.0, 1.0, 0.05), "rare_max_songs": (1, 10, 1)}
     text_keys = ("fg", "accent")
 

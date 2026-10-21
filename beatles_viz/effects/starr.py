@@ -1,3 +1,4 @@
+from beatles_viz.config import CARD, INK, VOICE_COLORS
 from beatles_viz.effects.base import Effect, map_words, register
 
 
@@ -7,7 +8,7 @@ class Starr(Effect):
     name = "starr"
     summary = "rounded font, first word of each line bounces"
     font = 'Nunito, "Varela Round", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif'
-    defaults = {"bg": "#fffbe6", "fg": "#1d3557", "accent": "#c1121f", "bounce": 4, "tempo": 1.2}
+    defaults = {"bg": CARD, "fg": INK, "accent": VOICE_COLORS["Starr"], "bounce": 4, "tempo": 1.2}
     ranges = {"bounce": (0, 10, 1), "tempo": (0.4, 3.0, 0.1)}
     text_keys = ("fg", "accent")
 

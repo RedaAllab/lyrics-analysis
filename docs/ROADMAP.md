@@ -54,7 +54,8 @@ Toute analyse contextuelle (phrases, négation, voisinage, embeddings) tourne en
 1. Thèmes = listes de mots sans contexte ni validation (`away` → voyage, `man` → monde, `real` → esprit).
 2. VADER sur sac de mots : pas de négation ni d'ironie (« don't cry » compte comme triste).
 3. Chanteur pris implicitement pour auteur dans `analysis/beatles/distinctive_words_by_singer.csv` et
-   `singer_summary.csv` (libellés honnêtes, lecture tentante).
+   `singer_summary.csv` (libellés honnêtes, lecture tentante). **Corrigé le 21/10/2026** : renommés `*_lead_voice*`,
+   comparaison par crédit officiel ajoutée (Harrison contre Lennon–McCartney), `analysis/beatles/README.md`.
 4. `trends.steady_movers` teste des centaines de mots à p < 0,05 sans correction ; les taux poolés pèsent plus
    lourd pour les chansons longues.
 5. Aucun jeu annoté de référence pour valider un thème ou une émotion.
@@ -204,8 +205,8 @@ contributions documentées depuis les livres.
 
 | Tâche | Fichiers | Résultat |
 |---|---|---|
-| Collecte MusicBrainz (édition originale, puis recherche par titre ; cache local, 1 req/s, relances sur 503) | `scripts/fetch_credits.py`, `data/credits/mb_*.csv` | ✅ 266 des 272 chansons associées à un enregistrement, 249 avec interprètes et instruments ; 6 sans enregistrement trouvé (jams de *Get Back*, *Suzy Parker*, *Save the Last Dance for Me*), listées dans `mb_missing.csv` |
-| Tables de crédits sourcées (schéma D) et vue des désaccords | `scripts/build_credits.py`, `beatles_viz/credits.py`, `data/credits/*.csv`, `data/credits/README.md`, `analysis/credits/lead_vocal_conflicts.csv` | ✅ 1 105 crédits d'œuvre, 3 231 crédits d'enregistrement, 376 personnes. 28 désaccords sur la voix principale entre la liste officielle et MusicBrainz : surtout de granularité (MusicBrainz crédite la partie chantée par McCartney dans *A Day in the Life* ; la liste nomme deux voix principales sur *Love Me Do*). Conservés tous les deux, rien n'est tranché |
+| Collecte MusicBrainz (édition originale, puis recherche par titre ; cache local, 1 req/s, relances sur 503) | `scripts/fetch_credits.py`, `data/credits/mb_*.csv` | ✅ 266 des 272 chansons associées à un enregistrement, 263 avec des crédits d'interprètes (249 avant la correction du 21/10/2026 : les 45 tours sont désormais rattachés à leur sortie d'origine, plus à une réédition sans crédits) ; 6 sans enregistrement trouvé (jams de *Get Back*, *Suzy Parker*, *Save the Last Dance for Me*), listées dans `mb_missing.csv` |
+| Tables de crédits sourcées (schéma D) et vue des désaccords | `scripts/build_credits.py`, `beatles_viz/credits.py`, `data/credits/*.csv`, `data/credits/README.md`, `analysis/credits/lead_vocal_conflicts.csv` | ✅ 1 107 crédits d'œuvre, 3 488 crédits d'enregistrement, 377 personnes. 27 désaccords sur la voix principale entre la liste officielle et MusicBrainz : surtout de granularité (MusicBrainz crédite la partie chantée par McCartney dans *A Day in the Life* ; la liste nomme deux voix principales sur *Love Me Do*). Conservés tous les deux, rien n'est tranché |
 | Saisie manuelle des contributions (sources de rang 1 et 2) | `data/credits/manual_sources.csv`, `manual_claims.csv` | 🔶 gabarit et règles prêts ; une seule affirmation saisie (*In My Life*, stylométrie, `interpretation`, confiance faible). Le reste demande les livres : **à faire à la main** |
 | Section « Who wrote it, who sings and plays? » sur la page Song | `render/views.py` | ✅ crédit officiel, affirmations non officielles avec leur source, interprètes et instruments |
 | Codebook de 14 thèmes (définition, inclure, exclure) | `data/themes/codebook.csv` | ✅ CSV plutôt que YAML : aucune dépendance. « Nature et saisons » et « Nourriture et boisson » ajoutés le 21/10/2026 après l'annotation modèle |
@@ -239,7 +240,7 @@ contributions documentées depuis les livres.
 | Tâche | Fichiers | Résultat |
 |---|---|---|
 | Niveau de preuve affiché sous chaque analyse (descriptif, exploratoire, à valider) | `render/components.py:evidence`, pages Trends, Mood, Credits, Other artists | ✅ |
-| Page Credits : instruments par membre et par période (familles), musiciens extérieurs, crédit officiel × voix principale × période, désaccords entre sources, contributions documentées | `app/credits_page.py`, `viz/credit_charts.py`, `credits.py` | ✅ 218 chansons avec instrumentistes ; ex. l'harmonica de Lennon en 1962-63 puis les claviers en 1966-67 ; George Martin (36 chansons) et Billy Preston (10) en tête des extérieurs |
+| Page Credits : instruments par membre et par période (familles), musiciens extérieurs, crédit officiel × voix principale × période, désaccords entre sources, contributions documentées | `app/credits_page.py`, `viz/credit_charts.py`, `credits.py` | ✅ 240 chansons avec instrumentistes (218 avant la correction des 45 tours) ; ex. l'harmonica de Lennon en 1962-63 puis les claviers en 1966-67 ; George Martin (36 chansons) et Billy Preston (10) en tête des extérieurs |
 | Sujets de strophes : le cœur de BERTopic (embeddings MiniLM, k-means, mots par c-TF-IDF) sans umap ni hdbscan ; k par silhouette ; stabilité par ARI entre 10 graines | `scripts/stanza_topics.py`, `data/themes/stanza_topics*.csv`, `analysis/themes/stanza_topics_quality.csv`, page Mood | ✅ 1 144 strophes distinctes, k = 18. **Silhouette 0,04, stabilité 0,29** : les strophes ne forment pas de groupes nets, et une autre graine donne des groupes assez différents. Quelques groupes lisibles (versions allemandes, amour / besoin, soleil, argent), d'autres réduits aux mots d'une ou deux chansons. Affiché comme exploratoire, pas comme des thèmes |
 | Indicateurs narratifs et humeur par ligne sur les 8 catalogues, avec intervalles bootstrap | `scripts/compare_narrative.py`, `analysis/artists/narrative.csv`, page Other artists | ✅ ex. Cohen narre le plus au passé, les Beatles et McCartney sont les plus tournés vers le futur et les plus positifs ; personnages exclus (la liste de noms est celle des Beatles) |
 | Classifieur d'émotions transformer | | ⏸ reporté : il ne peut être évalué que contre l'annotation manuelle, qui n'existe pas encore ; l'ajouter sans évaluation contredirait la règle de la v2 |
@@ -256,6 +257,20 @@ la nourriture, ajoutées depuis (8 chansons recodées ; kappa moyen inchangé à
 **Leçon** : le résultat le plus net de la phase 3 est négatif et utile. Les méthodes non supervisées (NMF en phase 2,
 groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles
 confirment le choix d'un codebook annoté à la main comme référence.
+
+**Wikipédia comme seconde source de crédits (21/10/2026)**
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Sections « Personnel » des pages d'albums : rôles limités à des chansons nommées seulement (le reste vaut pour tout l'album et n'est pas comparable chanson par chanson) | `beatles_viz/wiki.py`, `scripts/fetch_wikipedia_credits.py`, `data/credits/wp_*.csv` | ✅ 19 albums sur 27 ont une section ; accord avec MusicBrainz de 81 à 100 % selon la partie |
+| Sections « Personnel » des pages de chansons, avec la révision lue et les ouvrages cités (Lewisohn, MacDonald, Everett…) | idem | ✅ 233 articles avec section ; 3 462 lignes ; source `wikipedia_song_page`, confiance moyenne |
+| Qui a écrit quoi : phrases des articles lues par le modèle, une ligne par affirmation, citation et révision gardées | `scripts/wikipedia_authorship.py`, `data/credits/wikipedia_claims.csv` | ✅ 403 affirmations sur 177 chansons (234 moyennes, 169 faibles : sans citation ou contredites) ; 16 chansons où les récits divergent. **À vérifier dans les livres cités** |
+| Recoupement Wikipédia × MusicBrainz, personne par personne et partie par partie | `credits.py:compare_sources`, `analysis/credits/source_agreement.csv`, `source_disagreements.csv`, page Credits | ✅ 222 chansons comparées, **79 % d'accord** ; guitare 90 %, basse 91 %, voix principale 87 %, chœurs 63 %, cordes 62 % |
+
+Les désaccords sont surtout de définition : deux chanteurs qui se partagent la voix sont deux voix principales pour
+MusicBrainz, une voix et une harmonie pour beaucoup d'articles ; MusicBrainz nomme chaque musicien d'orchestre,
+Wikipédia écrit souvent « non crédité ». Quelques-uns sont de fond (McCartney absent de *She Said She Said* selon
+MacDonald et Everett, crédité à la basse par MusicBrainz). Rien n'est fusionné : chaque source garde sa ligne.
 
 **Reste à faire (dans l'ordre)** : annoter (page Annotate) → `scripts/theme_agreement.py` → remplacer les thèmes par
 listes de mots sur la page Mood → évaluer un classifieur d'émotions et les suggestions du modèle contre l'annotation →

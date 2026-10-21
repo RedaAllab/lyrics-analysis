@@ -1,0 +1,19 @@
+aspect,both,only_musicbrainz,only_wikipedia,agreed,wikipedia
+Guitar,351,12,26,0.902,wikipedia_song_page
+Percussion,300,26,36,0.829,wikipedia_song_page
+backing vocal,266,82,73,0.632,wikipedia_song_page
+lead vocal,229,25,8,0.874,wikipedia_song_page
+Bass,189,7,11,0.913,wikipedia_song_page
+Keyboards,149,7,21,0.842,wikipedia_song_page
+Winds and brass,105,14,32,0.695,wikipedia_song_page
+Strings,75,24,22,0.62,wikipedia_song_page
+Indian instruments,14,10,2,0.538,wikipedia_song_page
+Keyboards,44,0,2,0.957,wikipedia_album_page
+Percussion,30,0,3,0.909,wikipedia_album_page
+Winds and brass,25,0,3,0.893,wikipedia_album_page
+lead vocal,22,0,1,0.957,wikipedia_album_page
+Strings,17,0,4,0.81,wikipedia_album_page
+Guitar,12,0,0,1.0,wikipedia_album_page
+backing vocal,11,0,2,0.846,wikipedia_album_page
+Bass,3,0,0,1.0,wikipedia_album_page
+Indian instruments,2,0,0,1.0,wikipedia_album_page

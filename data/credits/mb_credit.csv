@@ -1,171 +1,176 @@
 title,level,target_mbid,person,person_mbid,role,detail,credited_as,accessed
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,David Lloyd,7ad4672f-e95c-49f6-9b10-08358bb877c7,engineer,assistant,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,upright piano,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cowbell,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
-A Hard Day's Night,recording,5253b9cd-227e-4f6a-8ab0-21e825d552aa,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,piano,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,instrument,bongos,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cowbell,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+A Hard Day's Night,recording,c1d63906-f64a-4cd1-9873-9f3a9f98883c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 A Hard Day's Night,work,9a55593e-1419-3aa7-8281-1ffc0bcb0ace,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 A Hard Day's Night,work,9a55593e-1419-3aa7-8281-1ffc0bcb0ace,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,classical guitar,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,claves,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-And I Love Her,recording,659239a8-da3d-4427-9fe7-0e8c434c97cf,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,claves,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+And I Love Her,recording,917f2be3-065e-4d1e-8a76-1b50abd1ad95,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 And I Love Her,work,09810be4-cac8-3ae7-915a-6394d9698160,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 And I Love Her,work,09810be4-cac8-3ae7-915a-6394d9698160,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Any Time at All,recording,b0694e8b-0d9a-465e-82b6-0375fd71ff71,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Any Time at All,recording,bf58a93c-1a90-43aa-b804-53f5a4f5307f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Any Time at All,work,2d2f4640-c31a-361b-9f93-1b7ac4e0da57,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Any Time at All,work,2d2f4640-c31a-361b-9f93-1b7ac4e0da57,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Jacques Esmenjaud,bd333d09-ec4b-4346-a847-f18679875f01,engineer,assistant,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cymbal,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Can't Buy Me Love,recording,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Jacques Esmenjaud,bd333d09-ec4b-4346-a847-f18679875f01,engineer,assistant,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cymbal,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,instrument,hi-hat,Norman Smith,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Can't Buy Me Love,recording,659b4269-fe81-40e4-86e9-12879c09c9e6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Can't Buy Me Love,work,62c39e8e-18e2-326b-9a2f-615f8e2b547d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Can't Buy Me Love,work,62c39e8e-18e2-326b-9a2f-615f8e2b547d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,A. B. Lincoln,a672fe88-4cc7-4dfa-9519-a676041ec599,engineer,assistant,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-I Should Have Known Better,recording,af291f2e-d430-452b-9421-37152ad511b4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I Should Have Known Better,recording,e33d52b7-2ed6-4889-89f4-7a9e696eac37,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 I Should Have Known Better,work,7258dd9c-d2bb-3d5a-acdd-2b8980b9bbe9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I Should Have Known Better,work,7258dd9c-d2bb-3d5a-acdd-2b8980b9bbe9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-I'll Be Back,recording,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I'll Be Back,recording,de7210fe-bbb3-4c91-80d1-14696dae558a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 I'll Be Back,work,15be9e23-4cb5-3e0f-ac7b-c552e9ea8eb6,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I'll Be Back,work,15be9e23-4cb5-3e0f-ac7b-c552e9ea8eb6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,A. B. Lincoln,a672fe88-4cc7-4dfa-9519-a676041ec599,engineer,assistant,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set); tambourine,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-I'll Cry Instead,recording,d116c032-eb32-4266-9b4a-57311477c44d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I'll Cry Instead,recording,ac06289f-f867-44ce-a2ff-66f6752ef7c9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 I'll Cry Instead,work,67d340af-3612-332d-9291-cdcddd279e5e,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I'll Cry Instead,work,67d340af-3612-332d-9291-cdcddd279e5e,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,A. B. Lincoln,a672fe88-4cc7-4dfa-9519-a676041ec599,engineer,assistant,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-I'm Happy Just to Dance with You,recording,a35f0599-a36a-4971-ba73-e43cafca32da,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+I'm Happy Just to Dance with You,recording,79d41dd0-d456-4d33-a36f-bfcc094c38ac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 I'm Happy Just to Dance with You,work,3a403ed4-4b09-362d-bc4c-111e9a417287,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I'm Happy Just to Dance with You,work,3a403ed4-4b09-362d-bc4c-111e9a417287,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,A. B. Lincoln,a672fe88-4cc7-4dfa-9519-a676041ec599,engineer,assistant,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-If I Fell,recording,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+If I Fell,recording,7fef28ab-aa1b-4368-8ffe-c128b58042dd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 If I Fell,work,6240c9ce-cdf7-3801-a0b2-e189bd10f2d6,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 If I Fell,work,6240c9ce-cdf7-3801-a0b2-e189bd10f2d6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,A. B. Lincoln,a672fe88-4cc7-4dfa-9519-a676041ec599,engineer,assistant,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,upright piano,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Tell Me Why,recording,e23e779f-4e47-4815-a045-739e5cee8ba7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,upright piano,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Tell Me Why,recording,c3fe2b67-a715-42c7-9e3c-2e353620a11d,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Tell Me Why,work,8423eef7-88aa-39b0-9c4f-11a2a113fdc6,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Tell Me Why,work,8423eef7-88aa-39b0-9c4f-11a2a113fdc6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,piano,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Things We Said Today,recording,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,piano,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Things We Said Today,recording,cc480502-bfe8-4bd5-b98b-feba018698f0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Things We Said Today,work,5dc5b761-e100-3c4f-b703-7058912a61cd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 Things We Said Today,work,5dc5b761-e100-3c4f-b703-7058912a61cd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar; piano,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-When I Get Home,recording,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar; piano,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+When I Get Home,recording,c9b373a4-99cd-41c5-ab97-582a0906e304,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 When I Get Home,work,c1790718-e5c8-3877-b47d-13bc4034e79f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 When I Get Home,work,c1790718-e5c8-3877-b47d-13bc4034e79f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,cowbell,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-You Can't Do That,recording,37f3c01f-ff47-4557-a94f-47da15451241,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,cowbell,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+You Can't Do That,recording,3426c118-cef9-42ea-8ea6-e6e4598cfc45,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 You Can't Do That,work,15835eb6-ea13-3178-bc84-6a5bc1f42a99,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 You Can't Do That,work,15835eb6-ea13-3178-bc84-6a5bc1f42a99,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 Because,recording,1e1d1f33-346c-4f9a-ad05-03aa715c2f37,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
@@ -837,6 +842,14 @@ Words of Love,recording,59e4621f-455e-4e61-b9a4-7435901d6580,John Lennon,4d5447d
 Words of Love,recording,59e4621f-455e-4e61-b9a4-7435901d6580,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Words of Love,work,db04899a-e902-341f-8ed6-4524024455b2,Buddy Holly,d352f5dd-3023-4565-a7bb-52396bf8821d,composer,,,2026-10-21
 Words of Love,work,db04899a-e902-341f-8ed6-4524024455b2,Buddy Holly,d352f5dd-3023-4565-a7bb-52396bf8821d,lyricist,,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar; electric guitar,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Act Naturally,recording,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,vocal,lead vocals,,2026-10-21
 Act Naturally,work,b00a941a-24a1-39a5-93d7-5f5399977e76,Voni Morrison,75aa236f-f5c5-44d6-9d5d-eeed5085ab1c,writer,,,2026-10-21
 Act Naturally,work,b00a941a-24a1-39a5-93d7-5f5399977e76,Johnny Russell,1a54756b-abe7-4557-96c5-584f9323ea72,writer,,,2026-10-21
 Another Girl,recording,3d462ae5-37cb-4682-b03a-8a702d2553ea,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
@@ -855,20 +868,30 @@ Another Girl,recording,3d462ae5-37cb-4682-b03a-8a702d2553ea,John Lennon,4d5447d7
 Another Girl,recording,3d462ae5-37cb-4682-b03a-8a702d2553ea,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Another Girl,work,442db089-2b8a-3417-81a4-1592c1969113,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Another Girl,work,442db089-2b8a-3417-81a4-1592c1969113,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,Hammond organ,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cowbell,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Dizzy Miss Lizzy,recording,1441e9d7-2704-485d-bf8c-cc902fa01ad8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 Dizzy Miss Lizzy,work,a36f1f9e-29c3-37f2-bcaf-f9097498f8f5,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,composer,,,2026-10-21
 Dizzy Miss Lizzy,work,a36f1f9e-29c3-37f2-bcaf-f9097498f8f5,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,lyricist,,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,12 string guitar,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Help!,recording,7a1661c8-ee80-4625-b400-a9e48d1eb977,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,12 string guitar,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Help!,recording,73674fc7-4e76-480e-8240-d3fe312af45e,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Help!,work,8b771af1-a04f-3ac5-bc53-d73849ffad16,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Help!,work,8b771af1-a04f-3ac5-bc53-d73849ffad16,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 I Need You,recording,85863982-7efd-4dff-bcee-4bf5d66fd43b,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
@@ -889,12 +912,39 @@ I Need You,recording,85863982-7efd-4dff-bcee-4bf5d66fd43b,Paul McCartney,ba550d0
 I Need You,recording,85863982-7efd-4dff-bcee-4bf5d66fd43b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
 I Need You,work,1de941d6-1527-3b9a-b7d4-7a8f200263ee,George Harrison,42a8f507-8412-4611-854f-926571049fa0,composer,,,2026-10-21
 I Need You,work,1de941d6-1527-3b9a-b7d4-7a8f200263ee,George Harrison,42a8f507-8412-4611-854f-926571049fa0,lyricist,,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,acoustic guitar,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,maracas,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I've Just Seen a Face,recording,9c5b5248-9044-407c-a3e4-87be327f59d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 I've Just Seen a Face,work,72351d17-dfb0-3a18-befc-7bd73e51b712,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I've Just Seen a Face,work,72351d17-dfb0-3a18-befc-7bd73e51b712,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-It's Only Love,recording,ba976061-ed56-44f7-b768-5aa03f04328c,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar; electric guitar,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,12 string guitar; electric guitar,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+It's Only Love,recording,980a8ae7-4191-4be5-a9b3-4ab741c6327b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 It's Only Love,work,100862f7-6e9b-3487-ac59-20eb9652dce9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 It's Only Love,work,100862f7-6e9b-3487-ac59-20eb9652dce9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Tell Me What You See,recording,bbde3cab-67f4-46bd-bec9-c074dd192326,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,claves; güiro,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar; electric piano,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Tell Me What You See,recording,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Tell Me What You See,work,256be72e-8a17-3699-ad57-94606321b3c2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Tell Me What You See,work,256be72e-8a17-3699-ad57-94606321b3c2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 The Night Before,recording,dec365ed-576f-4a31-9204-0a5d4aa191b2,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
@@ -913,25 +963,61 @@ The Night Before,recording,dec365ed-576f-4a31-9204-0a5d4aa191b2,John Lennon,4d54
 The Night Before,recording,dec365ed-576f-4a31-9204-0a5d4aa191b2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 The Night Before,work,c89a15dd-fa08-3739-9a43-d4c9246f8737,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 The Night Before,work,c89a15dd-fa08-3739-9a43-d4c9246f8737,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric guitar,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Ticket to Ride,recording,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar; electric guitar,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Ticket to Ride,recording,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Ticket to Ride,work,4ee39265-f6f0-38f6-b0fd-4d75fd2d23c0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Ticket to Ride,work,4ee39265-f6f0-38f6-b0fd-4d75fd2d23c0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,acoustic guitar,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Kenneth Essex,43ae16e3-7f9d-446e-8516-41026fabf998,instrument,viola,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Francisco Gabarro,3da2cc91-a59e-4669-84a3-da196d86c2db,instrument,cello,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Tony Gilbert,56908419-3ab8-447b-a9da-7165a4f77e28,instrument,violin,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Sidney Sax,f8b6b5e9-28e2-4582-86ad-1a7c15174651,instrument,violin,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument arranger,string quartet,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Yesterday,recording,8aefa373-2858-4643-b691-cad4ac7c971a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Yesterday,work,0c80db24-389e-3620-8e0b-84dc2b7c009a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Yesterday,work,0c80db24-389e-3620-8e0b-84dc2b7c009a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar; electric guitar,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric piano; tambourine,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,piano,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+You Like Me Too Much,recording,d2aaaf1b-bed1-442c-8d3b-3039714440a9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
 You Like Me Too Much,work,d091ee97-b4b3-31d4-abde-bcf30c142016,George Harrison,42a8f507-8412-4611-854f-926571049fa0,writer,,,2026-10-21
-You're Going to Lose That Girl,recording,b6494292-6291-43d4-bbee-d2a0e9d9ce82,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+You're Going to Lose That Girl,recording,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 You're Going to Lose That Girl,work,8f2b3829-27db-395b-ae67-5653fa277441,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 You're Going to Lose That Girl,work,8f2b3829-27db-395b-ae67-5653fa277441,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 You've Got to Hide Your Love Away,recording,c88254f8-7feb-41d9-917e-4322b6ceff35,Malcolm Davies,3597bbf8-eadc-4d2f-b711-c24d3859899b,engineer,additional,,2026-10-21
@@ -1401,33 +1487,34 @@ Penny Lane,recording,58169b2c-e31a-4a46-8741-71c672a089ac,Paul McCartney,ba550d0
 Penny Lane,recording,58169b2c-e31a-4a46-8741-71c672a089ac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Penny Lane,work,1548c8c0-108f-33a8-9671-a025aa68e382,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Penny Lane,work,1548c8c0-108f-33a8-9671-a025aa68e382,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Dave Harries,21a49119-f4ee-4fcf-9b5e-5f653113e977,engineer,,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,mellotron,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,mellotron,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,bass guitar,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Mal Evans,f8df9750-4f73-4c6c-b16b-24cbc57d10f6,instrument,tambourine,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,mellotron,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,bongos,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,timpani,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,swarmandal,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,guitar,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Greg Bowen,fa24f3fb-e813-4ef2-bbdc-56239b2349b3,instrument,trumpet,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Tony Fisher,2136b56c-2bb4-42d1-8a6b-83fc646a55d1,instrument,trumpet,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,John Hall,10383556-8786-4ef5-9bff-8ed9c422282b,instrument,cello,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Norman Jones,17ee462b-d251-40f6-96dd-8605114e851a,instrument,cello,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Stan Roderick,c54f0616-c92a-41a3-a261-09bbad395811,instrument,trumpet,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Derek Simpson,ab6ce138-98d3-44cb-8958-7099d16cce19,instrument,cello,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Derek Watkins,0905529e-d273-4f50-bce1-cb8efbf03d0d,instrument,trumpet,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,maracas,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,Dave Harries,21a49119-f4ee-4fcf-9b5e-5f653113e977,producer,,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Strawberry Fields Forever,recording,58221b3f-7470-4001-a718-6379bec69a20,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,other vocals,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,conductor,,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Dave Harries,21a49119-f4ee-4fcf-9b5e-5f653113e977,engineer,,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,mellotron,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,mellotron,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,bass guitar,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Mal Evans,f8df9750-4f73-4c6c-b16b-24cbc57d10f6,instrument,tambourine,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,bongos,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,maracas,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,percussion,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,timpani,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,swarmandal,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,guitar,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Greg Bowen,fa24f3fb-e813-4ef2-bbdc-56239b2349b3,instrument,trumpet,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Tony Fisher,2136b56c-2bb4-42d1-8a6b-83fc646a55d1,instrument,trumpet,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Hall,10383556-8786-4ef5-9bff-8ed9c422282b,instrument,cello,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Norman Jones,17ee462b-d251-40f6-96dd-8605114e851a,instrument,cello,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Stan Roderick,c54f0616-c92a-41a3-a261-09bbad395811,instrument,trumpet,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Derek Simpson,ab6ce138-98d3-44cb-8958-7099d16cce19,instrument,cello,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Derek Watkins,0905529e-d273-4f50-bce1-cb8efbf03d0d,instrument,trumpet,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,Dave Harries,21a49119-f4ee-4fcf-9b5e-5f653113e977,producer,,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Strawberry Fields Forever,recording,fe9a0114-5fb9-452c-a9d7-049c598ac860,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,other vocals,,2026-10-21
 Strawberry Fields Forever,work,29e5fdc3-ed21-3d34-9700-1aa9b68e60b7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,composer,,,2026-10-21
 Strawberry Fields Forever,work,29e5fdc3-ed21-3d34-9700-1aa9b68e60b7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,composer,,,2026-10-21
 Strawberry Fields Forever,work,29e5fdc3-ed21-3d34-9700-1aa9b68e60b7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,lyricist,,,2026-10-21
@@ -1465,6 +1552,19 @@ Your Mother Should Know,recording,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,John Lenn
 Your Mother Should Know,recording,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Your Mother Should Know,work,cb7aa612-1c13-3e62-93ec-9bb4ba42a419,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Your Mother Should Know,work,cb7aa612-1c13-3e62-93ec-9bb4ba42a419,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Karl Hinze,78f6a92b-a506-4add-8ff2-1f42f2794243,engineer,,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Pete Best,0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9,instrument,drums (drum set),,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,guitar,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,guitar,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Tony Sheridan,7f9a3245-df19-4681-8314-4a4c1281dc74,instrument,guitar,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Bert Kaempfert,9d0828bc-702d-4c89-b66f-4954958b8e11,producer,,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+My Bonnie,recording,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,Tony Sheridan,7f9a3245-df19-4681-8314-4a4c1281dc74,vocal,lead vocals,,2026-10-21
+My Bonnie,work,1fc08e0e-dcae-32ee-98b8-fcf30ae53310,[traditional],9be7f096-97ec-4615-8957-8d40b5dcbc41,composer,,,2026-10-21
+My Bonnie,work,1fc08e0e-dcae-32ee-98b8-fcf30ae53310,[traditional],9be7f096-97ec-4615-8957-8d40b5dcbc41,lyricist,,,2026-10-21
 Christmas Time (Is Here Again),recording,44754ab4-6778-4ea6-893d-0c79a8ccfe3b,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
 Christmas Time (Is Here Again),recording,44754ab4-6778-4ea6-893d-0c79a8ccfe3b,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,acoustic guitar,,2026-10-21
 Christmas Time (Is Here Again),recording,44754ab4-6778-4ea6-893d-0c79a8ccfe3b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,bass drum,,2026-10-21
@@ -1494,65 +1594,165 @@ I'm Talking About You,recording,1a1e7895-b6c9-49fd-8b74-5dccdc7b99b2,Jimmy Grant
 I'm Talking About You,work,998a3471-f8ab-3204-a506-e7d9fb5e92f5,Chuck Berry,592a3b6d-c42b-4567-99c9-ecf63bd66499,composer,,,2026-10-21
 I'm Talking About You,work,998a3471-f8ab-3204-a506-e7d9fb5e92f5,Chuck Berry,592a3b6d-c42b-4567-99c9-ecf63bd66499,lyricist,,,2026-10-21
 I'm Talking About You,work,998a3471-f8ab-3204-a506-e7d9fb5e92f5,Chuck Berry,592a3b6d-c42b-4567-99c9-ecf63bd66499,writer,,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+From Me to You,recording,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 From Me to You,work,67ad3571-dc6f-3c67-9d6f-636774b4db74,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 From Me to You,work,67ad3571-dc6f-3c67-9d6f-636774b4db74,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I Want to Hold Your Hand,recording,e9433409-2786-4194-8dfb-9427e6ba34d2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals; lead vocals,,2026-10-21
 I Want to Hold Your Hand,work,14f552db-5921-3699-a807-a0b944d9f725,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I Want to Hold Your Hand,work,14f552db-5921-3699-a807-a0b944d9f725,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I'll Get You,recording,ae676487-8c3e-4311-8487-b284460ad3c3,Bernie Andrews,1a00de63-95cc-4da3-b94e-5cd4175eccdd,producer,,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I'll Get You,recording,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 I'll Get You,work,1f34a41b-b775-43a5-afa0-33a4cec61e80,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I'll Get You,work,1f34a41b-b775-43a5-afa0-33a4cec61e80,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+She Loves You,recording,21047249-7b3f-4651-acca-246669c081fd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 She Loves You,work,743a57f0-95ff-3e0d-a46e-4f094362a339,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 She Loves You,work,743a57f0-95ff-3e0d-a46e-4f094362a339,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Thank You Girl,recording,3766b344-febd-493f-ba7e-ea69475e7ce9,Ron Belchier,9d3740d4-70f9-43aa-aa23-171d26179761,producer,,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Thank You Girl,recording,7aac9d0c-a55c-4796-9877-8302beb1e618,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Thank You Girl,work,9af1a60d-4030-4a69-a6c3-dfd71e27b496,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Thank You Girl,work,9af1a60d-4030-4a69-a6c3-dfd71e27b496,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,mix,task,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,Sam Okell,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be,mix,task,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-This Boy,recording,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+This Boy,recording,7c9e1dfc-71e4-4980-982b-ef841efdd325,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 This Boy,work,b839598d-48bb-3636-9012-b095b0fed1a6,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 This Boy,work,b839598d-48bb-3636-9012-b095b0fed1a6,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,12 string guitar,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,cowbell,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I Call Your Name,recording,9afac596-67e0-4624-8401-aa31d53d3006,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 I Call Your Name,work,64875214-d946-372a-a602-350186cf86cd,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I Call Your Name,work,64875214-d946-372a-a602-350186cf86cd,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,mix,task,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,Sam Okell,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be,mix,task,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-I Feel Fine,recording,d52ca560-5e84-475e-b6c0-d817dd0788db,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,additional,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Ron Pender,33f0fdc3-a1c5-4be8-902e-fcc96eab31c6,engineer,additional,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+I Feel Fine,recording,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 I Feel Fine,work,eaff0de1-b6ea-37d0-add7-87afa19e28f5,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I Feel Fine,work,eaff0de1-b6ea-37d0-add7-87afa19e28f5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Jacques Esmenjaud,bd333d09-ec4b-4346-a847-f18679875f01,engineer,assistant,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-"Komm, gib mir deine Hand",recording,4b18697d-1a56-490a-a207-9b641c4974d9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,assistant,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Jacques Esmenjaud,bd333d09-ec4b-4346-a847-f18679875f01,engineer,assistant,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+"Komm, gib mir deine Hand",recording,c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 "Komm, gib mir deine Hand",work,d2c98e54-10db-38f5-a387-5d8e20ead817,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 "Komm, gib mir deine Hand",work,d2c98e54-10db-38f5-a387-5d8e20ead817,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Long Tall Sally,recording,26419d8c-d492-4728-ba1e-a14ae8034dc2,Terry Henebery,00973242-4279-4aef-aadb-bdda3cdb30d4,producer,,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,upright piano,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Long Tall Sally,recording,c9737887-1b58-4a8a-aa21-98ea19630aac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Long Tall Sally,work,4679e271-b7c1-3331-882e-2a173f2001e4,Robert “Bumps” Blackwell,44389e9f-8ae9-40ff-8645-d082a9109e72,writer,,Robert Alexander Blackwell,2026-10-21
 Long Tall Sally,work,4679e271-b7c1-3331-882e-2a173f2001e4,Enotris Johnson,e4eb9c22-c61f-4363-8617-ba22f3efdc01,writer,,,2026-10-21
 Long Tall Sally,work,4679e271-b7c1-3331-882e-2a173f2001e4,Little Richard,95c2339b-8277-49a6-9aaf-08d8eeeaa0be,writer,,Richard Wayne Penniman,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,piano,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Matchbox,recording,4063a464-01e0-4e68-bfe1-e243c4474f83,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,vocal,lead vocals,,2026-10-21
 Matchbox,work,4c2a636f-a375-3924-99ad-e8a8a5155dfe,Carl Perkins,068bd7ab-c38e-4fae-8ed2-cb0c153ed68f,composer,,,2026-10-21
 Matchbox,work,4c2a636f-a375-3924-99ad-e8a8a5155dfe,Carl Perkins,068bd7ab-c38e-4fae-8ed2-cb0c153ed68f,lyricist,,,2026-10-21
-She's a Woman,recording,a2a405d2-c372-488d-8d49-c571e03dc31c,Bernie Andrews,1a00de63-95cc-4da3-b94e-5cd4175eccdd,producer,,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Ron Pender,33f0fdc3-a1c5-4be8-902e-fcc96eab31c6,engineer,additional,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Mike Stone,fbaac8d8-7439-4ecc-bdbb-8b773c7adf1f,engineer,additional,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,percussion,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+She's a Woman,recording,9110fec1-7acd-46f2-baae-41fc48906115,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 She's a Woman,work,7fcba58f-5717-3789-928e-fec1954432ba,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 She's a Woman,work,7fcba58f-5717-3789-928e-fec1954432ba,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 Sie liebt dich,recording,7a2287d6-357e-4cb4-adae-f19db3469c8b,Jacques Esmenjaud,bd333d09-ec4b-4346-a847-f18679875f01,engineer,assistant,,2026-10-21
@@ -1568,104 +1768,165 @@ Sie liebt dich,recording,7a2287d6-357e-4cb4-adae-f19db3469c8b,John Lennon,4d5447
 Sie liebt dich,recording,7a2287d6-357e-4cb4-adae-f19db3469c8b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals; lead vocals,,2026-10-21
 Sie liebt dich,work,5a3ea2ce-5f15-3542-96e5-4b0d2d8a32a7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Sie liebt dich,work,5a3ea2ce-5f15-3542-96e5-4b0d2d8a32a7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,Richard Langham,97a48ba9-7320-423a-aeba-0a1b15eae50b,engineer,assistant,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,assistant,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,piano,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Slow Down,recording,e111a509-372c-49d4-8860-a05a47df95a9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 Slow Down,work,7d2ec07b-9c83-38e6-beb6-9ceea274fa0a,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,composer,,,2026-10-21
 Slow Down,work,7d2ec07b-9c83-38e6-beb6-9ceea274fa0a,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,lyricist,,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,Hammond organ,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric piano,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Bad Boy,recording,a53cb822-f655-4acc-a55b-3bf8243bcb7a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 Bad Boy,work,bf4788ba-4334-3b4e-beb0-471f9b64d5f4,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,composer,,Lawrence E. Williams,2026-10-21
 Bad Boy,work,bf4788ba-4334-3b4e-beb0-471f9b64d5f4,Larry Williams,78926ef1-69ee-4a37-9379-e55e6ca14928,lyricist,,Lawrence E. Williams,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Ron Pender,33f0fdc3-a1c5-4be8-902e-fcc96eab31c6,engineer,additional,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,tambourine,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-Day Tripper,recording,faad8739-c053-46b4-bf57-070ff7569de7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional; task,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Graham Kirkby,6f64fe58-fa6d-4cc7-86ba-d98123c57087,engineer,additional; task,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Ron Pender,33f0fdc3-a1c5-4be8-902e-fcc96eab31c6,engineer,additional,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,tambourine,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Peter Bown,8a602f9e-6317-48f5-aabb-a16ef01d4d30,mix,,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Day Tripper,recording,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Day Tripper,work,a48b1cf5-345e-37a5-aac3-10b1e1b9b69b,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Day Tripper,work,a48b1cf5-345e-37a5-aac3-10b1e1b9b69b,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,guitar,,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,guitar,,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-I'm Down,recording,a95011b6-35bb-405e-98a7-307a3d0850e1,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Phil McDonald,91e7ebdb-07b3-4819-b269-08dab097e0ba,engineer,additional,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electronic organ,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+I'm Down,recording,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 I'm Down,work,d8275eaa-dd65-32b1-9808-88ed02ba99b9,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 I'm Down,work,d8275eaa-dd65-32b1-9808-88ed02ba99b9,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-We Can Work It Out,recording,ca416595-987a-4974-aab3-e4d2ea397ed5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-We Can Work It Out,recording,ca416595-987a-4974-aab3-e4d2ea397ed5,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-We Can Work It Out,recording,ca416595-987a-4974-aab3-e4d2ea397ed5,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,mix,task,,2026-10-21
-We Can Work It Out,recording,ca416595-987a-4974-aab3-e4d2ea397ed5,Sam Okell,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be,mix,task,,2026-10-21
-We Can Work It Out,recording,ca416595-987a-4974-aab3-e4d2ea397ed5,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Jerry Boys,9f8facfd-9ff6-4e40-a842-f0747de4fbdb,engineer,additional,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,tambourine,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonium,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+We Can Work It Out,recording,a5746d0c-221b-424f-9a70-7174784339af,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 We Can Work It Out,work,095f636d-a439-319f-9e72-28ecdce38c5c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,composer,,,2026-10-21
 We Can Work It Out,work,095f636d-a439-319f-9e72-28ecdce38c5c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,composer,,,2026-10-21
 We Can Work It Out,work,095f636d-a439-319f-9e72-28ecdce38c5c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,lyricist,,,2026-10-21
 We Can Work It Out,work,095f636d-a439-319f-9e72-28ecdce38c5c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,lyricist,,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,guitar,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,bass guitar,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Yes It Is,recording,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Jerry Boys,9f8facfd-9ff6-4e40-a842-f0747de4fbdb,engineer,additional,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,additional,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,instrument,electronic organ,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,drums (drum set),,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Yes It Is,recording,c2ab2f34-c833-405f-8b1f-c4582c2518d4,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Yes It Is,work,2159ca99-61ff-36bd-a706-a8e2c0a70a38,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Yes It Is,work,2159ca99-61ff-36bd-a706-a8e2c0a70a38,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,tambourine,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric guitar,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-Paperback Writer,recording,c08b8e08-f98a-4e49-9463-6923e2ec8375,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,tambourine,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric guitar,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Paperback Writer,recording,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Paperback Writer,work,49feaf29-8203-3927-8543-6017e38f6c6a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Paperback Writer,work,49feaf29-8203-3927-8543-6017e38f6c6a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Sam Okell,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be,engineer,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,mix,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Sam Okell,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be,mix,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,producer,,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-Rain,recording,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Rain,recording,cd36c25c-1208-4deb-8338-496955d97954,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Rain,work,65473dda-bff0-38f6-bbad-43b622f8380c,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Rain,work,65473dda-bff0-38f6-bbad-43b622f8380c,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Barry Sheffield,01de9ea2-3ec6-46e7-a475-701aeedfbff8,engineer,,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,tambourine,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Hey Jude,recording,7b0b9016-59c5-4a83-9bcc-a6051453e422,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,vocal,background vocals,,2026-10-21
 Hey Jude,work,eac0d507-46ed-3ed7-80d5-e4ac31719221,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Hey Jude,work,eac0d507-46ed-3ed7-80d5-e4ac31719221,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Bill Jackman,a8cbd86f-0980-4f88-82ce-0415dab44a25,instrument,baritone saxophone,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Harry Klein,3201527b-01e5-4f59-953d-264f3f7f209e,instrument,baritone saxophone,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Bill Povey,cca597ae-f678-48c9-ac09-91015ab5e3fb,instrument,tenor saxophone,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Ronnie Scott,ba22290c-f172-4b19-9176-e63da9991b7d,instrument,tenor saxophone,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-Lady Madonna,recording,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Ken Scott,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3,engineer,,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Bill Jackman,a8cbd86f-0980-4f88-82ce-0415dab44a25,instrument,baritone saxophone,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Harry Klein,3201527b-01e5-4f59-953d-264f3f7f209e,instrument,baritone saxophone,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Bill Povey,cca597ae-f678-48c9-ac09-91015ab5e3fb,instrument,tenor saxophone,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Ronnie Scott,ba22290c-f172-4b19-9176-e63da9991b7d,instrument,tenor saxophone,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Lady Madonna,recording,2c9fee64-12e6-4cfb-8771-8360894f7215,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 Lady Madonna,work,370f8cd4-c7be-3c46-a9a0-e06e957de652,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Lady Madonna,work,370f8cd4-c7be-3c46-a9a0-e06e957de652,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Revolution,recording,fc84e72e-5552-4ee9-b63f-8edaf4675a25,Giles Martin,e71872c6-d390-4da0-a0da-4726a05c9a85,mix,,,2026-10-21
-Revolution,recording,fc84e72e-5552-4ee9-b63f-8edaf4675a25,The Beatles,b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d,producer,,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Nicky Hopkins,6cbe7f39-d487-42e2-8722-23dc2332ea95,instrument,electric piano,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Revolution,recording,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
 Revolution,work,fc6e50dd-839f-352a-90a5-25bdb6da7b51,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Revolution,work,fc6e50dd-839f-352a-90a5-25bdb6da7b51,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 The Inner Light,recording,83c15eac-e94c-4be4-b65f-6bb4c1b24453,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
@@ -1691,59 +1952,57 @@ The Inner Light,recording,83c15eac-e94c-4be4-b65f-6bb4c1b24453,John Lennon,4d544
 The Inner Light,recording,83c15eac-e94c-4be4-b65f-6bb4c1b24453,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 The Inner Light,work,a0548fff-2c7d-3e81-b551-2ed01b98df21,George Harrison,42a8f507-8412-4611-854f-926571049fa0,composer,,,2026-10-21
 The Inner Light,work,a0548fff-2c7d-3e81-b551-2ed01b98df21,George Harrison,42a8f507-8412-4611-854f-926571049fa0,lyricist,,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,Billy Preston,8a7cf497-dc5c-4523-932d-3fcbc9a69d38,instrument,electric piano,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-Don't Let Me Down,recording,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,Billy Preston,8a7cf497-dc5c-4523-932d-3fcbc9a69d38,instrument,electric piano,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,background vocals,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+Don't Let Me Down,recording,76a0136f-d130-4a63-81e9-f7a438a86442,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Don't Let Me Down,work,fde0360c-ca61-314a-bc23-ddb08c20a3d2,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 Don't Let Me Down,work,fde0360c-ca61-314a-bc23-ddb08c20a3d2,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,Jeff Jarratt,b3daedfa-9f92-49f3-9dd8-9d29c110406f,engineer,,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,piano,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,drums (drum set),,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,organ,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,Chris Thomas,2a25263b-54ad-42c5-acea-e50b3913369c,producer,,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
-Old Brown Shoe,recording,df591a27-b71b-4f32-a593-a055f5f9ab83,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,Jeff Jarratt,b3daedfa-9f92-49f3-9dd8-9d29c110406f,engineer,,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,electric guitar,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,piano,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,drums (drum set),,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,organ,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,Chris Thomas,2a25263b-54ad-42c5-acea-e50b3913369c,producer,,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,George Harrison,42a8f507-8412-4611-854f-926571049fa0,vocal,lead vocals,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,background vocals,,2026-10-21
+Old Brown Shoe,recording,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 Old Brown Shoe,work,3683ce51-a855-3747-b2b4-6359508be405,George Harrison,42a8f507-8412-4611-854f-926571049fa0,composer,,,2026-10-21
 Old Brown Shoe,work,3683ce51-a855-3747-b2b4-6359508be405,George Harrison,42a8f507-8412-4611-854f-926571049fa0,lyricist,,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,electric guitar,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,percussion,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,drums (drum set),,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,maracas,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-The Ballad of John and Yoko,recording,d11d1fb2-683b-46e0-8647-538d526d9748,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,acoustic guitar; electric guitar; percussion,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,drums (drum set); electric bass guitar; maracas; piano,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+The Ballad of John and Yoko,recording,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,background vocals,,2026-10-21
 The Ballad of John and Yoko,work,ddeb86c1-4979-3d81-aad4-94c90362426f,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 The Ballad of John and Yoko,work,ddeb86c1-4979-3d81-aad4-94c90362426f,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Jeff Jarratt,b3daedfa-9f92-49f3-9dd8-9d29c110406f,engineer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,bass guitar,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,guitar,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,guitar,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,vibraphone,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Brian Jones,a704bc81-1d32-4b21-a1fd-ffaa6a1d86e1,instrument,saxophone,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,maracas,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,producer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Chris Thomas,2a25263b-54ad-42c5-acea-e50b3913369c,producer,,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
-You Know My Name (Look Up the Number),recording,f8df278c-5d44-41b2-8b6a-5d4caacfeef1,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,engineer,,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,electric bass guitar,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,vibraphone,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,guitar,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,George Harrison,42a8f507-8412-4611-854f-926571049fa0,instrument,handclaps,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,maracas,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,guitar,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,handclaps,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,instrument,harmonica,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,handclaps,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,drums (drum set),,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,bongos,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Ringo Starr,300c4c73-33ac-4255-9d57-4e32627f5e13,instrument,handclaps,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,instrument,piano,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Brian Jones,a704bc81-1d32-4b21-a1fd-ffaa6a1d86e1,instrument,alto saxophone,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Geoff Emerick,3ff7a3d9-a800-4de4-94a6-41a35c96c0ae,producer,,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,George Martin,26fa8b67-6c7f-406c-ad64-a1d070092df2,producer,,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,vocal,lead vocals,,2026-10-21
+You Know My Name (Look Up the Number),recording,283be7ab-9783-4676-b673-5a151b0c56c8,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,vocal,lead vocals,,2026-10-21
 You Know My Name (Look Up the Number),work,b48db359-22d7-47fa-9e8f-854c6ff543a7,John Lennon,4d5447d7-c61c-4120-ba1b-d7f471d385b9,writer,,,2026-10-21
 You Know My Name (Look Up the Number),work,b48db359-22d7-47fa-9e8f-854c6ff543a7,Paul McCartney,ba550d0e-adac-4864-b88b-407cab5e76af,writer,,,2026-10-21
 Love Me Do,recording,1f518811-7cf9-4bdc-a656-0958e130f312,Norman Smith,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca,engineer,,,2026-10-21

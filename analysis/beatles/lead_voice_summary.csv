@@ -1,6 +1,6 @@
-singer,songs,tokens,types,mattr,repeat_ratio
+lead_voice,songs,tokens,types,mattr,repeat_ratio
 Lennon,75,185.04,65.307,0.63,0.298
-McCartney,67,193.06,66.0,0.621,0.318
+McCartney,66,190.364,65.015,0.62,0.322
 Harrison,27,172.556,65.519,0.655,0.279
 Starr,8,203.375,68.625,0.601,0.329
 Shared,32,174.125,51.906,0.596,0.392

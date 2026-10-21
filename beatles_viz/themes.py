@@ -31,6 +31,11 @@ def load_annotations(path=ANNOTATIONS_PATH):
     return d
 
 
+def is_model(annotator):
+    """Annotators named "... (model)" are language models, kept apart from people (docs/ROADMAP.md, v2)."""
+    return str(annotator).strip().endswith("(model)")
+
+
 def theme_list(cell):
     return [t for t in str(cell or "").split(SEP) if t]
 

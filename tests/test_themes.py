@@ -65,3 +65,7 @@ def test_stanza_topic_shares_and_heatmap():
     topics = pd.DataFrame({"topic": [1, 0], "words": ["sun sky blue day rain", "love need"]})
     fig = stanza_topic_heatmap(s, topics)
     assert list(fig.data[0].y) == ["sun sky blue day", "love need"]
+
+
+def test_model_annotators_are_recognised():
+    assert T.is_model("claude-opus-5.5 (model)") and not T.is_model("rb")

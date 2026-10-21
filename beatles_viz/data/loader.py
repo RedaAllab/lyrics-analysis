@@ -4,6 +4,7 @@ from collections import Counter
 import pandas as pd
 
 from beatles_viz.config import LYRICS_PATH, PUBLIC_PATH, SEMANTIC_PATH
+from beatles_viz.text.context import from_lists
 
 
 def has_lyrics():
@@ -27,6 +28,9 @@ def load_songs(source="auto", originals_only=True):
         df = pd.read_parquet(PUBLIC_PATH)
         df["bow"] = [Counter(dict(zip(w, c))) for w, c in zip(df.bow_words, df.bow_counts)]
         df = df.drop(columns=["bow_words", "bow_counts"])
+        if "ctx_pairs" in df:  # files exported before the window counts have none
+            df["ctx"] = [from_lists(k, c) for k, c in zip(df.ctx_pairs, df.ctx_counts)]
+            df = df.drop(columns=["ctx_pairs", "ctx_counts"])
     if originals_only:
         df = df[df.is_original]
     return df.reset_index(drop=True)

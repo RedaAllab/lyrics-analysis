@@ -6,9 +6,12 @@ import pandas as pd
 
 from beatles_viz.attribution import lead_voice
 from beatles_viz.config import IMPROVISATIONS, MIN_TOKENS, PHASES
+from beatles_viz.credits import credit_columns
 from beatles_viz.data.loader import load_songs
 from beatles_viz.text.metrics import pronoun_shares, text_metrics
-from beatles_viz.text.mood import mood, themes
+from beatles_viz.text.context import window_pairs
+from beatles_viz.text.mood import line_mood, mood, themes
+from beatles_viz.text.narrative import line_markers, word_markers
 from beatles_viz.text.repetition import fingerprint, repetition_score
 from beatles_viz.text.sections import all_lines, section_name
 from beatles_viz.text.segment import AUTO, song_sections
@@ -43,6 +46,11 @@ def build_corpus(df):
         df["sections"] = df.lyrics_raw.map(song_sections)
         df["words"] = df.sections.map(lambda s: tokenize("\n".join(all_lines(s))))
         df["bow"] = df.words.map(Counter)
+        df["ctx"] = df.words.map(window_pairs)
+        moods = pd.DataFrame(df.sections.map(lambda s: line_mood(all_lines(s))).tolist(), index=df.index)
+        df = df.drop(columns=[c for c in moods if c in df]).join(moods)
+        lines = pd.DataFrame(df.sections.map(lambda s: line_markers(all_lines(s))).tolist(), index=df.index)
+        df = df.drop(columns=[c for c in lines if c in df]).join(lines)
         metrics = pd.DataFrame(df.sections.map(lambda s: text_metrics(all_lines(s))).tolist(), index=df.index)
         df = df.drop(columns=[c for c in metrics if c in df]).join(metrics)
         df["repetition_score"] = df.words.map(repetition_score)
@@ -58,10 +66,14 @@ def build_corpus(df):
             if col in df:
                 df[col] = df[col].map(list)
     df = df.join(pd.DataFrame(df.bow.map(mood).tolist(), index=df.index))
+    df = df.join(pd.DataFrame(df.bow.map(word_markers).tolist(), index=df.index))
     df = df.join(pd.DataFrame(df.bow.map(themes).tolist(), index=df.index).add_prefix(THEME_PREFIX))
     df["voice"] = df.lead_vocal.map(lead_voice)
     df["phase"] = df.year.map(phase_of)
     df["album"] = df.release_core.map(album_of)
+    credits = pd.DataFrame([credit_columns(r) for r in df[["songwriters", "lead_vocal", "release_core", "album"]]
+                            .to_dict("records")], index=df.index)
+    df = df.drop(columns=[c for c in credits if c in df]).join(credits)
     return df.sort_values(["year", "title"]).reset_index(drop=True)
 
 

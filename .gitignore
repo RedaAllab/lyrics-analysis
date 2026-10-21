@@ -8,6 +8,11 @@ data/beatles/*
 !data/beatles/section_times.csv
 # Lyrics-free dataset used by the deployed app (metrics + word counts)
 !data/public/
+# Credits with their sources (no lyrics); the raw MusicBrainz responses stay local
+!data/credits/
+data/credits/mb_cache/
+# Theme codebook, human annotations and model suggestions (no lyrics)
+!data/themes/
 __pycache__/
 .DS_Store
 .venv/

@@ -1,0 +1,57 @@
+artist,measure,label,songs,mean,ci_low,ci_high
+The Beatles,third_person,he / she / they (share of words),209,0.0234,0.0191,0.0283
+The Beatles,past,past words (share),209,0.0292,0.0246,0.0337
+The Beatles,future,future words (share),209,0.0154,0.0125,0.0188
+The Beatles,questions,lines asking a question (share),209,0.0403,0.027,0.0564
+The Beatles,orders,lines opening on an order or plea (share),209,0.0697,0.0544,0.0863
+The Beatles,valence,"mood, single words (-1..1)",187,0.1934,0.1492,0.2382
+The Beatles,valence_ctx,"mood, line by line (-1..1)",194,0.1832,0.1415,0.2254
+The Rolling Stones,third_person,he / she / they (share of words),293,0.0185,0.0152,0.0218
+The Rolling Stones,past,past words (share),293,0.0374,0.0337,0.0414
+The Rolling Stones,future,future words (share),293,0.0094,0.0078,0.011
+The Rolling Stones,questions,lines asking a question (share),293,0.0478,0.0363,0.059
+The Rolling Stones,orders,lines opening on an order or plea (share),293,0.0773,0.0645,0.091
+The Rolling Stones,valence,"mood, single words (-1..1)",277,0.0473,0.0174,0.0767
+The Rolling Stones,valence_ctx,"mood, line by line (-1..1)",285,0.043,0.0156,0.0716
+Bob Dylan,third_person,he / she / they (share of words),403,0.0289,0.0256,0.0322
+Bob Dylan,past,past words (share),403,0.0439,0.0407,0.0473
+Bob Dylan,future,future words (share),403,0.0113,0.0099,0.0129
+Bob Dylan,questions,lines asking a question (share),403,0.0367,0.0285,0.0458
+Bob Dylan,orders,lines opening on an order or plea (share),403,0.0469,0.0389,0.0552
+Bob Dylan,valence,"mood, single words (-1..1)",388,0.0433,0.0232,0.0616
+Bob Dylan,valence_ctx,"mood, line by line (-1..1)",394,0.0366,0.0151,0.0573
+Paul McCartney,third_person,he / she / they (share of words),382,0.0168,0.0139,0.02
+Paul McCartney,past,past words (share),382,0.0314,0.028,0.035
+Paul McCartney,future,future words (share),382,0.0121,0.0101,0.0141
+Paul McCartney,questions,lines asking a question (share),382,0.0411,0.0328,0.0503
+Paul McCartney,orders,lines opening on an order or plea (share),382,0.0674,0.0564,0.0796
+Paul McCartney,valence,"mood, single words (-1..1)",345,0.2351,0.2063,0.2633
+Paul McCartney,valence_ctx,"mood, line by line (-1..1)",362,0.2319,0.2054,0.2605
+John Lennon,third_person,he / she / they (share of words),95,0.0148,0.0098,0.0207
+John Lennon,past,past words (share),95,0.0357,0.0285,0.0445
+John Lennon,future,future words (share),95,0.0067,0.0049,0.0087
+John Lennon,questions,lines asking a question (share),95,0.0269,0.0122,0.0448
+John Lennon,orders,lines opening on an order or plea (share),95,0.0576,0.0413,0.0749
+John Lennon,valence,"mood, single words (-1..1)",89,0.0935,0.0344,0.1487
+John Lennon,valence_ctx,"mood, line by line (-1..1)",90,0.1139,0.0536,0.1722
+Leonard Cohen,third_person,he / she / they (share of words),133,0.0241,0.0192,0.0291
+Leonard Cohen,past,past words (share),133,0.0577,0.0517,0.064
+Leonard Cohen,future,future words (share),133,0.0061,0.0044,0.008
+Leonard Cohen,questions,lines asking a question (share),133,0.0326,0.0185,0.0493
+Leonard Cohen,orders,lines opening on an order or plea (share),133,0.0455,0.026,0.0689
+Leonard Cohen,valence,"mood, single words (-1..1)",127,0.1091,0.0755,0.144
+Leonard Cohen,valence_ctx,"mood, line by line (-1..1)",132,0.0833,0.0454,0.1219
+Joni Mitchell,third_person,he / she / they (share of words),162,0.0331,0.0279,0.0387
+Joni Mitchell,past,past words (share),162,0.0379,0.0338,0.0416
+Joni Mitchell,future,future words (share),162,0.0059,0.0044,0.0075
+Joni Mitchell,questions,lines asking a question (share),162,0.0318,0.0248,0.0395
+Joni Mitchell,orders,lines opening on an order or plea (share),162,0.0312,0.023,0.0398
+Joni Mitchell,valence,"mood, single words (-1..1)",159,0.1357,0.1043,0.1653
+Joni Mitchell,valence_ctx,"mood, line by line (-1..1)",162,0.122,0.0917,0.1532
+Paul Simon,third_person,he / she / they (share of words),132,0.0244,0.0193,0.03
+Paul Simon,past,past words (share),132,0.0438,0.0386,0.0493
+Paul Simon,future,future words (share),132,0.0076,0.0056,0.01
+Paul Simon,questions,lines asking a question (share),132,0.0332,0.0204,0.0479
+Paul Simon,orders,lines opening on an order or plea (share),132,0.026,0.0187,0.0333
+Paul Simon,valence,"mood, single words (-1..1)",123,0.0966,0.0572,0.1372
+Paul Simon,valence_ctx,"mood, line by line (-1..1)",127,0.1054,0.0701,0.1395

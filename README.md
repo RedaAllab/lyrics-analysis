@@ -16,9 +16,13 @@ Each song goes through `beatles_viz.corpus.build_corpus`:
    verses and choruses are detected from returning stanzas (`text/sections.py`, `text/segment.py`).
 2. **Metrics**: tokenisation, lexical richness (MATTR), repetition and a 48×48 repetition "fingerprint",
    pronouns, mood (VADER lexicon) and themes (`text/`).
-3. **Voices**: the lead voice is the singer named in the section tag, otherwise the song's `lead_vocal`,
+3. **Voices and credits**: the lead voice is the singer named in the section tag, otherwise the song's `lead_vocal`,
    otherwise "Neutral"; several voices give "Shared" (`attribution.py`). This is not the songwriting credit.
-4. **Rendering**: Plotly charts (`viz/`), a Read page with one visual effect per voice (`effects/`), and a
+   `credits.py` splits the official strings into credited writers, lead and backing singers and outside names; these
+   are official credits only ("Lennon–McCartney" names both, whoever wrote the song).
+4. **Context** (computed where the lyrics are, exported without them): words within 5 words of each other
+   (`text/context.py`) and the mood read line by line with VADER's sentence rules (`text/mood.py`).
+5. **Rendering**: Plotly charts (`viz/`), a Read page with one visual effect per voice (`effects/`), and a
    share card (`render/share_card.py`), and a "Who sings?" game (`quiz.py`) that shows single telling words, never lyrics.
    The look is one "session sheet" design: `.streamlit/config.toml` for Streamlit, `config.py` and `viz/theme.py` for
    Python, with the palette kept in sync by `tests/test_theme.py`. Fonts are self-hosted (`app/static/fonts`).
@@ -28,7 +32,7 @@ Each song goes through `beatles_viz.corpus.build_corpus`:
 | Mode | Source | Content |
 |---|---|---|
 | `local` | `data/beatles/beatles.parquet` (git-ignored) | full lyrics; enables the Read page, "My songs" and semantic similarities |
-| `public` | `data/public/beatles_bow.parquet` (versioned) | metrics, word counts, repetition fingerprint, section shapes: **no lyrics** |
+| `public` | `data/public/beatles_bow.parquet` (versioned) | metrics, word counts, unordered pairs of nearby content words, line-by-line mood, repetition fingerprint, section shapes: **no lyrics** |
 
 Lyrics are copyrighted and are not in the repository. Without the local file the app starts in `public` mode.
 `BEATLES_PUBLIC_ONLY=1` forces that mode on a machine that has the lyrics.
@@ -41,6 +45,8 @@ beatles_viz/          Python package
   config.py           paths, phases, thresholds, colours
   corpus.py           build_corpus / load_corpus / analysable
   attribution.py      voice -> effect rule
+  credits.py          official credits split into members and other people; credit tables (data/credits)
+  themes.py           hand-annotated themes (data/themes): codebook, annotations, agreement
   stories.py          the findings shown in "Stories"
   data/               loader.py (local/public), export.py (lyrics-free export)
   text/               tokenisation, sections, metrics, mood, repetition, semantics
@@ -51,8 +57,8 @@ beatles_viz/          Python package
 scripts/              offline data building and analyses
 tests/                pytest, synthetic lyrics only
 analysis/             generated tables and figures (no lyrics); artists/README.md describes the method
-data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/ (the rest is git-ignored)
-docs/                 ROADMAP.md, AUDIT_UX.md, PRODUCT_IDEAS.md: working notes (in French)
+data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/, credits/, themes/ (the rest is git-ignored)
+docs/                 ROADMAP.md (v2: thematic analysis and credits), AUDIT_UX.md, PRODUCT_IDEAS.md: working notes (in French)
 ```
 
 ## Install and run
@@ -85,13 +91,22 @@ BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # as in GitHub Actions CI: tests that n
 | Public lyrics-free file | `scripts/export_public.py` |
 | Official YouTube IDs | `scripts/youtube_ids.py` |
 | Tables and figures | `scripts/analyse_beatles.py`, `scripts/compare_artists.py`, `scripts/audit_dataset.py` |
+| Credits from MusicBrainz, then the sourced credit tables (see `data/credits/README.md`) | `scripts/fetch_credits.py`, `scripts/build_credits.py` |
+| Theme suggestions (local, nlp extra), agreement once songs are annotated on the Annotate page | `scripts/suggest_themes.py`, `scripts/theme_agreement.py` |
+| Automatic stanza groups (exploratory, with their stability) | `scripts/stanza_topics.py` |
+| Narrative markers and line-by-line mood for the eight catalogues | `scripts/compare_narrative.py` (same files as `compare_artists.py`) |
 
 ## Known limitations
 
 - `build_beatles.py` writes `beatles_lyrics.csv`; no versioned script produces the `beatles.parquet` the app reads
   (columns `title`, `release_core`, `is_original`, `lyrics_raw`…), so that local file cannot be rebuilt from the
   repository alone.
-- Genius years are unreliable; the year used is the one from the official list.
+- Genius years are unreliable; the year used is the one from the official list. It is the release year for songs
+  released at the time, but the year of the session or demo for archive releases (Anthology, Live at the BBC, Get
+  Back, the 1963 bootlegs, the 2018 White Album demos: *Free as a Bird* is 1977, *Real Love* 1979). The corpus marks
+  them with `is_archival` and `year_basis`.
+- Word drifts in Trends are leads, not findings: over a hundred words are tested and few hold after correction (the
+  page shows how many).
 - Section timestamps (`section_times.csv`) are measured by ear on two songs (Hey Jude, Let It Be), the only ones with the
   synchronised player; adding a song means listening to it and adding its rows.
 - Three original songs without section tags (Bad to Me, I'm in Love, Madman) have no stanza that returns, so no

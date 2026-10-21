@@ -14,7 +14,8 @@ needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file no
 
 
 @pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py", "compare_page.py", "stories_page.py",
-                                   "album_page.py", "voice_page.py", "guess_page.py", "mood_page.py", "trends_page.py"])
+                                   "album_page.py", "voice_page.py", "guess_page.py", "mood_page.py", "trends_page.py",
+                                   "annotate_page.py", "word_page.py", "credits_page.py"])
 def test_pages_run(entry):
     assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
 
@@ -131,3 +132,13 @@ def test_guess_page_scores_an_answer_and_moves_on():
     assert {b.key for b in at.button} == {"guess_next", "guess_open"}
     at.button(key="guess_next").click().run()
     assert not at.exception and at.session_state["guess_q"].title != first and at.session_state["guess_pick"] is None
+
+
+@needs_lyrics
+def test_annotate_page_shows_a_song_and_hides_suggestions_until_annotated():
+    at = AppTest.from_file(str(APP / "annotate_page.py"), default_timeout=180).run()
+    assert not at.exception and at.info[0].value.startswith("Type a name")
+    at.text_input[0].input("test-annotator-nobody").run()
+    assert not at.exception
+    assert any(m.label == "Themes" for m in at.multiselect)
+    assert not any(e.label.startswith("Model suggestions") for e in at.expander)

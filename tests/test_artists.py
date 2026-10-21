@@ -143,3 +143,15 @@ def test_official_songs_prefer_exact_titles_and_year_released():
     official = official_songs(html, "Ann Writer")
     assert official["paper kettle"]["title"] == "Paper Kettle" and official["paper kettle"]["year"] == 1976
     assert official["paper kettle reprise"]["year"] == 1984
+
+
+def test_narrative_bars_scale_shares_and_keep_mood():
+    import pandas as pd
+
+    from beatles_viz.viz import artist_charts as ac
+    t = pd.DataFrame({"artist": ["Bob Dylan", "The Beatles"] * 2, "measure": ["past", "past", "valence", "valence"],
+                      "label": ["past words (share)"] * 2 + ["mood, single words (-1..1)"] * 2, "songs": [3, 4, 3, 4],
+                      "mean": [0.05, 0.03, 0.1, 0.2], "ci_low": [0.04, 0.02, 0.0, 0.1], "ci_high": [0.06, 0.04, 0.2, 0.3]})
+    past = ac.narrative_bars(t, "past")
+    assert list(past.data[0].y) == ["The Beatles", "Bob Dylan"] and past.data[0].x[1] == 5
+    assert ac.narrative_bars(t, "valence").data[0].x[0] == 0.2

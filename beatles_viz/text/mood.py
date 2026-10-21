@@ -3,12 +3,15 @@
 Mood: VADER's word valences (Hutto & Gilbert 2014, MIT licence), averaged over the song's words that the lexicon
 knows. Without the sentences there is no negation or irony: "don't cry" counts as sad. Interjections and words
 that are mostly grammatical in lyrics ("like a", "kind of", "hold your hand") are left out.
+Mood in context (valence_ctx, local only, then exported): VADER's sentence rules line by line, so negation,
+intensifiers and "but" count ("don't cry" is no longer sad). Same lexicon, same neutral words left out.
 Themes: short hand-made word lists, counted per 1,000 words."""
 from functools import lru_cache
 from importlib.resources import files
 
 NEUTRAL_WORDS = {"yeah", "yes", "no", "like", "well", "please", "woo", "hand", "kind", "help", "ok", "okay", "pretty"}
 MIN_MOOD_WORDS = 5  # fewer lexicon words than this: no mood score
+MIN_MOOD_LINES = 3  # fewer lines carrying a mood than this: no mood-in-context score
 
 THEMES = {
     "Love": {"love", "loves", "loved", "loving", "lover", "lovers", "kiss", "kissed", "kisses", "kissing", "darling",
@@ -56,6 +59,23 @@ def mood(bow):
     neg = sum(c for w, c in hits.items() if lex[w] < 0)
     value = sum(c * lex[w] for w, c in hits.items()) / n / 4 if n >= MIN_MOOD_WORDS else float("nan")
     return {"valence": value, "positive": pos / total, "negative": neg / total, "mood_words": n}
+
+
+@lru_cache(maxsize=1)
+def analyzer():
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+    a = SentimentIntensityAnalyzer()
+    for w in NEUTRAL_WORDS:
+        a.lexicon.pop(w, None)
+    return a
+
+
+def line_mood(lines):
+    """valence_ctx: mean VADER compound score (-1..1) of the lines that carry a mood; mood_lines: their count."""
+    scores = [analyzer().polarity_scores(line)["compound"] for line in lines if line.strip()]
+    scores = [x for x in scores if x != 0]
+    value = sum(scores) / len(scores) if len(scores) >= MIN_MOOD_LINES else float("nan")
+    return {"valence_ctx": value, "mood_lines": len(scores)}
 
 
 def mood_words(bow, k=6):

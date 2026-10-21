@@ -10,12 +10,15 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from beatles_viz.attribution import lead_voice, resolve_voice  # noqa: E402
 from beatles_viz.config import ROOT  # noqa: E402
+from beatles_viz.credits import vocal_credit, writer_credit  # noqa: E402
 from beatles_viz.data.loader import load_songs  # noqa: E402
 from beatles_viz.text.sections import header_tags, normalize_label, parse_members, split_sections  # noqa: E402
+from beatles_viz.text.semantic import SEMANTIC_COLS  # noqa: E402
 
 OUT = ROOT / "analysis/audit"
 OUT.mkdir(parents=True, exist_ok=True)
-df = load_songs("local", originals_only=False)
+# The raw lyrics file only: load_songs also joins the semantic neighbours, which are not part of it.
+df = load_songs("local", originals_only=False).drop(columns=SEMANTIC_COLS, errors="ignore")
 
 labels, singers, songs, voices = Counter(), Counter(), [], Counter()
 for row in df.itertuples():
@@ -51,6 +54,22 @@ songs.to_csv(OUT / "songs.csv", index=False)
 cov = pd.Series(voices).rename("sections").rename_axis(["voice", "kind"]).reset_index()
 cov.to_csv(OUT / "voice_coverage_sections.csv", index=False)
 
+# Every credit string must resolve to members and named outsiders, or be marked unknown: nothing is guessed.
+credit_rows = []
+for raw, n in df.songwriters.value_counts().items():
+    c = writer_credit(raw)
+    credit_rows.append({"field": "songwriters", "raw": raw, "songs": n, "members": "; ".join(c["writers"]),
+                        "others": "; ".join(c["other_writers"]), "label": c["writer_credit"],
+                        "resolved": bool(c["writers"] or c["other_writers"])})
+for raw, n in df.lead_vocal.value_counts().items():
+    c = vocal_credit(raw)
+    credit_rows.append({"field": "lead_vocal", "raw": raw, "songs": n, "members": "; ".join(c["lead_singers"]),
+                        "others": "; ".join(c["backing_singers"] + c["other_singers"]),
+                        "label": "known" if c["vocal_known"] else "unknown",
+                        "resolved": bool(c["lead_singers"] or c["other_singers"]) or not c["vocal_known"]})
+credits = pd.DataFrame(credit_rows)
+credits.to_csv(OUT / "credits.csv", index=False)
+
 orig = songs[songs.is_original]
 summary = {
     "songs": len(songs), "originals": len(orig), "columns": ", ".join(df.columns),
@@ -64,6 +83,9 @@ summary = {
     "distinct_raw_labels": len(labels), "distinct_singer_strings": len(singers),
     "sections": int(songs.n_sections.sum()), "sections_with_named_singer": int(songs.sections_with_singer.sum()),
     "originals_co_written": int(orig.co_written.sum()),
+    "credit_strings": len(credits), "credit_strings_unresolved": int((~credits.resolved).sum()),
+    "lead_vocal_unknown": int((credits[credits.field == "lead_vocal"].label == "unknown").mul(
+        credits[credits.field == "lead_vocal"].songs).sum()),
 }
 summary.update({f"originals_voice_{v}": int(n) for v, n in orig.song_voice.value_counts().items()})
 pd.Series(summary).to_csv(OUT / "summary.csv", header=["value"])

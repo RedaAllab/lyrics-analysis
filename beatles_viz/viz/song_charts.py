@@ -146,7 +146,10 @@ def voice_split(sections, lead_vocal):
     return titled(fig, "Who sings each section", height=max(260, 28 * len(df)))
 
 
-PRONOUN_LABELS = {"first_singular": "I / me / my", "second": "you / your", "first_plural": "we / us / our"}
+PRONOUN_LABELS = {"first_singular": "I / me / my", "second": "you / your", "first_plural": "we / us / our",
+                  "third_person": "he / she / they"}
+TELLING_LABELS = {"past": "looks back (past words)", "future": "looks ahead (future words)",
+                  "questions": "asks (lines with a question)", "orders": "urges (lines opening on an order)"}
 
 
 def pronoun_profile(song, corpus):
@@ -159,6 +162,25 @@ def pronoun_profile(song, corpus):
                  labels={"share": "per 100 words", "pronoun": ""},
                  color_discrete_sequence=[SECONDARY, REFERENCE])
     return titled(fig, "Point of view: personal pronouns", height=320)
+
+
+def telling_profile(song, corpus):
+    """Past and future words per 100 words, questions and orders per 100 lines, against the period average.
+    None when the song has none of the measures (public file exported before them)."""
+    keys = [k for k in TELLING_LABELS if k in corpus and song.get(k) == song.get(k)]
+    if not keys:
+        return None
+    ref = corpus[corpus.phase == song.phase] if song.phase else corpus
+    rows = []
+    for key in keys:
+        rows.append(dict(marker=TELLING_LABELS[key], group="this song", rate=100 * song[key]))
+        rows.append(dict(marker=TELLING_LABELS[key], group=f"average {song.phase or 'corpus'}",
+                         rate=100 * ref[key].mean()))
+    fig = px.bar(pd.DataFrame(rows), x="rate", y="marker", color="group", barmode="group", orientation="h",
+                 labels={"rate": "per 100 words (past, future) · per 100 lines (questions, orders)", "marker": ""},
+                 color_discrete_sequence=[SECONDARY, REFERENCE])
+    fig.update_yaxes(autorange="reversed")
+    return titled(fig, "How it tells", height=320)
 
 
 def fingerprint_figure(fp, color=ACCENT, height=150):

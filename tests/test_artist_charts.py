@@ -63,6 +63,7 @@ def test_p_value_either_order():
 def test_artists_page_runs_and_filters_groups():
     at = AppTest.from_file(str(APP / "artists_page.py"), default_timeout=120).run()
     everyone = len(ac.present(ac.load_tables()["songs"]))
-    assert not at.exception and len(at.get("plotly_chart")) == everyone + 2  # box, one bar chart each, lines
+    extra = 2 + (ac.narrative_table() is not None)  # box, lines, and the narrative bars when computed
+    assert not at.exception and len(at.get("plotly_chart")) == everyone + extra  # plus one bar chart each
     at.segmented_control(key="artists_group").set_value("Beatles after the Beatles").run()
-    assert not at.exception and len(at.get("plotly_chart")) == 3 + 2
+    assert not at.exception and len(at.get("plotly_chart")) == 3 + extra

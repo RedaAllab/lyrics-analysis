@@ -26,3 +26,17 @@ def test_mood_words_split_by_sign():
 def test_theme_rates_per_thousand():
     t = themes(Counter({"sun": 5, "rain": 5, "money": 10, "the": 980}))
     assert t["Nature"] == 10 and t["Money and work"] == 10 and t["Love"] == 0
+
+
+def test_line_mood_reads_negation():
+    from beatles_viz.text.mood import line_mood
+    sad = line_mood(["I cry", "I am lonely", "so sad"])
+    turned = line_mood(["don't cry", "never lonely", "not sad"])
+    assert sad["valence_ctx"] < 0 < turned["valence_ctx"] and sad["mood_lines"] == 3
+
+
+def test_line_mood_ignores_interjections_and_needs_three_lines():
+    from beatles_viz.text.mood import line_mood
+    assert line_mood(["yeah yeah yeah", "no no no", "the table"])["mood_lines"] == 0
+    r = line_mood(["happy", "the table"])
+    assert r["valence_ctx"] != r["valence_ctx"] and r["mood_lines"] == 1

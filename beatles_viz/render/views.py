@@ -3,6 +3,7 @@ import streamlit as st
 
 from beatles_viz.attribution import resolve_voice
 from beatles_viz.corpus import doc_frequencies, neighbors
+from beatles_viz.credits import load_table, song_performers
 from beatles_viz.effects import get_effect
 from beatles_viz.render.components import HELP, chip_row, open_word, plot
 from beatles_viz.text.mood import mood_words
@@ -109,6 +110,33 @@ def mood_section(song, corpus):
         plot(fig)
 
 
+@st.cache_data(show_spinner=False)
+def _credit_tables():
+    return load_table("performance_credit"), load_table("person"), load_table("work_credit"), load_table("source")
+
+
+def credits_section(song):
+    perf, people, work, sources = _credit_tables()
+    st.markdown("**Who wrote it, who sings and plays?**")
+    st.caption(f"Official credit: {song.songwriters}. Lennon–McCartney names both, whoever wrote the song.")
+    if perf.empty:
+        st.info("The credit tables are not built (scripts/fetch_credits.py, then scripts/build_credits.py).")
+        return
+    claims = work[(work.title == song.title) & (work.kind != "official")]
+    citations = dict(zip(sources.source_id, sources.citation))
+    for c in claims.itertuples():
+        st.markdown(f"- *{c.kind}*, confidence {c.confidence}: {c.person_id.capitalize()}, {c.role.replace('_', ' ')}. "
+                    f"{c.note} ({citations.get(c.source_id, c.source_id)})")
+    table = song_performers(perf, people, song.title)
+    if table.empty:
+        st.info("No recording credits for this song yet.")
+        return
+    st.dataframe(table, hide_index=True, width="stretch",
+                 column_config={"person": "Person", "what": "Sings or plays", "sources": "Sources"})
+    st.caption("MusicBrainz credits are for the original edition's recording; the lead vocal column of the official "
+               "list does not say which version. Where they disagree, both are shown.")
+
+
 def analyse_view(song, corpus, local, key):
     _show(charts.structure_timeline(song), "How is the song built?", "No section information for this song.")
     if charts.has_structure(song) and any(song.sec_auto):
@@ -136,7 +164,12 @@ def analyse_view(song, corpus, local, key):
                 open_word(pick)
     with right:
         _show(charts.pronoun_profile(song, corpus), "From whose point of view does the song speak?")
+        _show(charts.telling_profile(song, corpus), "Does it look back, ask or urge?",
+              "No narrative markers in this data file.")
+        st.caption("Word lists and line rules, not grammar: “love” counts as a verb or a noun alike, and questions "
+                   "rely on the transcription's question marks. Rough markers to compare songs.")
     mood_section(song, corpus)
+    credits_section(song)
     period = st.radio("Compare with", ["same period", "all songs"], horizontal=True, key=f"{key}_period")
     _show(charts.corpus_position(song, corpus, song.phase if period == "same period" else None),
           "Is the song typical of its time?")

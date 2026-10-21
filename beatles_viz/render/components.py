@@ -112,3 +112,19 @@ def chip_row(label, options, key, help=None):
     away on a click, so no selection is left behind."""
     return st.pills(label, options, selection_mode="single", key=key, help=help, width="stretch",
                     wrap=True) if options else None
+
+
+EVIDENCE = {
+    "descriptive": (":material/bar_chart:", "Descriptive",
+                    "counts read from the data: true of these sources, nothing more"),
+    "exploratory": (":material/explore:", "Exploratory",
+                    "a pattern found by a method that could have found another: a lead to check"),
+    "validate": (":material/rule:", "To validate",
+                 "a claim that needs annotated data, sources or a test before it can be stated"),
+}
+
+
+def evidence(level):
+    """One line saying how far a result can be trusted (docs/ROADMAP.md, v2, part D)."""
+    icon, name, meaning = EVIDENCE[level]
+    st.caption(f"{icon} **{name}**: {meaning}.")

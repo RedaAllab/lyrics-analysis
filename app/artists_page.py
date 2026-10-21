@@ -1,7 +1,7 @@
 """The Beatles next to other artists, from the tables in analysis/artists/ (no lyrics)."""
 import streamlit as st
 
-from beatles_viz.render.components import HELP, chip_row, open_word, plot
+from beatles_viz.render.components import HELP, chip_row, evidence, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.viz import artist_charts as ac
 
@@ -62,6 +62,18 @@ st.caption("Nine years is the Beatles' whole recording career (1962-1970), so ev
            "nine years from their first record: the Stones from 1963, Dylan from 1962, Cohen from 1967, Mitchell from "
            "1968, Lennon from 1969, McCartney from 1970 and Paul Simon from 1972, his first solo album after Simon & "
            "Garfunkel. Hollow dots: fewer than five songs that year. Click a name in the legend to hide it.")
+
+narrative = ac.narrative_table()
+if narrative is not None:
+    st.markdown("#### How they tell")
+    labels = dict(zip(narrative.measure, narrative.label))
+    measure = st.segmented_control("Marker", list(labels), format_func=lambda m: labels[m].split(" (")[0],
+                                   default="past", key="artists_narrative") or "past"
+    plot(ac.narrative_bars(narrative, measure))
+    evidence("exploratory")
+    st.caption("Mean per song with a 95% bootstrap interval; intervals that overlap are not a difference. Word lists "
+               "and line rules (no grammar), questions read from the transcriptions' question marks, whose habits vary "
+               "between catalogues; mood line by line uses VADER's sentence rules. scripts/compare_narrative.py.")
 
 counts = t["songs"].artist.value_counts()
 st.caption("Original compositions with at least 30 words: " + ", ".join(f"{counts.get(a, 0)} by {a}" for a in everyone)

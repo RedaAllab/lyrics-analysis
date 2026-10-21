@@ -1,4 +1,270 @@
-# Roadmap : explorateur de chansons des Beatles (Streamlit)
+# Roadmap : explorateur de chansons des Beatles
+
+Deux étapes :
+
+- **v2 (en cours, 21/10/2026)** : passer du comptage de mots à une analyse thématique interprétable, et fiabiliser
+  les crédits (auteurs, voix, instruments) avec des sources citées.
+- **v1 (terminée)** : construction de l'explorateur Streamlit, en annexe en bas de ce fichier.
+
+Légende : ✅ vérifié (dans le repo ou sur la source citée) · 🔶 connu, à revérifier · 💡 recommandation.
+
+---
+
+# v2 : analyse thématique et crédits
+
+## A. État des lieux (audit du 21/10/2026)
+
+### Ce qui existe ✅
+
+| Fonction | Fichiers | Constat |
+|---|---|---|
+| Corpus et sections | `corpus.py`, `text/sections.py`, `text/segment.py` | balises Genius normalisées ; sans balises, sections déduites des strophes qui reviennent |
+| Métriques lexicales | `text/metrics.py`, `text/repetition.py` | MATTR, hapax, répétition, empreinte 48×48 |
+| Mots distinctifs | `text/keyness.py` | log-odds de Monroe et al. (prior de Dirichlet), déjà mieux que des fréquences brutes |
+| Mots compagnons | `text/words.py:companions` | contraste chansons avec / sans le mot : le contexte est la chanson entière, pas le voisinage du mot |
+| Humeur et thèmes | `text/mood.py` | VADER sur le sac de mots + 9 listes de mots faites à la main |
+| Similarité | `text/similarity.py` (TF-IDF), `text/semantic.py` (MiniLM-L6, local via `scripts/embed_songs.py`) | seuls 5 voisins et scores sont exportés |
+| Évolution | `text/trends.py`, `stories.py` | rho de Spearman année × taux, 4 périodes, récits recalculés depuis les données |
+| Voix | `attribution.py` | balise de section > `lead_vocal` > Neutral ; le README précise que ce n'est pas le crédit d'écriture |
+| Comparaison | `scripts/compare_artists.py`, `analysis/artists/` | 8 catalogues, même pipeline |
+
+**Contrainte structurante** : le mode public (`data/public/beatles_bow.parquet`) ne contient que des sacs de mots.
+Toute analyse contextuelle (phrases, négation, voisinage, embeddings) tourne en local et s'exporte sous forme de
+**variables dérivées** sans texte, comme `semantic.parquet`.
+
+### Qualité des données ✅
+
+- 272 chansons, 213 compositions, environ 209 analysables (≥ 30 mots) : petit corpus.
+- **159 des 213 compositions sont créditées « Lennon–McCartney »** sans distinction. `songwriters` est une chaîne brute
+  jamais analysée (affichage dans `render/song_widgets.py`, `is_original`).
+- Graphies hétérogènes : `Lennon–McCartney` / `Lennon; McCartney` (titres d'archives), `Starkey` / `Starr`,
+  `Jerry Leiber\; \; Mike Stoller`, médleys `Lennon; McCartney /; Lennon; McCartney; Harrison; Starkey`.
+- `lead_vocal` : 22 graphies (`McCartney; (with Lennon,; Harrison,; and Starr)`), `–` (3), `Sound Collage`,
+  `Tony Sheridan`. Les chœurs entre parenthèses sont jetés.
+- `year` : année de sortie pour les titres publiés à l'époque, mais année de session ou de démo pour les archives
+  (*Free as a Bird* 1977, *Real Love* 1979, *Get Back*, *Bootleg 1963*). Le README parlait à tort d'« année de
+  première sortie ». C'est l'année utile pour l'évolution de l'écriture, mais il faut la nommer et la signaler.
+- `release` : 56 valeurs mêlant album et mentions de face A/B.
+- Aucun niveau « enregistrement » : `lead_vocal` est porté par la chanson alors qu'il dépend de la version.
+- `beatles.parquet` ne peut pas être reconstruit depuis le repo (`build_beatles.py` écrit un CSV).
+- Le parquet public ne se lit pas avec un pyarrow ancien (lu correctement avec la version épinglée 24).
+
+### Problèmes méthodologiques
+
+1. Thèmes = listes de mots sans contexte ni validation (`away` → voyage, `man` → monde, `real` → esprit).
+2. VADER sur sac de mots : pas de négation ni d'ironie (« don't cry » compte comme triste).
+3. Chanteur pris implicitement pour auteur dans `analysis/beatles/distinctive_words_by_singer.csv` et
+   `singer_summary.csv` (libellés honnêtes, lecture tentante).
+4. `trends.steady_movers` teste des centaines de mots à p < 0,05 sans correction ; les taux poolés pèsent plus
+   lourd pour les chansons longues.
+5. Aucun jeu annoté de référence pour valider un thème ou une émotion.
+
+## B. Comparaison des approches
+
+| Approche | Question | Pertinence (~210 chansons) | Interprétable | Dépendances | Coût | Verdict |
+|---|---|---|---|---|---|---|
+| Concordance et collocations en fenêtre (±5 mots, log-odds) | Dans quel sens « love », « girl », « mine » sont-ils employés ? | excellente, sans entraînement | très forte | aucune | faible | ✅ retenir |
+| Codebook thématique multi-label annoté à la main, assisté par embeddings | De quoi parle chaque chanson, plusieurs thèmes à la fois ? | idéale : 210 chansons s'annotent en quelques jours | très forte | MiniLM (présent) | moyen puis faible | ✅ cœur de la v2 |
+| Embeddings (strophes, chansons) | Quelles chansons sont proches malgré un vocabulaire différent ? | bonne (pré-entraîné) | moyenne : montrer les strophes qui rapprochent | sentence-transformers (local) | faible | ✅ étendre |
+| NMF sur TF-IDF | Quels mots reviennent ensemble ? | correcte, plus stable que LDA sur textes courts | bonne | scikit-learn (présent) | faible | 🔶 exploratoire, pour proposer des thèmes |
+| LDA | idem | faible : textes courts, répétitifs, instable | moyenne | sklearn / gensim | faible | ❌ écarter |
+| BERTopic | idem, par embeddings | médiocre sur 210 documents, acceptable sur ~1 800 strophes ; instable (UMAP, HDBSCAN) | moyenne | torch, umap, hdbscan | moyen à élevé | ❌ phase 3 au plus, une fois |
+| Émotion par ligne (VADER phrase, gère la négation) | Quelle émotion, où, avec quel contraste ? | bonne | bonne | vaderSentiment (présent) | faible | ✅ retenir |
+| Classifieur d'émotions transformer (type GoEmotions) | joie, tristesse, colère… | moyenne : entraîné sur Reddit | faible | torch | moyen | 🔶 optionnel, validé contre l'annotation |
+| Sens littéral / implicite (ironie) | *Run for Your Life*, *Happiness Is a Warm Gun* | aucun modèle fiable | n/a | n/a | annotation | ✅ champ manuel du codebook |
+| Analyse narrative (je / tu / nous, personnages, impératifs, questions, temps) | Qui parle à qui ? | très bonne, règles simples | très forte | regex ou spaCy `en_core_web_sm` | faible à moyen | ✅ retenir |
+| Évolution temporelle avec intervalles | Les thèmes changent-ils ? | bonne si par chanson | forte | scipy (présent) | faible | ✅ retenir, tests corrigés |
+
+**Combinaison retenue** 💡 : concordance contextuelle + codebook annoté (embeddings et NMF comme assistants) +
+émotion par ligne + indicateurs narratifs + tendances avec intervalles et correction des tests multiples. Avec
+210 chansons, l'annotation humaine est faisable et sert de référence ; les modèles proposent et mesurent l'accord,
+ils ne décident pas.
+
+## C. Sources externes
+
+### Vérifié le 21/10/2026 ✅
+
+- **MusicBrainz** ([API](https://musicbrainz.org/doc/MusicBrainz_API) ;
+  [limite](https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting) : 1 requête/s, User-Agent descriptif). Données
+  cœur, *Relationships* comprises, en CC0 ([Data License](https://musicbrainz.org/doc/About/Data_License),
+  [Database](https://musicbrainz.org/doc/MusicBrainz_Database)) ; tags et annotations en CC BY-NC-SA.
+  - La work *In My Life* a deux relations writer (Lennon, McCartney).
+  - Sur *Abbey Road* (1969, ES), *Come Together* a 30 relations (instruments par membre, ingénieurs, producteur
+    George Martin), *Something* 26 (dont orgue Hammond, Billy Preston).
+  - Les enregistrements de remasters ou compilations n'ont **aucune** relation : cibler l'enregistrement d'origine.
+  - Les relations ne citent pas leur source : fiabilité moyenne.
+- **Wikidata** : P676 « lyrics by » et P86 « composer » sont distinctes (paroles / musique). Couverture Beatles non
+  vérifiée.
+- **Stylométrie** : Glickman et al., *Data in the Life: Authorship Attribution in Lennon-McCartney Songs*, Harvard
+  Data Science Review, n° 1 (page en 403, résumé via la
+  [Harvard Gazette](https://news.harvard.edu/gazette/story/2018/09/harvard-statistician-examines-beatles-mystery) et
+  [Smithsonian](https://www.smithsonianmag.com/smart-news/statistics-offer-answer-decades-long-dispute-over-authorship-beatles-hit-180969804/)) :
+  ~70 chansons, traits **musicaux** ; *In My Life* nettement Lennon, pont proche de 50/50. Inférence statistique, à
+  stocker comme interprétation.
+
+### À explorer 🔶
+
+| Rang | Source | Apport | Accès |
+|---|---|---|---|
+| 1 primaire | pochettes et étiquettes ; entretiens : Lennon (*Playboy* 1980, D. Sheff, *All We Are Saying*), McCartney (B. Miles, *Many Years From Now*, 1997 ; *The Lyrics*, 2021) | crédit officiel, témoignages contradictoires | manuel, page citée |
+| 2 référence | M. Lewisohn, *The Complete Beatles Recording Sessions* ; I. MacDonald, *Revolution in the Head* ; W. Everett, *The Beatles as Musicians* ; Guesdon & Margotin, *Tous les Beatles* | sessions, personnel, analyses d'attribution | manuel, page citée |
+| 3 bases | MusicBrainz (CC0, API), Wikidata (CC0, SPARQL), Discogs (API, crédits par édition) | instruments et voix par enregistrement, identifiants stables | automatisable |
+| 4 secondaire | sections « Personnel » de Wikipédia (CC BY-SA), The Beatles Bible, crédits Genius | pratique, exactitude variable | Wikipédia oui ; Beatles Bible sans API, droits à vérifier |
+
+**Règles d'enrichissement** 💡
+
+- Chaque donnée est une affirmation (claim) liée à une source, avec un niveau de confiance (`high`, `medium`, `low`).
+- Jamais de fusion : deux sources en désaccord donnent deux lignes, signalées par une vue `conflicts`.
+- Trois natures distinctes : `official` (crédit), `documented` (contribution attestée), `interpretation` (analyse).
+- Sans preuve : `unknown`. Aucune attribution forcée.
+- Collecte automatique : `retrieved_at` et identifiant MusicBrainz / Wikidata.
+
+## D. Architecture cible
+
+### Schéma (`data/credits/*.csv`, sans paroles, versionnés)
+
+```
+work(work_id, title, is_original, year_written?, mbid_work, wikidata_qid)
+recording(recording_id, work_id, label, release, year_recorded, year_released, is_canonical, mbid_recording)
+person(person_id, name, is_member)
+source(source_id, type[primary|reference|database|secondary], citation, url, accessed)
+work_credit(work_id, person_id, role[credited_writer|lyrics|music|middle_eight…], kind[official|documented|interpretation],
+            share?, source_id, confidence[high|medium|low], note)
+performance_credit(recording_id, person_id, role[lead_vocal|backing_vocal|instrument|producer|engineer|arranger],
+                   detail, source_id, confidence, note)
+```
+
+Une propriété de la chanson (auteurs) reste distincte d'une propriété d'un enregistrement (voix, instruments).
+Exemples (valeurs du repo, de MusicBrainz au 21/10/2026, ou attributions à sourcer précisément) :
+
+```
+work_credit: in_my_life, lennon,    credited_writer, official,       src=pochette_rubber_soul, high
+work_credit: in_my_life, mccartney, credited_writer, official,       src=pochette_rubber_soul, high
+work_credit: in_my_life, lennon,    lyrics,          documented,     src=sheff_1980 (page à vérifier), medium
+work_credit: in_my_life, mccartney, music,           documented,     src=miles_1997 (page à vérifier), medium   ← conflit
+work_credit: in_my_life, lennon,    music,           interpretation, src=glickman_hdsr, low, note="stylométrie, pont ~50/50"
+performance_credit: come_together_1969, harrison, instrument, "electric guitar", src=musicbrainz, medium, accessed=2026-10-21
+performance_credit: something_1969,     preston_b, instrument, "Hammond organ",   src=musicbrainz, medium, accessed=2026-10-21
+```
+
+**Migration** : `songwriters` et `lead_vocal` restent dans les parquets. Le module `beatles_viz/credits.py` en dérive
+des colonnes (phase 1), puis lira les tables (phase 2) pour ajouter `primary_writer` (ou `undetermined`) et
+`writer_confidence`. `attribution.py` ne change pas. Un test vérifie que chaque `work_id` correspond à un titre.
+
+### Analyses rendues possibles (formats, pas résultats)
+
+- Carte thèmes × album (part de chansons portant chaque thème, effectif affiché).
+- Paires « proches en sens, éloignées en mots » : cosinus MiniLM élevé, TF-IDF faible, avec les strophes en cause.
+- Tableau **auteur documenté × interprète** : les chansons écrites par l'un et chantées par l'autre testent le biais
+  d'interprète (effectifs très faibles).
+- Graphe membres → instruments par enregistrement, de *Please Please Me* à *Abbey Road*.
+
+**Niveaux de preuve à afficher** : descriptif (comptages) ; exploratoire (NMF, voisins, tendances non corrigées) ;
+à valider (toute affirmation « Lennon écrit plus sur X » : auteurs documentés, bootstrap, Benjamini-Hochberg, et
+confusion période × auteur, Harrison et Starr écrivant surtout tard).
+
+## E. Plan d'action
+
+### Phase 1 : simple, à forte valeur ajoutée
+
+**Statut** : faite le 21/10/2026 (non commitée à cette date). 208 tests passent en local ; 204 passent et 4 sont ignorés en mode public.
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Parser les crédits : `songwriters` → `writers`, `other_writers`, `writer_credit`, `medley` ; `lead_vocal` → `lead_singers`, `backing_singers`, `other_singers`, `vocal_known` | `beatles_viz/credits.py`, `corpus.py`, `tests/test_credits.py` | ✅ colonnes calculées en mode local et public ; colonnes d'origine intactes ; les voix principales coïncident avec `attribution.lead_members` sur toutes les chaînes réelles |
+| Nature de `year` : `is_archival`, `year_basis` (`release` / `recording`) ; README corrigé | `credits.py`, `corpus.py`, `README.md` | ✅ 56 titres d'archives (Anthology, BBC, Get Back, Bootleg 1963, démos 2018…) |
+| Album séparé de la mention de face : `release_note` | `credits.py`, `corpus.py` | ✅ |
+| Couverture du parsing dans l'audit | `scripts/audit_dataset.py`, `analysis/audit/credits.csv`, `summary.csv` | ✅ 82 chaînes, 0 non résolue, 4 chansons à voix inconnue (`–`, `Sound Collage`) |
+| Collocations en fenêtre ±5 mots, exportées en paires non ordonnées de mots pleins | `text/context.py`, `data/export.py`, `data/loader.py`, `app/word_page.py`, `viz/word_charts.py`, `tests/test_context.py` | ✅ section « What stands right next to it? » sur la page Word ; parquet public 239 → 381 Ko, colonnes existantes identiques |
+| Humeur par ligne (`valence_ctx`, `mood_lines`), `valence` conservée | `text/mood.py`, `corpus.py`, `data/export.py`, `app/mood_page.py`, `viz/mood_charts.py` | ✅ nuage « Two readings of the mood » + chansons où l'écart est le plus grand ; corrélation 0,87 entre les deux lectures |
+| Tendances : q-values (Benjamini-Hochberg), moyenne des taux par chanson (`change_song`), intervalle bootstrap 95 % | `text/trends.py`, `viz/trend_charts.py`, `app/trends_page.py` | ✅ sur 129 mots testés, 2 tiennent après correction (« love », « just ») ; ils sont toujours affichés (astérisque) |
+
+**Constats et décisions**
+
+- Aucun des mots « qui bougent » montrés jusqu'ici, hors « love » et « just », ne résiste à la correction : la page
+  les présente désormais comme des pistes. « just » a un intervalle qui croise zéro entre la première et la dernière
+  période alors que sa corrélation sur toutes les années est significative : les deux mesures ne disent pas la même
+  chose, la légende l'explique.
+- `valence` (mots isolés) reste la mesure utilisée par Stories, la carte de partage, Compare et Other artists.
+  Basculer vers `valence_ctx` est une décision à prendre en phase 2, après comparaison sur l'annotation manuelle.
+- Les paires de mots sont stockées sans ordre ni mots grammaticaux : elles ne permettent pas de reconstituer les
+  paroles. Les mots vides de scikit-learn (dont « mine ») n'ont donc pas de voisinage.
+- Le parquet public a été régénéré (`scripts/export_public.py`) ; à recommiter avec le code.
+
+- **Dépendances** : aucune nouvelle.
+- **Critères de réussite** : 100 % des chaînes `songwriters` et `lead_vocal` correspondent à un ensemble de membres
+  ou à `unknown` ; tests existants verts ; CI publique inchangée (le parquet public garde ses colonnes et en gagne).
+- **Risques** : moins de « mots qui bougent » après correction (attendu : ceux qui restent sont plus solides) ; le
+  parquet public doit être régénéré en local (`scripts/export_public.py`).
+
+### Phase 2 : enrichissement des données et analyses de fond
+
+**Statut** : outillage fait le 21/10/2026 ; reste l'annotation des thèmes (travail humain) et la saisie des
+contributions documentées depuis les livres.
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Collecte MusicBrainz (édition originale, puis recherche par titre ; cache local, 1 req/s, relances sur 503) | `scripts/fetch_credits.py`, `data/credits/mb_*.csv` | ✅ 266 des 272 chansons associées à un enregistrement, 249 avec interprètes et instruments ; 6 sans enregistrement trouvé (jams de *Get Back*, *Suzy Parker*, *Save the Last Dance for Me*), listées dans `mb_missing.csv` |
+| Tables de crédits sourcées (schéma D) et vue des désaccords | `scripts/build_credits.py`, `beatles_viz/credits.py`, `data/credits/*.csv`, `data/credits/README.md`, `analysis/credits/lead_vocal_conflicts.csv` | ✅ 1 105 crédits d'œuvre, 3 231 crédits d'enregistrement, 376 personnes. 28 désaccords sur la voix principale entre la liste officielle et MusicBrainz : surtout de granularité (MusicBrainz crédite la partie chantée par McCartney dans *A Day in the Life* ; la liste nomme deux voix principales sur *Love Me Do*). Conservés tous les deux, rien n'est tranché |
+| Saisie manuelle des contributions (sources de rang 1 et 2) | `data/credits/manual_sources.csv`, `manual_claims.csv` | 🔶 gabarit et règles prêts ; une seule affirmation saisie (*In My Life*, stylométrie, `interpretation`, confiance faible). Le reste demande les livres : **à faire à la main** |
+| Section « Who wrote it, who sings and plays? » sur la page Song | `render/views.py` | ✅ crédit officiel, affirmations non officielles avec leur source, interprètes et instruments |
+| Codebook de 14 thèmes (définition, inclure, exclure) | `data/themes/codebook.csv` | ✅ CSV plutôt que YAML : aucune dépendance. « Nature et saisons » et « Nourriture et boisson » ajoutés le 21/10/2026 après l'annotation modèle |
+| Page « Annotate » (locale) : paroles, codebook, thèmes multiples, thème principal, sens implicite, note ; suggestions du modèle masquées tant que la chanson n'est pas annotée | `app/annotate_page.py`, `beatles_viz/themes.py`, `data/themes/annotations.csv` | ✅ outil prêt ; **0 chanson annotée** |
+| Suggestions du modèle : similarité MiniLM strophes × descriptions des thèmes ; NMF 12 sujets | `scripts/suggest_themes.py`, `data/themes/suggestions.csv`, `nmf_topics.csv`, `nmf_songs.csv` | ✅ ; à l'œil, souvent à côté (*Within You Without You* n'est pas classée « spiritualité », *Lucy in the Sky* pas « rêve ») : confirme que le modèle ne peut qu'aider |
+| Accord inter-annotateurs et annotateur × modèle (kappa de Cohen par thème) | `scripts/theme_agreement.py`, `analysis/themes/agreement.csv` | ✅ script prêt, à lancer après annotation |
+| Thèmes annotés par période sur la page Mood | `app/mood_page.py`, `viz/mood_charts.py` | ✅ s'affiche dès qu'une annotation existe |
+| Indicateurs narratifs : 3e personne, passé, futur, personnages nommés (sac de mots) ; questions, ordres (lignes, exportés) | `text/narrative.py`, `corpus.py`, `data/export.py` | ✅ graphique « How it tells » (page Song), section « Do the songs tell differently? » (Trends) |
+
+**Décisions**
+
+- Indicateurs narratifs par listes de mots et règles de ligne plutôt que spaCy : transparents, sans dépendance,
+  suffisants pour comparer des chansons. Limites affichées : pas de grammaire, questions dépendantes de la
+  ponctuation de la transcription.
+- Les thèmes du modèle ne sont jamais affichés comme résultat dans l'app : seulement dans la page Annotate, après la
+  décision de l'annotateur.
+- `valence` reste la mesure d'humeur principale tant que l'annotation n'a pas permis de comparer les deux lectures.
+
+**Prochaines étapes (humaines)**
+
+1. Annoter les ~209 compositions (page Annotate), idéalement à deux sur un échantillon de 40 chansons pour mesurer
+   l'accord (objectif : kappa ≥ 0,6 par thème ; sinon préciser le codebook).
+2. Lancer `python scripts/theme_agreement.py`, puis remplacer les thèmes par listes de mots.
+3. Saisir dans `manual_claims.csv` les attributions documentées (Lewisohn, MacDonald, Everett ; entretiens Sheff et
+   Miles), page citée, une ligne par source, conflits conservés.
+
+### Phase 3 : exploratoire
+
+**Statut** : faite le 21/10/2026, sauf ce qui dépend de l'annotation des thèmes.
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Niveau de preuve affiché sous chaque analyse (descriptif, exploratoire, à valider) | `render/components.py:evidence`, pages Trends, Mood, Credits, Other artists | ✅ |
+| Page Credits : instruments par membre et par période (familles), musiciens extérieurs, crédit officiel × voix principale × période, désaccords entre sources, contributions documentées | `app/credits_page.py`, `viz/credit_charts.py`, `credits.py` | ✅ 218 chansons avec instrumentistes ; ex. l'harmonica de Lennon en 1962-63 puis les claviers en 1966-67 ; George Martin (36 chansons) et Billy Preston (10) en tête des extérieurs |
+| Sujets de strophes : le cœur de BERTopic (embeddings MiniLM, k-means, mots par c-TF-IDF) sans umap ni hdbscan ; k par silhouette ; stabilité par ARI entre 10 graines | `scripts/stanza_topics.py`, `data/themes/stanza_topics*.csv`, `analysis/themes/stanza_topics_quality.csv`, page Mood | ✅ 1 144 strophes distinctes, k = 18. **Silhouette 0,04, stabilité 0,29** : les strophes ne forment pas de groupes nets, et une autre graine donne des groupes assez différents. Quelques groupes lisibles (versions allemandes, amour / besoin, soleil, argent), d'autres réduits aux mots d'une ou deux chansons. Affiché comme exploratoire, pas comme des thèmes |
+| Indicateurs narratifs et humeur par ligne sur les 8 catalogues, avec intervalles bootstrap | `scripts/compare_narrative.py`, `analysis/artists/narrative.csv`, page Other artists | ✅ ex. Cohen narre le plus au passé, les Beatles et McCartney sont les plus tournés vers le futur et les plus positifs ; personnages exclus (la liste de noms est celle des Beatles) |
+| Classifieur d'émotions transformer | | ⏸ reporté : il ne peut être évalué que contre l'annotation manuelle, qui n'existe pas encore ; l'ajouter sans évaluation contredirait la règle de la v2 |
+| Thèmes du codebook appliqués aux 8 catalogues | | ⏸ reporté : dépend aussi de l'annotation (un modèle validé sur les Beatles pourrait alors être appliqué aux autres, avec contrôle sur un échantillon) |
+
+**Annotation modèle (21/10/2026)** : les 209 compositions annotées par Claude (Opus 5.5) avec le codebook, annotateur
+`claude-opus-5.5 (model)` dans `data/themes/annotations.csv`, à partir des paroles seules ; 1,95 thème par chanson,
+30 chansons marquées « sens implicite ». Ce n'est **pas** la référence humaine : c'est un second codeur. Accord avec les
+suggestions MiniLM (top 2) : kappa moyen **0,28** (accord faible), de 0,10 (société) à 0,51 (musique et danse). MiniLM
+surestime « identité », « nostalgie », « solitude » et « chagrin », sous-estime « société », « spiritualité », « rêve »
+et « désir » : il lit le vocabulaire affectif, pas le propos. Lacunes du codebook relevées : la nature et les saisons,
+la nourriture, ajoutées depuis (8 chansons recodées ; kappa moyen inchangé à 0,28). Prochaine mesure, la seule qui valide : humain × Claude, dès qu'une annotation humaine existe.
+
+**Leçon** : le résultat le plus net de la phase 3 est négatif et utile. Les méthodes non supervisées (NMF en phase 2,
+groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles
+confirment le choix d'un codebook annoté à la main comme référence.
+
+**Reste à faire (dans l'ordre)** : annoter (page Annotate) → `scripts/theme_agreement.py` → remplacer les thèmes par
+listes de mots sur la page Mood → évaluer un classifieur d'émotions et les suggestions du modèle contre l'annotation →
+étendre aux autres catalogues. En parallèle : saisir les contributions documentées (`data/credits/manual_claims.csv`).
+
+---
+
+# Annexe : roadmap v1 (terminée)
+
 
 ## Hypothèses
 

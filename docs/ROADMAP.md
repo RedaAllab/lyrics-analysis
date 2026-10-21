@@ -208,7 +208,7 @@ contributions documentées depuis les livres.
 | Tables de crédits sourcées (schéma D) et vue des désaccords | `scripts/build_credits.py`, `beatles_viz/credits.py`, `data/credits/*.csv`, `data/credits/README.md`, `analysis/credits/lead_vocal_conflicts.csv` | ✅ 1 105 crédits d'œuvre, 3 231 crédits d'enregistrement, 376 personnes. 28 désaccords sur la voix principale entre la liste officielle et MusicBrainz : surtout de granularité (MusicBrainz crédite la partie chantée par McCartney dans *A Day in the Life* ; la liste nomme deux voix principales sur *Love Me Do*). Conservés tous les deux, rien n'est tranché |
 | Saisie manuelle des contributions (sources de rang 1 et 2) | `data/credits/manual_sources.csv`, `manual_claims.csv` | 🔶 gabarit et règles prêts ; une seule affirmation saisie (*In My Life*, stylométrie, `interpretation`, confiance faible). Le reste demande les livres : **à faire à la main** |
 | Section « Who wrote it, who sings and plays? » sur la page Song | `render/views.py` | ✅ crédit officiel, affirmations non officielles avec leur source, interprètes et instruments |
-| Codebook de 12 thèmes (définition, inclure, exclure) | `data/themes/codebook.csv` | ✅ CSV plutôt que YAML : aucune dépendance |
+| Codebook de 14 thèmes (définition, inclure, exclure) | `data/themes/codebook.csv` | ✅ CSV plutôt que YAML : aucune dépendance. « Nature et saisons » et « Nourriture et boisson » ajoutés le 21/10/2026 après l'annotation modèle |
 | Page « Annotate » (locale) : paroles, codebook, thèmes multiples, thème principal, sens implicite, note ; suggestions du modèle masquées tant que la chanson n'est pas annotée | `app/annotate_page.py`, `beatles_viz/themes.py`, `data/themes/annotations.csv` | ✅ outil prêt ; **0 chanson annotée** |
 | Suggestions du modèle : similarité MiniLM strophes × descriptions des thèmes ; NMF 12 sujets | `scripts/suggest_themes.py`, `data/themes/suggestions.csv`, `nmf_topics.csv`, `nmf_songs.csv` | ✅ ; à l'œil, souvent à côté (*Within You Without You* n'est pas classée « spiritualité », *Lucy in the Sky* pas « rêve ») : confirme que le modèle ne peut qu'aider |
 | Accord inter-annotateurs et annotateur × modèle (kappa de Cohen par thème) | `scripts/theme_agreement.py`, `analysis/themes/agreement.csv` | ✅ script prêt, à lancer après annotation |
@@ -251,7 +251,7 @@ contributions documentées depuis les livres.
 suggestions MiniLM (top 2) : kappa moyen **0,28** (accord faible), de 0,10 (société) à 0,51 (musique et danse). MiniLM
 surestime « identité », « nostalgie », « solitude » et « chagrin », sous-estime « société », « spiritualité », « rêve »
 et « désir » : il lit le vocabulaire affectif, pas le propos. Lacunes du codebook relevées : la nature et les saisons,
-la nourriture. Prochaine mesure, la seule qui valide : humain × Claude, dès qu'une annotation humaine existe.
+la nourriture, ajoutées depuis (8 chansons recodées ; kappa moyen inchangé à 0,28). Prochaine mesure, la seule qui valide : humain × Claude, dès qu'une annotation humaine existe.
 
 **Leçon** : le résultat le plus net de la phase 3 est négatif et utile. Les méthodes non supervisées (NMF en phase 2,
 groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles

@@ -24,12 +24,12 @@ Blue Jay Way,claude-opus-5.5 (model),loneliness;friendship,loneliness,False,wait
 Can You Take Me Back?,claude-opus-5.5 (model),nostalgia;loneliness,nostalgia,False,,2026-10-21
 Can't Buy Me Love,claude-opus-5.5 (model),love_devotion;society,love_devotion,False,love against money,2026-10-21
 Carry That Weight,claude-opus-5.5 (model),self,self,False,a burden carried,2026-10-21
-Child of Nature,claude-opus-5.5 (model),spirituality;nostalgia,spirituality,False,,2026-10-21
+Child of Nature,claude-opus-5.5 (model),nature;spirituality;nostalgia,nature,False,,2026-10-21
 Christmas Time (Is Here Again),claude-opus-5.5 (model),music_fun;friendship,music_fun,False,seasonal greetings,2026-10-21
 Come Together,claude-opus-5.5 (model),characters;dream,characters,True,cryptic portrait,2026-10-21
 Cry Baby Cry,claude-opus-5.5 (model),dream;characters,dream,False,,2026-10-21
 Day Tripper,claude-opus-5.5 (model),heartbreak;desire,heartbreak,True,teasing double meanings about a fickle woman,2026-10-21
-Dear Prudence,claude-opus-5.5 (model),friendship;spirituality,friendship,False,,2026-10-21
+Dear Prudence,claude-opus-5.5 (model),friendship;spirituality;nature,friendship,False,,2026-10-21
 Dig It,claude-opus-5.5 (model),music_fun;society,music_fun,False,studio jam,2026-10-21
 Dig a Pony,claude-opus-5.5 (model),dream;love_devotion,dream,False,,2026-10-21
 Do You Want to Know a Secret,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
@@ -52,7 +52,7 @@ Getting Better,claude-opus-5.5 (model),self;love_devotion,self,True,optimism und
 Girl,claude-opus-5.5 (model),heartbreak;characters;society,heartbreak,True,last verse questions the ethic of suffering,2026-10-21
 Glass Onion,claude-opus-5.5 (model),music_fun;dream,music_fun,True,false clues about earlier songs,2026-10-21
 Golden Slumbers,claude-opus-5.5 (model),nostalgia;dream,nostalgia,False,lullaby and lost home,2026-10-21
-Good Day Sunshine,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Good Day Sunshine,claude-opus-5.5 (model),love_devotion;nature,love_devotion,False,,2026-10-21
 Good Morning Good Morning,claude-opus-5.5 (model),society;characters,society,False,tedium of daily life,2026-10-21
 Good Night,claude-opus-5.5 (model),dream;friendship,dream,False,lullaby,2026-10-21
 Got to Get You into My Life,claude-opus-5.5 (model),love_devotion;self,love_devotion,True,another kind of mind: not only a lover,2026-10-21
@@ -62,7 +62,7 @@ Hello Little Girl,claude-opus-5.5 (model),desire,desire,False,courting a girl wh
 Help!,claude-opus-5.5 (model),self;loneliness;nostalgia,self,False,loss of self-assurance,2026-10-21
 Helter Skelter,claude-opus-5.5 (model),desire;music_fun,desire,False,,2026-10-21
 Her Majesty,claude-opus-5.5 (model),desire;characters,desire,True,a crush on the Queen,2026-10-21
-Here Comes the Sun,claude-opus-5.5 (model),self,self,False,renewal; codebook gap: nature and seasons,2026-10-21
+Here Comes the Sun,claude-opus-5.5 (model),nature;self,nature,False,the return of the sun after winter,2026-10-21
 "Here, There and Everywhere",claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
 Hey Bulldog,claude-opus-5.5 (model),friendship;loneliness;dream,friendship,False,,2026-10-21
 Hey Jude,claude-opus-5.5 (model),friendship;love_devotion;self,friendship,False,encouragement,2026-10-21
@@ -123,7 +123,7 @@ Maxwell's Silver Hammer,claude-opus-5.5 (model),characters;society,characters,Tr
 Mean Mr. Mustard,claude-opus-5.5 (model),characters,characters,False,,2026-10-21
 Michelle,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
 Misery,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
-Mother Nature's Son,claude-opus-5.5 (model),self;music_fun,self,False,codebook gap: nature,2026-10-21
+Mother Nature's Son,claude-opus-5.5 (model),nature;self;music_fun,nature,False,codebook gap: nature,2026-10-21
 No Reply,claude-opus-5.5 (model),heartbreak,heartbreak,False,"jealousy, lies",2026-10-21
 Norwegian Wood (This Bird Has Flown),claude-opus-5.5 (model),characters;desire,characters,True,"veiled affair, ambiguous ending",2026-10-21
 Not Guilty,claude-opus-5.5 (model),self;society,self,False,,2026-10-21
@@ -141,14 +141,14 @@ Penny Lane,claude-opus-5.5 (model),nostalgia;characters,nostalgia,False,,2026-10
 Piggies,claude-opus-5.5 (model),society,society,False,,2026-10-21
 Please Please Me,claude-opus-5.5 (model),desire;heartbreak,desire,True,sexual double meaning in the request,2026-10-21
 Polythene Pam,claude-opus-5.5 (model),characters;desire,characters,False,,2026-10-21
-Rain,claude-opus-5.5 (model),spirituality;society,spirituality,False,weather as a state of mind,2026-10-21
+Rain,claude-opus-5.5 (model),spirituality;society;nature,spirituality,False,weather as a state of mind,2026-10-21
 Real Love,claude-opus-5.5 (model),love_devotion;self,love_devotion,False,,2026-10-21
 Revolution,claude-opus-5.5 (model),society;self,society,False,,2026-10-21
 Revolution 1,claude-opus-5.5 (model),society;self,society,False,,2026-10-21
 Rocky Raccoon,claude-opus-5.5 (model),characters;heartbreak,characters,False,,2026-10-21
 Run for Your Life,claude-opus-5.5 (model),heartbreak,heartbreak,False,jealousy taken to a death threat,2026-10-21
 Save the Last Dance for Me,claude-opus-5.5 (model),love_devotion;desire;music_fun,love_devotion,False,,2026-10-21
-Savoy Truffle,claude-opus-5.5 (model),friendship,friendship,False,codebook gap: food and its pleasures,2026-10-21
+Savoy Truffle,claude-opus-5.5 (model),food;friendship,food,False,sweets and their price,2026-10-21
 Sexy Sadie,claude-opus-5.5 (model),characters;spirituality;society,characters,True,a disguised target,2026-10-21
 Sgt. Pepper's Lonely Hearts Club Band,claude-opus-5.5 (model),music_fun;characters,music_fun,False,,2026-10-21
 Sgt. Pepper's Lonely Hearts Club Band (Reprise),claude-opus-5.5 (model),music_fun,music_fun,False,,2026-10-21
@@ -187,7 +187,7 @@ Wait,claude-opus-5.5 (model),love_devotion;loneliness,love_devotion,False,,2026-
 We Can Work It Out,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,a quarrel to resolve,2026-10-21
 What Goes On,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
 What You're Doing,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
-What's the New Mary Jane,claude-opus-5.5 (model),dream;characters,dream,True,drug allusions,2026-10-21
+What's the New Mary Jane,claude-opus-5.5 (model),dream;characters;food,dream,True,drug allusions,2026-10-21
 When I Get Home,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
 When I'm Sixty-Four,claude-opus-5.5 (model),love_devotion,love_devotion,False,growing old together,2026-10-21
 While My Guitar Gently Weeps,claude-opus-5.5 (model),society;spirituality,society,False,"love left asleep, people bought and sold",2026-10-21

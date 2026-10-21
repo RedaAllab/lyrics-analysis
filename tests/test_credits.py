@@ -1,8 +1,10 @@
 # Strings copied from the official song list (metadata, not lyrics).
+import pandas as pd
 import pytest
 
 from beatles_viz.attribution import lead_members
-from beatles_viz.credits import is_archival, release_note, vocal_credit, writer_credit
+from beatles_viz.credits import (is_archival, lead_vocal_conflicts, person_id, release_note, song_performers,
+                                 vocal_credit, writer_credit)
 
 VOCALS = ["Harrison", "Harrison; McCartney", "Lennon; (with Harrison)", "Lennon; (with McCartney; and Harrison)",
           "Lennon; (with Yoko Ono)", "Lennon; McCartney; Harrison; Eric Morecambe; Ernie Wise", "Lennon; and McCartney",
@@ -55,3 +57,24 @@ def test_release_note_and_archives():
     assert release_note("Revolver") == ""
     assert is_archival("Anthology 1") and is_archival("The Beatles: Get Back")
     assert is_archival("The Beatles", "2018 Deluxe Edition") and not is_archival("Abbey Road")
+
+
+def test_person_id_keeps_the_producer_apart():
+    assert [person_id(n) for n in ["John Lennon", "Starkey", "Ringo Starr", "George Harrison", "George Martin",
+                                   "Billy Preston"]] == ["lennon", "starr", "starr", "harrison", "george_martin",
+                                                         "billy_preston"]
+
+
+def test_conflicts_and_performers():
+    perf = pd.DataFrame([
+        ("A", "lennon", "lead_vocal", "", "list"), ("A", "mccartney", "lead_vocal", "", "mb"),
+        ("A", "mccartney", "instrument", "bass guitar", "mb"), ("A", "george_martin", "producer", "", "mb"),
+        ("B", "harrison", "lead_vocal", "", "list"), ("B", "harrison", "lead_vocal", "", "mb"),
+        ("C", "starr", "lead_vocal", "", "list")],
+        columns=["title", "person_id", "role", "detail", "source_id"])
+    conflicts = lead_vocal_conflicts(perf)
+    assert conflicts.title.tolist() == ["A"] and conflicts.iloc[0]["mb"] == "mccartney"
+    people = pd.DataFrame({"person_id": ["lennon", "mccartney"], "name": ["John Lennon", "Paul McCartney"]})
+    table = song_performers(perf, people, "A")
+    assert table.person.tolist() == ["John Lennon", "Paul McCartney"]
+    assert table.what.iloc[1] == "lead vocal, bass guitar" and table.sources.iloc[1] == "mb"

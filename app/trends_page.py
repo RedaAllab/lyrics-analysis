@@ -53,6 +53,21 @@ plot(charts.voice_shares(voices, counts))
 st.caption("Lead voice is read from the credits; “Shared” means several lead singers. "
            f"{PHASES[0][0]} has {counts.iloc[0]} songs, so a single song moves it by several points.")
 
+TELLING = {"he / she / they": ("third_person", "per 100 words"), "past words": ("past", "per 100 words"),
+           "future words": ("future", "per 100 words"), "questions": ("questions", "per 100 lines"),
+           "orders and pleas": ("orders", "per 100 lines")}
+telling = {k: v for k, v in TELLING.items() if v[0] in d and d[v[0]].notna().any()}
+if telling:
+    st.subheader("Do the songs tell differently?")
+    label = st.radio("Marker", list(telling), horizontal=True, key="trend_telling")
+    col, unit = telling[label]
+    plot(charts.phase_strip(d.assign(**{col: 100 * d[col]}), col, f"{label}, {unit}",
+                            f"{label.capitalize()}, period by period"))
+    st.caption("Word lists and line rules (beatles_viz/text/narrative.py), no grammar: past words are “was”, “said”, "
+               "regular “-ed” forms…; an order is a line opening on “come”, “help”, “don't”, “let's”…; a question is a "
+               "line ending in a question mark in the transcription. Rough markers: a song can tell a story in the "
+               "present.")
+
 if "sem_early" in d and d.sem_early.notna().any():
     st.subheader("Do the songs move away from their first subjects?")
     plot(charts.phase_strip(d, "sem_early", f"closeness in meaning to the {PHASES[0][0]} songs",

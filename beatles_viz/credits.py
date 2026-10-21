@@ -3,8 +3,11 @@ split into members and other people. These are official credits only: "Lennon–
 wrote the song, and nothing here says who actually wrote what (see docs/ROADMAP.md, v2)."""
 import re
 
-from beatles_viz.config import MEMBERS
+import pandas as pd
 
+from beatles_viz.config import MEMBER_PATTERNS, MEMBERS, ROOT
+
+CREDITS_DIR = ROOT / "data/credits"  # tables built by scripts/build_credits.py
 ALIASES = {"Starkey": "Starr"}  # Richard Starkey is credited under his real name
 NON_SINGERS = {"Sound Collage", "–", "-", ""}
 # Releases put out decades after the band years: their `year` is the year of the session or demo, not of release.
@@ -76,3 +79,44 @@ def credit_columns(row):
     archival = is_archival(row["album"], note)
     return {**writer_credit(row["songwriters"]), **vocal_credit(row["lead_vocal"]), "release_note": note,
             "is_archival": archival, "year_basis": "recording" if archival else "release"}
+
+
+def person_id(name):
+    """'John Lennon', 'Lennon' -> 'lennon'; 'Ringo Starr', 'Starkey' -> 'starr'; anyone else: a slug of the name.
+    A member's first name only counts with the surname or alone ('George Martin' is the producer)."""
+    name = str(name).strip()
+    for m, pattern in MEMBER_PATTERNS.items():
+        if pattern.search(name):
+            return m.lower()
+    return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+
+
+def load_table(name, path=None):
+    """One credit table (source, person, recording, work_credit, performance_credit); empty when not built."""
+    path = path or CREDITS_DIR / f"{name}.csv"
+    return pd.read_csv(path, keep_default_na=False) if path.exists() else pd.DataFrame()
+
+
+def lead_vocal_conflicts(perf):
+    """Songs where two sources name different lead singers. One row per song: each source's singers."""
+    lead = perf[perf.role == "lead_vocal"]
+    by = lead.groupby(["title", "source_id"]).person_id.agg(lambda p: "; ".join(sorted(set(p)))).unstack()
+    if by.shape[1] < 2:
+        return pd.DataFrame(columns=["title"])
+    by = by.dropna()
+    return by[by.nunique(axis=1) > 1].reset_index()
+
+
+def song_performers(perf, people, title):
+    """Who sings and plays on the song's recording, one row per person: roles and instruments, with sources."""
+    d = perf[(perf.title == title) & perf.role.isin(["lead_vocal", "backing_vocal", "vocal", "instrument"])]
+    if d.empty:
+        return d
+    names = dict(zip(people.person_id, people.name))
+    d = d.assign(what=d.role.str.replace("_", " ").where(d.role != "instrument", d.detail))
+    g = d.groupby("person_id").agg(what=("what", lambda w: ", ".join(dict.fromkeys(x for x in w if x))),
+                                    sources=("source_id", lambda s: ", ".join(sorted(set(s)))))
+    g.insert(0, "person", g.index.map(lambda p: names.get(p, p)))
+    order = {m.lower(): i for i, m in enumerate(MEMBERS)}
+    return g.reset_index().sort_values("person_id", key=lambda s: s.map(lambda p: order.get(p, 9))).drop(
+        columns="person_id").reset_index(drop=True)

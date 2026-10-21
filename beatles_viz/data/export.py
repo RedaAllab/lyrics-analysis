@@ -7,7 +7,7 @@ from beatles_viz.text.context import to_lists
 from beatles_viz.text.semantic import SEMANTIC_COLS
 
 PUBLIC_COLS = ["title", "year", "release_core", "songwriters", "lead_vocal", "is_original", "tokens", "types",
-               "mattr", "repeat_ratio", "hapax", "repetition_score", "valence_ctx", "mood_lines", *STRUCTURE_COLS]
+               "mattr", "repeat_ratio", "hapax", "repetition_score", "valence_ctx", "mood_lines", "questions", "orders", *STRUCTURE_COLS]
 
 
 def public_table(corpus):

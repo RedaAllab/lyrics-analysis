@@ -1,6 +1,7 @@
 """Mood and themes across the catalogue, from word counts only (works without the lyrics)."""
 import streamlit as st
 
+from beatles_viz import themes as T
 from beatles_viz.config import PHASE_ORDER, VOICE_ORDER
 from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
@@ -51,3 +52,18 @@ st.caption(f"Mood: average valence of the song's words in the VADER lexicon (Hut
            f"Word counts only, so negation and irony are missed (“don't cry” counts as sad); interjections such as "
            f"“yeah” or “no” are ignored. {len(corpus) - len(scored)} songs with fewer than 5 mood words have no score. "
            "Themes: short hand-made word lists (see beatles_viz/text/mood.py).")
+
+st.subheader("Themes annotated by hand")
+annotations = T.load_annotations()
+if annotations.empty:
+    st.info("No song annotated yet. The themes above come from word lists; hand annotations with the codebook "
+            "(data/themes/codebook.csv, Annotate page on a computer with the lyrics) will replace them here.")
+else:
+    codebook = T.load_codebook()
+    annotator = st.selectbox("Annotator", sorted(annotations.annotator.unique()), key="mood_annotator")
+    matrix = T.theme_matrix(annotations, annotator, codebook.theme)
+    matrix = matrix[matrix.index.isin(corpus.title)]
+    plot(mc.annotated_theme_heatmap(matrix, corpus, dict(zip(codebook.theme, codebook.label))))
+    st.caption(f"{len(matrix)} of {len(corpus)} songs annotated by {annotator}. Share of the annotated songs of each "
+               "period that carry the theme; a song can carry several. A period with few annotated songs moves a "
+               "lot with each one.")

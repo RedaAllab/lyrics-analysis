@@ -199,20 +199,38 @@ confusion période × auteur, Harrison et Starr écrivant surtout tard).
 
 ### Phase 2 : enrichissement des données et analyses de fond
 
-- Tables de crédits (schéma D) : `scripts/fetch_credits.py` (MusicBrainz, 1 req/s, enregistrement d'origine), puis
-  saisie manuelle des sources de rang 1 et 2 pour les « Lennon–McCartney ».
-- Codebook thématique (~10 thèmes : définition, exemples, contre-exemples), annotation multi-label des ~210
-  compositions avec champ « sens implicite / ambigu » ; thèmes candidats proposés par NMF et par similarité MiniLM
-  aux définitions ; double annotation d'un échantillon.
-- Indicateurs narratifs : je / tu / nous, interlocuteur, personnages nommés, impératifs, questions, temps.
-- **Fichiers** : `data/credits/*.csv`, `beatles_viz/credits.py`, `data/themes/codebook.yaml`,
-  `data/themes/annotations.csv`, `text/narrative.py`, `scripts/embed_songs.py`, `app/mood_page.py`,
-  `app/voice_page.py`.
-- **Dépendances** : `requests` ; spaCy optionnel (extra `nlp`).
-- **Critères** : chaque crédit enrichi a une source et une confiance ; kappa de Cohen ≥ 0,6 sur les thèmes ; accord
-  modèle / annotation mesuré et publié.
-- **Risques** : temps d'annotation ; sources primaires contradictoires (stockées, pas tranchées) ; qualité inégale
-  de MusicBrainz.
+**Statut** : outillage fait le 21/10/2026 ; reste l'annotation des thèmes (travail humain) et la saisie des
+contributions documentées depuis les livres.
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Collecte MusicBrainz (édition originale, puis recherche par titre ; cache local, 1 req/s, relances sur 503) | `scripts/fetch_credits.py`, `data/credits/mb_*.csv` | ✅ 266 des 272 chansons associées à un enregistrement, 249 avec interprètes et instruments ; 6 sans enregistrement trouvé (jams de *Get Back*, *Suzy Parker*, *Save the Last Dance for Me*), listées dans `mb_missing.csv` |
+| Tables de crédits sourcées (schéma D) et vue des désaccords | `scripts/build_credits.py`, `beatles_viz/credits.py`, `data/credits/*.csv`, `data/credits/README.md`, `analysis/credits/lead_vocal_conflicts.csv` | ✅ 1 105 crédits d'œuvre, 3 231 crédits d'enregistrement, 376 personnes. 28 désaccords sur la voix principale entre la liste officielle et MusicBrainz : surtout de granularité (MusicBrainz crédite la partie chantée par McCartney dans *A Day in the Life* ; la liste nomme deux voix principales sur *Love Me Do*). Conservés tous les deux, rien n'est tranché |
+| Saisie manuelle des contributions (sources de rang 1 et 2) | `data/credits/manual_sources.csv`, `manual_claims.csv` | 🔶 gabarit et règles prêts ; une seule affirmation saisie (*In My Life*, stylométrie, `interpretation`, confiance faible). Le reste demande les livres : **à faire à la main** |
+| Section « Who wrote it, who sings and plays? » sur la page Song | `render/views.py` | ✅ crédit officiel, affirmations non officielles avec leur source, interprètes et instruments |
+| Codebook de 12 thèmes (définition, inclure, exclure) | `data/themes/codebook.csv` | ✅ CSV plutôt que YAML : aucune dépendance |
+| Page « Annotate » (locale) : paroles, codebook, thèmes multiples, thème principal, sens implicite, note ; suggestions du modèle masquées tant que la chanson n'est pas annotée | `app/annotate_page.py`, `beatles_viz/themes.py`, `data/themes/annotations.csv` | ✅ outil prêt ; **0 chanson annotée** |
+| Suggestions du modèle : similarité MiniLM strophes × descriptions des thèmes ; NMF 12 sujets | `scripts/suggest_themes.py`, `data/themes/suggestions.csv`, `nmf_topics.csv`, `nmf_songs.csv` | ✅ ; à l'œil, souvent à côté (*Within You Without You* n'est pas classée « spiritualité », *Lucy in the Sky* pas « rêve ») : confirme que le modèle ne peut qu'aider |
+| Accord inter-annotateurs et annotateur × modèle (kappa de Cohen par thème) | `scripts/theme_agreement.py`, `analysis/themes/agreement.csv` | ✅ script prêt, à lancer après annotation |
+| Thèmes annotés par période sur la page Mood | `app/mood_page.py`, `viz/mood_charts.py` | ✅ s'affiche dès qu'une annotation existe |
+| Indicateurs narratifs : 3e personne, passé, futur, personnages nommés (sac de mots) ; questions, ordres (lignes, exportés) | `text/narrative.py`, `corpus.py`, `data/export.py` | ✅ graphique « How it tells » (page Song), section « Do the songs tell differently? » (Trends) |
+
+**Décisions**
+
+- Indicateurs narratifs par listes de mots et règles de ligne plutôt que spaCy : transparents, sans dépendance,
+  suffisants pour comparer des chansons. Limites affichées : pas de grammaire, questions dépendantes de la
+  ponctuation de la transcription.
+- Les thèmes du modèle ne sont jamais affichés comme résultat dans l'app : seulement dans la page Annotate, après la
+  décision de l'annotateur.
+- `valence` reste la mesure d'humeur principale tant que l'annotation n'a pas permis de comparer les deux lectures.
+
+**Prochaines étapes (humaines)**
+
+1. Annoter les ~209 compositions (page Annotate), idéalement à deux sur un échantillon de 40 chansons pour mesurer
+   l'accord (objectif : kappa ≥ 0,6 par thème ; sinon préciser le codebook).
+2. Lancer `python scripts/theme_agreement.py`, puis remplacer les thèmes par listes de mots.
+3. Saisir dans `manual_claims.csv` les attributions documentées (Lewisohn, MacDonald, Everett ; entretiens Sheff et
+   Miles), page citée, une ligne par source, conflits conservés.
 
 ### Phase 3 : exploratoire
 

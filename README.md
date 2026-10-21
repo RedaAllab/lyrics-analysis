@@ -45,7 +45,8 @@ beatles_viz/          Python package
   config.py           paths, phases, thresholds, colours
   corpus.py           build_corpus / load_corpus / analysable
   attribution.py      voice -> effect rule
-  credits.py          official credits split into members and other people
+  credits.py          official credits split into members and other people; credit tables (data/credits)
+  themes.py           hand-annotated themes (data/themes): codebook, annotations, agreement
   stories.py          the findings shown in "Stories"
   data/               loader.py (local/public), export.py (lyrics-free export)
   text/               tokenisation, sections, metrics, mood, repetition, semantics
@@ -56,7 +57,7 @@ beatles_viz/          Python package
 scripts/              offline data building and analyses
 tests/                pytest, synthetic lyrics only
 analysis/             generated tables and figures (no lyrics); artists/README.md describes the method
-data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/ (the rest is git-ignored)
+data/                 beatles_songs.csv, youtube.csv, section_times.csv, public/, credits/, themes/ (the rest is git-ignored)
 docs/                 ROADMAP.md (v2: thematic analysis and credits), AUDIT_UX.md, PRODUCT_IDEAS.md: working notes (in French)
 ```
 
@@ -90,6 +91,8 @@ BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # as in GitHub Actions CI: tests that n
 | Public lyrics-free file | `scripts/export_public.py` |
 | Official YouTube IDs | `scripts/youtube_ids.py` |
 | Tables and figures | `scripts/analyse_beatles.py`, `scripts/compare_artists.py`, `scripts/audit_dataset.py` |
+| Credits from MusicBrainz, then the sourced credit tables (see `data/credits/README.md`) | `scripts/fetch_credits.py`, `scripts/build_credits.py` |
+| Theme suggestions (local, nlp extra), agreement once songs are annotated on the Annotate page | `scripts/suggest_themes.py`, `scripts/theme_agreement.py` |
 
 ## Known limitations
 

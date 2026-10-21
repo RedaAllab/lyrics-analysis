@@ -40,7 +40,8 @@ st.navigation({
         st.Page(HERE / "album_page.py", title="Albums", icon=":material/album:", url_path="albums"),
         st.Page(HERE / "stories_page.py", title="Stories", icon=":material/auto_stories:", url_path="stories"),
         st.Page(HERE / "trends_page.py", title="Trends", icon=":material/trending_up:", url_path="trends"),
-        *([st.Page(HERE / "journal_page.py", title="My songs", icon=":material/favorite:", url_path="mine")]
+        *([st.Page(HERE / "journal_page.py", title="My songs", icon=":material/favorite:", url_path="mine"),
+           st.Page(HERE / "annotate_page.py", title="Annotate", icon=":material/label:", url_path="annotate")]
           if personal.enabled() else []),
     ],
     "Go further": [

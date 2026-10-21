@@ -21,7 +21,7 @@ st.markdown('<p class="lx-lead">Structure, repetitions, vocabulary and voices of
             f'{len(originals)} original compositions, song by song or across the whole catalogue.</p>',
             unsafe_allow_html=True)
 
-search, surprise = st.columns([4, 1], vertical_alignment="bottom")
+search, surprise = st.columns([7, 3], vertical_alignment="bottom")
 titles = originals.sort_values("title").title.tolist()
 choice = search.selectbox("Search a song", titles, index=None, placeholder="Type a title…",
                           label_visibility="collapsed")

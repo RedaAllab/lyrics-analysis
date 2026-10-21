@@ -78,7 +78,7 @@ else:
     show = conflicts.rename(columns=cols)
     for col in cols.values():
         if col in show:
-            show[col] = show[col].map(lambda s: ", ".join(names.get(p, p) for p in str(s).split("; ")))
+            show[col] = show[col].map(lambda s: ", ".join(names.get(p, p) for p in str(s).split("; ") if p))
     song_table(show, "credits_conflicts", {"title": "Title"})
 evidence("descriptive")
 st.caption("All are kept: the list gives one lead per song without saying which version; MusicBrainz credits the "

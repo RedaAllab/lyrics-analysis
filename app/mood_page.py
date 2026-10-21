@@ -67,10 +67,13 @@ else:
     matrix = T.theme_matrix(annotations, annotator, codebook.theme)
     matrix = matrix[matrix.index.isin(corpus.title)]
     plot(mc.annotated_theme_heatmap(matrix, corpus, dict(zip(codebook.theme, codebook.label))))
-    evidence("descriptive")
+    by_model = T.is_model(annotator)
+    evidence("exploratory" if by_model else "descriptive")
     st.caption(f"{len(matrix)} of {len(corpus)} songs annotated by {annotator}. Share of the annotated songs of each "
                "period that carry the theme; a song can carry several. A period with few annotated songs moves a "
-               "lot with each one.")
+               "lot with each one."
+               + (" This annotation was made by a language model reading the lyrics with the codebook, not by a "
+                  "person: a second coder to measure agreement against, not the reference." if by_model else ""))
 
 if T.STANZA_TOPICS_PATH.exists() and T.STANZA_SONGS_PATH.exists():
     st.subheader("Stanzas that resemble each other")

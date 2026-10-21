@@ -4,8 +4,8 @@ data/credits/mb_credit.csv; scripts/build_credits.py merges them into the credit
 
 For each release of the corpus (column album), the official edition whose tracks match the most corpus titles (then
 carry the most relationships) is read among the earliest ones; songs are matched by normalised title. Songs not
-found there (singles, Past Masters, archives) are looked up one by one: among the Beatles recordings with that title,
-the one with the most relationships. Remasters carry no relationships in MusicBrainz, original editions do. Responses are cached in data/credits/mb_cache/ (git-ignored), so a second run
+found there, or found without any credit (singles, Past Masters, archives), are looked up one by one: among the
+Beatles recordings with that title first released around the song's year, the one with the most relationships. Remasters carry no relationships in MusicBrainz, original editions do. Responses are cached in data/credits/mb_cache/ (git-ignored), so a second run
 makes no request. MusicBrainz asks for at most one request per second and a descriptive User-Agent.
 Run: python scripts/fetch_credits.py"""
 import json
@@ -72,7 +72,7 @@ def release_groups(album):
     return out
 
 
-def best_release(rg_ids, wanted, tries=8):
+def best_release(rg_ids, wanted, tries=15):
     """Among the earliest official editions, the one whose tracks match the most wanted titles, then carry the
     most relationships (original pressings do, remasters do not)."""
     best, best_key = None, (-1, -1)
@@ -88,17 +88,27 @@ def best_release(rg_ids, wanted, tries=8):
     return best
 
 
-def lookup_recording(title, candidates=5):
-    """A song outside the album releases: among the Beatles recordings with that title, the one with the most
-    relationships, with a release to name it by."""
-    found = get("recording", query=f'recording:"{title}" AND arid:{BEATLES} AND status:official', limit=25)
+def lookup_recording(title, year=None, candidates=10):
+    """The song's own recordings: among the Beatles recordings with that title (first released within a year of the
+    song's year when it is known), the one with the most relationships, with a release to name it by."""
+    query = f'recording:"{title}" AND arid:{BEATLES} AND status:official'
+    if year:
+        query += f" AND firstreleasedate:[{int(year) - 1} TO {int(year) + 1}]"
+    found = get("recording", query=query, limit=25)
     found = [r for r in found["recordings"] if norm(r["title"]) == norm(title)][:candidates]
+    if not found and year:  # nothing that early: any date
+        return lookup_recording(title, None, candidates)
     best, best_n = None, -1
     for r in found:
         d = get(f"recording/{r['id']}", inc="artist-rels+work-rels+work-level-rels+releases")
         if len(d.get("relations", [])) > best_n:
             best, best_n = d, len(d.get("relations", []))
     return best
+
+
+def credited(recording):
+    """Number of artist relationships (players, singers, producers) on a recording."""
+    return sum(r.get("target-type") == "artist" for r in recording.get("relations", []))
 
 
 def rows_for(title, album, release, track):
@@ -133,18 +143,19 @@ def main():
         rgs = release_groups(album)
         release = best_release(rgs, wanted) if rgs else None
         tracks = {norm(t["title"]): t for m in (release or {}).get("media", []) for t in m["tracks"]}
-        for title in songs.title:
+        for title, year in zip(songs.title, songs.year):
             track = tracks.get(norm(title))
             source = release
-            if track is None:  # not on the album release: the song's own recordings
-                rec = lookup_recording(title)
-                if rec is None:
+            if track is None or not credited(track["recording"]):  # not on the release, or credited nowhere there
+                rec = lookup_recording(title, year)
+                if rec is not None and (track is None or credited(rec) > credited(track["recording"])):
+                    first = min(rec.get("releases") or [{}], key=lambda r: r.get("date") or "9999")
+                    track = {"title": rec["title"], "recording": rec}
+                    source = {"id": first.get("id", ""), "date": first.get("date", ""),
+                              "country": first.get("country", "")}
+                elif track is None:
                     missing.append({"title": title, "album": album, "reason": "no matching recording"})
                     continue
-                first = (rec.get("releases") or [{}])[0]
-                track, source = {"title": rec["title"], "recording": rec}, {"id": first.get("id", ""),
-                                                                            "date": first.get("date", ""),
-                                                                            "country": first.get("country", "")}
             rec, cr = rows_for(title, album, source, track)
             recordings.append(rec)
             credits += cr

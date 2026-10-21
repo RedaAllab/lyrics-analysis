@@ -78,7 +78,6 @@ danny_moss,Danny Moss,False,b6f5ae14-bf17-4ad5-bc91-cf8aa94e4127
 dave_harries,Dave Harries,False,21a49119-f4ee-4fcf-9b5e-5f653113e977
 dave_siddle,Dave Siddle,False,a13515c5-7a77-4da8-8f33-1e5bf5636560
 david_glyde,David Glyde,False,d5179e09-bf4f-4955-a523-682cc9b3605f
-david_lloyd,David Lloyd,False,7ad4672f-e95c-49f6-9b10-08358bb877c7
 david_mason,David Mason,False,d7e98dcd-3b72-4ac0-a7e6-80ea7f16b2fd
 david_mccallum,David McCallum,False,7d5f46b0-7d2f-4c19-82a8-f27a20023ef1
 david_sanderman,David Sanderman,False,8c1754cd-208a-461e-bc0f-2dc0dcdf9ed9
@@ -135,6 +134,7 @@ giles_martin,Giles Martin,False,e71872c6-d390-4da0-a0da-4726a05c9a85
 glyn_johns,Glyn Johns,False,9bea300f-ad94-4c0b-b0e2-f41776b53af0
 gordon_lewin,Gordon Lewin,False,28bcefb6-ea96-450d-9cce-f36f0c86b2fe
 gordon_pearce,Gordon Pearce,False,9540459a-6912-4037-964b-dd7e4acc478a
+graham_kirkby,Graham Kirkby,False,6f64fe58-fa6d-4cc7-86ba-d98123c57087
 graham_nash,Graham Nash,False,2ed8ecda-5bb9-4d9f-8c99-0bf9b85b3624
 granville_jones,Granville Jones,False,7ad92f75-40dd-4bce-b0ab-109ac69f8a02
 greg_bowen,Greg Bowen,False,fa24f3fb-e813-4ef2-bbdc-56239b2349b3
@@ -214,6 +214,7 @@ ken_essex,Ken Essex,False,122e6eea-9393-4d12-b72f-8ba011974543
 ken_scott,Ken Scott,False,bca0229a-dbd3-4f4a-84ae-b40d87fbcde3
 ken_townsend,Ken Townsend,False,92d323e6-6a66-4d97-aea4-45b95acb3eaa
 kenneth_casey,Kenneth Casey,False,97200491-b41c-4c6e-b3bc-3eaefc14c92b
+kenneth_essex,Kenneth Essex,False,43ae16e3-7f9d-446e-8516-41026fabf998
 kent_westberry,Kent Westberry,False,89e5332c-bcba-4cfc-b5ee-d4262073e4d3
 larry_williams,Larry Williams,False,78926ef1-69ee-4a37-9379-e55e6ca14928
 lee_dorsey,Lee Dorsey,False,
@@ -265,6 +266,7 @@ morris_miller,Morris Miller,False,17111e8b-c622-453e-a435-449cdc0588c3
 mort_shuman,Mort Shuman,False,
 neil_aspinall,Neil Aspinall,False,aada1ac9-37cf-4fc0-af06-b2ed0bd99670
 neill_sanders,Neill Sanders,False,79daa7bd-0989-454c-9525-8765418ee175
+nicky_hopkins,Nicky Hopkins,False,6cbe7f39-d487-42e2-8722-23dc2332ea95
 norman_jones,Norman Jones,False,17ee462b-d251-40f6-96dd-8605114e851a
 norman_lederman,Norman Lederman,False,a0a8bd2f-3653-412f-819e-e1e563d61d54
 norman_smith,Norman Smith,False,3c4092d7-0b4b-4cc1-8098-eb2ebb43a1ca
@@ -330,7 +332,6 @@ roy_young,Roy Young,False,e36b3991-b6c3-43ca-a526-271c59aead1b
 rudolph_isley,Rudolph Isley,False,4ea2e016-183d-4225-b5ea-6df98e926f38
 ruth_roberts,Ruth Roberts,False,eed95a51-77b2-4679-af5d-cf9ab29fdf14
 s_r_kenkari,S.R. Kenkari,False,8484c63a-625a-49d8-bfea-b7fc0392f4c3
-sam_okell,Sam Okell,False,6cd64b88-0eba-4fbc-9b31-6b5effa3c2be
 sansom,Sansom,False,
 shambu_das,Shambu-Das,False,7bbfbb68-95b6-4b08-b711-b489e75b0009
 sharad_jadev,Sharad Jadev,False,93691e55-baea-4ff4-bb4d-29bf0d1e5707
@@ -364,7 +365,7 @@ tony_fisher,Tony Fisher,False,2136b56c-2bb4-42d1-8a6b-83fc646a55d1
 tony_gilbert,Tony Gilbert,False,56908419-3ab8-447b-a9da-7165a4f77e28
 tony_sheridan,Tony Sheridan,False,7f9a3245-df19-4681-8314-4a4c1281dc74
 tony_tunstall,Tony Tunstall,False,c06ecd21-42be-4f0e-b903-51cc2d2befc1
-traditional,Traditional,False,
+traditional,[traditional],False,9be7f096-97ec-4615-8957-8d40b5dcbc41
 trevor_williams,Trevor Williams,False,83135ef3-0e42-412c-81af-0122d3e1e340
 tristan_fry,Tristan Fry,False,dded86e1-6f42-4094-9018-e2418b0900c7
 unknown,[unknown],False,125ec42a-7229-4250-afc5-e057484327fe

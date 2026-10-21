@@ -1,7 +1,7 @@
 title,recording_id,person_id,role,detail,source_id,confidence,note
 "Hallelujah, I Love Her So",132e0890-67c6-4ec4-8854-6657f142d6ea,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You'll Be Mine,96787e64-aaa8-426e-a847-c02a997b7109,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-My Bonnie,a139ee10-a57d-467d-a52b-a8ff95947c3a,tony_sheridan,vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,tony_sheridan,vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Nobody's Child,c207eb3b-f103-44b2-8b1d-16e7cfb19e87,tony_sheridan,vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Sweet Georgia Brown,ff17c935-ba1b-4a6e-ab3a-ee5f262bb278,tony_sheridan,vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Why,46d31955-3b0b-4615-bcc7-832c4b666c0b,tony_sheridan,vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -34,8 +34,8 @@ Do You Want to Know a Secret,b3c37580-789c-42d4-a906-ee0cf5cf4649,harrison,lead_
 Don't Bother Me,ae2c5d82-1295-4f2a-8680-8bd42e61281a,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Don't Ever Change,11ac1c09-1cb8-4f48-af3f-129f8b373485,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Don't Ever Change,11ac1c09-1cb8-4f48-af3f-129f8b373485,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-From Me to You,81a35bfe-9ef9-4205-b5b9-3991f47c4137,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-From Me to You,81a35bfe-9ef9-4205-b5b9-3991f47c4137,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Glad All Over,bc8dcdc1-89a6-432c-b233-982c0bd84b85,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Hold Me Tight,47c5356f-b40f-4369-82d4-b0238eb78f6a,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Got a Woman,cdc231b1-1a18-4383-ba60-228321ed5d09,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -43,12 +43,12 @@ I Got to Find My Baby,7a16107f-ca31-4aaa-b2c6-3c458dda3428,lennon,lead_vocal,,wi
 I Just Don't Understand,122cc530-5eec-467c-bafa-8f6a972cbf1e,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Saw Her Standing There,0e04d324-4710-422e-8a4a-1d7362caa5ad,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Wanna Be Your Man,573b70bd-9ac3-4600-8092-00e483046d3e,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I Want to Hold Your Hand,6ba91c09-c1dd-46b2-bfc1-b82f65f76164,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I Want to Hold Your Hand,6ba91c09-c1dd-46b2-bfc1-b82f65f76164,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'll Be on My Way,7d2fc60b-a11f-4c1e-8a06-f91170dcc85b,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'll Be on My Way,7d2fc60b-a11f-4c1e-8a06-f91170dcc85b,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'll Get You,ae676487-8c3e-4311-8487-b284460ad3c3,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'll Get You,ae676487-8c3e-4311-8487-b284460ad3c3,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm Talking About You,1a1e7895-b6c9-49fd-8b74-5dccdc7b99b2,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm in Love,20680f16-6893-4f9a-b24f-710725232af6,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 It Won't Be Long,d51d3d1f-7f92-4a8b-91df-f37c3a93d145,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -72,115 +72,115 @@ Ooh! My Soul,1e793ba0-3a7a-4e76-8220-0fbfb399a618,mccartney,lead_vocal,,wikipedi
 Please Please Me,b720b11f-2c00-4f48-83b9-4aa9d3207e8c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Please Please Me,b720b11f-2c00-4f48-83b9-4aa9d3207e8c,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Roll Over Beethoven,e44e7ccd-3297-48ed-8611-0beb6087d92d,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-She Loves You,b86fcede-bd05-4479-8028-2706dde15e2c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-She Loves You,b86fcede-bd05-4479-8028-2706dde15e2c,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 So How Come (No One Loves Me),73691a9e-5547-4d79-b395-38a219e16e7b,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Some Other Guy,18e2e00f-5946-4353-a7fa-fac8cd7b1f45,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Some Other Guy,18e2e00f-5946-4353-a7fa-fac8cd7b1f45,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Sure to Fall (in Love with You),0eb6f6eb-c99b-4b6d-a63e-88bd3989644e,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Thank You Girl,3766b344-febd-493f-ba7e-ea69475e7ce9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Thank You Girl,3766b344-febd-493f-ba7e-ea69475e7ce9,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 The Honeymoon Song,b6c8df03-01d4-43a3-9fbf-28f675ae2f12,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 There's a Place,ee801ae1-001f-4b9e-9ebc-b2d03b8bf672,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 There's a Place,ee801ae1-001f-4b9e-9ebc-b2d03b8bf672,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Till There Was You,7d61f681-36ea-44cf-9de1-84c0241de96d,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Too Much Monkey Business,88dbf325-455e-49d4-98d0-fe935739aa0a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Twist and Shout,735027a3-d183-42a0-a691-7be6c166df2f,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You Really Got a Hold on Me,4dc2450f-4353-441f-baa4-e3b0d31562fa,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You Really Got a Hold on Me,4dc2450f-4353-441f-baa4-e3b0d31562fa,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Baby's in Black,d7a53cec-1318-495a-ab05-849d2ebc38f8,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Baby's in Black,d7a53cec-1318-495a-ab05-849d2ebc38f8,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Eight Days a Week,9c2b1e21-33f3-4482-813b-c9ea34094a3a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Every Little Thing,32612c83-852f-425b-a48c-b676e0180c69,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Every Little Thing,32612c83-852f-425b-a48c-b676e0180c69,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Everybody's Trying to Be My Baby,170f49f6-33d2-4fa9-bbec-1c22e72eba13,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Honey Don't,2761e565-7bf0-48c4-9bed-0c4069538482,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I Call Your Name,4f534a41-fa48-44b3-952b-6f46caa1dff0,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Don't Want to Spoil the Party,3d657843-a881-467d-9442-bb4494ba95a1,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Don't Want to Spoil the Party,3d657843-a881-467d-9442-bb4494ba95a1,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Forgot to Remember to Forget,1af80694-aad2-4e51-8d46-fe798aa88553,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'll Follow the Sun,00c17e2a-25c3-403b-b584-007feb28d6f2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm a Loser,e1535aec-d9c8-4241-b74a-cfe149aeffba,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Kansas City/Hey-Hey-Hey-Hey!,63b65edc-6feb-4fd2-ab3e-29c55f03b28e,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Leave My Kitten Alone,597b9f58-beed-4ef2-bf2d-f3e19f92a967,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Long Tall Sally,26419d8c-d492-4728-ba1e-a14ae8034dc2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Matchbox,a44874d9-9fef-44e5-8df8-9d3b07f0c2c7,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Mr. Moonlight,6f649d12-e007-477d-b886-4816caeed2c7,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 No Reply,e936441e-ee84-4218-b5be-d4db11e458c5,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Rock and Roll Music,5b84f918-daef-4677-8e46-d830fba0f876,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-She's a Woman,a2a405d2-c372-488d-8d49-c571e03dc31c,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Shout,1583ffa9-b2bf-49dd-b1a8-7827e5549808,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Shout,1583ffa9-b2bf-49dd-b1a8-7827e5549808,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Shout,1583ffa9-b2bf-49dd-b1a8-7827e5549808,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Shout,1583ffa9-b2bf-49dd-b1a8-7827e5549808,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Slow Down,53e6bd6c-3dbb-4958-872a-2f194cd5154f,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 What You're Doing,d0b252a0-a67b-4350-85f0-a7816bba6000,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You Know What to Do,0fe6602b-d692-44d0-bb29-e90252e2806b,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Act Naturally,8c942f11-39e6-42c8-9454-c29a2b75ee76,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Bad Boy,6da39de9-730d-4fb5-b099-39b5dd51e0bd,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Dizzy Miss Lizzy,9e06eb66-e85a-47c5-b95b-f1dc0be28f08,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Drive My Car,81de071c-c003-4f67-b643-71df52ddd0cc,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Drive My Car,81de071c-c003-4f67-b643-71df52ddd0cc,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Girl,b47453d8-f7d0-44c9-afbe-08cf54662276,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm Looking Through You,f7b56517-4357-44a9-a351-a387078e25d5,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-I've Just Seen a Face,792ba225-6ffc-4dda-afbb-b34c484c1e59,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 If I Needed Someone,15bed6d7-5ef7-4fb4-bf43-fa3c88a42abd,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 If You've Got Trouble,f853b9d0-d8ea-4d4b-af1f-ddb96791ec86,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 In My Life,4670caff-59d1-4a26-b26c-35491059756d,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-It's Only Love,ba976061-ed56-44f7-b768-5aa03f04328c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Michelle,a62fac57-e56d-4ec2-9e68-9111c2bab300,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Norwegian Wood (This Bird Has Flown),783e684e-6045-4d07-87d0-3d6ba91238f6,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Nowhere Man,c9497fd9-1027-4d75-804c-ff96f2e8a43c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Run for Your Life,38fe13b2-3091-4b13-99ae-308ece53355c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Tell Me What You See,bbde3cab-67f4-46bd-bec9-c074dd192326,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Tell Me What You See,bbde3cab-67f4-46bd-bec9-c074dd192326,lennon,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,lennon,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 The Word,132eb957-2f11-49d8-858f-b576f93882b9,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Think for Yourself,22cfddd3-1895-497a-973f-2253561c1805,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Wait,ba00d3c5-72c3-41e2-819d-5606a8394c81,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Wait,ba00d3c5-72c3-41e2-819d-5606a8394c81,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 What Goes On,a030f9ee-e8a1-4a6a-8e5d-8983f992977a,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Yesterday,07773f6b-16e4-4c50-8f45-57f6dbc99ab0,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-You Like Me Too Much,a43f6bce-e027-41fa-bb42-787e549cb80a,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You Won't See Me,1debdd11-7222-4dfe-83d3-df03605c7af1,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-You're Going to Lose That Girl,b6494292-6291-43d4-bbee-d2a0e9d9ce82,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You've Got to Hide Your Love Away,c88254f8-7feb-41d9-917e-4322b6ceff35,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 And Your Bird Can Sing,aa0561dd-620c-4ee1-bc59-3e78f61f9526,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Doctor Robert,9de5674f-db98-49d0-bc7a-d5ce048b0966,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -192,8 +192,8 @@ Got to Get You into My Life,2e942ee0-8191-4a04-a789-2d559a08f886,mccartney,lead_
 I Want to Tell You,44cc8631-dc55-43c2-a9c0-f987a06dd3c1,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm Only Sleeping,596fb2f1-afef-4cb3-af5d-0bc6ff54e9c6,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Love You To,70ad83b7-a623-44e5-b136-c9744e7f362d,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Rain,cd36c25c-1208-4deb-8338-496955d97954,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 She Said She Said,9d6ed009-9a63-4076-9053-6ae615a464a2,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Taxman,3f8ea4a1-ecba-427f-b734-ef32ad7797be,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Tomorrow Never Knows,3db1ed20-fff9-491f-a7b1-0ea2f76ff9cd,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -224,7 +224,7 @@ Sgt. Pepper's Lonely Hearts Club Band (Reprise),61f3b135-e4e3-4aad-b25d-14343bfc
 Sgt. Pepper's Lonely Hearts Club Band (Reprise),61f3b135-e4e3-4aad-b25d-14343bfc5999,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 She's Leaving Home,7fe294e9-e2c8-43e9-b0a0-9ff1cba89685,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 She's Leaving Home,7fe294e9-e2c8-43e9-b0a0-9ff1cba89685,lennon,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 The Fool on the Hill,9a42a834-e258-4b05-af58-d71da0f84c0b,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 When I'm Sixty-Four,163cf257-2f13-4766-8bd4-3c4da5351ea1,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 With a Little Help from My Friends,a40d2f44-5ddb-4df4-ae55-1acbfef415ae,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -245,20 +245,20 @@ Glass Onion,053d552a-1718-42d0-82e8-2fdcc2d5b30e,lennon,lead_vocal,,wikipedia_so
 Good Night,27f19d5f-a9dc-4b04-b7ff-54d045c1487c,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Happiness Is a Warm Gun,91f01169-9332-45d5-ae65-6cd9ce31a1e5,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Helter Skelter,8717d821-88ef-4873-bd91-32a0b72ba415,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Hey Jude,c67c0013-77a6-42fc-b280-1209e2c05ca6,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Honey Pie,79eaa087-edbe-43af-b7d2-de06ecf8cd90,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I Will,07c9f1a8-c11f-460e-b8ae-99081f6f6094,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 I'm So Tired,771025ae-7f9e-4f76-8aa4-ccfec40f218c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Julia,dda183c0-8697-49fa-a971-6632e6a8c31c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Junk,8641667c-3b3c-49e0-88c3-4be7e6d1ee93,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 "Long, Long, Long",87031e7c-f9a2-43c6-b123-93601643e49a,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Martha My Dear,291758ed-60eb-4192-92af-367b1c754745,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Mother Nature's Son,cf147cd0-8e0a-43ee-82f1-cc3fbe666d88,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Not Guilty,3d624fa0-be24-48ec-9174-1afa7439647c,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 "Ob-La-Di, Ob-La-Da",5118f7b4-eafc-491a-9158-ee646dff2236,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Piggies,9506a3df-d210-43ba-9d50-30bf45e650ae,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Revolution,fc84e72e-5552-4ee9-b63f-8edaf4675a25,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Revolution 1,167b224b-596f-4a57-a405-08bfee59df59,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Rocky Raccoon,995fe358-4938-4fb0-9e85-67e86611b28e,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Savoy Truffle,2eb16581-560c-4a4d-82af-6f33e38fffad,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -287,7 +287,7 @@ Carry That Weight,daaee15a-8a4c-4275-a7c1-5b6211f0ec69,harrison,backing_vocal,,w
 Carry That Weight,daaee15a-8a4c-4275-a7c1-5b6211f0ec69,starr,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Come Together,485bbe7f-d0f7-4ffe-8adb-0f1093dd2dbf,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Commonwealth,,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Get Back,a52c2553-1670-4262-9193-6ecd6713741a,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Golden Slumbers,3d7f2000-123d-4cac-862b-e04ead24c5f2,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Her Majesty,ed8d1b3b-8757-447a-baba-3efe027f2765,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -303,7 +303,7 @@ Maxwell's Silver Hammer,a92380e6-f10d-4407-aceb-5825b17fed5a,mccartney,lead_voca
 Mean Mr. Mustard,99c004fb-ba87-41be-afd4-e0157b40516a,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Octopus's Garden,15127932-c879-466e-b0f8-a1c5022d16e7,starr,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Oh! Darling,de896c41-463d-4eaa-8fe4-d826e2afa0f8,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Only a Northern Song,dd7e2396-55ac-4543-ba2d-6351ce8a59ee,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Polythene Pam,65ca55c8-d857-4a3b-9246-835b1e54fe4d,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 She Came In Through the Bathroom Window,c19db4d3-6640-4732-a0b2-e358ed80c5c4,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -313,7 +313,7 @@ Sun King,d057c75d-04eb-438f-be0b-74f629f2953c,lennon,lead_vocal,,wikipedia_song_
 Sun King,d057c75d-04eb-438f-be0b-74f629f2953c,mccartney,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Sun King,d057c75d-04eb-438f-be0b-74f629f2953c,harrison,backing_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Suzy Parker,,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 The End,5ad78393-77c2-451e-beb1-074df7e06e57,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 You Never Give Me Your Money,474546e9-0b30-4881-9269-c6c1c8bbf07b,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Dig It,906836d9-b363-405d-a52c-e780a6cb5f24,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
@@ -330,155 +330,160 @@ One After 909,e1f05d06-06ad-4f22-9c81-c94c0f44fe41,mccartney,lead_vocal,,wikiped
 The Long and Winding Road,2df46dec-b453-4444-91b9-5fa5d7515fd9,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Two of Us,4576371a-a0d6-4dbf-b3b7-8f1e1b58ec43,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Two of Us,4576371a-a0d6-4dbf-b3b7-8f1e1b58ec43,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Free as a Bird,e5163f14-40ec-4890-a7d7-cee9ec32ed42,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Free as a Bird,e5163f14-40ec-4890-a7d7-cee9ec32ed42,mccartney,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Free as a Bird,e5163f14-40ec-4890-a7d7-cee9ec32ed42,harrison,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
 Real Love,a550155e-7cfe-4c51-948b-777f73225a1c,lennon,lead_vocal,,wikipedia_song_list,medium,"song-level column, version not stated"
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,geoff_emerick,engineer,assistant,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,norman_smith,engineer,,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,david_lloyd,engineer,assistant,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,harrison,instrument,12 string guitar,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,lennon,instrument,electric guitar,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,lennon,instrument,acoustic guitar,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,george_martin,instrument,upright piano,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,starr,instrument,drums (drum set),musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,starr,instrument,bongos,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,starr,instrument,cowbell,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,george_martin,producer,,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-A Hard Day's Night,5253b9cd-227e-4f6a-8ab0-21e825d552aa,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,richard_langham,engineer,assistant,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,norman_smith,engineer,,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,geoff_emerick,engineer,assistant,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,harrison,instrument,classical guitar,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,lennon,instrument,acoustic guitar,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,starr,instrument,bongos,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,starr,instrument,claves,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,george_martin,producer,,musicbrainz,medium,
-And I Love Her,659239a8-da3d-4427-9fe7-0e8c434c97cf,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,geoff_emerick,engineer,assistant,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,ken_scott,engineer,assistant,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,norman_smith,engineer,,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,harrison,instrument,12 string guitar,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,lennon,instrument,acoustic guitar,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,mccartney,instrument,piano,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,starr,instrument,drums (drum set),musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,george_martin,producer,,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Any Time at All,b0694e8b-0d9a-465e-82b6-0375fd71ff71,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,jacques_esmenjaud,engineer,assistant,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,norman_smith,engineer,,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,richard_langham,engineer,assistant,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,harrison,instrument,electric guitar,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,lennon,instrument,acoustic guitar,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,starr,instrument,drums (drum set),musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,starr,instrument,cymbal,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,george_martin,producer,,musicbrainz,medium,
-Can't Buy Me Love,e2064c3f-2f55-48b6-a553-db58f3b9a9ce,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,richard_langham,engineer,assistant,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,norman_smith,engineer,,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,a_b_lincoln,engineer,assistant,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,harrison,instrument,12 string guitar,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,lennon,instrument,harmonica,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,lennon,instrument,acoustic guitar,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,starr,instrument,drums (drum set),musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,george_martin,producer,,musicbrainz,medium,
-I Should Have Known Better,af291f2e-d430-452b-9421-37152ad511b4,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,geoff_emerick,engineer,assistant,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,ken_scott,engineer,assistant,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,norman_smith,engineer,,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,harrison,instrument,acoustic guitar,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,lennon,instrument,acoustic guitar,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,starr,instrument,drums (drum set),musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,george_martin,producer,,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-I'll Be Back,a8a0301d-6b45-47e0-9ac3-41e81513ce9d,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,a_b_lincoln,engineer,assistant,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,ken_scott,engineer,assistant,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,norman_smith,engineer,,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,harrison,instrument,12 string guitar,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,lennon,instrument,acoustic guitar,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,starr,instrument,drums (drum set); tambourine,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,george_martin,producer,,musicbrainz,medium,
-I'll Cry Instead,d116c032-eb32-4266-9b4a-57311477c44d,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,richard_langham,engineer,assistant,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,norman_smith,engineer,,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,a_b_lincoln,engineer,assistant,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,harrison,instrument,12 string guitar,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,lennon,instrument,electric guitar,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,starr,instrument,drums (drum set),musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,starr,instrument,bongos,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,george_martin,producer,,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,harrison,lead_vocal,lead vocals,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,lennon,backing_vocal,background vocals,musicbrainz,medium,
-I'm Happy Just to Dance with You,a35f0599-a36a-4971-ba73-e43cafca32da,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,richard_langham,engineer,assistant,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,norman_smith,engineer,,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,a_b_lincoln,engineer,assistant,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,harrison,instrument,12 string guitar,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,lennon,instrument,acoustic guitar,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,starr,instrument,drums (drum set),musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,george_martin,producer,,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-If I Fell,bf1ecb6d-426e-4c86-ab31-028f4702e6d0,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,richard_langham,engineer,assistant,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,norman_smith,engineer,,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,a_b_lincoln,engineer,assistant,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,harrison,instrument,electric guitar,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,lennon,instrument,acoustic guitar,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,george_martin,instrument,upright piano,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,starr,instrument,drums (drum set),musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,george_martin,producer,,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Tell Me Why,e23e779f-4e47-4815-a045-739e5cee8ba7,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,ken_scott,engineer,assistant,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,norman_smith,engineer,,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,harrison,instrument,electric guitar,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,lennon,instrument,piano,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,lennon,instrument,acoustic guitar,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,starr,instrument,drums (drum set),musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,starr,instrument,tambourine,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,george_martin,producer,,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Things We Said Today,bc1ab2d4-fc19-4eb2-9d8b-5789e499eeea,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,geoff_emerick,engineer,assistant,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,ken_scott,engineer,assistant,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,norman_smith,engineer,,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,harrison,instrument,electric guitar,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,lennon,instrument,electric guitar,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,mccartney,instrument,electric bass guitar; piano,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,starr,instrument,drums (drum set),musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,george_martin,producer,,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,harrison,backing_vocal,background vocals,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-When I Get Home,e7abc0d2-bd83-43b4-b3de-4e2db8d9ebd9,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,richard_langham,engineer,assistant,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,norman_smith,engineer,,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,harrison,instrument,12 string guitar,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,lennon,instrument,electric guitar,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,mccartney,instrument,cowbell,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,starr,instrument,drums (drum set),musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,starr,instrument,bongos,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,george_martin,producer,,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,harrison,backing_vocal,background vocals,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-You Can't Do That,37f3c01f-ff47-4557-a94f-47da15451241,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,geoff_emerick,engineer,assistant,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,norman_smith,engineer,,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,harrison,instrument,12 string guitar,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,lennon,instrument,acoustic guitar,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,lennon,instrument,electric guitar,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,george_martin,instrument,piano,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,norman_smith,instrument,bongos,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,starr,instrument,drums (drum set),musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,starr,instrument,cowbell,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,george_martin,producer,,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+A Hard Day's Night,c1d63906-f64a-4cd1-9873-9f3a9f98883c,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,richard_langham,engineer,assistant,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,norman_smith,engineer,,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,geoff_emerick,engineer,assistant,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,harrison,instrument,acoustic guitar,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,lennon,instrument,acoustic guitar,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,starr,instrument,bongos,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,starr,instrument,claves,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,george_martin,producer,,musicbrainz,medium,
+And I Love Her,917f2be3-065e-4d1e-8a76-1b50abd1ad95,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,geoff_emerick,engineer,assistant,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,ken_scott,engineer,assistant,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,norman_smith,engineer,,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,harrison,instrument,12 string guitar,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,mccartney,instrument,piano,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,starr,instrument,drums (drum set),musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,george_martin,producer,,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Any Time at All,bf58a93c-1a90-43aa-b804-53f5a4f5307f,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,jacques_esmenjaud,engineer,assistant,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,norman_smith,engineer,,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,richard_langham,engineer,assistant,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,geoff_emerick,engineer,,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,geoff_emerick,engineer,assistant,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,harrison,instrument,electric guitar,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,starr,instrument,drums (drum set),musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,starr,instrument,cymbal,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,norman_smith,instrument,hi-hat,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,george_martin,producer,,musicbrainz,medium,
+Can't Buy Me Love,659b4269-fe81-40e4-86e9-12879c09c9e6,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,richard_langham,engineer,assistant,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,norman_smith,engineer,,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,harrison,instrument,12 string guitar,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,lennon,instrument,harmonica,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,starr,instrument,drums (drum set),musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,george_martin,producer,,musicbrainz,medium,
+I Should Have Known Better,e33d52b7-2ed6-4889-89f4-7a9e696eac37,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,ken_scott,engineer,assistant,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,norman_smith,engineer,,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,harrison,instrument,acoustic guitar,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,starr,instrument,drums (drum set),musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,george_martin,producer,,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I'll Be Back,de7210fe-bbb3-4c91-80d1-14696dae558a,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,ken_scott,engineer,assistant,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,norman_smith,engineer,,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,harrison,instrument,12 string guitar,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,starr,instrument,drums (drum set),musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,starr,instrument,tambourine,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,george_martin,producer,,musicbrainz,medium,
+I'll Cry Instead,ac06289f-f867-44ce-a2ff-66f6752ef7c9,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,richard_langham,engineer,assistant,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,norman_smith,engineer,,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,harrison,instrument,12 string guitar,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,lennon,instrument,electric guitar,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,starr,instrument,drums (drum set),musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,starr,instrument,bongos,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,george_martin,producer,,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,harrison,lead_vocal,lead vocals,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,lennon,backing_vocal,background vocals,musicbrainz,medium,
+I'm Happy Just to Dance with You,79d41dd0-d456-4d33-a36f-bfcc094c38ac,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,richard_langham,engineer,assistant,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,norman_smith,engineer,,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,geoff_emerick,engineer,assistant,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,harrison,instrument,12 string guitar,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,lennon,instrument,acoustic guitar,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,starr,instrument,drums (drum set),musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,george_martin,producer,,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+If I Fell,7fef28ab-aa1b-4368-8ffe-c128b58042dd,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,richard_langham,engineer,assistant,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,norman_smith,engineer,,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,geoff_emerick,engineer,assistant,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,harrison,instrument,electric guitar,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,george_martin,instrument,upright piano,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,starr,instrument,drums (drum set),musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,george_martin,producer,,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Tell Me Why,c3fe2b67-a715-42c7-9e3c-2e353620a11d,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,geoff_emerick,engineer,assistant,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,ken_scott,engineer,assistant,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,norman_smith,engineer,,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,harrison,instrument,electric guitar,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,lennon,instrument,piano,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,starr,instrument,drums (drum set),musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,starr,instrument,tambourine,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,george_martin,producer,,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Things We Said Today,cc480502-bfe8-4bd5-b98b-feba018698f0,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,geoff_emerick,engineer,assistant,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,ken_scott,engineer,assistant,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,norman_smith,engineer,,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,harrison,instrument,electric guitar,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,lennon,instrument,electric guitar,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,mccartney,instrument,electric bass guitar; piano,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,starr,instrument,drums (drum set),musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,george_martin,producer,,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,harrison,backing_vocal,background vocals,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+When I Get Home,c9b373a4-99cd-41c5-ab97-582a0906e304,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,richard_langham,engineer,assistant,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,norman_smith,engineer,,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,geoff_emerick,engineer,assistant,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,harrison,instrument,12 string guitar,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,lennon,instrument,electric guitar,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,mccartney,instrument,cowbell,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,starr,instrument,drums (drum set),musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,starr,instrument,bongos,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,george_martin,producer,,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,harrison,backing_vocal,background vocals,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+You Can't Do That,3426c118-cef9-42ea-8ea6-e6e4598cfc45,mccartney,backing_vocal,background vocals,musicbrainz,medium,
 Because,1e1d1f33-346c-4f9a-ad05-03aa715c2f37,geoff_emerick,engineer,,musicbrainz,medium,
 Because,1e1d1f33-346c-4f9a-ad05-03aa715c2f37,phil_mcdonald,engineer,,musicbrainz,medium,
 Because,1e1d1f33-346c-4f9a-ad05-03aa715c2f37,lennon,instrument,electric guitar,musicbrainz,medium,
@@ -1035,6 +1040,14 @@ Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,george_martin,producer,,music
 Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,harrison,backing_vocal,background vocals,musicbrainz,medium,
 Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,lennon,lead_vocal,lead vocals,musicbrainz,medium,
 Words of Love,59e4621f-455e-4e61-b9a4-7435901d6580,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,phil_mcdonald,engineer,additional,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,norman_smith,engineer,,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,harrison,instrument,acoustic guitar; electric guitar,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,starr,instrument,drums (drum set),musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,george_martin,producer,,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Act Naturally,5042d503-fbfa-4a4e-a141-dab1d8f0b61b,starr,lead_vocal,lead vocals,musicbrainz,medium,
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,malcolm_davies,engineer,additional,musicbrainz,medium,
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,ken_scott,engineer,additional,musicbrainz,medium,
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,norman_smith,engineer,,musicbrainz,medium,
@@ -1049,18 +1062,28 @@ Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,george_martin,producer,,musicb
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,harrison,backing_vocal,background vocals,musicbrainz,medium,
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,lennon,backing_vocal,background vocals,musicbrainz,medium,
 Another Girl,3d462ae5-37cb-4682-b03a-8a702d2553ea,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,phil_mcdonald,engineer,additional,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,ken_scott,engineer,additional,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,norman_smith,engineer,,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,harrison,instrument,electric guitar,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,lennon,instrument,12 string guitar,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,starr,instrument,drums (drum set),musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,starr,instrument,tambourine,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,george_martin,producer,,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Help!,7a1661c8-ee80-4625-b400-a9e48d1eb977,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,ken_scott,engineer,additional,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,norman_smith,engineer,,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,harrison,instrument,electric guitar,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,lennon,instrument,Hammond organ,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,lennon,instrument,electric guitar,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,starr,instrument,drums (drum set),musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,starr,instrument,cowbell,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,george_martin,producer,,musicbrainz,medium,
+Dizzy Miss Lizzy,1441e9d7-2704-485d-bf8c-cc902fa01ad8,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,phil_mcdonald,engineer,additional,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,ken_scott,engineer,additional,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,norman_smith,engineer,,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,harrison,instrument,electric guitar,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,lennon,instrument,12 string guitar,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,starr,instrument,drums (drum set),musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,starr,instrument,tambourine,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,george_martin,producer,,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Help!,73674fc7-4e76-480e-8240-d3fe312af45e,mccartney,backing_vocal,background vocals,musicbrainz,medium,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,malcolm_davies,engineer,additional,musicbrainz,medium,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,ken_scott,engineer,additional,musicbrainz,medium,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,norman_smith,engineer,,musicbrainz,medium,
@@ -1077,8 +1100,35 @@ I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,harrison,lead_vocal,lead vocals,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,lennon,backing_vocal,background vocals,musicbrainz,medium,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,mccartney,backing_vocal,background vocals,musicbrainz,medium,
 I Need You,85863982-7efd-4dff-bcee-4bf5d66fd43b,harrison,backing_vocal,background vocals,musicbrainz,medium,
-It's Only Love,ba976061-ed56-44f7-b768-5aa03f04328c,george_martin,producer,,musicbrainz,medium,
-Tell Me What You See,bbde3cab-67f4-46bd-bec9-c074dd192326,george_martin,producer,,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,phil_mcdonald,engineer,additional,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,norman_smith,engineer,,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,harrison,instrument,12 string guitar,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,mccartney,instrument,acoustic guitar,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,starr,instrument,drums (drum set),musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,starr,instrument,maracas,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,george_martin,producer,,musicbrainz,medium,
+I've Just Seen a Face,9c5b5248-9044-407c-a3e4-87be327f59d0,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,phil_mcdonald,engineer,additional,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,norman_smith,engineer,,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,harrison,instrument,acoustic guitar; electric guitar,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,lennon,instrument,12 string guitar; electric guitar,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,starr,instrument,drums (drum set),musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,starr,instrument,tambourine,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,george_martin,producer,,musicbrainz,medium,
+It's Only Love,980a8ae7-4191-4be5-a9b3-4ab741c6327b,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,malcolm_davies,engineer,additional,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,ken_scott,engineer,additional,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,norman_smith,engineer,,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,harrison,instrument,claves; güiro,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,lennon,instrument,electric guitar,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,mccartney,instrument,electric bass guitar; electric piano,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,starr,instrument,drums (drum set),musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,starr,instrument,tambourine,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,george_martin,producer,,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Tell Me What You See,52c26c36-8313-4a0a-8e92-b5ddd8cbfefa,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,malcolm_davies,engineer,additional,musicbrainz,medium,
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,ken_scott,engineer,additional,musicbrainz,medium,
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,norman_smith,engineer,,musicbrainz,medium,
@@ -1093,20 +1143,56 @@ The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,george_martin,producer,,mu
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,harrison,backing_vocal,background vocals,musicbrainz,medium,
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,lennon,backing_vocal,background vocals,musicbrainz,medium,
 The Night Before,dec365ed-576f-4a31-9204-0a5d4aa191b2,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,ken_scott,engineer,additional,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,norman_smith,engineer,,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,harrison,instrument,12 string guitar,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,harrison,instrument,electric guitar,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,lennon,instrument,electric guitar,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,mccartney,instrument,electric guitar,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,starr,instrument,drums (drum set),musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,starr,instrument,tambourine,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,starr,instrument,handclaps,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,george_martin,producer,,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Ticket to Ride,ed052ae1-c950-47f2-8d2b-46e1b58ab76c,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-You're Going to Lose That Girl,b6494292-6291-43d4-bbee-d2a0e9d9ce82,george_martin,producer,,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,malcolm_davies,engineer,additional,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,ken_scott,engineer,additional,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,norman_smith,engineer,,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,harrison,instrument,electric guitar,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,harrison,instrument,12 string guitar,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,lennon,instrument,electric guitar,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,mccartney,instrument,electric bass guitar; electric guitar,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,starr,instrument,drums (drum set),musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,starr,instrument,tambourine,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,starr,instrument,handclaps,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,george_martin,producer,,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Ticket to Ride,00c47ea6-3a10-4a32-b1f1-990ac756c6a0,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,phil_mcdonald,engineer,additional,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,norman_smith,engineer,,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,mccartney,instrument,acoustic guitar,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,kenneth_essex,instrument,viola,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,francisco_gabarro,instrument,cello,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,tony_gilbert,instrument,violin,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,sidney_sax,instrument,violin,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,george_martin,instrument arranger,string quartet,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,george_martin,producer,,musicbrainz,medium,
+Yesterday,8aefa373-2858-4643-b691-cad4ac7c971a,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,malcolm_davies,engineer,additional,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,ken_scott,engineer,additional,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,norman_smith,engineer,,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,harrison,instrument,acoustic guitar; electric guitar,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,lennon,instrument,electric piano; tambourine,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,george_martin,instrument,piano,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,mccartney,instrument,piano,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,starr,instrument,drums (drum set),musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,george_martin,producer,,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,harrison,lead_vocal,lead vocals,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+You Like Me Too Much,d2aaaf1b-bed1-442c-8d3b-3039714440a9,lennon,backing_vocal,background vocals,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,malcolm_davies,engineer,additional,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,ken_scott,engineer,additional,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,norman_smith,engineer,,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,lennon,instrument,electric guitar,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,lennon,instrument,acoustic guitar,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,starr,instrument,drums (drum set),musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,harrison,instrument,electric guitar,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,mccartney,instrument,piano,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,starr,instrument,bongos,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,george_martin,producer,,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,harrison,backing_vocal,background vocals,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+You're Going to Lose That Girl,2b64c64f-0a20-4a0f-bae3-50c8eb28326b,mccartney,backing_vocal,background vocals,musicbrainz,medium,
 You've Got to Hide Your Love Away,c88254f8-7feb-41d9-917e-4322b6ceff35,malcolm_davies,engineer,additional,musicbrainz,medium,
 You've Got to Hide Your Love Away,c88254f8-7feb-41d9-917e-4322b6ceff35,ken_scott,engineer,additional,musicbrainz,medium,
 You've Got to Hide Your Love Away,c88254f8-7feb-41d9-917e-4322b6ceff35,norman_smith,engineer,,musicbrainz,medium,
@@ -1477,33 +1563,34 @@ Penny Lane,58169b2c-e31a-4a46-8741-71c672a089ac,george_martin,producer,,musicbra
 Penny Lane,58169b2c-e31a-4a46-8741-71c672a089ac,lennon,lead_vocal,lead vocals,musicbrainz,medium,
 Penny Lane,58169b2c-e31a-4a46-8741-71c672a089ac,mccartney,backing_vocal,background vocals,musicbrainz,medium,
 Penny Lane,58169b2c-e31a-4a46-8741-71c672a089ac,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,geoff_emerick,engineer,,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,dave_harries,engineer,,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,harrison,instrument,electric guitar,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,lennon,instrument,mellotron,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,lennon,instrument,electric guitar,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mccartney,instrument,mellotron,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mccartney,instrument,bass guitar,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,starr,instrument,drums (drum set),musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mal_evans,instrument,tambourine,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,george_martin,instrument,mellotron,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mccartney,instrument,piano,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,harrison,instrument,bongos,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mccartney,instrument,timpani,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,harrison,instrument,swarmandal,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,mccartney,instrument,guitar,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,greg_bowen,instrument,trumpet,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,tony_fisher,instrument,trumpet,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,john_hall,instrument,cello,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,norman_jones,instrument,cello,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,stan_roderick,instrument,trumpet,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,derek_simpson,instrument,cello,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,derek_watkins,instrument,trumpet,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,harrison,instrument,maracas,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,dave_harries,producer,,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,george_martin,producer,,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Strawberry Fields Forever,58221b3f-7470-4001-a718-6379bec69a20,lennon,vocal,other vocals,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,george_martin,conductor,,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,geoff_emerick,engineer,,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,dave_harries,engineer,,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,harrison,instrument,electric guitar,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,instrument,mellotron,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,instrument,electric guitar,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mccartney,instrument,mellotron,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mccartney,instrument,bass guitar,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,starr,instrument,drums (drum set),musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mal_evans,instrument,tambourine,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,harrison,instrument,bongos,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,harrison,instrument,maracas,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,instrument,percussion,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mccartney,instrument,timpani,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,harrison,instrument,swarmandal,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mccartney,instrument,guitar,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,greg_bowen,instrument,trumpet,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,tony_fisher,instrument,trumpet,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,john_hall,instrument,cello,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,norman_jones,instrument,cello,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,stan_roderick,instrument,trumpet,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,derek_simpson,instrument,cello,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,derek_watkins,instrument,trumpet,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,mccartney,instrument,piano,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,dave_harries,producer,,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,george_martin,producer,,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Strawberry Fields Forever,fe9a0114-5fb9-452c-a9d7-049c598ac860,lennon,vocal,other vocals,musicbrainz,medium,
 The Fool on the Hill,9a42a834-e258-4b05-af58-d71da0f84c0b,ken_scott,engineer,,musicbrainz,medium,
 The Fool on the Hill,9a42a834-e258-4b05-af58-d71da0f84c0b,harrison,instrument,harmonica,musicbrainz,medium,
 The Fool on the Hill,9a42a834-e258-4b05-af58-d71da0f84c0b,lennon,instrument,harmonica,musicbrainz,medium,
@@ -1533,6 +1620,17 @@ Your Mother Should Know,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,george_martin,produ
 Your Mother Should Know,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
 Your Mother Should Know,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,lennon,backing_vocal,background vocals,musicbrainz,medium,
 Your Mother Should Know,2de2ab27-6fcf-46ec-8cd2-2ef5d51e39e8,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,karl_hinze,engineer,,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,pete_best,instrument,drums (drum set),musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,harrison,instrument,guitar,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,lennon,instrument,guitar,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,tony_sheridan,instrument,guitar,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,bert_kaempfert,producer,,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,harrison,backing_vocal,background vocals,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,lennon,backing_vocal,background vocals,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+My Bonnie,18bbb73a-b24f-4f59-ad3d-fb141e17cb1c,tony_sheridan,lead_vocal,lead vocals,musicbrainz,medium,
 Christmas Time (Is Here Again),44754ab4-6778-4ea6-893d-0c79a8ccfe3b,geoff_emerick,engineer,,musicbrainz,medium,
 Christmas Time (Is Here Again),44754ab4-6778-4ea6-893d-0c79a8ccfe3b,harrison,instrument,acoustic guitar,musicbrainz,medium,
 Christmas Time (Is Here Again),44754ab4-6778-4ea6-893d-0c79a8ccfe3b,lennon,instrument,bass drum,musicbrainz,medium,
@@ -1552,42 +1650,142 @@ Christmas Time (Is Here Again),44754ab4-6778-4ea6-893d-0c79a8ccfe3b,victor_spine
 Beautiful Dreamer,0cb50d99-8ee2-4685-ae59-9cad8d0c0e91,jimmy_grant,producer,,musicbrainz,medium,
 I'm Talking About You,1a1e7895-b6c9-49fd-8b74-5dccdc7b99b2,bernie_andrews,producer,,musicbrainz,medium,
 I'm Talking About You,1a1e7895-b6c9-49fd-8b74-5dccdc7b99b2,jimmy_grant,producer,,musicbrainz,medium,
-I'll Get You,ae676487-8c3e-4311-8487-b284460ad3c3,bernie_andrews,producer,,musicbrainz,medium,
-Thank You Girl,3766b344-febd-493f-ba7e-ea69475e7ce9,ron_belchier,producer,,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,harrison,instrument,electric guitar,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,lennon,instrument,acoustic guitar,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,starr,instrument,drums (drum set),musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,giles_martin,mix,task,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,sam_okell,mix,task,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-This Boy,e8db41c1-8e63-4acb-b8a1-3fca9192b30c,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,harrison,instrument,electric guitar,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,lennon,instrument,acoustic guitar,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,lennon,instrument,electric guitar,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,starr,instrument,drums (drum set),musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,giles_martin,mix,task,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,sam_okell,mix,task,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-I Feel Fine,d52ca560-5e84-475e-b6c0-d817dd0788db,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,geoff_emerick,engineer,assistant,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,norman_smith,engineer,,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,jacques_esmenjaud,engineer,assistant,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,harrison,instrument,electric guitar,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,lennon,instrument,electric guitar,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,starr,instrument,drums (drum set),musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,harrison,instrument,handclaps,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,lennon,instrument,handclaps,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,mccartney,instrument,handclaps,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,starr,instrument,handclaps,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,george_martin,producer,,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,harrison,lead_vocal,lead vocals,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-"Komm, gib mir deine Hand",4b18697d-1a56-490a-a207-9b641c4974d9,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Long Tall Sally,26419d8c-d492-4728-ba1e-a14ae8034dc2,terry_henebery,producer,,musicbrainz,medium,
-She's a Woman,a2a405d2-c372-488d-8d49-c571e03dc31c,bernie_andrews,producer,,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,richard_langham,engineer,assistant,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,norman_smith,engineer,,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,harrison,instrument,electric guitar,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,lennon,instrument,electric guitar,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,lennon,instrument,harmonica,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,starr,instrument,drums (drum set),musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,george_martin,producer,,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+From Me to You,dc87225b-46bc-4a5d-837f-14e7eb8f2ca2,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,norman_smith,engineer,,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,harrison,instrument,handclaps,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,harrison,instrument,electric guitar,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,lennon,instrument,handclaps,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,lennon,instrument,electric guitar,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,mccartney,instrument,handclaps,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,starr,instrument,drums (drum set),musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,starr,instrument,handclaps,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,george_martin,producer,,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I Want to Hold Your Hand,e9433409-2786-4194-8dfb-9427e6ba34d2,mccartney,backing_vocal,background vocals; lead vocals,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,geoff_emerick,engineer,assistant,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,norman_smith,engineer,,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,harrison,instrument,handclaps,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,harrison,instrument,electric guitar,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,instrument,harmonica,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,instrument,handclaps,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,instrument,electric guitar,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,mccartney,instrument,handclaps,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,starr,instrument,drums (drum set),musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,starr,instrument,handclaps,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,george_martin,producer,,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,harrison,backing_vocal,background vocals,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I'll Get You,5de0bb62-d0aa-47f1-9d04-e7911a7ffdc5,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,geoff_emerick,engineer,assistant,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,norman_smith,engineer,,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,harrison,instrument,electric guitar,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,lennon,instrument,acoustic guitar,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,starr,instrument,drums (drum set),musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,george_martin,producer,,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,harrison,backing_vocal,background vocals,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+She Loves You,21047249-7b3f-4651-acca-246669c081fd,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,richard_langham,engineer,assistant,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,norman_smith,engineer,,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,geoff_emerick,engineer,assistant,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,harrison,instrument,electric guitar,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,lennon,instrument,electric guitar,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,starr,instrument,drums (drum set),musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,lennon,instrument,harmonica,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,george_martin,producer,,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Thank You Girl,7aac9d0c-a55c-4796-9877-8302beb1e618,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,geoff_emerick,engineer,assistant,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,norman_smith,engineer,,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,harrison,instrument,electric guitar,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,lennon,instrument,acoustic guitar,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,starr,instrument,drums (drum set),musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,george_martin,producer,,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,harrison,backing_vocal,background vocals,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+This Boy,7c9e1dfc-71e4-4980-982b-ef841efdd325,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,richard_langham,engineer,assistant,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,norman_smith,engineer,,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,harrison,instrument,12 string guitar,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,lennon,instrument,electric guitar,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,starr,instrument,drums (drum set),musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,starr,instrument,cowbell,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,george_martin,producer,,musicbrainz,medium,
+I Call Your Name,9afac596-67e0-4624-8401-aa31d53d3006,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,geoff_emerick,engineer,additional,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,ron_pender,engineer,additional,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,norman_smith,engineer,,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,harrison,instrument,electric guitar,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,lennon,instrument,acoustic guitar,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,starr,instrument,drums (drum set),musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,george_martin,producer,,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,harrison,backing_vocal,background vocals,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+I Feel Fine,1e69e64a-6cfd-43a6-9a59-7e4271c2a29a,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,geoff_emerick,engineer,assistant,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,norman_smith,engineer,,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,jacques_esmenjaud,engineer,assistant,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,harrison,instrument,electric guitar,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,lennon,instrument,electric guitar,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,starr,instrument,drums (drum set),musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,harrison,instrument,handclaps,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,lennon,instrument,handclaps,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,mccartney,instrument,handclaps,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,starr,instrument,handclaps,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,george_martin,producer,,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,harrison,lead_vocal,lead vocals,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+"Komm, gib mir deine Hand",c201822e-282a-4aa4-8eb5-5bf57bb5d7d0,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,richard_langham,engineer,assistant,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,norman_smith,engineer,,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,harrison,instrument,electric guitar,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,lennon,instrument,electric guitar,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,george_martin,instrument,upright piano,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,starr,instrument,drums (drum set),musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,george_martin,producer,,musicbrainz,medium,
+Long Tall Sally,c9737887-1b58-4a8a-aa21-98ea19630aac,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,richard_langham,engineer,assistant,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,ken_scott,engineer,assistant,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,norman_smith,engineer,,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,harrison,instrument,electric guitar,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,lennon,instrument,electric guitar,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,george_martin,instrument,piano,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,starr,instrument,drums (drum set),musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,george_martin,producer,,musicbrainz,medium,
+Matchbox,4063a464-01e0-4e68-bfe1-e243c4474f83,starr,lead_vocal,lead vocals,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,ron_pender,engineer,additional,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,ken_scott,engineer,additional,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,norman_smith,engineer,,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,mike_stone,engineer,additional,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,harrison,instrument,electric guitar,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,lennon,instrument,electric guitar,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,mccartney,instrument,piano,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,starr,instrument,percussion,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,starr,instrument,drums (drum set),musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,george_martin,producer,,musicbrainz,medium,
+She's a Woman,9110fec1-7acd-46f2-baae-41fc48906115,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,jacques_esmenjaud,engineer,assistant,musicbrainz,medium,
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,norman_smith,engineer,,musicbrainz,medium,
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,unknown,engineer,assistant,musicbrainz,medium,
@@ -1599,82 +1797,143 @@ Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,george_martin,producer,,musi
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,harrison,backing_vocal,background vocals,musicbrainz,medium,
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,lennon,lead_vocal,lead vocals,musicbrainz,medium,
 Sie liebt dich,7a2287d6-357e-4cb4-adae-f19db3469c8b,mccartney,backing_vocal,background vocals; lead vocals,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,ron_pender,engineer,additional,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,ken_scott,engineer,additional,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,norman_smith,engineer,,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,harrison,instrument,electric guitar,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,lennon,instrument,electric guitar,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,lennon,instrument,tambourine,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,starr,instrument,drums (drum set),musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,george_martin,producer,,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,lennon,backing_vocal,background vocals,musicbrainz,medium,
-Day Tripper,faad8739-c053-46b4-bf57-070ff7569de7,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,norman_smith,engineer,,musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,harrison,instrument,guitar,musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,lennon,instrument,guitar,musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,starr,instrument,drums (drum set),musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,george_martin,producer,,musicbrainz,medium,
-I'm Down,a95011b6-35bb-405e-98a7-307a3d0850e1,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,starr,instrument,drums (drum set),musicbrainz,medium,
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,giles_martin,mix,task,musicbrainz,medium,
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,sam_okell,mix,task,musicbrainz,medium,
-We Can Work It Out,ca416595-987a-4974-aab3-e4d2ea397ed5,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,norman_smith,engineer,,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,harrison,instrument,guitar,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,lennon,instrument,acoustic guitar,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,mccartney,instrument,bass guitar,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,starr,instrument,drums (drum set),musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,george_martin,producer,,musicbrainz,medium,
-Yes It Is,7b79f719-25f6-43c5-ba11-c49e6c18cbb4,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,geoff_emerick,engineer,,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,harrison,instrument,electric guitar,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,lennon,instrument,tambourine,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,mccartney,instrument,electric guitar,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,starr,instrument,drums (drum set),musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,george_martin,producer,,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,lennon,backing_vocal,background vocals,musicbrainz,medium,
-Paperback Writer,c08b8e08-f98a-4e49-9463-6923e2ec8375,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,geoff_emerick,engineer,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,sam_okell,engineer,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,lennon,instrument,electric guitar,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,starr,instrument,drums (drum set),musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,starr,instrument,tambourine,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,giles_martin,mix,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,sam_okell,mix,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,george_martin,producer,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,giles_martin,producer,,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,lennon,backing_vocal,background vocals,musicbrainz,medium,
-Rain,2301d19d-e6d7-4f7e-9fd4-b1db29ab0207,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,geoff_emerick,engineer,,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,ken_scott,engineer,,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,harrison,instrument,electric guitar,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,lennon,instrument,electric guitar,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,mccartney,instrument,piano,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,starr,instrument,drums (drum set),musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,harrison,instrument,handclaps,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,bill_jackman,instrument,baritone saxophone,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,harry_klein,instrument,baritone saxophone,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,lennon,instrument,handclaps,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,mccartney,instrument,handclaps,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,bill_povey,instrument,tenor saxophone,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,ronnie_scott,instrument,tenor saxophone,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,george_martin,producer,,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,lennon,backing_vocal,background vocals,musicbrainz,medium,
-Lady Madonna,1e62bcb8-09fa-449e-87f7-1e2d39e8a057,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
-Revolution,fc84e72e-5552-4ee9-b63f-8edaf4675a25,giles_martin,mix,,musicbrainz,medium,
-Revolution,fc84e72e-5552-4ee9-b63f-8edaf4675a25,the_beatles,producer,,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,richard_langham,engineer,assistant,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,ken_scott,engineer,assistant,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,norman_smith,engineer,,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,harrison,instrument,electric guitar,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,lennon,instrument,electric guitar,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,starr,instrument,drums (drum set),musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,george_martin,instrument,piano,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,george_martin,producer,,musicbrainz,medium,
+Slow Down,e111a509-372c-49d4-8860-a05a47df95a9,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,ken_scott,engineer,additional,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,norman_smith,engineer,,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,harrison,instrument,electric guitar,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,lennon,instrument,Hammond organ,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,lennon,instrument,electric guitar,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,mccartney,instrument,electric piano,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,starr,instrument,drums (drum set),musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,starr,instrument,tambourine,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,george_martin,producer,,musicbrainz,medium,
+Bad Boy,a53cb822-f655-4acc-a55b-3bf8243bcb7a,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,ken_scott,engineer,additional; task,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,graham_kirkby,engineer,additional; task,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,ron_pender,engineer,additional,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,norman_smith,engineer,,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,harrison,instrument,electric guitar,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,lennon,instrument,electric guitar,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,lennon,instrument,tambourine,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,starr,instrument,drums (drum set),musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,starr,instrument,tambourine,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,peter_bown,mix,,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,george_martin,producer,,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Day Tripper,70bd5ba7-321d-4caa-925a-ee0c5b6ba895,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,phil_mcdonald,engineer,additional,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,norman_smith,engineer,,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,harrison,instrument,electric guitar,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,lennon,instrument,electronic organ,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,starr,instrument,drums (drum set),musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,starr,instrument,bongos,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,george_martin,producer,,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,harrison,backing_vocal,background vocals,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,lennon,backing_vocal,background vocals,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+I'm Down,21a1c3a9-960f-47fb-a3fd-5fa2e34fb140,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,jerry_boys,engineer,additional,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,ken_scott,engineer,additional,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,norman_smith,engineer,,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,harrison,instrument,tambourine,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,lennon,instrument,harmonium,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,lennon,instrument,acoustic guitar,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,starr,instrument,drums (drum set),musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,george_martin,producer,,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,lennon,backing_vocal,background vocals,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+We Can Work It Out,a5746d0c-221b-424f-9a70-7174784339af,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,jerry_boys,engineer,additional,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,ken_scott,engineer,additional,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,norman_smith,engineer,,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,harrison,instrument,electric guitar,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,starr,instrument,drums (drum set),musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,george_martin,instrument,electronic organ,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,mccartney,instrument,drums (drum set),musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,george_martin,producer,,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Yes It Is,c2ab2f34-c833-405f-8b1f-c4582c2518d4,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,geoff_emerick,engineer,,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,harrison,instrument,electric guitar,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,lennon,instrument,tambourine,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,mccartney,instrument,electric guitar,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,starr,instrument,drums (drum set),musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,george_martin,producer,,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Paperback Writer,ad47e733-8900-4bf5-aa8b-8ea0d6825c1f,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,geoff_emerick,engineer,,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,lennon,instrument,electric guitar,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,starr,instrument,drums (drum set),musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,starr,instrument,tambourine,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,george_martin,producer,,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Rain,cd36c25c-1208-4deb-8338-496955d97954,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,barry_sheffield,engineer,,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,harrison,instrument,electric guitar,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,lennon,instrument,acoustic guitar,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,mccartney,instrument,piano,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,starr,instrument,drums (drum set),musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,starr,instrument,tambourine,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,george_martin,producer,,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Hey Jude,7b0b9016-59c5-4a83-9bcc-a6051453e422,starr,backing_vocal,background vocals,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,geoff_emerick,engineer,,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,ken_scott,engineer,,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,harrison,instrument,electric guitar,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,lennon,instrument,electric guitar,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,mccartney,instrument,piano,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,starr,instrument,drums (drum set),musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,harrison,instrument,handclaps,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,bill_jackman,instrument,baritone saxophone,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,harry_klein,instrument,baritone saxophone,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,lennon,instrument,handclaps,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,mccartney,instrument,handclaps,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,bill_povey,instrument,tenor saxophone,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,ronnie_scott,instrument,tenor saxophone,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,george_martin,producer,,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Lady Madonna,2c9fee64-12e6-4cfb-8771-8360894f7215,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,geoff_emerick,engineer,,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,harrison,instrument,electric guitar,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,harrison,instrument,handclaps,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,lennon,instrument,electric guitar,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,lennon,instrument,handclaps,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,mccartney,instrument,handclaps,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,starr,instrument,drums (drum set),musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,starr,instrument,handclaps,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,nicky_hopkins,instrument,electric piano,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,george_martin,producer,,musicbrainz,medium,
+Revolution,e0289d8e-c8f1-41a5-b1b2-18ea3d93e83a,lennon,lead_vocal,lead vocals,musicbrainz,medium,
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,geoff_emerick,engineer,,musicbrainz,medium,
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,indril_bhattacharya,instrument,sitar,musicbrainz,medium,
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,rijram_desad,instrument,harmonium,musicbrainz,medium,
@@ -1696,53 +1955,51 @@ The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,george_martin,producer,,mus
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,harrison,lead_vocal,lead vocals,musicbrainz,medium,
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,lennon,backing_vocal,background vocals,musicbrainz,medium,
 The Inner Light,83c15eac-e94c-4be4-b65f-6bb4c1b24453,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,harrison,instrument,electric guitar,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,lennon,instrument,electric guitar,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,billy_preston,instrument,electric piano,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,starr,instrument,drums (drum set),musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,george_martin,producer,,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,harrison,backing_vocal,background vocals,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-Don't Let Me Down,3218c9ab-60f5-44b6-99f6-5b5c9f46381a,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,jeff_jarratt,engineer,,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,harrison,instrument,electric guitar,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,lennon,instrument,piano,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,mccartney,instrument,drums (drum set),musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,harrison,instrument,organ,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,george_martin,producer,,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,chris_thomas,producer,,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,harrison,lead_vocal,lead vocals,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,lennon,backing_vocal,background vocals,musicbrainz,medium,
-Old Brown Shoe,df591a27-b71b-4f32-a593-a055f5f9ab83,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,geoff_emerick,engineer,,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,lennon,instrument,acoustic guitar,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,lennon,instrument,electric guitar,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,lennon,instrument,percussion,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,mccartney,instrument,drums (drum set),musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,mccartney,instrument,electric bass guitar,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,mccartney,instrument,maracas,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,mccartney,instrument,piano,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,george_martin,producer,,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-The Ballad of John and Yoko,d11d1fb2-683b-46e0-8647-538d526d9748,mccartney,backing_vocal,background vocals,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,geoff_emerick,engineer,,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,jeff_jarratt,engineer,,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,mccartney,instrument,bass guitar,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,starr,instrument,drums (drum set),musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,harrison,instrument,guitar,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,lennon,instrument,guitar,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,mccartney,instrument,piano,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,harrison,instrument,vibraphone,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,brian_jones,instrument,saxophone,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,lennon,instrument,maracas,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,starr,instrument,bongos,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,geoff_emerick,producer,,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,george_martin,producer,,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,chris_thomas,producer,,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,lennon,lead_vocal,lead vocals,musicbrainz,medium,
-You Know My Name (Look Up the Number),f8df278c-5d44-41b2-8b6a-5d4caacfeef1,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,harrison,instrument,electric guitar,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,lennon,instrument,electric guitar,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,billy_preston,instrument,electric piano,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,starr,instrument,drums (drum set),musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,george_martin,producer,,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,harrison,backing_vocal,background vocals,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+Don't Let Me Down,76a0136f-d130-4a63-81e9-f7a438a86442,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,jeff_jarratt,engineer,,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,harrison,instrument,electric guitar,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,lennon,instrument,piano,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,mccartney,instrument,drums (drum set),musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,harrison,instrument,organ,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,george_martin,producer,,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,chris_thomas,producer,,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,harrison,lead_vocal,lead vocals,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,lennon,backing_vocal,background vocals,musicbrainz,medium,
+Old Brown Shoe,5199acad-fac9-4fd8-8bd2-948ff8ca7b41,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,geoff_emerick,engineer,,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,lennon,instrument,acoustic guitar; electric guitar; percussion,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,mccartney,instrument,drums (drum set); electric bass guitar; maracas; piano,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,george_martin,producer,,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+The Ballad of John and Yoko,02690387-dbd9-4d24-bbf5-1d2d7ca103ac,mccartney,backing_vocal,background vocals,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,geoff_emerick,engineer,,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,mccartney,instrument,electric bass guitar,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,harrison,instrument,vibraphone,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,harrison,instrument,guitar,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,harrison,instrument,handclaps,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,instrument,maracas,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,instrument,guitar,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,instrument,handclaps,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,instrument,harmonica,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,mccartney,instrument,handclaps,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,starr,instrument,drums (drum set),musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,starr,instrument,bongos,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,starr,instrument,handclaps,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,mccartney,instrument,piano,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,brian_jones,instrument,alto saxophone,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,geoff_emerick,producer,,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,george_martin,producer,,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,lennon,lead_vocal,lead vocals,musicbrainz,medium,
+You Know My Name (Look Up the Number),283be7ab-9783-4676-b673-5a151b0c56c8,mccartney,lead_vocal,lead vocals,musicbrainz,medium,
 Love Me Do,1f518811-7cf9-4bdc-a656-0958e130f312,norman_smith,engineer,,musicbrainz,medium,
 Love Me Do,1f518811-7cf9-4bdc-a656-0958e130f312,harrison,instrument,acoustic guitar,musicbrainz,medium,
 Love Me Do,1f518811-7cf9-4bdc-a656-0958e130f312,lennon,instrument,harmonica,musicbrainz,medium,

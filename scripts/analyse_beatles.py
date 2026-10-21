@@ -1,6 +1,6 @@
 """Vocabulary analysis of the Beatles' original compositions (data/beatles/beatles.parquet).
-Covers: global vocabulary, evolution over time (year / phase), comparison by lead singer.
-Outputs: tables (CSV) and figures (PNG) in analysis/beatles/."""
+Covers: global vocabulary, evolution over time (year / phase), comparison by lead voice and by official writing credit.
+Outputs: tables (CSV) and figures (PNG) in analysis/beatles/ (see analysis/beatles/README.md)."""
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -18,11 +18,12 @@ from beatles_viz.text.tokenize import content, tokenize
 OUT = ROOT / "analysis/beatles"
 OUT.mkdir(parents=True, exist_ok=True)
 
-df = analysable(load_corpus("local")).rename(columns={"voice": "singer"})
+df = analysable(load_corpus("local")).rename(columns={"voice": "lead_voice"})
 # MATTR with repeated lines counted once: richness of the writing rather than of the performance
 df["mattr_dedup"] = df.sections.map(lambda s: mattr([w for l in dict.fromkeys(x.lower() for x in all_lines(s))
                                                     for w in tokenize(l)]))
-df[["title", "year", "phase", "release_core", "singer", "tokens", "types", "mattr", "mattr_dedup", "repeat_ratio"]].to_csv(OUT / "song_metrics.csv", index=False)
+df[["title", "year", "phase", "release_core", "lead_voice", "writer_credit", "tokens", "types", "mattr", "mattr_dedup",
+    "repeat_ratio"]].to_csv(OUT / "song_metrics.csv", index=False)
 print(f"corpus: {len(df)} songs")
 
 # ---------- 1. global vocabulary ----------
@@ -77,7 +78,11 @@ def distinctive(col, groups, fname, fig_name, title):
     for ax, g in zip(np.atleast_1d(axes), groups):
         a = Counter(content([w for ws in tm[tm[col] == g].words for w in ws]))
         b = Counter(content([w for ws in tm[tm[col] != g].words for w in ws]))
-        r = monroe(a, b, prior).head(10); r.insert(0, col, g); res.append(r)
+        r = monroe(a, b, prior).head(10); r.insert(0, col, g)
+        group = tm[tm[col] == g]
+        # how many of the group's songs use the word: one song repeating it can make it look typical
+        r["songs_using"] = [int(group.bow.map(lambda c, w=w: c.get(w, 0) > 0).sum()) for w in r.word]
+        r["songs_in_group"] = len(group); res.append(r)
         ax.barh(r.word[::-1], r.z[::-1], color="#e07a5f"); ax.set_title(f"{g}"); ax.set_xlabel("z-score")
     pd.concat(res).to_csv(OUT / fname, index=False)
     fig.suptitle(title); fig.tight_layout(); fig.savefig(OUT / fig_name, dpi=150); plt.close(fig)
@@ -96,17 +101,31 @@ for w in WATCH: ax.plot(trend.index, trend[w], marker="o", label=w)
 ax.set_ylabel("occurrences per 1000 words"); ax.set_title("Selected words by period"); ax.legend(ncol=4, fontsize=8)
 fig.tight_layout(); fig.savefig(OUT / "fig5_word_trends.png", dpi=150); plt.close(fig)
 
-# ---------- 3. by lead singer ----------
+# ---------- 3. by lead voice ----------
+# Who sings, not who wrote: most songs are credited Lennon–McCartney whoever wrote them, so these differences describe
+# the songs each member sang; they say nothing of their writing.
 order = ["Lennon", "McCartney", "Harrison", "Starr", "Shared"]
-sg = df.groupby("singer").agg(songs=("title", "count"), tokens=("tokens", "mean"), types=("types", "mean"),
-                              mattr=("mattr", "mean"), repeat_ratio=("repeat_ratio", "mean")).round(3).reindex(order)
-sg.to_csv(OUT / "singer_summary.csv")
-main = [s for s in ["Lennon", "McCartney", "Harrison"] if s in df.singer.values]
+summary = dict(songs=("title", "count"), tokens=("tokens", "mean"), types=("types", "mean"), mattr=("mattr", "mean"),
+               repeat_ratio=("repeat_ratio", "mean"))
+sg = df.groupby("lead_voice").agg(**summary).round(3).reindex(order)
+sg.to_csv(OUT / "lead_voice_summary.csv")
+main = [s for s in ["Lennon", "McCartney", "Harrison"] if s in df.lead_voice.values]
 fig, axes = plt.subplots(1, 3, figsize=(13, 4))
 for ax, col, ttl in zip(axes, ["tokens", "mattr", "repeat_ratio"], ["words per song", f"lexical richness (MATTR-{MATTR_WINDOW})", "share of repeated lines"]):
-    ax.boxplot([df[df.singer == s][col].dropna() for s in main], tick_labels=[f"{s}\n(n={int((df.singer == s).sum())})" for s in main])
+    ax.boxplot([df[df.lead_voice == s][col].dropna() for s in main], tick_labels=[f"{s}\n(n={int((df.lead_voice == s).sum())})" for s in main])
     ax.set_title(ttl)
-fig.suptitle("Lead singer comparison (originals)"); fig.tight_layout(); fig.savefig(OUT / "fig6_singers.png", dpi=150); plt.close(fig)
-distinctive("singer", main, "distinctive_words_by_singer.csv", "fig7_singer_words.png", "Words most characteristic of each lead singer")
+fig.suptitle("By lead voice: who sings, not who wrote (originals)"); fig.tight_layout()
+fig.savefig(OUT / "fig6_lead_voices.png", dpi=150); plt.close(fig)
+distinctive("lead_voice", main, "distinctive_words_by_lead_voice.csv", "fig7_lead_voice_words.png",
+            "Words most characteristic of the songs each member sang (not wrote)")
 
-print(pd.Series(glob)); print(ph); print(sg); print(trend)
+# ---------- 4. by official writing credit ----------
+# Harrison against the Lennon–McCartney pair: the only individual credit with enough songs (Starr, Lennon and McCartney
+# alone: 1 or 2 songs each; the four together: studio jams).
+cr = df.groupby("writer_credit").agg(**summary).round(3).sort_values("songs", ascending=False)
+cr.to_csv(OUT / "credit_summary.csv")
+credits = ["Lennon–McCartney", "Harrison"]
+distinctive("writer_credit", credits, "distinctive_words_by_credit.csv", "fig8_credit_words.png",
+            "Words most characteristic of each official writing credit")
+
+print(pd.Series(glob)); print(ph); print(sg); print(cr); print(trend)

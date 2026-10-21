@@ -258,6 +258,20 @@ la nourriture, ajoutées depuis (8 chansons recodées ; kappa moyen inchangé à
 groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles
 confirment le choix d'un codebook annoté à la main comme référence.
 
+**Wikipédia comme seconde source de crédits (21/10/2026)**
+
+| Tâche | Fichiers | Résultat |
+|---|---|---|
+| Sections « Personnel » des pages d'albums : rôles limités à des chansons nommées seulement (le reste vaut pour tout l'album et n'est pas comparable chanson par chanson) | `beatles_viz/wiki.py`, `scripts/fetch_wikipedia_credits.py`, `data/credits/wp_*.csv` | ✅ 19 albums sur 27 ont une section ; accord avec MusicBrainz de 81 à 100 % selon la partie |
+| Sections « Personnel » des pages de chansons, avec la révision lue et les ouvrages cités (Lewisohn, MacDonald, Everett…) | idem | ✅ 233 articles avec section ; 3 462 lignes ; source `wikipedia_song_page`, confiance moyenne |
+| Qui a écrit quoi : phrases des articles lues par le modèle, une ligne par affirmation, citation et révision gardées | `scripts/wikipedia_authorship.py`, `data/credits/wikipedia_claims.csv` | ✅ 403 affirmations sur 177 chansons (234 moyennes, 169 faibles : sans citation ou contredites) ; 16 chansons où les récits divergent. **À vérifier dans les livres cités** |
+| Recoupement Wikipédia × MusicBrainz, personne par personne et partie par partie | `credits.py:compare_sources`, `analysis/credits/source_agreement.csv`, `source_disagreements.csv`, page Credits | ✅ 222 chansons comparées, **79 % d'accord** ; guitare 90 %, basse 91 %, voix principale 87 %, chœurs 63 %, cordes 62 % |
+
+Les désaccords sont surtout de définition : deux chanteurs qui se partagent la voix sont deux voix principales pour
+MusicBrainz, une voix et une harmonie pour beaucoup d'articles ; MusicBrainz nomme chaque musicien d'orchestre,
+Wikipédia écrit souvent « non crédité ». Quelques-uns sont de fond (McCartney absent de *She Said She Said* selon
+MacDonald et Everett, crédité à la basse par MusicBrainz). Rien n'est fusionné : chaque source garde sa ligne.
+
 **Reste à faire (dans l'ordre)** : annoter (page Annotate) → `scripts/theme_agreement.py` → remplacer les thèmes par
 listes de mots sur la page Mood → évaluer un classifieur d'émotions et les suggestions du modèle contre l'annotation →
 étendre aux autres catalogues. En parallèle : saisir les contributions documentées (`data/credits/manual_claims.csv`).

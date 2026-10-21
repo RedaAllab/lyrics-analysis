@@ -1,28 +1,35 @@
-title,musicbrainz,wikipedia_song_list
-A Day in the Life,lennon; mccartney,lennon
-A Hard Day's Night,lennon; mccartney,lennon
-All Together Now,lennon; mccartney,mccartney
-Any Time at All,lennon; mccartney,lennon
-"Baby, You're a Rich Man",lennon; mccartney,lennon
-Because,harrison; lennon; mccartney,lennon
-Carry That Weight,harrison; lennon; mccartney; starr,mccartney
-Hey Bulldog,lennon; mccartney,lennon
-I Don't Want to Spoil the Party,lennon; mccartney,lennon
-I Wanna Be Your Man,lennon; starr,starr
-I Want to Hold Your Hand,lennon,lennon; mccartney
-I'll Be Back,lennon,lennon; mccartney
-I'll Be on My Way,lennon,lennon; mccartney
-"Komm, gib mir deine Hand",harrison; lennon; mccartney,lennon; mccartney
-Little Child,lennon,lennon; mccartney
-Love Me Do,mccartney,lennon; mccartney
-Magical Mystery Tour,mccartney,lennon; mccartney
-Misery,lennon,lennon; mccartney
-Penny Lane,lennon; mccartney,mccartney
-Please Please Me,lennon,lennon; mccartney
-Sgt. Pepper's Lonely Hearts Club Band,harrison; lennon; mccartney,mccartney
-She's Leaving Home,lennon; mccartney,mccartney
-Shout,mccartney,harrison; lennon; mccartney; starr
-Sie liebt dich,lennon,lennon; mccartney
-Sun King,harrison; lennon; mccartney,lennon
-There's a Place,lennon,lennon; mccartney
-You'll Be Mine,lennon; mccartney,mccartney
+title,musicbrainz,wikipedia_album_page,wikipedia_song_list,wikipedia_song_page
+A Day in the Life,lennon; mccartney,,lennon,lennon; mccartney
+A Hard Day's Night,lennon; mccartney,,lennon,lennon; mccartney
+All Together Now,lennon; mccartney,,mccartney,lennon; mccartney
+Any Time at All,lennon; mccartney,,lennon,lennon
+"Baby, You're a Rich Man",lennon; mccartney,,lennon,lennon
+Because,harrison; lennon; mccartney,harrison,lennon,
+Birthday,lennon; mccartney,,lennon; mccartney,mccartney
+Can You Take Me Back?,mccartney,,mccartney,lennon; mccartney
+Carry That Weight,harrison; lennon; mccartney; starr,,mccartney,mccartney
+Christmas Time (Is Here Again),harrison; lennon; mccartney; starr,,harrison; lennon; mccartney; starr,george_martin; harrison; lennon; mccartney; starr; victor_spinetti
+From Me to You,lennon; mccartney,,lennon; mccartney,lennon
+Hey Bulldog,lennon; mccartney,,lennon,lennon
+I Don't Want to Spoil the Party,lennon; mccartney,,lennon,lennon
+I Wanna Be Your Man,lennon; starr,starr,starr,
+I'll Be Back,lennon,,lennon; mccartney,lennon
+I'll Be on My Way,lennon,,lennon; mccartney,lennon
+If I Fell,lennon,,lennon,lennon; mccartney
+"Komm, gib mir deine Hand",harrison; lennon; mccartney,,lennon; mccartney,
+Little Child,lennon,,lennon; mccartney,
+Love Me Do,mccartney,,lennon; mccartney,
+Madman,,,mccartney,lennon
+Magical Mystery Tour,mccartney,,lennon; mccartney,lennon; mccartney
+One After 909,lennon; mccartney,,lennon; mccartney,lennon
+Penny Lane,lennon; mccartney,,mccartney,
+Please Please Me,lennon,,lennon; mccartney,lennon
+Sgt. Pepper's Lonely Hearts Club Band,harrison; lennon; mccartney,,mccartney,harrison; lennon; mccartney; starr
+Sgt. Pepper's Lonely Hearts Club Band (Reprise),harrison; lennon; mccartney,starr,harrison; lennon; mccartney,harrison; lennon; mccartney; starr
+She's Leaving Home,lennon; mccartney,,mccartney,lennon; mccartney
+Shout,mccartney,,harrison; lennon; mccartney; starr,
+Sun King,harrison; lennon; mccartney,,lennon,lennon
+Thank You Girl,lennon; mccartney,,lennon; mccartney,lennon
+There's a Place,lennon,,lennon; mccartney,
+You Really Got a Hold on Me,lennon,,lennon,harrison; lennon
+You'll Be Mine,lennon; mccartney,,mccartney,mccartney

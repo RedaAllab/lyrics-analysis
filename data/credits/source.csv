@@ -1,4 +1,6 @@
 source_id,type,citation,url,accessed
 wikipedia_song_list,secondary,"Wikipedia, List of songs recorded by the Beatles (writer and lead vocal columns, which reproduce the official credits of the releases)",https://en.wikipedia.org/wiki/List_of_songs_recorded_by_the_Beatles,
 musicbrainz,database,"MusicBrainz, recording and work relationships (CC0), original editions",https://musicbrainz.org/,2026-10-21
+wikipedia_song_page,secondary,"English Wikipedia, Personnel section of the song's article; each row names the works the article cites (revision in the note)",https://en.wikipedia.org/,2026-10-21
+wikipedia_album_page,secondary,"English Wikipedia, Personnel section of the album's article, roles limited to named songs only; works cited in the note",https://en.wikipedia.org/,2026-10-21
 glickman_hdsr,interpretation,"Glickman, Brown and Song, Data in the Life: Authorship Attribution in Lennon-McCartney Songs, Harvard Data Science Review, issue 1 (2019); reported by the Harvard Gazette, September 2018",https://news.harvard.edu/gazette/story/2018/09/harvard-statistician-examines-beatles-mystery,2026-10-21

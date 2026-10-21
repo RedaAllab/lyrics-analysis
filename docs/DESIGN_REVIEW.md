@@ -16,10 +16,14 @@ Checked on 2026-10-21, every page at 800 px wide, home / song / voices at 375 px
 4. Voices radar: taller, with larger margins.
 5. Segmented controls now select in solid ink, like the tabs.
 
+6. Artists and Corpus box plots: solid fills in the group colour, ink outline and median (`viz.theme.solid_boxes`).
+7. Tabs (Corpus and others): the old `data-baseweb` selectors matched nothing in this Streamlit version; they now target
+   `data-testid="stTab"`, selected tab in solid ink.
+8. Notices (`st.info`, `st.warning`): card background, ink frame, thick left edge, no tint.
+9. Phone: top padding of the page reduced so the title starts higher.
+10. Listen player: unplayed sections at 80 % opacity, the current one outlined by an ink bar.
+
 ## To improve
-1. **Box plot on Artists** uses pastel box fills from Streamlit's categorical colours; set the fills explicitly.
-2. **Corpus tabs** are small and underlined rather than the solid-ink tabs used elsewhere; check the selected state.
-3. **Info box** on My songs keeps Streamlit's blue tint; restyle with `--lx-rule` border and card background.
-4. **Mobile header**: the sidebar logo shrinks to the icon plus a `»` toggle; fine, but the title block starts low.
-5. **Listen player** (synced sections bar): unplayed segments at 55 % opacity read grey on paper; raise contrast.
-6. **Fonts**: IBM Plex and Space Grotesk load from Google Fonts at runtime; a slow connection shows a fallback flash.
+1. **Fonts**: IBM Plex and Space Grotesk load from Google Fonts at runtime, so a slow connection shows a fallback flash.
+   `st.html` strips `<link rel="preconnect">`, so the only real fix is to self-host the font files
+   (`enableStaticServing` plus `[[theme.fontFaces]]` in `config.toml`), which needs the woff2 files added to the repository.

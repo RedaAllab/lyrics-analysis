@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from beatles_viz.config import ROOT
+from beatles_viz.viz.theme import solid_boxes
 
 ARTISTS_DIR = ROOT / "analysis/artists"
 # Same order and colours as scripts/compare_artists.py.
@@ -59,6 +60,7 @@ def profile_box(songs, measure):
                  category_orders={"artist": present(d)}, labels={measure: MEASURES[measure], "artist": ""})
     fig.update_xaxes(tickangle=-30)
     fig.update_layout(showlegend=False)
+    solid_boxes(fig, ARTIST_COLORS)
     return _layout(fig, f"{MEASURES[measure]}, song by song")
 
 

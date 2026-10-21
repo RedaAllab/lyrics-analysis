@@ -17,8 +17,8 @@ TEMPLATE = """
 body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: __INK__; }
 #player { width: 100%; max-width: 560px; aspect-ratio: 16 / 9; }
 #bar { position: relative; height: 26px; margin: 10px 0 6px; cursor: pointer; }
-.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 __PAPER__; opacity: .55; }
-.seg.on { opacity: 1; }
+.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 __PAPER__; opacity: .8; }
+.seg.on { opacity: 1; box-shadow: inset -2px 0 __PAPER__, inset 0 -4px __INK__; }
 #head { position: absolute; top: -4px; bottom: -4px; width: 2px; background: __INK__; left: 0; }
 #now { font-size: 15px; font-weight: 600; }
 #note { font-size: 12px; opacity: .65; }

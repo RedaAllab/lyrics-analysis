@@ -24,10 +24,15 @@ h1 {{ line-height: .95 !important; text-wrap: balance; }}
 [data-testid="stMetricDelta"] {{ color: var(--lx-muted) !important; }}
 [data-testid="stMetricDelta"] svg {{ display: none; }}
 [data-testid="stVerticalBlockBorderWrapper"]:has(> div > [data-testid="stVerticalBlock"]) {{ background: var(--lx-card); }}
-[data-baseweb="tab-list"] {{ border-bottom: 2px solid var(--lx-ink); gap: 0; }}
-[data-baseweb="tab"] {{ padding: .75rem 1.5rem; font-weight: 600; }}
-[data-baseweb="tab"][aria-selected="true"] {{ background: var(--lx-ink); color: var(--lx-paper); }}
-[data-baseweb="tab-highlight"], [data-baseweb="tab-border"] {{ display: none; }}
+[role="tablist"] {{ border-bottom: 2px solid var(--lx-ink); gap: 0; }}
+[data-testid="stTab"] {{ padding: .6rem 1.1rem; font-weight: 600; }}
+[data-testid="stTab"][aria-selected="true"] {{ background: var(--lx-ink); }}
+[data-testid="stTab"][aria-selected="true"], [data-testid="stTab"][aria-selected="true"] * {{ color: var(--lx-paper) !important; }}
+[role="tablist"]::after, [data-testid="stTab"]::after {{ display: none !important; }}
+/* Notices: card with an ink frame instead of Streamlit's tinted box */
+[data-testid="stAlert"] > div {{ background: var(--lx-card) !important; border: 1px solid var(--lx-ink) !important;
+  border-left-width: 6px !important; border-radius: 0 !important; }}
+[data-testid="stAlert"], [data-testid="stAlert"] * {{ color: var(--lx-ink) !important; }}
 [data-testid="stCaptionContainer"] {{ color: var(--lx-muted); }}
 hr {{ border-color: var(--lx-ink) !important; }}
 /* Nothing is cut with an ellipsis: labels, values, deltas and button texts wrap instead */
@@ -48,6 +53,7 @@ hr {{ border-color: var(--lx-ink) !important; }}
   [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] > [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] > [data-testid="stMetric"]) > [data-testid="stColumn"] {{
     flex: 1 1 calc(50% - 1rem) !important; min-width: calc(50% - 1rem) !important; }}
   h1 {{ font-size: 2.75rem !important; }}
+  [data-testid="stMainBlockContainer"] {{ padding-top: 4.5rem !important; }}
 }}
 </style>
 """

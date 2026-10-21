@@ -17,6 +17,9 @@ h1 {{ line-height: .95 !important; text-wrap: balance; }}
 .lx-banner {{ display: block; width: 100%; height: auto; margin-bottom: .75rem; }}
 .lx-lead {{ font-size: 1.2rem; line-height: 1.5; max-width: 36rem; }}
 .lx-dot {{ display: inline-block; width: .7em; height: .7em; margin-right: .4em; }}
+.lx-chips {{ display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 1.5rem; }}
+.lx-chip {{ font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; padding: .25rem .9rem;
+           background: var(--lx-card); border: 2px solid var(--lx-ink); }}
 .lx-stat {{ font-family: var(--lx-mono); font-size: .75rem !important; text-transform: uppercase; letter-spacing: .06em; }}
 [data-testid="stMetric"] {{ border-top: 1px solid var(--lx-ink); padding-top: .75rem; }}
 [data-testid="stMetricLabel"] p {{ font-family: var(--lx-mono); font-size: .66rem !important; text-transform: uppercase;

@@ -14,7 +14,7 @@ needs_lyrics = pytest.mark.skipif(not has_lyrics(), reason="local lyrics file no
 
 
 @pytest.mark.parametrize("entry", ["beatles_app.py", "corpus_page.py", "compare_page.py", "stories_page.py",
-                                   "album_page.py", "voice_page.py", "mood_page.py", "trends_page.py"])
+                                   "album_page.py", "voice_page.py", "guess_page.py", "mood_page.py", "trends_page.py"])
 def test_pages_run(entry):
     assert not AppTest.from_file(str(APP / entry), default_timeout=180).run().exception
 
@@ -120,3 +120,14 @@ def test_song_page_syncs_the_structure_on_test_songs(title, video):
     at.run()
     assert not at.exception
     assert any(video in str(e.proto) and "seekTo" in str(e.proto) for e in at.get("iframe"))
+
+
+def test_guess_page_scores_an_answer_and_moves_on():
+    at = AppTest.from_file(str(APP / "guess_page.py"), default_timeout=180).run()
+    assert not at.exception and len(at.button) == 4
+    first = at.session_state["guess_q"].title
+    at.button(key="guess_Lennon").click().run()
+    assert not at.exception and at.session_state["guess_score"][1] == 1
+    assert {b.key for b in at.button} == {"guess_next", "guess_open"}
+    at.button(key="guess_next").click().run()
+    assert not at.exception and at.session_state["guess_q"].title != first and at.session_state["guess_pick"] is None

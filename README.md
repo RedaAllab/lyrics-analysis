@@ -19,7 +19,9 @@ Each song goes through `beatles_viz.corpus.build_corpus`:
 3. **Voices**: the lead voice is the singer named in the section tag, otherwise the song's `lead_vocal`,
    otherwise "Neutral"; several voices give "Shared" (`attribution.py`). This is not the songwriting credit.
 4. **Rendering**: Plotly charts (`viz/`), a Read page with one visual effect per voice (`effects/`), and a
-   share card (`render/share_card.py`).
+   share card (`render/share_card.py`), and a "Who sings?" game (`quiz.py`) that shows single telling words, never lyrics.
+   The look is one "session sheet" design: `.streamlit/config.toml` for Streamlit, `config.py` and `viz/theme.py` for
+   Python, with the palette kept in sync by `tests/test_theme.py`. Fonts are self-hosted (`app/static/fonts`).
 
 ## Two data modes
 
@@ -34,7 +36,7 @@ Lyrics are copyrighted and are not in the repository. Without the local file the
 ## Layout
 
 ```
-app/                  Streamlit: beatles_app.py (navigation) + one *_page.py per page; static/ (logos)
+app/                  Streamlit: beatles_app.py (navigation) + one *_page.py per page; static/ (logos, fonts)
 beatles_viz/          Python package
   config.py           paths, phases, thresholds, colours
   corpus.py           build_corpus / load_corpus / analysable
@@ -44,6 +46,7 @@ beatles_viz/          Python package
   text/               tokenisation, sections, metrics, mood, repetition, semantics
   viz/                Plotly charts
   effects/            one visual effect per voice
+  quiz.py             questions for the "Who sings?" game
   render/             views, share card, fonts (OFL licences included)
 scripts/              offline data building and analyses
 tests/                pytest, synthetic lyrics only
@@ -89,5 +92,9 @@ BEATLES_PUBLIC_ONLY=1 .venv/bin/pytest   # as in GitHub Actions CI: tests that n
   (columns `title`, `release_core`, `is_original`, `lyrics_raw`…), so that local file cannot be rebuilt from the
   repository alone.
 - Genius years are unreliable; the year used is the one from the official list.
-- Section timestamps (`section_times.csv`) are measured by ear on a few songs and estimated for the others.
+- Section timestamps (`section_times.csv`) are measured by ear on two songs (Hey Jude, Let It Be), the only ones with the
+  synchronised player; adding a song means listening to it and adding its rows.
+- Three original songs without section tags (Bad to Me, I'm in Love, Madman) have no stanza that returns, so no
+  structure is detected and they stay one block.
+- The notes in `docs/` are working notes, mostly in French.
 - For personal research use only.

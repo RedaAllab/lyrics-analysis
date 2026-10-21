@@ -22,9 +22,9 @@ def usage_by_voice(by_voice, word):
     return titled(fig, f"Who sings “{word}”", height=320)
 
 
-def companion_words(comp, word):
+def companion_words(comp, word, title=None):
     if comp.empty:
         return None
     fig = px.bar(comp[::-1], x="z", y="word", orientation="h", color_discrete_sequence=[SECONDARY],
                  labels={"z": "over-representation (z-score)", "word": ""})
-    return titled(fig, f"Words that come with “{word}”", height=max(300, 24 * len(comp)))
+    return titled(fig, title or f"Words that come with “{word}”", height=max(300, 24 * len(comp)))

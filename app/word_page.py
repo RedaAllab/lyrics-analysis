@@ -5,6 +5,7 @@ from beatles_viz.render.components import (apply_filters, cached_corpus, chip_ro
                                            song_table)
 from beatles_viz.render.identity import kicker
 from beatles_viz.text import words as W
+from beatles_viz.text.context import SPAN, collocates
 from beatles_viz.viz import word_charts as charts
 
 corpus = cached_corpus(data_source())
@@ -48,6 +49,15 @@ with right:
         pick = chip_row("Explore a companion word", comp.word.head(6).tolist(), "comp")
         if pick:
             open_word(pick)
+
+near = collocates(d, word)
+if not near.empty:
+    st.subheader("What stands right next to it?")
+    plot(charts.companion_words(near, word, f"Words within {SPAN} words of “{word}”"))
+    st.caption(f"Content words sung at most {SPAN} words before or after “{word}”, compared with every other content "
+               "word of the same songs (log-odds z-score). The chart above compares whole songs; this one reads the "
+               "close neighbourhood, which tells the senses of a word apart. A word repeated in a chorus counts each "
+               "time it is sung.")
 
 st.subheader("Songs where it matters most")
 top = W.top_songs(d, word)

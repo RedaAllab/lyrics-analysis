@@ -14,6 +14,9 @@ distinct_singer_strings,59
 sections,1827
 sections_with_named_singer,361
 originals_co_written,183
+credit_strings,82
+credit_strings_unresolved,0
+lead_vocal_unknown,4
 originals_voice_Lennon,75
 originals_voice_McCartney,68
 originals_voice_Shared,32

@@ -20,6 +20,18 @@ def mood_over_time(corpus):
                        "Mood of each song, period by period", zero_line=True)
 
 
+def mood_methods(corpus):
+    """Word-by-word mood against line-by-line mood: songs far from the diagonal are where negation or phrasing
+    changes the reading."""
+    d = corpus.dropna(subset=["valence", "valence_ctx"])
+    fig = px.scatter(d, x="valence", y="valence_ctx", hover_name="title", color_discrete_sequence=[SECONDARY],
+                     labels={"valence": "mood from single words", "valence_ctx": "mood line by line"})
+    fig.add_shape(type="line", x0=-1, y0=-1, x1=1, y1=1, line=dict(color=REFERENCE, dash="dot"))
+    fig.update_xaxes(range=[-1, 1], zeroline=False)
+    fig.update_yaxes(range=[-1, 1], zeroline=False)
+    return titled(fig, "Two readings of the mood", height=420)
+
+
 def theme_heatmap(corpus, key, order):
     cols = theme_columns(corpus)
     g = corpus.groupby(key)[cols].mean().reindex([o for o in order if o in set(corpus[key])])

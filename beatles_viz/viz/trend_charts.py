@@ -1,4 +1,5 @@
 """Figures about change over the discography. No lyric text in any figure."""
+import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -14,13 +15,21 @@ def _phase_labels(counts):
 
 
 def word_movers(movers):
+    """movers: steady_movers rows, with ci_low and ci_high (change_interval) when available: drawn as error bars."""
     first, last = PHASE_ORDER[0], PHASE_ORDER[-1]
-    fig = px.bar(movers[::-1], x="change", y="word", orientation="h", color="direction",
-                 color_discrete_map={"rising": RISING, "falling": ACCENT},
-                 hover_data={"first": ":.1f", "last": ":.1f", "songs": True, "direction": False},
-                 labels={"change": f"change in rate, {first} to {last} (per 1,000 words)", "word": "",
-                         "first": f"per 1,000 words, {first}", "last": f"per 1,000 words, {last}",
-                         "songs": "songs using it"})
+    d = movers[::-1]
+    extra = {}
+    if {"ci_low", "ci_high"} <= set(d):
+        extra = dict(error_x=d.ci_high - d.change_song, error_x_minus=d.change_song - d.ci_low)
+    held = d.held if "held" in d else False  # survives the correction for multiple tests: starred
+    d = d.assign(label=d.word + np.where(held, " *", ""))
+    fig = px.bar(d, x="change_song", y="label", orientation="h", color="direction",
+                 color_discrete_map={"rising": RISING, "falling": ACCENT}, **extra,
+                 hover_data={"first_song": ":.1f", "last_song": ":.1f", "songs": True, "q": ":.2f",
+                             "direction": False},
+                 labels={"change_song": f"change in rate, {first} to {last} (per 1,000 words, mean of songs)",
+                         "label": "", "first_song": f"per 1,000 words, {first}", "last_song": f"per 1,000 words, {last}",
+                         "songs": "songs using it", "q": "q (corrected for the words tested)"})
     fig.update_layout(showlegend=False)
     return titled(fig, "Words that drift steadily", height=max(320, 26 * len(movers) + 100))
 

@@ -15,10 +15,13 @@ def cached_trends(source):
     d = analysable(cached_corpus(source))
     d = d[d.phase.notna()]
     shares, counts = T.voice_shares(d)
-    return d, T.steady_movers(T.word_trends(d), exclude=("love",)), T.section_shares(d), shares, counts
+    trends = T.word_trends(d)
+    movers = T.steady_movers(trends, exclude=("love",))
+    movers = movers.merge(T.change_interval(d, movers.word), on="word")
+    return d, movers, len(trends), trends[trends.q < 0.05].word.tolist(), T.section_shares(d), shares, counts
 
 
-d, movers, sections, voices, counts = cached_trends(data_source())
+d, movers, tested, kept, sections, voices, counts = cached_trends(data_source())
 
 kicker("Trends · original compositions, period by period")
 st.markdown("## What changed between 1962 and 1970")
@@ -31,9 +34,13 @@ pick = chip_row("Open a word", movers.word.head(3).tolist() + movers.word.tail(3
 if pick:
     open_word(pick)
 st.caption("Words used in at least 10 songs whose rate follows the release year (rank correlation, p < 0.05), "
-           "ranked by the change between the first and the last period. Over a hundred words are tested, so a few "
-           "of these drifts are chance: read them as leads, then check the word's own page. Few words rise because "
-           "the later vocabulary spreads over many words, none of which dominates.")
+           "ranked by the change of the songs' mean rate between the first and the last period; bars show a 95% "
+           f"bootstrap interval (songs resampled). {tested} words are tested: once corrected for that "
+           f"(Benjamini-Hochberg, q < 0.05), only {len(kept)} hold{'s' if len(kept) == 1 else ''}"
+           f"{': ' + ', '.join(f'“{w}”' for w in kept) if kept else ''} (starred). Read the others as leads, then check "
+           "the word's own page. The correlation uses every year, the interval only the first and last periods, so "
+           "they can disagree. An interval that crosses zero is not a change. Few words rise "
+           "because the later vocabulary spreads over many words, none of which dominates.")
 
 st.subheader("Are songs built differently over time?")
 plot(charts.section_shares(sections, counts))

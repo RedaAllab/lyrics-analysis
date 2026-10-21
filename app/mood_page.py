@@ -30,6 +30,17 @@ with right:
     if pick:
         open_song(pick)
 
+if "valence_ctx" in corpus and corpus.valence_ctx.notna().any():
+    st.subheader("Does reading line by line change the mood?")
+    plot(mc.mood_methods(corpus))
+    gap = (scored.valence_ctx - scored.valence).abs().dropna()
+    pick = chip_row("Biggest changes", scored.loc[gap.nlargest(6).index].title.tolist(), "mood_gap")
+    if pick:
+        open_song(pick)
+    st.caption("Line by line, VADER's sentence rules apply: negation (“don't cry” is no longer sad), intensifiers and "
+               "“but”. The score is the mean of the lines that carry a mood, from −1 to +1; songs with fewer than 3 such "
+               "lines have none. Both readings use the same lexicon, and neither sees irony.")
+
 by = st.radio("Themes by", ["period", "voice"], horizontal=True, key="mood_by")
 if by == "period":
     plot(mc.theme_heatmap(corpus, "phase", PHASE_ORDER))

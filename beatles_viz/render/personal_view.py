@@ -24,7 +24,7 @@ def personal_strip(song):
         return
     title = song.title
     e = personal.entry(personal.load(), title)
-    fav, stars, listen, info = st.columns([1.2, 1.4, 1.2, 3], vertical_alignment="center")
+    fav, stars, listen, info = st.columns([2, 2.4, 1.6, 2.2], vertical_alignment="center")
     label = "Favourite" if e["favourite"] else "Add to favourites"
     if fav.button(label, icon=":material/star:" if e["favourite"] else ":material/star_border:",
                   key=_key(title, "fav"), type="tertiary"):

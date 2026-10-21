@@ -24,7 +24,7 @@ def navigation(song, scope, key):
     order = st.radio("Browse", ["chronological", "album"], horizontal=True, key=f"{key}_order",
                      format_func=lambda o: "by year" if o == "chronological" else "within the release")
     prev_title, next_title = neighbors(scope, song.title, order)
-    cols = st.columns([1, 1, 4])
+    cols = st.columns([2, 2, 3])
     cols[0].button("← Previous", disabled=prev_title is None, on_click=go_to, args=(prev_title,),
                    width="stretch", key=f"{key}_prev")
     cols[1].button("Next →", disabled=next_title is None, on_click=go_to, args=(next_title,),

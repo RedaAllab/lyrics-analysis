@@ -19,8 +19,8 @@ h1 {{ line-height: .95 !important; text-wrap: balance; }}
 .lx-dot {{ display: inline-block; width: .7em; height: .7em; margin-right: .4em; }}
 .lx-stat {{ font-family: var(--lx-mono); font-size: .75rem !important; text-transform: uppercase; letter-spacing: .06em; }}
 [data-testid="stMetric"] {{ border-top: 1px solid var(--lx-ink); padding-top: .75rem; }}
-[data-testid="stMetricLabel"] p {{ font-family: var(--lx-mono); font-size: .7rem !important; text-transform: uppercase;
-                                  letter-spacing: .04em; color: var(--lx-muted); }}
+[data-testid="stMetricLabel"] p {{ font-family: var(--lx-mono); font-size: .66rem !important; text-transform: uppercase;
+                                  letter-spacing: .02em; color: var(--lx-muted); overflow-wrap: normal; word-break: normal; }}
 [data-testid="stMetricDelta"] {{ color: var(--lx-muted) !important; }}
 [data-testid="stMetricDelta"] svg {{ display: none; }}
 [data-testid="stVerticalBlockBorderWrapper"]:has(> div > [data-testid="stVerticalBlock"]) {{ background: var(--lx-card); }}
@@ -30,6 +30,17 @@ h1 {{ line-height: .95 !important; text-wrap: balance; }}
 [data-baseweb="tab-highlight"], [data-baseweb="tab-border"] {{ display: none; }}
 [data-testid="stCaptionContainer"] {{ color: var(--lx-muted); }}
 hr {{ border-color: var(--lx-ink) !important; }}
+/* Nothing is cut with an ellipsis: labels, values, deltas and button texts wrap instead */
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] *, [data-testid="stMetricValue"], [data-testid="stMetricValue"] *,
+[data-testid="stMetricDelta"], [data-testid="stMetricDelta"] *, [data-testid^="stBaseButton"] p {{
+  white-space: normal !important; overflow: visible !important; text-overflow: clip !important; }}
+[data-testid="stMetricValue"] {{ font-size: clamp(1.5rem, 2.4vw, 2.25rem) !important; line-height: 1.1; overflow-wrap: anywhere; }}
+[data-testid="stMetricDelta"] {{ height: auto !important; }}
+[data-testid^="stBaseButton"] {{ height: auto; min-height: 2.5rem; }}
+/* Segmented controls select like tabs: solid ink */
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][data-selected="true"] {{
+  background: var(--lx-ink) !important; color: var(--lx-paper) !important; }}
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][data-selected="true"] * {{ color: var(--lx-paper) !important; }}
 /* Phones: rows of metrics stay two by two instead of one per line */
 @media (max-width: 640px) {{
   [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] > [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] > [data-testid="stMetric"]) {{

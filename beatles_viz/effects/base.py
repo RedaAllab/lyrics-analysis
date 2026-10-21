@@ -1,6 +1,8 @@
 import html
 import re
 
+from beatles_viz.config import CARD, INK, MUTED
+
 WORD_SPLIT = re.compile(r"([A-Za-z’']+)")
 REGISTRY = {}
 
@@ -24,7 +26,7 @@ class Effect:
     name = "neutral"
     summary = "plain text, no animation"
     font = "inherit"
-    defaults = {"bg": "#f5f5f2", "fg": "#222222", "accent": "#8a8a8a"}
+    defaults = {"bg": CARD, "fg": INK, "accent": MUTED}
     ranges = {}
     text_keys = ("fg",)  # colour params used for text, checked for contrast against bg
 

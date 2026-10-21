@@ -48,7 +48,8 @@ st.navigation({
         st.Page(HERE / "compare_page.py", title="Compare", icon=":material/compare_arrows:", url_path="compare"),
         st.Page(HERE / "artists_page.py", title="Other artists", icon=":material/groups:", url_path="artists"),
         st.Page(HERE / "mood_page.py", title="Mood", icon=":material/sentiment_satisfied:", url_path="mood"),
+        st.Page(HERE / "guess_page.py", title="Who sings?", icon=":material/quiz:", url_path="guess"),
         st.Page(HERE / "voice_page.py", title="Voices", icon=":material/record_voice_over:", url_path="voices"),
         st.Page(HERE / "corpus_page.py", title="Corpus", icon=":material/bar_chart:", url_path="corpus"),
     ],
-}).run()
+}, expanded=True).run()

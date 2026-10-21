@@ -68,13 +68,14 @@ Impact et effort sont estimés à vue : I = impact, E = effort, sur une échelle
 | 4 | Vue par album | Fait : page Albums (frise des sorties, structure de chaque piste, pistes comparées, mots de l'album, empreintes) |
 | 5 | Profils de voix | Fait : page Voices, deux voix face à face (Lennon / McCartney par défaut) |
 | 6 | Histoires guidées | Fait : page Stories, 4 constats dont le texte est calculé à partir des données |
-| 7 | Détection des sections | Fait pour 16 des 21 chansons sans balises. Mesurée sur les chansons balisées : 70 % des lignes bien classées (62 % en classant tout en couplet), F1 de 0,65 sur les refrains |
-| 8 | Jeu « Qui chante ? » | À faire |
-| 9 | Carte partageable | À faire |
+| 7 | Détection des sections | Fait pour 16 des 21 chansons sans balises ; parmi les compositions originales, 3 restent en un seul bloc parce qu'aucune strophe n'y revient (Bad to Me, I'm in Love, Madman). Mesurée sur les chansons balisées : 70 % des lignes bien classées (62 % en classant tout en couplet), F1 de 0,65 sur les refrains |
+| 8 | Jeu « Qui chante ? » | Fait : page Who sings?, 6 mots caractéristiques d'une chanson (jamais ses paroles, mots du titre exclus) et 4 voix à deviner, score de la session |
+| 9 | Carte partageable | Fait : image 1200 x 630 à télécharger, dessinée dans le style « session sheet » |
 | 10 | Sentiment et thèmes | Fait : page Mood et section de la fiche chanson. Valence des mots (lexique VADER, MIT), 9 thèmes en listes de mots. Sans contexte : la négation et l'ironie échappent au score |
 | 11 | Notes et favoris personnels | Fait, en local : favori, note sur 5, notes, journal d'écoute, page My songs |
 | 12 | Écoute | Fait sous forme de liens de recherche vers 4 plateformes (pas d'identifiants de pistes, pas de lecteur intégré) |
 | Design | Pastilles de voix, gabarit Plotly unique, mobile (métriques 2 x 2, titres qui passent à la ligne, légendes sous les graphiques) | Fait |
+| Design | Thème « session sheet » : thème Streamlit clair, gabarit Plotly commun, polices hébergées, carte de partage assortie, test qui garde thème et palette alignés | Fait (voir `DESIGN_REVIEW.md`) |
 
 ## Design
 

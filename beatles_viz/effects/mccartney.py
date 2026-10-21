@@ -1,15 +1,16 @@
 import html
 
+from beatles_viz.config import CARD, INK, VOICE_COLORS
 from beatles_viz.effects.base import Effect, register
 
 
 @register
 class McCartney(Effect):
-    """Readable serif, warm palette, lines fade in one after another, choruses slightly larger."""
+    """Readable serif, lines fade in one after another, choruses slightly larger."""
     name = "mccartney"
     summary = "warm serif, lines fade in, larger choruses"
     font = 'Georgia, "Times New Roman", serif'
-    defaults = {"bg": "#fff3e6", "fg": "#4a1f12", "accent": "#b23a48", "speed": 0.25, "chorus_scale": 1.12}
+    defaults = {"bg": CARD, "fg": INK, "accent": VOICE_COLORS["McCartney"], "speed": 0.25, "chorus_scale": 1.12}
     ranges = {"speed": (0.0, 1.0, 0.05), "chorus_scale": (1.0, 1.4, 0.02)}
 
     def extra_css(self, c, p):

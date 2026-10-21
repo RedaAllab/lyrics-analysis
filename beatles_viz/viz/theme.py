@@ -52,3 +52,10 @@ def style(fig):
     fig.update_xaxes(t.xaxis.to_plotly_json())
     fig.update_yaxes(t.yaxis.to_plotly_json())
     return fig
+
+
+def solid_boxes(fig, colors):
+    """Box plots with a solid fill in each group's colour and an ink outline and median, not Plotly's translucent fill."""
+    fig.for_each_trace(lambda t: t.update(fillcolor=colors.get(t.name, t.marker.color), line=dict(color=INK, width=1.2),
+                                          marker=dict(color=colors.get(t.name, t.marker.color), size=4)))
+    return fig

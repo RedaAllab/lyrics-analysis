@@ -11,6 +11,7 @@ from beatles_viz.render.components import (HELP, apply_filters, cached_corpus, c
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import content_counter, merge
 from beatles_viz.text.words import usage_by
+from beatles_viz.viz.theme import solid_boxes
 from beatles_viz.viz.voice_charts import voice_words
 
 METRICS = {"Words per song": "tokens", "Distinct words per song": "types",
@@ -139,7 +140,7 @@ with tab_singer:
                  color_discrete_map=VOICE_COLORS, category_orders={"voice": SINGERS}, log_y=log,
                  labels={"voice": "", METRICS[m]: m + (" (log scale)" if log else "")})
     fig.update_layout(showlegend=False)
-    plot(fig)
+    plot(solid_boxes(fig, VOICE_COLORS))
     st.caption("Songs credited to Lennon-McCartney: the lead singer is used as a proxy, not the actual writer.")
     main = [s for s in ["Lennon", "McCartney", "Harrison"] if (df.voice == s).sum() >= 5]
     if len(main) >= 2:

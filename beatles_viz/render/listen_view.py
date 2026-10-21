@@ -1,24 +1,35 @@
 """The official upload with the song's structure under it: a playhead follows the music and a click on a section
 jumps to it. Under test on a few songs (SYNCED) before it replaces the plain player. Section starts come from
 data/beatles/section_times.csv when measured by ear, otherwise from word counts between the measured ones."""
+import base64
 import json
+from functools import lru_cache
 
 import streamlit.components.v1 as components
 
-from beatles_viz.config import INK, PAPER, SECTION_COLORS
+from beatles_viz.config import INK, PAPER, ROOT, SECTION_COLORS
 from beatles_viz.listen import section_spans, section_times, video_id
 from beatles_viz.render.components import listen_row
 from beatles_viz.viz.song_charts import has_structure
 
 SYNCED = {"Hey Jude", "Let It Be"}
 
+@lru_cache(maxsize=None)
+def _font_face():
+    """The iframe is a separate document that does not get the page's fonts: carry IBM Plex Sans inside it."""
+    data = base64.b64encode((ROOT / "app/static/fonts/IBMPlexSans-latin-var.woff2").read_bytes()).decode()
+    return ("@font-face { font-family: 'IBM Plex Sans'; font-weight: 400 700; "
+            f"src: url(data:font/woff2;base64,{data}) format('woff2'); }}")
+
+
 TEMPLATE = """
 <style>
+__FONT__
 body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: __INK__; }
 #player { width: 100%; max-width: 560px; aspect-ratio: 16 / 9; }
 #bar { position: relative; height: 26px; margin: 10px 0 6px; cursor: pointer; }
-.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 __PAPER__; opacity: .55; }
-.seg.on { opacity: 1; }
+.seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 __PAPER__; opacity: .8; }
+.seg.on { opacity: 1; box-shadow: inset -2px 0 __PAPER__, inset 0 -4px __INK__; }
 #head { position: absolute; top: -4px; bottom: -4px; width: 2px; background: __INK__; left: 0; }
 #now { font-size: 15px; font-weight: 600; }
 #note { font-size: 12px; opacity: .65; }
@@ -80,7 +91,7 @@ def synced_player(song, vid):
              for i, (n, k, a, b) in enumerate(section_spans(song))]
     note = (f"Start of {len(measured)} of {len(spans)} sections measured by ear, the others estimated from word counts."
             if measured else "Section times are estimated from word counts, not measured.")
-    html = TEMPLATE.replace("__INK__", INK).replace("__PAPER__", PAPER).replace("__SPANS__", json.dumps(spans)).replace("__VIDEO__", vid).replace("__NOTE__", note)
+    html = TEMPLATE.replace("__FONT__", _font_face()).replace("__INK__", INK).replace("__PAPER__", PAPER).replace("__SPANS__", json.dumps(spans)).replace("__VIDEO__", vid).replace("__NOTE__", note)
     components.html(html, height=420)
 
 

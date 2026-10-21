@@ -17,19 +17,38 @@ h1 {{ line-height: .95 !important; text-wrap: balance; }}
 .lx-banner {{ display: block; width: 100%; height: auto; margin-bottom: .75rem; }}
 .lx-lead {{ font-size: 1.2rem; line-height: 1.5; max-width: 36rem; }}
 .lx-dot {{ display: inline-block; width: .7em; height: .7em; margin-right: .4em; }}
+.lx-chips {{ display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 1.5rem; }}
+.lx-chip {{ font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; padding: .25rem .9rem;
+           background: var(--lx-card); border: 2px solid var(--lx-ink); }}
 .lx-stat {{ font-family: var(--lx-mono); font-size: .75rem !important; text-transform: uppercase; letter-spacing: .06em; }}
 [data-testid="stMetric"] {{ border-top: 1px solid var(--lx-ink); padding-top: .75rem; }}
-[data-testid="stMetricLabel"] p {{ font-family: var(--lx-mono); font-size: .7rem !important; text-transform: uppercase;
-                                  letter-spacing: .04em; color: var(--lx-muted); }}
+[data-testid="stMetricLabel"] p {{ font-family: var(--lx-mono); font-size: .66rem !important; text-transform: uppercase;
+                                  letter-spacing: .02em; color: var(--lx-muted); overflow-wrap: normal; word-break: normal; }}
 [data-testid="stMetricDelta"] {{ color: var(--lx-muted) !important; }}
 [data-testid="stMetricDelta"] svg {{ display: none; }}
 [data-testid="stVerticalBlockBorderWrapper"]:has(> div > [data-testid="stVerticalBlock"]) {{ background: var(--lx-card); }}
-[data-baseweb="tab-list"] {{ border-bottom: 2px solid var(--lx-ink); gap: 0; }}
-[data-baseweb="tab"] {{ padding: .75rem 1.5rem; font-weight: 600; }}
-[data-baseweb="tab"][aria-selected="true"] {{ background: var(--lx-ink); color: var(--lx-paper); }}
-[data-baseweb="tab-highlight"], [data-baseweb="tab-border"] {{ display: none; }}
+[role="tablist"] {{ border-bottom: 2px solid var(--lx-ink); gap: 0; }}
+[data-testid="stTab"] {{ padding: .6rem 1.1rem; font-weight: 600; }}
+[data-testid="stTab"][aria-selected="true"] {{ background: var(--lx-ink); }}
+[data-testid="stTab"][aria-selected="true"], [data-testid="stTab"][aria-selected="true"] * {{ color: var(--lx-paper) !important; }}
+[role="tablist"]::after, [data-testid="stTab"]::after {{ display: none !important; }}
+/* Notices: card with an ink frame instead of Streamlit's tinted box */
+[data-testid="stAlert"] > div {{ background: var(--lx-card) !important; border: 1px solid var(--lx-ink) !important;
+  border-left-width: 6px !important; border-radius: 0 !important; }}
+[data-testid="stAlert"], [data-testid="stAlert"] * {{ color: var(--lx-ink) !important; }}
 [data-testid="stCaptionContainer"] {{ color: var(--lx-muted); }}
 hr {{ border-color: var(--lx-ink) !important; }}
+/* Nothing is cut with an ellipsis: labels, values, deltas and button texts wrap instead */
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] *, [data-testid="stMetricValue"], [data-testid="stMetricValue"] *,
+[data-testid="stMetricDelta"], [data-testid="stMetricDelta"] *, [data-testid^="stBaseButton"] p {{
+  white-space: normal !important; overflow: visible !important; text-overflow: clip !important; }}
+[data-testid="stMetricValue"] {{ font-size: clamp(1.5rem, 2.4vw, 2.25rem) !important; line-height: 1.1; overflow-wrap: anywhere; }}
+[data-testid="stMetricDelta"] {{ height: auto !important; }}
+[data-testid^="stBaseButton"] {{ height: auto; min-height: 2.5rem; }}
+/* Segmented controls select like tabs: solid ink */
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][data-selected="true"] {{
+  background: var(--lx-ink) !important; color: var(--lx-paper) !important; }}
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][data-selected="true"] * {{ color: var(--lx-paper) !important; }}
 /* Phones: rows of metrics stay two by two instead of one per line */
 @media (max-width: 640px) {{
   [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] > [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] > [data-testid="stMetric"]) {{
@@ -37,6 +56,7 @@ hr {{ border-color: var(--lx-ink) !important; }}
   [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] > [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] > [data-testid="stMetric"]) > [data-testid="stColumn"] {{
     flex: 1 1 calc(50% - 1rem) !important; min-width: calc(50% - 1rem) !important; }}
   h1 {{ font-size: 2.75rem !important; }}
+  [data-testid="stMainBlockContainer"] {{ padding-top: 4.5rem !important; }}
 }}
 </style>
 """

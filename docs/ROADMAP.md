@@ -245,6 +245,14 @@ contributions documentées depuis les livres.
 | Classifieur d'émotions transformer | | ⏸ reporté : il ne peut être évalué que contre l'annotation manuelle, qui n'existe pas encore ; l'ajouter sans évaluation contredirait la règle de la v2 |
 | Thèmes du codebook appliqués aux 8 catalogues | | ⏸ reporté : dépend aussi de l'annotation (un modèle validé sur les Beatles pourrait alors être appliqué aux autres, avec contrôle sur un échantillon) |
 
+**Annotation modèle (21/10/2026)** : les 209 compositions annotées par Claude (Opus 5.5) avec le codebook, annotateur
+`claude-opus-5.5 (model)` dans `data/themes/annotations.csv`, à partir des paroles seules ; 1,95 thème par chanson,
+30 chansons marquées « sens implicite ». Ce n'est **pas** la référence humaine : c'est un second codeur. Accord avec les
+suggestions MiniLM (top 2) : kappa moyen **0,28** (accord faible), de 0,10 (société) à 0,51 (musique et danse). MiniLM
+surestime « identité », « nostalgie », « solitude » et « chagrin », sous-estime « société », « spiritualité », « rêve »
+et « désir » : il lit le vocabulaire affectif, pas le propos. Lacunes du codebook relevées : la nature et les saisons,
+la nourriture. Prochaine mesure, la seule qui valide : humain × Claude, dès qu'une annotation humaine existe.
+
 **Leçon** : le résultat le plus net de la phase 3 est négatif et utile. Les méthodes non supervisées (NMF en phase 2,
 groupes de strophes ici) ne trouvent pas de structure thématique stable dans un corpus de cette taille : elles
 confirment le choix d'un codebook annoté à la main comme référence.

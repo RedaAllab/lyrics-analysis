@@ -1,1 +1,210 @@
 title,annotator,themes,main_theme,implicit,note,annotated_on
+A Day in the Life,claude-opus-5.5 (model),society;characters;dream,society,True,"news, death and an invitation to be turned on",2026-10-21
+A Hard Day's Night,claude-opus-5.5 (model),love_devotion,love_devotion,False,"work all day, love at home",2026-10-21
+Across the Universe,claude-opus-5.5 (model),spirituality;self;dream,spirituality,False,,2026-10-21
+All I've Got to Do,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+All My Loving,claude-opus-5.5 (model),love_devotion,love_devotion,False,faithfulness while away,2026-10-21
+All Together Now,claude-opus-5.5 (model),music_fun;friendship;love_devotion,music_fun,False,,2026-10-21
+All You Need Is Love,claude-opus-5.5 (model),spirituality;society,spirituality,False,universal love,2026-10-21
+And I Love Her,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+And Your Bird Can Sing,claude-opus-5.5 (model),self;society;dream,self,True,cryptic address to someone with possessions,2026-10-21
+Another Girl,claude-opus-5.5 (model),heartbreak;love_devotion,heartbreak,False,leaving her for someone new,2026-10-21
+Any Time at All,claude-opus-5.5 (model),love_devotion;friendship,love_devotion,False,support offered,2026-10-21
+Ask Me Why,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Baby's in Black,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,she mourns another man,2026-10-21
+"Baby, You're a Rich Man",claude-opus-5.5 (model),society;self,society,True,irony about the beautiful people,2026-10-21
+Back in the U.S.S.R.,claude-opus-5.5 (model),music_fun;desire;society,music_fun,True,parody of American rock and Cold War,2026-10-21
+Bad to Me,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,fear of being left,2026-10-21
+Because,claude-opus-5.5 (model),spirituality;love_devotion;dream,spirituality,False,,2026-10-21
+Because I Know You Love Me So,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Being for the Benefit of Mr. Kite!,claude-opus-5.5 (model),characters;music_fun,characters,False,,2026-10-21
+Birthday,claude-opus-5.5 (model),music_fun;friendship,music_fun,False,,2026-10-21
+Blackbird,claude-opus-5.5 (model),self;spirituality,self,True,the bird as a metaphor for liberation,2026-10-21
+Blue Jay Way,claude-opus-5.5 (model),loneliness;friendship,loneliness,False,waiting for lost friends,2026-10-21
+Can You Take Me Back?,claude-opus-5.5 (model),nostalgia;loneliness,nostalgia,False,,2026-10-21
+Can't Buy Me Love,claude-opus-5.5 (model),love_devotion;society,love_devotion,False,love against money,2026-10-21
+Carry That Weight,claude-opus-5.5 (model),self,self,False,a burden carried,2026-10-21
+Child of Nature,claude-opus-5.5 (model),spirituality;nostalgia,spirituality,False,,2026-10-21
+Christmas Time (Is Here Again),claude-opus-5.5 (model),music_fun;friendship,music_fun,False,seasonal greetings,2026-10-21
+Come Together,claude-opus-5.5 (model),characters;dream,characters,True,cryptic portrait,2026-10-21
+Cry Baby Cry,claude-opus-5.5 (model),dream;characters,dream,False,,2026-10-21
+Day Tripper,claude-opus-5.5 (model),heartbreak;desire,heartbreak,True,teasing double meanings about a fickle woman,2026-10-21
+Dear Prudence,claude-opus-5.5 (model),friendship;spirituality,friendship,False,,2026-10-21
+Dig It,claude-opus-5.5 (model),music_fun;society,music_fun,False,studio jam,2026-10-21
+Dig a Pony,claude-opus-5.5 (model),dream;love_devotion,dream,False,,2026-10-21
+Do You Want to Know a Secret,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Doctor Robert,claude-opus-5.5 (model),characters;society,characters,True,a doctor whose cure is implied,2026-10-21
+Don't Bother Me,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+Don't Let Me Down,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Don't Pass Me By,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+Drive My Car,claude-opus-5.5 (model),characters;desire;society,characters,True,fame ambitions; the car as innuendo,2026-10-21
+Eight Days a Week,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Eleanor Rigby,claude-opus-5.5 (model),loneliness;characters;spirituality,loneliness,False,,2026-10-21
+Every Little Thing,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Everybody's Got Something to Hide Except Me and My Monkey,claude-opus-5.5 (model),self;spirituality,self,True,"paradoxes, coded",2026-10-21
+Fixing a Hole,claude-opus-5.5 (model),self;dream,self,False,,2026-10-21
+For No One,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+For You Blue,claude-opus-5.5 (model),love_devotion;music_fun,love_devotion,False,,2026-10-21
+Free as a Bird,claude-opus-5.5 (model),nostalgia;friendship;self,nostalgia,False,,2026-10-21
+From Me to You,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Get Back,claude-opus-5.5 (model),characters;nostalgia,characters,True,identity play around Loretta,2026-10-21
+Getting Better,claude-opus-5.5 (model),self;love_devotion,self,True,optimism undercut by asides; past cruelty confessed,2026-10-21
+Girl,claude-opus-5.5 (model),heartbreak;characters;society,heartbreak,True,last verse questions the ethic of suffering,2026-10-21
+Glass Onion,claude-opus-5.5 (model),music_fun;dream,music_fun,True,false clues about earlier songs,2026-10-21
+Golden Slumbers,claude-opus-5.5 (model),nostalgia;dream,nostalgia,False,lullaby and lost home,2026-10-21
+Good Day Sunshine,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Good Morning Good Morning,claude-opus-5.5 (model),society;characters,society,False,tedium of daily life,2026-10-21
+Good Night,claude-opus-5.5 (model),dream;friendship,dream,False,lullaby,2026-10-21
+Got to Get You into My Life,claude-opus-5.5 (model),love_devotion;self,love_devotion,True,another kind of mind: not only a lover,2026-10-21
+Happiness Is a Warm Gun,claude-opus-5.5 (model),desire;characters;dream,desire,True,gun and fix as sexual and drug images,2026-10-21
+Hello Little Girl,claude-opus-5.5 (model),desire,desire,False,courting a girl who ignores him,2026-10-21
+"Hello, Goodbye",claude-opus-5.5 (model),love_devotion;self,love_devotion,False,playful contradictions with a lover,2026-10-21
+Help!,claude-opus-5.5 (model),self;loneliness;nostalgia,self,False,loss of self-assurance,2026-10-21
+Helter Skelter,claude-opus-5.5 (model),desire;music_fun,desire,False,,2026-10-21
+Her Majesty,claude-opus-5.5 (model),desire;characters,desire,True,a crush on the Queen,2026-10-21
+Here Comes the Sun,claude-opus-5.5 (model),self,self,False,renewal; codebook gap: nature and seasons,2026-10-21
+"Here, There and Everywhere",claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Hey Bulldog,claude-opus-5.5 (model),friendship;loneliness;dream,friendship,False,,2026-10-21
+Hey Jude,claude-opus-5.5 (model),friendship;love_devotion;self,friendship,False,encouragement,2026-10-21
+Hold Me Tight,claude-opus-5.5 (model),desire;love_devotion,desire,False,,2026-10-21
+Honey Pie,claude-opus-5.5 (model),desire;characters;music_fun,desire,False,,2026-10-21
+I Am the Walrus,claude-opus-5.5 (model),dream;society,dream,True,nonsense that mocks interpreters,2026-10-21
+I Call Your Name,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+I Don't Want to Spoil the Party,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+I Feel Fine,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+I Me Mine,claude-opus-5.5 (model),self;spirituality,self,False,ego,2026-10-21
+I Need You,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+I Saw Her Standing There,claude-opus-5.5 (model),desire;music_fun,desire,False,falling for someone at a dance,2026-10-21
+I Should Have Known Better,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+I Wanna Be Your Man,claude-opus-5.5 (model),desire,desire,False,,2026-10-21
+I Want You (She's So Heavy),claude-opus-5.5 (model),desire,desire,False,,2026-10-21
+I Want to Hold Your Hand,claude-opus-5.5 (model),desire;love_devotion,desire,False,,2026-10-21
+I Want to Tell You,claude-opus-5.5 (model),self;love_devotion,self,False,words that fail,2026-10-21
+I Will,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+I'll Be Back,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+I'll Be on My Way,claude-opus-5.5 (model),heartbreak,heartbreak,False,parting after a short love,2026-10-21
+I'll Cry Instead,claude-opus-5.5 (model),heartbreak;self,heartbreak,False,anger and revenge fantasy,2026-10-21
+I'll Follow the Sun,claude-opus-5.5 (model),heartbreak;self,heartbreak,False,the singer leaves,2026-10-21
+I'll Get You,claude-opus-5.5 (model),desire,desire,False,,2026-10-21
+I'm Down,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+I'm Happy Just to Dance with You,claude-opus-5.5 (model),desire;music_fun,desire,False,,2026-10-21
+I'm Looking Through You,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+I'm Only Sleeping,claude-opus-5.5 (model),self;dream;society,self,False,idleness against the rush of others,2026-10-21
+I'm So Tired,claude-opus-5.5 (model),self;love_devotion;loneliness,self,False,insomnia,2026-10-21
+I'm a Loser,claude-opus-5.5 (model),self;heartbreak,self,True,cheerful mask over despair,2026-10-21
+I'm in Love,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+I've Got a Feeling,claude-opus-5.5 (model),love_devotion;society,love_devotion,False,,2026-10-21
+I've Just Seen a Face,claude-opus-5.5 (model),desire;love_devotion,desire,False,love at first sight,2026-10-21
+If I Fell,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,fear of being hurt again,2026-10-21
+If I Needed Someone,claude-opus-5.5 (model),desire,desire,False,turns down an admirer while in love elsewhere,2026-10-21
+If You've Got Trouble,claude-opus-5.5 (model),heartbreak;society,heartbreak,False,rejects a greedy partner,2026-10-21
+In My Life,claude-opus-5.5 (model),nostalgia;love_devotion;friendship,nostalgia,False,places and people remembered,2026-10-21
+It Won't Be Long,claude-opus-5.5 (model),loneliness;love_devotion,loneliness,False,alone until the lover returns,2026-10-21
+It's All Too Much,claude-opus-5.5 (model),spirituality;love_devotion;dream,spirituality,False,,2026-10-21
+It's Only Love,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,,2026-10-21
+Julia,claude-opus-5.5 (model),love_devotion;dream,love_devotion,False,,2026-10-21
+Junk,claude-opus-5.5 (model),nostalgia;society,nostalgia,False,objects of a past life,2026-10-21
+Just Fun,claude-opus-5.5 (model),love_devotion;friendship,love_devotion,False,,2026-10-21
+"Komm, gib mir deine Hand",claude-opus-5.5 (model),desire,desire,False,German version,2026-10-21
+Lady Madonna,claude-opus-5.5 (model),characters;society,characters,False,,2026-10-21
+Let It Be,claude-opus-5.5 (model),spirituality;self,spirituality,False,consolation,2026-10-21
+Like Dreamers Do,claude-opus-5.5 (model),desire;love_devotion,desire,False,waiting for a dream girl,2026-10-21
+Little Child,claude-opus-5.5 (model),desire;music_fun;loneliness,desire,False,,2026-10-21
+"Long, Long, Long",claude-opus-5.5 (model),love_devotion;spirituality,love_devotion,True,the 'you' may be divine,2026-10-21
+Love Me Do,claude-opus-5.5 (model),desire;love_devotion,desire,False,a plea to be loved,2026-10-21
+Love You To,claude-opus-5.5 (model),desire;spirituality;society,desire,False,life is short,2026-10-21
+Lovely Rita,claude-opus-5.5 (model),desire;characters,desire,False,,2026-10-21
+Lucy in the Sky with Diamonds,claude-opus-5.5 (model),dream,dream,False,,2026-10-21
+Madman,claude-opus-5.5 (model),characters,characters,False,,2026-10-21
+Maggie Mae,claude-opus-5.5 (model),characters,characters,False,,2026-10-21
+Magical Mystery Tour,claude-opus-5.5 (model),dream;music_fun,dream,True,a trip in both senses,2026-10-21
+Martha My Dear,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+Maxwell's Silver Hammer,claude-opus-5.5 (model),characters;society,characters,True,"cheerful tune, serial murders",2026-10-21
+Mean Mr. Mustard,claude-opus-5.5 (model),characters,characters,False,,2026-10-21
+Michelle,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Misery,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+Mother Nature's Son,claude-opus-5.5 (model),self;music_fun,self,False,codebook gap: nature,2026-10-21
+No Reply,claude-opus-5.5 (model),heartbreak,heartbreak,False,"jealousy, lies",2026-10-21
+Norwegian Wood (This Bird Has Flown),claude-opus-5.5 (model),characters;desire,characters,True,"veiled affair, ambiguous ending",2026-10-21
+Not Guilty,claude-opus-5.5 (model),self;society,self,False,,2026-10-21
+Not a Second Time,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+Nowhere Man,claude-opus-5.5 (model),self;characters;society,self,False,a portrait that addresses the listener,2026-10-21
+"Ob-La-Di, Ob-La-Da",claude-opus-5.5 (model),characters;love_devotion;music_fun,characters,False,,2026-10-21
+Octopus's Garden,claude-opus-5.5 (model),dream;friendship,dream,False,,2026-10-21
+Oh! Darling,claude-opus-5.5 (model),heartbreak;love_devotion,heartbreak,False,,2026-10-21
+Old Brown Shoe,claude-opus-5.5 (model),love_devotion;self,love_devotion,False,,2026-10-21
+One After 909,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+Only a Northern Song,claude-opus-5.5 (model),music_fun;society,music_fun,True,irony about the song's own worth,2026-10-21
+P.S. I Love You,claude-opus-5.5 (model),love_devotion,love_devotion,False,love letter from afar,2026-10-21
+Paperback Writer,claude-opus-5.5 (model),characters;society,characters,False,,2026-10-21
+Penny Lane,claude-opus-5.5 (model),nostalgia;characters,nostalgia,False,,2026-10-21
+Piggies,claude-opus-5.5 (model),society,society,False,,2026-10-21
+Please Please Me,claude-opus-5.5 (model),desire;heartbreak,desire,True,sexual double meaning in the request,2026-10-21
+Polythene Pam,claude-opus-5.5 (model),characters;desire,characters,False,,2026-10-21
+Rain,claude-opus-5.5 (model),spirituality;society,spirituality,False,weather as a state of mind,2026-10-21
+Real Love,claude-opus-5.5 (model),love_devotion;self,love_devotion,False,,2026-10-21
+Revolution,claude-opus-5.5 (model),society;self,society,False,,2026-10-21
+Revolution 1,claude-opus-5.5 (model),society;self,society,False,,2026-10-21
+Rocky Raccoon,claude-opus-5.5 (model),characters;heartbreak,characters,False,,2026-10-21
+Run for Your Life,claude-opus-5.5 (model),heartbreak,heartbreak,False,jealousy taken to a death threat,2026-10-21
+Save the Last Dance for Me,claude-opus-5.5 (model),love_devotion;desire;music_fun,love_devotion,False,,2026-10-21
+Savoy Truffle,claude-opus-5.5 (model),friendship,friendship,False,codebook gap: food and its pleasures,2026-10-21
+Sexy Sadie,claude-opus-5.5 (model),characters;spirituality;society,characters,True,a disguised target,2026-10-21
+Sgt. Pepper's Lonely Hearts Club Band,claude-opus-5.5 (model),music_fun;characters,music_fun,False,,2026-10-21
+Sgt. Pepper's Lonely Hearts Club Band (Reprise),claude-opus-5.5 (model),music_fun,music_fun,False,,2026-10-21
+She Came In Through the Bathroom Window,claude-opus-5.5 (model),characters;dream,characters,False,,2026-10-21
+She Loves You,claude-opus-5.5 (model),love_devotion;friendship,love_devotion,False,advice to a friend about his lover,2026-10-21
+She Said She Said,claude-opus-5.5 (model),self;nostalgia;dream,self,False,,2026-10-21
+She's Leaving Home,claude-opus-5.5 (model),characters;society;loneliness,characters,False,parents and daughter,2026-10-21
+She's a Woman,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Sie liebt dich,claude-opus-5.5 (model),love_devotion;friendship,love_devotion,False,German version,2026-10-21
+Something,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Sour Milk Sea,claude-opus-5.5 (model),spirituality;self,spirituality,False,,2026-10-21
+Step Inside Love,claude-opus-5.5 (model),love_devotion;music_fun,love_devotion,False,,2026-10-21
+Strawberry Fields Forever,claude-opus-5.5 (model),self;dream;nostalgia,self,False,,2026-10-21
+Sun King,claude-opus-5.5 (model),dream;music_fun,dream,False,,2026-10-21
+Suzy Parker,claude-opus-5.5 (model),music_fun,music_fun,False,,2026-10-21
+Taxman,claude-opus-5.5 (model),society,society,False,,2026-10-21
+Tell Me What You See,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+Tell Me Why,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+Thank You Girl,claude-opus-5.5 (model),love_devotion,love_devotion,False,,2026-10-21
+The Ballad of John and Yoko,claude-opus-5.5 (model),characters;society;love_devotion,characters,False,the couple against the press,2026-10-21
+The Continuing Story of Bungalow Bill,claude-opus-5.5 (model),characters;society,characters,True,satire of a hunter,2026-10-21
+The End,claude-opus-5.5 (model),spirituality;love_devotion,spirituality,False,a maxim on love,2026-10-21
+The Fool on the Hill,claude-opus-5.5 (model),characters;spirituality;loneliness,characters,False,,2026-10-21
+The Inner Light,claude-opus-5.5 (model),spirituality,spirituality,False,,2026-10-21
+The Long and Winding Road,claude-opus-5.5 (model),heartbreak;loneliness;nostalgia,heartbreak,False,,2026-10-21
+The Night Before,claude-opus-5.5 (model),heartbreak;nostalgia,heartbreak,False,,2026-10-21
+The Word,claude-opus-5.5 (model),spirituality;love_devotion,spirituality,False,love as a creed to spread,2026-10-21
+There's a Place,claude-opus-5.5 (model),self;love_devotion;loneliness,self,False,the mind as a refuge,2026-10-21
+Things We Said Today,claude-opus-5.5 (model),love_devotion;nostalgia,love_devotion,False,imagined future memories,2026-10-21
+Think for Yourself,claude-opus-5.5 (model),heartbreak;self,heartbreak,False,telling someone off and leaving,2026-10-21
+This Boy,claude-opus-5.5 (model),heartbreak;desire,heartbreak,False,wants her back from a rival,2026-10-21
+Ticket to Ride,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+Tomorrow Never Knows,claude-opus-5.5 (model),spirituality;dream,spirituality,False,,2026-10-21
+Two of Us,claude-opus-5.5 (model),friendship;nostalgia;love_devotion,friendship,False,,2026-10-21
+Wait,claude-opus-5.5 (model),love_devotion;loneliness,love_devotion,False,,2026-10-21
+We Can Work It Out,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,a quarrel to resolve,2026-10-21
+What Goes On,claude-opus-5.5 (model),heartbreak,heartbreak,False,,2026-10-21
+What You're Doing,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+What's the New Mary Jane,claude-opus-5.5 (model),dream;characters,dream,True,drug allusions,2026-10-21
+When I Get Home,claude-opus-5.5 (model),love_devotion;desire,love_devotion,False,,2026-10-21
+When I'm Sixty-Four,claude-opus-5.5 (model),love_devotion,love_devotion,False,growing old together,2026-10-21
+While My Guitar Gently Weeps,claude-opus-5.5 (model),society;spirituality,society,False,"love left asleep, people bought and sold",2026-10-21
+Why Don't We Do It in the Road?,claude-opus-5.5 (model),desire,desire,False,,2026-10-21
+With a Little Help from My Friends,claude-opus-5.5 (model),friendship;love_devotion,friendship,True,getting high with friends,2026-10-21
+Within You Without You,claude-opus-5.5 (model),spirituality;society,spirituality,False,,2026-10-21
+Yellow Submarine,claude-opus-5.5 (model),dream;friendship;characters,dream,False,,2026-10-21
+Yer Blues,claude-opus-5.5 (model),loneliness;self,loneliness,False,despair,2026-10-21
+Yes It Is,claude-opus-5.5 (model),heartbreak;nostalgia,heartbreak,False,a past love haunts a new one,2026-10-21
+Yesterday,claude-opus-5.5 (model),nostalgia;heartbreak;self,nostalgia,False,,2026-10-21
+You Can't Do That,claude-opus-5.5 (model),heartbreak,heartbreak,False,jealousy,2026-10-21
+You Know My Name (Look Up the Number),claude-opus-5.5 (model),music_fun,music_fun,False,,2026-10-21
+You Know What to Do,claude-opus-5.5 (model),desire;loneliness,desire,False,,2026-10-21
+You Like Me Too Much,claude-opus-5.5 (model),love_devotion;heartbreak,love_devotion,False,,2026-10-21
+You Never Give Me Your Money,claude-opus-5.5 (model),society;nostalgia;dream,society,False,"money troubles, escape",2026-10-21
+You Won't See Me,claude-opus-5.5 (model),heartbreak;loneliness,heartbreak,False,,2026-10-21
+You'll Be Mine,claude-opus-5.5 (model),love_devotion;desire,love_devotion,True,spoken middle parodies a love declaration,2026-10-21
+You're Going to Lose That Girl,claude-opus-5.5 (model),desire;heartbreak,desire,False,warning a rival,2026-10-21
+You've Got to Hide Your Love Away,claude-opus-5.5 (model),heartbreak;loneliness;society,heartbreak,False,mocked by others,2026-10-21
+Your Mother Should Know,claude-opus-5.5 (model),music_fun;nostalgia,music_fun,False,,2026-10-21

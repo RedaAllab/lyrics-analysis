@@ -23,7 +23,8 @@ Checked on 2026-10-21, every page at 800 px wide, home / song / voices at 375 px
 9. Phone: top padding of the page reduced so the title starts higher.
 10. Listen player: unplayed sections at 80 % opacity, the current one outlined by an ink bar.
 
+11. Fonts self-hosted in `app/static/fonts` (declared with `[[theme.fontFaces]]`, `enableStaticServing = true`): no request to
+    Google Fonts and no fallback flash. Latin subsets only.
+
 ## To improve
-1. **Fonts**: IBM Plex and Space Grotesk load from Google Fonts at runtime, so a slow connection shows a fallback flash.
-   `st.html` strips `<link rel="preconnect">`, so the only real fix is to self-host the font files
-   (`enableStaticServing` plus `[[theme.fontFaces]]` in `config.toml`), which needs the woff2 files added to the repository.
+Nothing left from this review.

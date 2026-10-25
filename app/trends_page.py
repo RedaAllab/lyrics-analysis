@@ -6,6 +6,8 @@ from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, chip_row, evidence, open_word, plot
 from beatles_viz.render.identity import kicker
+from beatles_viz.render.share_card import figure_share_block
+from beatles_viz.config import APP_URL
 from beatles_viz.text import trends as T
 from beatles_viz.viz import trend_charts as charts
 
@@ -29,7 +31,8 @@ st.markdown('<p class="lx-lead">Beyond “love” (see Stories): which words, wh
             unsafe_allow_html=True)
 
 st.subheader("Which words rise or fall, besides “love”?")
-plot(charts.word_movers(movers))
+fig_movers = charts.word_movers(movers)
+plot(fig_movers)
 pick = chip_row("Open a word", movers.word.head(3).tolist() + movers.word.tail(3).tolist(), "trend_words")
 if pick:
     open_word(pick)
@@ -43,6 +46,13 @@ st.caption("Words used in at least 10 songs whose rate follows the release year 
            "they can disagree. An interval that crosses zero is not a change. Few words rise "
            "because the later vocabulary spreads over many words, none of which dominates.")
 
+top_up, top_down = movers.sort_values("change_song").word.iloc[-1], movers.sort_values("change_song").word.iloc[0]
+figure_share_block("trends-words", f"Beyond “love”: “{top_up}” rises, “{top_down}” falls",
+                   f"{tested} words were tested for a steady change between {PHASES[0][0]} and {PHASES[-1][0]}. Once "
+                   f"corrected for that, {len(kept)} hold; the others are leads, not findings. Bars show the change of "
+                   "the songs' mean rate with a 95% interval.", fig_movers, "TRENDS", f"{APP_URL}/trends",
+                   "Original compositions, 1962-1970")
+
 st.subheader("Are songs built differently over time?")
 plot(charts.section_shares(sections, counts))
 evidence("descriptive")
@@ -51,7 +61,15 @@ st.caption("Sections come from Genius tags (verses and choruses detected from re
            "of the transcription, not only with the songs.")
 
 st.subheader("Who sings lead, and when?")
-plot(charts.voice_shares(voices, counts))
+fig_voices = charts.voice_shares(voices, counts)
+plot(fig_voices)
+change = (voices.iloc[-1] - voices.iloc[0]).drop(labels=["Neutral", "Shared"], errors="ignore")
+who = change.abs().idxmax()
+figure_share_block("trends-voices", f"{who} leads {voices.iloc[-1][who]:.0%} of songs in {voices.index[-1]}, "
+                   f"from {voices.iloc[0][who]:.0%} in {voices.index[0]}",
+                   "Share of songs by lead voice, period by period. The lead voice is read from the credits, so it "
+                   f"is not the writer. {PHASES[0][0]} has only {counts.iloc[0]} songs: one song moves it by several points.",
+                   fig_voices, "TRENDS", f"{APP_URL}/trends", "Original compositions, 1962-1970")
 evidence("descriptive")
 st.caption("Lead voice is read from the credits; “Shared” means several lead singers. "
            f"{PHASES[0][0]} has {counts.iloc[0]} songs, so a single song moves it by several points.")

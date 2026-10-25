@@ -72,7 +72,7 @@ def card_png(song, reference, scale=1):
     return _png(img)
 
 
-def story_card_png(story, step, total, size="wide", scale=1, source=""):
+def story_card_png(story, step, total, size="wide", scale=1, source="", kicker=None):
     """One story as an image: the headline, its first sentences, the chart. Layout in design units of
     `design` wide; the card is rendered at (width * scale) pixels."""
     _, width, height, design = STORY_FORMATS[size]
@@ -86,7 +86,7 @@ def story_card_png(story, step, total, size="wide", scale=1, source=""):
     foot = 150
 
     logo_mark(d, m * u, 60 * u, 52 * u)
-    d.text(((m + 72) * u, 72 * u), f"STORY {step} OF {total}", fill=MUTED, font=font(28 * u, "label"))
+    d.text(((m + 72) * u, 72 * u), kicker or f"STORY {step} OF {total}", fill=MUTED, font=font(28 * u, "label"))
     y = 150
     col = inner if portrait else 560  # wide: text on the left, the chart gets the rest of the width
     lines, hs = title_lines(d, story.headline, col, sizes=(96, 86, 78, 70) if portrait else (68, 62, 56, 50),
@@ -159,3 +159,24 @@ def share_block(song, reference):
                            icon=":material/download:")
         st.caption("Post the image with the link below: link previews from this app show no picture.")
         st.code(f"{song.title}: {voice_line(song.voice)}\n\n{song_link(song.title)}", language=None, wrap_lines=True)
+
+
+@st.cache_data(show_spinner=False, max_entries=24)
+def _cached_figure_png(key, size, _card, kicker, source):
+    return story_card_png(_card, 0, 0, size, scale=2, source=source, kicker=kicker)
+
+
+def figure_share_block(key, headline, text, fig, kicker, link, source=""):
+    """The share block for a chart on any page: the same X cards as the stories, from a headline, a few
+    sentences and the Plotly figure that is on screen. `key` identifies the chart and what it shows (it keys the cache)."""
+    from types import SimpleNamespace
+    with st.expander("Share this chart", icon=":material/share:"):
+        size = st.radio("Format", list(STORY_FORMATS), horizontal=True, key=f"card_format_{key}",
+                        format_func=lambda f: STORY_FORMATS[f][0])
+        card = SimpleNamespace(headline=headline, text=text, figure=fig)
+        png = _cached_figure_png(f"{key}-{headline}", size, card, kicker, source)
+        st.image(png, width="stretch", caption=f"{headline}: chart card")
+        st.download_button("Download the image", png, file_name=f"beatles-{key}-{size}.png", mime="image/png",
+                           icon=":material/download:", key=f"card_dl_{key}_{size}")
+        st.caption("Post text, ready to paste along with the image:")
+        st.code(f"{headline}\n\nBeatles lyrics explorer: {link}", language=None, wrap_lines=True)

@@ -83,12 +83,15 @@ def credit_columns(row):
 
 def person_id(name):
     """'John Lennon', 'Lennon' -> 'lennon'; 'Ringo Starr', 'Starkey' -> 'starr'; anyone else: a slug of the name.
-    A member's first name only counts with the surname or alone ('George Martin' is the producer)."""
+    A member's first name only counts with the surname or alone ('George Martin' is the producer). Never empty for
+    a non-empty name."""
     name = str(name).strip()
     for m, pattern in MEMBER_PATTERNS.items():
         if pattern.search(name):
             return m.lower()
-    return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+    slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+    # a name in another script (Μίκης Θεοδωράκης) keeps its own letters rather than becoming ''
+    return slug or re.sub(r"\W+", "_", name.lower()).strip("_")
 
 
 def load_table(name, path=None):

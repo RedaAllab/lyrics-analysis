@@ -106,3 +106,8 @@ def test_instruments_outside_musicians_and_charts():
     assert s[("lennon", "Keyboards")] == 0.5 and per_phase["1962-63"] == 2
     assert cc.member_instruments(shares, per_phase, "Lennon") is not None
     assert cc.member_instruments(shares, per_phase, "Starr") is None
+
+
+def test_person_id_of_a_name_in_another_script_is_not_empty():
+    assert person_id("Μίκης Θεοδωράκης") == "μίκης_θεοδωράκης"
+    assert person_id("José Feliciano") == "jos_feliciano"  # Latin names unchanged

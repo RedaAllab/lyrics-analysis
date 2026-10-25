@@ -1,5 +1,4 @@
 person_id,name,is_member,mbid
-,Μίκης Θεοδωράκης,False,83970769-d8ea-434b-8734-88899213c922
 a_b_lincoln,A. B. Lincoln,False,a672fe88-4cc7-4dfa-9519-a676041ec599
 aaron_schroeder,Aaron Schroeder,False,3897c75a-a0b5-4c23-9ede-6bea1e1736bb
 aashish_khan,Aashish Khan,False,72427133-53fd-4907-979a-9d4085e58931
@@ -449,3 +448,4 @@ wes_farrell,Wes Farrell,False,ca14af84-9dc4-4cd8-ad93-0c299881f4df
 william_sansom,William Sansom,False,dffde8b0-d6c2-4c8c-8f87-b558b18dcb1e
 willie_weeks,Willie Weeks,False,
 yoko_ono,Yoko Ono,False,b0b33754-a664-43b7-ba00-be0dc4ec2396
+μίκης_θεοδωράκης,Μίκης Θεοδωράκης,False,83970769-d8ea-434b-8734-88899213c922

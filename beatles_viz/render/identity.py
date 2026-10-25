@@ -58,6 +58,16 @@ hr {{ border-color: var(--lx-ink) !important; }}
   h1 {{ font-size: 2.75rem !important; }}
   [data-testid="stMainBlockContainer"] {{ padding-top: 4.5rem !important; }}
 }}
+/* Printing or saving as PDF: no app chrome, no clipped page */
+@media print {{
+  [data-testid="stSidebar"], [data-testid="stHeader"], [data-testid="stToolbar"], [data-testid="stSidebarCollapsedControl"],
+  [data-testid="stBaseButton-secondary"], [data-testid="stBaseButton-primary"], [data-testid="stExpander"] {{ display: none !important; }}
+  html, body, [data-testid="stApp"], [data-testid="stAppViewContainer"], [data-testid="stMain"] {{
+    height: auto !important; overflow: visible !important; background: var(--lx-paper) !important; }}
+  [data-testid="stMainBlockContainer"] {{ max-width: 100% !important; padding: 1rem !important; }}
+  .stPlotlyChart, .js-plotly-plot {{ max-width: 100% !important; overflow: hidden; break-inside: avoid; }}
+  * {{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+}}
 </style>
 """
 

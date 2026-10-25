@@ -68,3 +68,15 @@ def test_stories_match_the_data(stories):
     assert stories["richness"].headline.endswith("1964-65")
     assert "1966-67" in stories["pronouns"].headline
     assert stories["mood"].headline.startswith("Lennon")
+
+
+def test_every_story_has_an_x_card_in_public_mode(stories):
+    import io
+
+    from PIL import Image
+
+    from beatles_viz.render.share_card import story_card_png
+
+    for i, s in enumerate(stories.values(), 1):
+        for fmt, size in (("wide", (1600, 900)), ("portrait", (1080, 1350))):
+            assert Image.open(io.BytesIO(story_card_png(s, i, len(stories), fmt))).size == size

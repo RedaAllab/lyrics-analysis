@@ -4,6 +4,7 @@ import streamlit as st
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
+from beatles_viz.render.share_card import story_share_block
 from beatles_viz.stories import build_stories
 
 
@@ -42,6 +43,8 @@ if links:
             if kind == "page":
                 st.switch_page(f"{target}_page.py")
             (open_word if kind == "word" else open_song)(target)
+
+story_share_block(story, step, n, source="Original compositions, 1962-1970")
 
 st.divider()
 prev, middle, nxt = st.columns([1, 2, 1])

@@ -2,18 +2,25 @@
 the text is computed from the data, so a story stays true if the corpus changes."""
 from collections import Counter, namedtuple
 
+import pandas as pd
 import plotly.express as px
 
 from beatles_viz.config import ACCENT, INK, MEMBERS, PHASE_ORDER, REFERENCE, SECONDARY, VOICE_COLORS
+from beatles_viz.config import ROOT
 from beatles_viz.corpus import analysable
+from beatles_viz.credits import instruments, load_table
 from beatles_viz.text.words import usage_by
 from beatles_viz.viz.compare_charts import contrast_figure, contrast_words
 from beatles_viz.viz.trend_charts import phase_strip
 from beatles_viz.text.tokenize import merge
+from beatles_viz.viz.credit_charts import family_shares
 from beatles_viz.viz.theme import titled
 
 # link: ("word", w), ("song", title) or ("page", file name)
 Story = namedtuple("Story", "key headline text figure links")
+DEFAULT_SOURCE = "Original compositions released 1962-1970 with at least 30 words."
+SOURCES = {"instruments": "MusicBrainz recording credits, original compositions 1962-1970.",
+           "sources": "MusicBrainz and Wikipedia song articles, songs both credit."}
 EARLY, LATE = PHASE_ORDER[0], PHASE_ORDER[-1]
 
 
@@ -114,9 +121,90 @@ def darkest_voice(d, min_songs=5):
     return Story("mood", headline, text, titled(fig, headline, 400), [("song", darkest.title), ("page", "mood")])
 
 
-STORIES = [love_fades, richest_years, i_to_we, new_words, darkest_voice]
+def _phase_bars(values, label, headline, height=360, fmt=".0f"):
+    d = values.reindex(PHASE_ORDER).rename("value").reset_index().rename(columns={"index": "phase"})
+    fig = px.bar(d, x="phase", y="value", color_discrete_sequence=[ACCENT], text_auto=fmt, labels={"value": label})
+    return titled(_phase_axis(fig), headline, height)
+
+
+def promises_fade(d):
+    g = (d.groupby("phase").future.mean() * 100).reindex(PHASE_ORDER)
+    first, last = g[EARLY], g[LATE]
+    text = (f"“Will”, “won't”, “gonna”, “tomorrow”, “someday”: in {EARLY} they make {first:.1f} of every 100 words. "
+            f"By {LATE} the share {trend(first, last)} to {last:.1f}. The early songs promise (“I'll be there”, "
+            "“we'll”), the late ones mostly describe what is happening now. A word list, not a grammar: it counts "
+            "markers of the future, not every way to talk about it.")
+    headline = f"The promises {'fade' if last < first else 'grow'}: {first:.1f} to {last:.1f} per 100 words"
+    top = d[d.phase == EARLY].sort_values("future", ascending=False).iloc[0]
+    return Story("future", headline, text, _phase_bars(g, "future markers per 100 words", headline, fmt=".1f"),
+                 [("song", top.title), ("page", "trends")])
+
+
+def characters_arrive(d):
+    g = (d.assign(named=d.characters > 0).groupby("phase").named.mean() * 100).reindex(PHASE_ORDER)
+    peak = g.idxmax()
+    top = d.sort_values("characters", ascending=False).iloc[0]
+    text = (f"A song counts as telling about someone when it names a character (Eleanor, Lucy, Rocky, Prudence...). "
+            f"That is {g[EARLY]:.0f}% of the songs of {EARLY} and {g[peak]:.0f}% in {peak}. The song with most named "
+            f"characters is {top.title} ({top.characters:.0f}). Early songs speak to “you”; later ones begin to tell "
+            "stories about other people. The names come from a fixed list of proper names: a rough marker.")
+    headline = f"Named characters: from {g[EARLY]:.0f}% of songs to {g[peak]:.0f}%"
+    return Story("characters", headline, text, _phase_bars(g, "songs naming a character (%)", headline),
+                 [("song", top.title), ("page", "trends")])
+
+
+def instrument_shift(d):
+    """The member and instrument family whose share of the period's credited songs rose most, and the one that fell most."""
+    perf = load_table("performance_credit")
+    if perf.empty:
+        return None
+    inst = instruments(perf)
+    credited = d[d.title.isin(set(inst.title))]
+    shares, per_phase = family_shares(inst, credited)
+    pivot = shares.pivot_table(index=["person_id", "family"], columns="phase", values="share").reindex(
+        columns=PHASE_ORDER).fillna(0)
+    change = pivot[LATE] - pivot[EARLY]
+    (up_who, up_fam), (down_who, down_fam) = change.idxmax(), change.idxmin()
+    name = lambda who: who.capitalize() if who != "mccartney" else "McCartney"
+    rows = [dict(phase=p, series=f"{name(w)} · {f}", share=pivot.loc[(w, f), p] * 100)
+            for w, f in ((up_who, up_fam), (down_who, down_fam)) for p in PHASE_ORDER]
+    ups, downs = pivot.loc[(up_who, up_fam)], pivot.loc[(down_who, down_fam)]
+    text = (f"Recording credits show who plays what on each song. {name(up_who)} plays {up_fam.lower()} on "
+            f"{ups[EARLY]:.0%} of the credited songs of {EARLY} and {ups[LATE]:.0%} in {LATE}. {name(down_who)} on "
+            f"{down_fam.lower()}: {downs[EARLY]:.0%} then {downs[LATE]:.0%}. MusicBrainz credits for the original "
+            f"recordings, {per_phase.min()} to {per_phase.max()} credited songs per period.")
+    fig = px.line(pd.DataFrame(rows), x="phase", y="share", color="series", markers=True,
+                  color_discrete_sequence=[ACCENT, SECONDARY], labels={"share": "% of credited songs", "series": ""})
+    headline = f"{name(up_who)}'s {up_fam.lower()}: {ups[EARLY]:.0%} of songs to {ups[LATE]:.0%}"
+    return Story("instruments", headline, text, titled(_phase_axis(fig), headline, 380),
+                 [("page", "credits")])
+
+
+def sources_agree(d):
+    agree = load_table("", ROOT / "analysis/credits/source_agreement.csv")
+    if agree.empty:
+        return None
+    a = agree[agree.wikipedia == "wikipedia_song_page"].copy()
+    a["all"] = a.both + a.only_musicbrainz + a.only_wikipedia
+    overall = a.both.sum() / a["all"].sum()
+    a = a.sort_values("agreed")
+    low, high = a.iloc[0], a.iloc[-1]
+    text = (f"MusicBrainz and the Personnel sections of Wikipedia's song articles were compared part by part, song by "
+            f"song: who sings lead, who sings backing, who plays which family of instruments. They agree on "
+            f"{overall:.0%} of the {a['all'].sum():,.0f} claims. Most solid: {high.aspect} ({high.agreed:.0%}). "
+            f"Least: {low.aspect} ({low.agreed:.0%}), because one source lists every orchestral player and "
+            "the other writes “uncredited”. Disagreements are kept, not fixed.")
+    fig = px.bar(a.assign(agreed=a.agreed * 100), x="agreed", y="aspect", orientation="h", color_discrete_sequence=[SECONDARY],
+                 text_auto=".0f", labels={"agreed": "% of claims both sources make", "aspect": ""})
+    fig.update_xaxes(range=[0, 100])
+    headline = f"Two sources agree on {overall:.0%} of who plays what"
+    return Story("sources", headline, text, titled(fig, headline, 420), [("page", "credits")])
+
+
+STORIES = [love_fades, richest_years, i_to_we, new_words, darkest_voice, promises_fade, characters_arrive,
+           instrument_shift, sources_agree]
 
 
 def build_stories(corpus):
     d = story_corpus(corpus)
-    return [s(d) for s in STORIES]
+    return [story for story in (s(d) for s in STORIES) if story is not None]

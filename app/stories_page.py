@@ -1,11 +1,11 @@
-"""Guided stories: four findings, one screen each. Statistics only, works without the lyrics."""
+"""Guided stories: one finding per screen. Statistics only, works without the lyrics."""
 import streamlit as st
 
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import cached_corpus, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
 from beatles_viz.render.share_card import story_share_block
-from beatles_viz.stories import build_stories
+from beatles_viz.stories import DEFAULT_SOURCE, SOURCES, build_stories
 
 
 @st.cache_data(show_spinner="Reading the catalogue...")
@@ -44,7 +44,7 @@ if links:
                 st.switch_page(f"{target}_page.py")
             (open_word if kind == "word" else open_song)(target)
 
-story_share_block(story, step, n, source="Original compositions, 1962-1970")
+story_share_block(story, step, n, source=SOURCES.get(story.key, "Original compositions, 1962-1970").rstrip("."))
 
 st.divider()
 prev, middle, nxt = st.columns([1, 2, 1])
@@ -59,4 +59,4 @@ else:
         st.switch_page("album_page.py")
     if nxt.button("Voices", icon=":material/record_voice_over:", width="stretch", key="story_voices"):
         st.switch_page("voice_page.py")
-st.caption("Original compositions released 1962-1970 with at least 30 words. Lyrics: Genius dataset, not proofread.")
+st.caption(f"{SOURCES.get(story.key, DEFAULT_SOURCE)} Lyrics: Genius dataset, not proofread.")

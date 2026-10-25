@@ -79,9 +79,9 @@ def test_word_page_runs_and_follows_url():
 def test_stories_step_through_and_stop_at_the_end():
     at = AppTest.from_file(str(APP / "stories_page.py"), default_timeout=180).run()
     assert not at.exception and at.button(key="story_prev").disabled
-    for _ in range(4):
+    for _ in range(8):
         at.button(key="story_next").click().run()
-    assert not at.exception and at.query_params["story"] == "5"
+    assert not at.exception and at.query_params["story"] == "9"
     assert not [b for b in at.button if b.key == "story_next"]
 
 

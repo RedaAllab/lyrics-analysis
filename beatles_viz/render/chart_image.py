@@ -31,7 +31,9 @@ def number(v, ref):
     return f"{v:.0f}" if ref >= 10 else f"{v:.1f}" if ref >= 1 else f"{v:.2f}"
 
 
-def _tick_text(v, step):
+def _tick_text(v, step, percent=False):
+    if percent:
+        return f"{v * 100:.0f}%"
     text = f"{v:.0f}" if step >= 1 else f"{v:.1f}" if step >= .1 else f"{v:.2f}"
     return text[1:] if text.strip("-0.") == "" and text.startswith("-") else text
 
@@ -111,12 +113,21 @@ def draw_figure(d, fig, box, u=1.0):
     if not all_values:
         return
     has_bars = any(t.type == "bar" for t in traces)
+    stacked = not horizontal and fig.layout.barmode in ("stack", "relative")
     lo, hi = min(all_values), max(all_values)
+    if stacked:
+        totals = {}
+        for t in traces:
+            if t.type == "bar":
+                for c_, v_ in zip(*_points(t)):
+                    totals[c_] = totals.get(c_, 0) + float(v_ or 0)
+        hi = max(totals.values())
+    percent = (fig.layout.yaxis.tickformat or "").endswith("%") and not horizontal
     if has_bars:
         lo, hi = min(lo, 0), max(hi, 0)
     else:
         pad = (hi - lo) * .06 or 1
-        lo, hi = (max(lo - pad, 0) if lo >= 0 else lo - pad), hi + pad
+        lo, hi = (max(lo - 2 * pad, 0) if lo >= 0 else lo - 2 * pad), hi + pad
     diverging = horizontal and lo < 0 < hi
     ticks = nice_ticks(lo, hi, (y1 - y0) / (70 * u) if not horizontal else 5)
     lo, hi = (min(lo, ticks[0]), max(hi, ticks[-1])) if not diverging else (lo * 1.1, hi * 1.1)
@@ -142,7 +153,7 @@ def draw_figure(d, fig, box, u=1.0):
         row = (bottom - top) / n
         cat_fs = max(min(label_fs, row * .62), 14 * u)
         label_w = 0 if diverging else max(d.textlength(c, font=font(cat_fs)) for c in cats) + 18 * u
-        left, right = x0 + label_w, x1 - (0 if not diverging else 0)
+        left, right = x0 + label_w, x1 - (0 if diverging else 64 * u)
         scale = lambda v: left + (v - lo) / (hi - lo) * (right - left)
         zero = scale(0)
         for tk in ([] if diverging else ticks):
@@ -180,38 +191,54 @@ def draw_figure(d, fig, box, u=1.0):
     # Vertical: categories along the bottom
     cat_fs = label_fs
     slot_guess = (x1 - x0) / n
-    while cat_fs > 16 * u and max(d.textlength(c, font=font(cat_fs)) for c in cats) > slot_guess * .94:
+    cat_lines = {c: c.replace("<br>", "\n").split("\n") for c in cats}
+    longest = lambda: max(d.textlength(l, font=font(cat_fs)) for ls in cat_lines.values() for l in ls)
+    while cat_fs > 16 * u and longest() > slot_guess * .94:
         cat_fs -= u
-    bottom = y1 - (cat_fs + 26 * u) - (36 * u if cat_title else 0)
-    label_w = max(d.textlength(_tick_text(tk, step), font=font(tick_fs * .9, "label")) for tk in ticks) + 14 * u
+    rows = max(len(ls) for ls in cat_lines.values())
+    bottom = y1 - (rows * cat_fs * 1.15 + 26 * u) - (36 * u if cat_title else 0)
+    label_w = max(d.textlength(_tick_text(tk, step, percent), font=font(tick_fs * .9, "label")) for tk in ticks) + 14 * u
     left, right = x0 + label_w, x1
     scale = lambda v: bottom - (v - lo) / (hi - lo) * (bottom - top - 28 * u)
     slot = (right - left) / n
     for tk in ticks:
         ty = scale(tk)
         d.line([left, ty, right, ty], fill=RULE, width=max(int(u), 1))
-        d.text((left - 10 * u, ty), _tick_text(tk, step), fill=INK, font=font(tick_fs * .9, "label"), anchor="rm")
+        d.text((left - 10 * u, ty), _tick_text(tk, step, percent), fill=INK, font=font(tick_fs * .9, "label"), anchor="rm")
     d.line([left, scale(lo if not has_bars else 0), right, scale(lo if not has_bars else 0)], fill=INK, width=max(int(2.5 * u), 2))
     d.line([left, top, left, bottom], fill=INK, width=max(int(2.5 * u), 2))
     if lo < 0 < hi:
         d.line([left, scale(0), right, scale(0)], fill=INK, width=max(int(1.5 * u), 1))
     for i, c in enumerate(cats):
-        d.text((left + (i + .5) * slot, bottom + 10 * u), c, fill=INK, font=font(cat_fs, "strong"), anchor="ma")
+        for j, line in enumerate(cat_lines[c]):
+            d.text((left + (i + .5) * slot, bottom + 10 * u + j * cat_fs * 1.15), line, fill=INK if j == 0 else MUTED,
+                   font=font(cat_fs, "strong" if j == 0 else "body"), anchor="ma")
     if cat_title:
         d.text(((left + right) / 2, y1), cat_title, fill=MUTED, font=font(24 * u, "label"), anchor="ms")
 
     bars = [(i, t) for i, t in enumerate(traces) if t.type == "bar"]
     rng = np.random.default_rng(7)
+    base = {}
     for i, t in bars:
-        k = bars.index((i, t))
-        width = slot * .62 / len(bars)
+        k = 0 if stacked else bars.index((i, t))
+        width = slot * (.7 if stacked else .62) / (1 if stacked else len(bars))
         tc, tv = _points(t)
         for c, v in zip(tc, tv):
             if c not in cats or v is None:
                 continue
             colors = t.marker.color
             col = colors[tc.index(c)] if isinstance(colors, (list, tuple, np.ndarray)) else _color(t, i, len(traces))
-            cx = left + (cats.index(c) + .5) * slot + (k - (len(bars) - 1) / 2) * width
+            cx = left + (cats.index(c) + .5) * slot + (k - (len(bars) - 1) / 2) * width * (0 if stacked else 1)
+            if stacked:
+                b0 = base.get(c, 0)
+                base[c] = b1 = b0 + float(v)
+                ya, yb = sorted((scale(b0), scale(b1)))
+                d.rectangle([cx - width / 2, ya, cx + width / 2, yb], fill=rgb(col)[:3], outline=PAPER, width=int(2 * u))
+                if yb - ya > 44 * u and float(v) >= .04 * hi:
+                    dark = sum(rgb(col)[:3]) < 480
+                    txt = f"{float(v) * 100:.0f}%" if percent else number(float(v), hi)
+                    d.text((cx, (ya + yb) / 2), txt, fill=PAPER if dark else INK, font=font(26 * u, "label"), anchor="mm")
+                continue
             ya, yb = sorted((scale(0), scale(float(v))))
             d.rectangle([cx - width / 2, ya, cx + width / 2, yb], fill=rgb(col)[:3])
             if n * len(bars) <= 12:

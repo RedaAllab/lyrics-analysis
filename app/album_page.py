@@ -6,6 +6,8 @@ from beatles_viz.corpus import albums
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, listen_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
+from beatles_viz.render.share_card import figure_share_block
+from beatles_viz.config import APP_URL
 from beatles_viz.text.keyness import contrast
 from beatles_viz.text.tokenize import merge
 from beatles_viz.viz import album_charts
@@ -46,6 +48,16 @@ with left:
         st.info("No value for this measure.")
     else:
         plot(fig)
+        col = TRACK_METRICS[label]
+        ranked = tracks.dropna(subset=[col]).sort_values(col)
+        if len(ranked) >= 2:
+            hi_, lo_ = ranked.iloc[-1], ranked.iloc[0]
+            fmt = (lambda v: f"{v:.0f}") if col == "tokens" else (lambda v: f"{v:.2f}")
+            figure_share_block(f"album-{album}-{col}", f"{album}: {label.lower()}, track by track",
+                               f"Highest: {hi_.title} ({fmt(hi_[col])}). Lowest: {lo_.title} ({fmt(lo_[col])}). "
+                               f"{len(ranked)} songs of the album with a value.", fig, f"{int(info.year)} · ALBUM",
+                               f"{APP_URL}/albums?album={album.replace(' ', '%20')}",
+                               "Beatles catalogue, release as listed on Wikipedia")
 with right:
     words = contrast(merge(tracks.bow), merge(corpus[corpus.album != album].bow), min_count=3)
     words = words.query("z > 0").word.head(8).tolist()

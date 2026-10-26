@@ -6,6 +6,8 @@ from beatles_viz.corpus import analysable
 from beatles_viz.data.loader import data_source
 from beatles_viz.render.components import HELP, cached_corpus, chip_row, open_song, open_word, plot
 from beatles_viz.render.identity import kicker
+from beatles_viz.render.share_card import figure_share_block
+from beatles_viz.config import APP_URL
 from beatles_viz.viz import voice_charts as vc
 
 corpus = analysable(cached_corpus(data_source()))
@@ -31,7 +33,13 @@ with left:
     plot(vc.voice_radar(corpus, voices))
 with right:
     label = st.radio("Over time", list(vc.TRENDS), horizontal=True, key="voice_trend")
-    plot(vc.voice_trend(corpus, voices, vc.TRENDS[label], label))
+    fig_trend = vc.voice_trend(corpus, voices, vc.TRENDS[label], label)
+    plot(fig_trend)
+
+lines = [f"{t.name}: {t.y[0]:.2f} in {t.x[0]}, {t.y[-1]:.2f} in {t.x[-1]}." for t in fig_trend.data if len(t.y) > 1]
+figure_share_block(f"voices-{'-'.join(voices)}-{label}", f"{' and '.join(voices)}: {label.lower()} over time",
+                   " ".join(lines) + " Lead voice is read from the credits; it is not the writer.", fig_trend,
+                   "LEAD VOICES", f"{APP_URL}/voices", "Original compositions, 1962-1970")
 
 if len(voices) == 2:
     fig = vc.voice_duel(corpus, a, b)

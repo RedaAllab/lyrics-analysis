@@ -64,3 +64,17 @@ def test_story_cards_have_the_x_feed_sizes_and_draw_every_chart_kind():
         story = Story("k", "A headline long enough to wrap on a few lines of the card, and then some more", long_text, fig, [])
         for fmt, size in (("wide", (1600, 900)), ("portrait", (1080, 1350))):
             assert Image.open(io.BytesIO(story_card_png(story, 1, 5, fmt))).size == size
+
+
+def test_stacked_bars_and_percent_axes_are_drawn():
+    import plotly.express as px
+    from types import SimpleNamespace
+
+    from beatles_viz.render.share_card import story_card_png
+
+    d = pd.DataFrame({"phase": ["a", "a", "b", "b"], "voice": ["x", "y", "x", "y"], "share": [.3, .7, .6, .4]})
+    fig = px.bar(d, x="phase", y="share", color="voice", barmode="stack")
+    fig.update_yaxes(tickformat=".0%")
+    card = SimpleNamespace(headline="Who leads", text="Share by period.", figure=fig)
+    png = story_card_png(card, 0, 0, "wide", kicker="TRENDS")
+    assert Image.open(io.BytesIO(png)).size == (1600, 900)
